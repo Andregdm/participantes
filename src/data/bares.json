@@ -19,7 +19,7 @@
       "address": "Rua Arthur Luchesi, 356",
       "dish": "Trio Mineiro-Bão Di Mais",
       "desc": "Um trio irresistível que celebra a cozinha de Minas: carninha de panela, couve refogada e angu cremoso em perfeita harmonia.",
-      "photo": "https://images.unsplash.com/photo-1544025162-d76694265947?w=400&q=80"
+      "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09111226/bardobartolomeu_triomineirobaodemais_bh_2026_rodneycosta_unibh-4207.jpg"
     },
     {
       "id": 2,
@@ -29,7 +29,7 @@
       "address": "Rua São Paulo da Cruz, 357",
       "dish": "Ora pro Boi",
       "desc": "Cubos de carne bovina grelhados no espeto, servidos com ora-pro-nóbis refogado e farofa crocante.",
-      "photo": "https://images.unsplash.com/photo-1551782450-17144efb9c50?w=400&q=80"
+      "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09112459/espetinhodoboi_oraproboi_bh_2026_pauloti_unibh-4969.jpg"
     },
     {
       "id": 3,
@@ -39,7 +39,7 @@
       "address": "Rua Amílcar Cabral, 515",
       "dish": "Coxa Supreme ao Alho Poró",
       "desc": "Sobrecoxa empanada e dourada, servida sobre cama de alho-poró caramelizado e molho especial da casa.",
-      "photo": "https://images.unsplash.com/photo-1598103442097-8b74394b95c0?w=400&q=80"
+      "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09112612/goldengrill_coxasuprimeaoalhoporo_bh_2026_rodneycosta_unibh-4571.jpg"
     },
     {
       "id": 4,
@@ -49,7 +49,7 @@
       "address": "Rua Benjamim Dias, 379",
       "dish": "Trem de Minas",
       "desc": "Clássico mineiro revisitado: costelinha, linguiça, couve e angu juntos num prato que é puro afeto.",
-      "photo": "https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?w=400&q=80",
+      "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09112719/jatoindo_tremdeminas_bh_2026_pauloti_unibh-5234.jpg",
       "champion": true
     },
     {
@@ -60,7 +60,7 @@
       "address": "Rua Oliveira Lisboa, 107",
       "dish": "Di Juei",
       "desc": "Corte suíno suculento com mandioca cozida e couve crispy. Simplicidade e sabor de boteco raiz.",
-      "photo": "https://images.unsplash.com/photo-1544025162-d76694265947?w=400&q=80"
+      "photo": ""
     },
     {
       "id": 6,
