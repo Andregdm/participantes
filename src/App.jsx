@@ -25,14 +25,14 @@ function CheckCircle({ d }) {
 function ThermometerIcon({ temp }) {
   const getColor = () => {
     if (temp === null) return "#aaa";
-    if (temp < -5) return "#2980b9";
-    if (temp < -3) return "#3498db";
+    if (temp < -5) return "#1a5276";
+    if (temp < -3) return "#2980b9";
     if (temp >= -3 && temp <= 1) return "#2ecc71";
     if (temp > 1 && temp <= 3) return "#f1c40f";
     return "#e74c3c";
   };
   return (
-    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke={getColor()} strokeWidth="2">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke={getColor()} strokeWidth="2.5">
       <path d="M12 9v8m-4-8a4 4 0 1 1 8 0m-4-6v2m-2 4a4 4 0 1 0 4 0"/>
     </svg>
   );
@@ -52,6 +52,10 @@ export default function App() {
   const [exp, setExp] = useState(null);
   const [tab, setTab] = useState("bares");
   const [imgErr, setImgErr] = useState(new Set());
+  
+  // NOVOS ESTADOS PARA FILTROS E ORDENAÇÃO
+  const [onlyVisitedByTeam, setOnlyVisitedByTeam] = useState(false);
+  const [sortBy, setSortBy] = useState("none");
 
   useEffect(() => { try { localStorage.setItem("cdb26v", JSON.stringify([...visited])) } catch {} }, [visited]);
   useEffect(() => { try { localStorage.setItem("cdb26f", JSON.stringify([...favorites])) } catch {} }, [favorites]);
@@ -59,22 +63,42 @@ export default function App() {
   const tv = (id) => setVisited(s => { const n = new Set(s); n.has(id) ? n.delete(id) : n.add(id); return n; });
   const tf = (id) => setFavorites(s => { const n = new Set(s); n.has(id) ? n.delete(id) : n.add(id); return n; });
 
-  const filtered = useMemo(() => BARS.filter(b => {
-    if (fv && !visited.has(b.id)) return false;
-    if (ff && !favorites.has(b.id)) return false;
-    if (fr !== "Todas" && b.region !== fr) return false;
-    if (q) {
-      const lq = q.toLowerCase();
-      if (!b.name.toLowerCase().includes(lq) && !b.dish.toLowerCase().includes(lq) && !b.neighborhood.toLowerCase().includes(lq)) return false;
+  const filteredAndSorted = useMemo(() => {
+    let result = BARS.filter(b => {
+      if (fv && !visited.has(b.id)) return false;
+      if (ff && !favorites.has(b.id)) return false;
+      if (fr !== "Todas" && b.region !== fr) return false;
+      if (onlyVisitedByTeam && !b.visited) return false;
+      if (q) {
+        const lq = q.toLowerCase();
+        if (!b.name.toLowerCase().includes(lq) && !b.dish.toLowerCase().includes(lq) && !b.neighborhood.toLowerCase().includes(lq)) return false;
+      }
+      return true;
+    });
+    
+    // ORDENAÇÃO
+    if (sortBy === "rating") {
+      result = [...result].sort((a, b) => {
+        const ratingA = a.rating !== null ? a.rating : -1;
+        const ratingB = b.rating !== null ? b.rating : -1;
+        return ratingB - ratingA;
+      });
+    } else if (sortBy === "beerTemp") {
+      result = [...result].sort((a, b) => {
+        const tempA = a.beerTemp !== null ? a.beerTemp : 999;
+        const tempB = b.beerTemp !== null ? b.beerTemp : 999;
+        return tempA - tempB;
+      });
     }
-    return true;
-  }), [fv, ff, fr, q, visited, favorites]);
+    
+    return result;
+  }, [fv, ff, fr, q, visited, favorites, onlyVisitedByTeam, sortBy]);
 
   const grouped = useMemo(() => {
     const g = {};
-    filtered.forEach(b => { (g[b.region] = g[b.region] || []).push(b) });
+    filteredAndSorted.forEach(b => { (g[b.region] = g[b.region] || []).push(b) });
     return g;
-  }, [filtered]);
+  }, [filteredAndSorted]);
   const regionKeys = Object.keys(grouped).sort();
 
   return (
@@ -160,6 +184,7 @@ export default function App() {
       {/* BARS TAB */}
       {tab === "bares" && (
         <>
+          {/* Sticky filters */}
           <div style={{ background: "#fff", borderBottom: "1px solid #e8e0d0", position: "sticky", top: 0, zIndex: 20, boxShadow: "0 2px 10px rgba(0,0,0,0.06)" }}>
             <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0.8rem 1.5rem", display: "flex", gap: "0.55rem", alignItems: "center", flexWrap: "wrap" }}>
               <div style={{ flex: "1 1 180px", position: "relative" }}>
@@ -171,16 +196,42 @@ export default function App() {
                 style={{ padding: "0.48rem 0.7rem", border: "1.5px solid #ddd", borderRadius: "8px", background: fr !== "Todas" ? "#eafaf1" : "#faf8f3", fontSize: "0.83rem", color: fr !== "Todas" ? "#1a472a" : "#555", outline: "none", fontWeight: fr !== "Todas" ? 700 : 400 }}>
                 {REGIONS.map(r => <option key={r}>{r}</option>)}
               </select>
+              
+              {/* NOVO FILTRO: Apenas visitados pelo time */}
+              <button onClick={() => setOnlyVisitedByTeam(v => !v)} style={{ 
+                padding: "0.45rem 0.9rem", 
+                borderRadius: "20px", 
+                border: `2px solid ${onlyVisitedByTeam ? "#27ae60" : "#ddd"}`, 
+                background: onlyVisitedByTeam ? "#eafaf1" : "#fff", 
+                color: onlyVisitedByTeam ? "#1a5c30" : "#666", 
+                fontSize: "0.8rem", 
+                fontWeight: 600, 
+                display: "flex", 
+                alignItems: "center", 
+                gap: "4px", 
+                fontFamily: "sans-serif" 
+              }}>
+                <CheckCircle d={onlyVisitedByTeam} /> Time visitou
+              </button>
+              
+              {/* NOVA ORDENAÇÃO */}
+              <select value={sortBy} onChange={e => setSortBy(e.target.value)}
+                style={{ padding: "0.48rem 0.7rem", border: "1.5px solid #ddd", borderRadius: "8px", background: sortBy !== "none" ? "#e8f4f8" : "#faf8f3", fontSize: "0.83rem", color: sortBy !== "none" ? "#1a5276" : "#555", outline: "none", fontWeight: sortBy !== "none" ? 700 : 400 }}>
+                <option value="none">📋 Sem ordenação</option>
+                <option value="rating">⭐ Maior nota</option>
+                <option value="beerTemp">🌡️ Mais gelada</option>
+              </select>
+              
               <button onClick={() => setFv(v => !v)} style={{ padding: "0.45rem 0.9rem", borderRadius: "20px", border: `2px solid ${fv ? "#27ae60" : "#ddd"}`, background: fv ? "#eafaf1" : "#fff", color: fv ? "#1a5c30" : "#666", fontSize: "0.8rem", fontWeight: 600, display: "flex", alignItems: "center", gap: "4px", fontFamily: "sans-serif" }}>
                 <CheckCircle d={fv} /> Visitados
               </button>
               <button onClick={() => setFf(v => !v)} style={{ padding: "0.45rem 0.9rem", borderRadius: "20px", border: `2px solid ${ff ? "#e74c3c" : "#ddd"}`, background: ff ? "#fdf0ed" : "#fff", color: ff ? "#c0392b" : "#666", fontSize: "0.8rem", fontWeight: 600, display: "flex", alignItems: "center", gap: "4px", fontFamily: "sans-serif" }}>
                 <HeartIcon f={ff} /> Favoritos
               </button>
-              {(fv || ff || fr !== "Todas" || q) && (
-                <button onClick={() => { setFv(false); setFf(false); setFr("Todas"); setQ("") }} style={{ padding: "0.45rem 0.85rem", borderRadius: "20px", border: "1px solid #ccc", background: "#fff", color: "#888", fontSize: "0.78rem", fontFamily: "sans-serif" }}>✕ Limpar</button>
+              {(fv || ff || fr !== "Todas" || q || onlyVisitedByTeam || sortBy !== "none") && (
+                <button onClick={() => { setFv(false); setFf(false); setFr("Todas"); setQ(""); setOnlyVisitedByTeam(false); setSortBy("none"); }} style={{ padding: "0.45rem 0.85rem", borderRadius: "20px", border: "1px solid #ccc", background: "#fff", color: "#888", fontSize: "0.78rem", fontFamily: "sans-serif" }}>✕ Limpar</button>
               )}
-              <div style={{ marginLeft: "auto", fontSize: "0.75rem", color: "#aaa", fontFamily: "sans-serif", whiteSpace: "nowrap" }}>{filtered.length} / {BARS.length}</div>
+              <div style={{ marginLeft: "auto", fontSize: "0.75rem", color: "#aaa", fontFamily: "sans-serif", whiteSpace: "nowrap" }}>{filteredAndSorted.length} / {BARS.length}</div>
             </div>
           </div>
 
@@ -196,16 +247,16 @@ export default function App() {
           </div>
 
           <main style={{ maxWidth: "1200px", margin: "0 auto", padding: "1.5rem 1.5rem 3rem" }}>
-            {filtered.length === 0 ? (
+            {filteredAndSorted.length === 0 ? (
               <div style={{ textAlign: "center", padding: "5rem 2rem", color: "#888" }}>
                 <div style={{ fontSize: "3rem", marginBottom: "1rem" }}>🔍</div>
                 <p style={{ fontFamily: "sans-serif" }}>Nenhum bar encontrado com esses filtros.</p>
-                <button onClick={() => { setFv(false); setFf(false); setFr("Todas"); setQ("") }} style={{ marginTop: "1rem", padding: "0.5rem 1.5rem", background: "#1a472a", color: "#fff", border: "none", borderRadius: "8px", fontFamily: "sans-serif" }}>Limpar filtros</button>
+                <button onClick={() => { setFv(false); setFf(false); setFr("Todas"); setQ(""); setOnlyVisitedByTeam(false); setSortBy("none"); }} style={{ marginTop: "1rem", padding: "0.5rem 1.5rem", background: "#1a472a", color: "#fff", border: "none", borderRadius: "8px", fontFamily: "sans-serif" }}>Limpar filtros</button>
               </div>
             ) : (
-              fr !== "Todas" ? (
+              sortBy !== "none" ? (
                 <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill,minmax(280px,1fr))", gap: "1.2rem" }}>
-                  {filtered.map(b => <Card key={b.id} b={b} visited={visited} favorites={favorites} tv={tv} tf={tf} exp={exp} setExp={setExp} imgErr={imgErr} setImgErr={setImgErr} />)}
+                  {filteredAndSorted.map(b => <Card key={b.id} b={b} visited={visited} favorites={favorites} tv={tv} tf={tf} exp={exp} setExp={setExp} imgErr={imgErr} setImgErr={setImgErr} sortBy={sortBy} />)}
                 </div>
               ) : (
                 regionKeys.map(region => (
@@ -216,7 +267,7 @@ export default function App() {
                       <span style={{ background: REGION_COLOR[region] + "18", color: REGION_COLOR[region], borderRadius: "20px", padding: "2px 10px", fontSize: "0.72rem", fontFamily: "sans-serif", fontWeight: 700 }}>{grouped[region].length} bares</span>
                     </div>
                     <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill,minmax(280px,1fr))", gap: "1.1rem" }}>
-                      {grouped[region].map(b => <Card key={b.id} b={b} visited={visited} favorites={favorites} tv={tv} tf={tf} exp={exp} setExp={setExp} imgErr={imgErr} setImgErr={setImgErr} />)}
+                      {grouped[region].map(b => <Card key={b.id} b={b} visited={visited} favorites={favorites} tv={tv} tf={tf} exp={exp} setExp={setExp} imgErr={imgErr} setImgErr={setImgErr} sortBy={sortBy} />)}
                     </div>
                   </section>
                 ))
@@ -237,7 +288,7 @@ export default function App() {
   );
 }
 
-function Card({ b, visited, favorites, tv, tf, exp, setExp, imgErr, setImgErr }) {
+function Card({ b, visited, favorites, tv, tf, exp, setExp, imgErr, setImgErr, sortBy }) {
   const isV = visited.has(b.id), isF = favorites.has(b.id), isE = exp === b.id;
   const rc = REGION_COLOR[b.region] || "#555";
   const hasErr = imgErr.has(b.id);
@@ -247,11 +298,19 @@ function Card({ b, visited, favorites, tv, tf, exp, setExp, imgErr, setImgErr })
   
   const getTempColor = (temp) => {
     if (temp === null) return "#aaa";
-    if (temp < -5) return "#2980b9";
-    if (temp < -3) return "#3498db";
+    if (temp < -7) return "#0d3b66";
+    if (temp < -5) return "#1a5276";
+    if (temp < -3) return "#2980b9";
     if (temp >= -3 && temp <= 1) return "#2ecc71";
     if (temp > 1 && temp <= 3) return "#f1c40f";
+    if (temp > 3 && temp <= 6) return "#e67e22";
     return "#e74c3c";
+  };
+  
+  const getTempGlow = (temp) => {
+    if (temp === null) return "none";
+    if (temp < -5) return "0 0 4px rgba(41,128,185,0.5)";
+    return "none";
   };
   
   return (
@@ -296,27 +355,27 @@ function Card({ b, visited, favorites, tv, tf, exp, setExp, imgErr, setImgErr })
           </div>
         </div>
         
-        {/* INFO VISITA DO TIME, RATING E TEMPERATURA - Tudo na mesma linha */}
+        {/* INFO VISITA DO TIME, RATING E TEMPERATURA - Linha unificada com melhor contraste */}
         <div style={{ 
           display: "flex", 
           justifyContent: "space-between", 
           alignItems: "center", 
-          marginTop: "0.5rem",
-          padding: "0.35rem 0",
-          borderTop: "1px solid #f0ebe0",
-          borderBottom: "1px solid #f0ebe0",
+          marginTop: "0.6rem",
+          padding: "0.5rem 0.6rem",
+          background: "#2c3e2f",
+          borderRadius: "10px",
           gap: "8px",
           flexWrap: "wrap"
         }}>
           {/* Status da visita do time */}
-          <div style={{ display: "flex", alignItems: "center", gap: "4px", flexShrink: 0 }}>
+          <div style={{ display: "flex", alignItems: "center", gap: "5px", flexShrink: 0 }}>
             {hasVisitedByParticipants ? (
               <>
                 <CheckCircle d={true} />
                 <span style={{ 
-                  fontSize: "0.68rem", 
+                  fontSize: "0.72rem", 
                   fontFamily: "sans-serif", 
-                  color: "#27ae60",
+                  color: "#a8e6cf",
                   fontWeight: 600,
                   whiteSpace: "nowrap"
                 }}>
@@ -325,11 +384,11 @@ function Card({ b, visited, favorites, tv, tf, exp, setExp, imgErr, setImgErr })
               </>
             ) : (
               <>
-                <span style={{ fontSize: "0.68rem", fontFamily: "sans-serif", color: "#bbb" }}>⏳</span>
+                <span style={{ fontSize: "0.72rem", fontFamily: "sans-serif", color: "#aaa" }}>⏳</span>
                 <span style={{ 
-                  fontSize: "0.68rem", 
+                  fontSize: "0.72rem", 
                   fontFamily: "sans-serif", 
-                  color: "#bbb",
+                  color: "#aaa",
                   whiteSpace: "nowrap"
                 }}>
                   Aguardando
@@ -340,31 +399,44 @@ function Card({ b, visited, favorites, tv, tf, exp, setExp, imgErr, setImgErr })
           
           {/* Nota do time */}
           {hasRating && (
-            <div style={{ display: "flex", alignItems: "center", gap: "4px", flexShrink: 0 }}>
-              <span style={{ fontSize: "0.7rem", color: "#f39c12" }}>⭐</span>
+            <div style={{ display: "flex", alignItems: "center", gap: "4px", flexShrink: 0, background: "rgba(255,255,255,0.15)", padding: "2px 8px", borderRadius: "20px" }}>
+              <span style={{ fontSize: "0.75rem", color: "#f9e74d" }}>⭐</span>
               <span style={{ 
-                fontSize: "0.7rem", 
+                fontSize: "0.75rem", 
                 fontFamily: "sans-serif", 
                 fontWeight: 700, 
-                color: "#f39c12"
+                color: "#f9e74d"
               }}>
                 {b.rating.toFixed(1)}
               </span>
             </div>
           )}
           
-          {/* Temperatura da cerveja */}
+          {/* Temperatura da cerveja - com destaque para mais geladas */}
           {hasBeerTemp && (
-            <div style={{ display: "flex", alignItems: "center", gap: "3px", flexShrink: 0 }}>
+            <div style={{ 
+              display: "flex", 
+              alignItems: "center", 
+              gap: "4px", 
+              flexShrink: 0,
+              background: b.beerTemp < -3 ? "rgba(41,128,185,0.25)" : "rgba(255,255,255,0.1)",
+              padding: "2px 8px",
+              borderRadius: "20px",
+              boxShadow: getTempGlow(b.beerTemp)
+            }}>
               <ThermometerIcon temp={b.beerTemp} />
               <span style={{ 
-                fontSize: "0.7rem", 
+                fontSize: "0.75rem", 
                 fontFamily: "sans-serif", 
-                fontWeight: 600,
-                color: getTempColor(b.beerTemp)
+                fontWeight: 700,
+                color: getTempColor(b.beerTemp),
+                textShadow: b.beerTemp < -5 ? "0 0 2px rgba(0,0,0,0.3)" : "none"
               }}>
                 {b.beerTemp}°C
               </span>
+              {b.beerTemp < -5 && (
+                <span style={{ fontSize: "0.6rem", color: "#85c1e9", marginLeft: "2px" }}>❄️</span>
+              )}
             </div>
           )}
         </div>
