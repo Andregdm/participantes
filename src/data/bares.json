@@ -191,7 +191,7 @@
       "address": "Rua Brás Cubas, 116",
       "dish": "Prova procê vê, criatura",
       "desc": "Canudo de pastel recheado de rabada e requeijão de raspa com maionese de agrião. Cremoso e irresistível.",
-      "photo": ""
+      "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09112832/mamute_provaprocevecriatura_bh_2026_rodneycosta_unibh-3876.jpg"
     },
     {
       "id": 19,
@@ -201,7 +201,7 @@
       "address": "Rua Flórida, 15",
       "dish": "Porco na Lama",
       "desc": "Lombo de panela com ora-pro-nóbis, batata e maionese de cebola picante. Sabor de quintal mineiro.",
-      "photo": ""
+      "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/16112227/pedecana_porconalama_joaovictor_unibh-3298.jpg"
     },
     {
       "id": 20,
@@ -211,7 +211,7 @@
       "address": "Rua Pium-I, 686",
       "dish": "Porco Escaldado Popeye",
       "desc": "Cubos de pernil mergulhados num escaldado de farinha de fubá torrada e espinafre refogado.",
-      "photo": "https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?w=400&q=80"
+      "photo": ""
     },
     {
       "id": 21,
@@ -221,7 +221,7 @@
       "address": "Av. Padre Vieira, 150",
       "dish": "Du Gibi",
       "desc": "Petisco exclusivo do ex-campeão: sabores nostálgicos da cozinha mineira em releitura contemporânea e criativa.",
-      "photo": "https://images.unsplash.com/photo-1544025162-d76694265947?w=400&q=80",
+      "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09113518/santuarioretro_dugibi_bh_2026_pauloti_unibh-4873.jpg",
       "champion": true
     },
     {
@@ -232,7 +232,7 @@
       "address": "Rua Francisco Deslandes, 10",
       "dish": "Di Joelho",
       "desc": "Joelho de porco defumado com chucrute, maionese de batata e chutney de abacaxi. Agridoce perfeito.",
-      "photo": "https://images.unsplash.com/photo-1544025162-d76694265947?w=400&q=80"
+      "photo": ""
     },
     {
       "id": 23,
