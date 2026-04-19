@@ -1,9 +1,9 @@
 import { useState, useMemo, useEffect } from "react";
 
 const PHOTO = {
-  carne:    "https://images.unsplash.com/photo-1544025162-d76694265947?w=400&q=80",
-  porco:    "https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?w=400&q=80",
-  frango:   "https://images.unsplash.com/photo-1598103442097-8b74394b95c0?w=400&q=80",
+  carne:    "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09110856/222_buraquimquente_bh_2026_pauloti_unibh-4859.jpg",
+  porco:    "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09110856/222_buraquimquente_bh_2026_pauloti_unibh-4859.jpg",
+  frango:   "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09110856/222_buraquimquente_bh_2026_pauloti_unibh-4859.jpg",
   peixe:    "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?w=400&q=80",
   vegano:   "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=400&q=80",
   bolinho:  "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=400&q=80",
