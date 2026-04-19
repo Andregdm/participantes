@@ -53,7 +53,6 @@ export default function App() {
   const [tab, setTab] = useState("bares");
   const [imgErr, setImgErr] = useState(new Set());
   
-  // NOVOS ESTADOS PARA FILTROS E ORDENAÇÃO
   const [onlyVisitedByTeam, setOnlyVisitedByTeam] = useState(false);
   const [sortBy, setSortBy] = useState("none");
 
@@ -76,7 +75,6 @@ export default function App() {
       return true;
     });
     
-    // ORDENAÇÃO
     if (sortBy === "rating") {
       result = [...result].sort((a, b) => {
         const ratingA = a.rating !== null ? a.rating : -1;
@@ -187,50 +185,62 @@ export default function App() {
           {/* Sticky filters */}
           <div style={{ background: "#fff", borderBottom: "1px solid #e8e0d0", position: "sticky", top: 0, zIndex: 20, boxShadow: "0 2px 10px rgba(0,0,0,0.06)" }}>
             <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0.8rem 1.5rem", display: "flex", gap: "0.55rem", alignItems: "center", flexWrap: "wrap" }}>
-              <div style={{ flex: "1 1 180px", position: "relative" }}>
+              
+              {/* Busca */}
+              <div style={{ flex: "2 1 200px", position: "relative" }}>
                 <span style={{ position: "absolute", left: "9px", top: "50%", transform: "translateY(-50%)", fontSize: "13px", color: "#aaa" }}>🔍</span>
                 <input type="text" placeholder="Bar, prato ou bairro..." value={q} onChange={e => setQ(e.target.value)}
                   style={{ width: "100%", padding: "0.48rem 0.75rem 0.48rem 1.9rem", border: "1.5px solid #ddd", borderRadius: "8px", fontSize: "0.83rem", background: "#faf8f3", color: "#333", outline: "none" }}/>
               </div>
-              <select value={fr} onChange={e => setFr(e.target.value)}
-                style={{ padding: "0.48rem 0.7rem", border: "1.5px solid #ddd", borderRadius: "8px", background: fr !== "Todas" ? "#eafaf1" : "#faf8f3", fontSize: "0.83rem", color: fr !== "Todas" ? "#1a472a" : "#555", outline: "none", fontWeight: fr !== "Todas" ? 700 : 400 }}>
-                {REGIONS.map(r => <option key={r}>{r}</option>)}
-              </select>
               
-              {/* NOVO FILTRO: Apenas visitados pelo time */}
-              <button onClick={() => setOnlyVisitedByTeam(v => !v)} style={{ 
-                padding: "0.45rem 0.9rem", 
-                borderRadius: "20px", 
-                border: `2px solid ${onlyVisitedByTeam ? "#27ae60" : "#ddd"}`, 
-                background: onlyVisitedByTeam ? "#eafaf1" : "#fff", 
-                color: onlyVisitedByTeam ? "#1a5c30" : "#666", 
-                fontSize: "0.8rem", 
-                fontWeight: 600, 
-                display: "flex", 
-                alignItems: "center", 
-                gap: "4px", 
-                fontFamily: "sans-serif" 
-              }}>
-                <CheckCircle d={onlyVisitedByTeam} /> Time visitou
-              </button>
+              {/* Regiões e Ordenação lado a lado */}
+              <div style={{ display: "flex", gap: "0.55rem", flexWrap: "wrap" }}>
+                <select value={fr} onChange={e => setFr(e.target.value)}
+                  style={{ padding: "0.48rem 0.7rem", border: "1.5px solid #ddd", borderRadius: "8px", background: fr !== "Todas" ? "#eafaf1" : "#faf8f3", fontSize: "0.83rem", color: fr !== "Todas" ? "#1a472a" : "#555", outline: "none", fontWeight: fr !== "Todas" ? 700 : 400 }}>
+                  {REGIONS.map(r => <option key={r}>{r === "Todas" ? "📌 Regiões" : r}</option>)}
+                </select>
+                
+                <select value={sortBy} onChange={e => setSortBy(e.target.value)}
+                  style={{ padding: "0.48rem 0.7rem", border: "1.5px solid #ddd", borderRadius: "8px", background: sortBy !== "none" ? "#e8f4f8" : "#faf8f3", fontSize: "0.83rem", color: sortBy !== "none" ? "#1a5276" : "#555", outline: "none", fontWeight: sortBy !== "none" ? 700 : 400 }}>
+                  <option value="none">📋 Ordenar por</option>
+                  <option value="rating">⭐ Maior nota</option>
+                  <option value="beerTemp">🌡️ Mais gelada</option>
+                </select>
+              </div>
               
-              {/* NOVA ORDENAÇÃO */}
-              <select value={sortBy} onChange={e => setSortBy(e.target.value)}
-                style={{ padding: "0.48rem 0.7rem", border: "1.5px solid #ddd", borderRadius: "8px", background: sortBy !== "none" ? "#e8f4f8" : "#faf8f3", fontSize: "0.83rem", color: sortBy !== "none" ? "#1a5276" : "#555", outline: "none", fontWeight: sortBy !== "none" ? 700 : 400 }}>
-                <option value="none">📋 Sem ordenação</option>
-                <option value="rating">⭐ Maior nota</option>
-                <option value="beerTemp">🌡️ Mais gelada</option>
-              </select>
+              {/* Botões de filtro lado a lado */}
+              <div style={{ display: "flex", gap: "0.55rem", flexWrap: "wrap" }}>
+                <button onClick={() => setOnlyVisitedByTeam(v => !v)} style={{ 
+                  padding: "0.45rem 0.9rem", 
+                  borderRadius: "20px", 
+                  border: `2px solid ${onlyVisitedByTeam ? "#27ae60" : "#ddd"}`, 
+                  background: onlyVisitedByTeam ? "#eafaf1" : "#fff", 
+                  color: onlyVisitedByTeam ? "#1a5c30" : "#666", 
+                  fontSize: "0.8rem", 
+                  fontWeight: 600, 
+                  display: "flex", 
+                  alignItems: "center", 
+                  gap: "4px", 
+                  fontFamily: "sans-serif" 
+                }}>
+                  <CheckCircle d={onlyVisitedByTeam} /> Time visitou
+                </button>
+                
+                <button onClick={() => setFv(v => !v)} style={{ padding: "0.45rem 0.9rem", borderRadius: "20px", border: `2px solid ${fv ? "#27ae60" : "#ddd"}`, background: fv ? "#eafaf1" : "#fff", color: fv ? "#1a5c30" : "#666", fontSize: "0.8rem", fontWeight: 600, display: "flex", alignItems: "center", gap: "4px", fontFamily: "sans-serif" }}>
+                  <CheckCircle d={fv} /> Visitados
+                </button>
+                
+                <button onClick={() => setFf(v => !v)} style={{ padding: "0.45rem 0.9rem", borderRadius: "20px", border: `2px solid ${ff ? "#e74c3c" : "#ddd"}`, background: ff ? "#fdf0ed" : "#fff", color: ff ? "#c0392b" : "#666", fontSize: "0.8rem", fontWeight: 600, display: "flex", alignItems: "center", gap: "4px", fontFamily: "sans-serif" }}>
+                  <HeartIcon f={ff} /> Favoritos
+                </button>
+              </div>
               
-              <button onClick={() => setFv(v => !v)} style={{ padding: "0.45rem 0.9rem", borderRadius: "20px", border: `2px solid ${fv ? "#27ae60" : "#ddd"}`, background: fv ? "#eafaf1" : "#fff", color: fv ? "#1a5c30" : "#666", fontSize: "0.8rem", fontWeight: 600, display: "flex", alignItems: "center", gap: "4px", fontFamily: "sans-serif" }}>
-                <CheckCircle d={fv} /> Visitados
-              </button>
-              <button onClick={() => setFf(v => !v)} style={{ padding: "0.45rem 0.9rem", borderRadius: "20px", border: `2px solid ${ff ? "#e74c3c" : "#ddd"}`, background: ff ? "#fdf0ed" : "#fff", color: ff ? "#c0392b" : "#666", fontSize: "0.8rem", fontWeight: 600, display: "flex", alignItems: "center", gap: "4px", fontFamily: "sans-serif" }}>
-                <HeartIcon f={ff} /> Favoritos
-              </button>
+              {/* Limpar filtros */}
               {(fv || ff || fr !== "Todas" || q || onlyVisitedByTeam || sortBy !== "none") && (
                 <button onClick={() => { setFv(false); setFf(false); setFr("Todas"); setQ(""); setOnlyVisitedByTeam(false); setSortBy("none"); }} style={{ padding: "0.45rem 0.85rem", borderRadius: "20px", border: "1px solid #ccc", background: "#fff", color: "#888", fontSize: "0.78rem", fontFamily: "sans-serif" }}>✕ Limpar</button>
               )}
+              
+              {/* Contador */}
               <div style={{ marginLeft: "auto", fontSize: "0.75rem", color: "#aaa", fontFamily: "sans-serif", whiteSpace: "nowrap" }}>{filteredAndSorted.length} / {BARS.length}</div>
             </div>
           </div>
@@ -355,14 +365,14 @@ function Card({ b, visited, favorites, tv, tf, exp, setExp, imgErr, setImgErr, s
           </div>
         </div>
         
-        {/* INFO VISITA DO TIME, RATING E TEMPERATURA - Linha unificada com melhor contraste */}
+        {/* INFO VISITA DO TIME, RATING E TEMPERATURA - Fundo cinza claro */}
         <div style={{ 
           display: "flex", 
           justifyContent: "space-between", 
           alignItems: "center", 
           marginTop: "0.6rem",
           padding: "0.5rem 0.6rem",
-          background: "#2c3e2f",
+          background: "#e8e8e8",
           borderRadius: "10px",
           gap: "8px",
           flexWrap: "wrap"
@@ -375,7 +385,7 @@ function Card({ b, visited, favorites, tv, tf, exp, setExp, imgErr, setImgErr, s
                 <span style={{ 
                   fontSize: "0.72rem", 
                   fontFamily: "sans-serif", 
-                  color: "#a8e6cf",
+                  color: "#2c5e2e",
                   fontWeight: 600,
                   whiteSpace: "nowrap"
                 }}>
@@ -384,11 +394,11 @@ function Card({ b, visited, favorites, tv, tf, exp, setExp, imgErr, setImgErr, s
               </>
             ) : (
               <>
-                <span style={{ fontSize: "0.72rem", fontFamily: "sans-serif", color: "#aaa" }}>⏳</span>
+                <span style={{ fontSize: "0.72rem", fontFamily: "sans-serif", color: "#888" }}>⏳</span>
                 <span style={{ 
                   fontSize: "0.72rem", 
                   fontFamily: "sans-serif", 
-                  color: "#aaa",
+                  color: "#888",
                   whiteSpace: "nowrap"
                 }}>
                   Aguardando
@@ -399,27 +409,27 @@ function Card({ b, visited, favorites, tv, tf, exp, setExp, imgErr, setImgErr, s
           
           {/* Nota do time */}
           {hasRating && (
-            <div style={{ display: "flex", alignItems: "center", gap: "4px", flexShrink: 0, background: "rgba(255,255,255,0.15)", padding: "2px 8px", borderRadius: "20px" }}>
-              <span style={{ fontSize: "0.75rem", color: "#f9e74d" }}>⭐</span>
+            <div style={{ display: "flex", alignItems: "center", gap: "4px", flexShrink: 0, background: "rgba(0,0,0,0.08)", padding: "2px 8px", borderRadius: "20px" }}>
+              <span style={{ fontSize: "0.75rem", color: "#d4a017" }}>⭐</span>
               <span style={{ 
                 fontSize: "0.75rem", 
                 fontFamily: "sans-serif", 
                 fontWeight: 700, 
-                color: "#f9e74d"
+                color: "#d4a017"
               }}>
                 {b.rating.toFixed(1)}
               </span>
             </div>
           )}
           
-          {/* Temperatura da cerveja - com destaque para mais geladas */}
+          {/* Temperatura da cerveja */}
           {hasBeerTemp && (
             <div style={{ 
               display: "flex", 
               alignItems: "center", 
               gap: "4px", 
               flexShrink: 0,
-              background: b.beerTemp < -3 ? "rgba(41,128,185,0.25)" : "rgba(255,255,255,0.1)",
+              background: b.beerTemp < -3 ? "rgba(41,128,185,0.15)" : "rgba(0,0,0,0.05)",
               padding: "2px 8px",
               borderRadius: "20px",
               boxShadow: getTempGlow(b.beerTemp)
@@ -430,12 +440,12 @@ function Card({ b, visited, favorites, tv, tf, exp, setExp, imgErr, setImgErr, s
                 fontFamily: "sans-serif", 
                 fontWeight: 700,
                 color: getTempColor(b.beerTemp),
-                textShadow: b.beerTemp < -5 ? "0 0 2px rgba(0,0,0,0.3)" : "none"
+                textShadow: b.beerTemp < -5 ? "0 0 2px rgba(0,0,0,0.2)" : "none"
               }}>
                 {b.beerTemp}°C
               </span>
               {b.beerTemp < -5 && (
-                <span style={{ fontSize: "0.6rem", color: "#85c1e9", marginLeft: "2px" }}>❄️</span>
+                <span style={{ fontSize: "0.6rem", color: "#2980b9", marginLeft: "2px" }}>❄️</span>
               )}
             </div>
           )}
