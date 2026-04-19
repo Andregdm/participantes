@@ -20,7 +20,10 @@
       "dish": "Trio Mineiro-Bão Di Mais",
       "desc": "Um trio irresistível que celebra a cozinha de Minas: carninha de panela, couve refogada e angu cremoso em perfeita harmonia.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09111226/bardobartolomeu_triomineirobaodemais_bh_2026_rodneycosta_unibh-4207.jpg",
-      "photoCredit": "Rodney Costa UniBH"
+      "photoCredit": "Rodney Costa UniBH",
+      "visited": true,
+      "rating": 7.5,
+      "beerTemp": null
     },
     {
       "id": 2,
@@ -31,7 +34,10 @@
       "dish": "Ora pro Boi",
       "desc": "Cubos de carne bovina grelhados no espeto, servidos com ora-pro-nóbis refogado e farofa crocante.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09112459/espetinhodoboi_oraproboi_bh_2026_pauloti_unibh-4969.jpg",
-      "photoCredit": "Paulo Ti UniBH"
+      "photoCredit": "Paulo Ti UniBH",
+      "visited": true,
+      "rating": 8.25,
+      "beerTemp": null
     },
     {
       "id": 3,
@@ -42,7 +48,10 @@
       "dish": "Coxa Supreme ao Alho Poró",
       "desc": "Sobrecoxa empanada e dourada, servida sobre cama de alho-poró caramelizado e molho especial da casa.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09112612/goldengrill_coxasuprimeaoalhoporo_bh_2026_rodneycosta_unibh-4571.jpg",
-      "photoCredit": "Rodney Costa UniBH"
+      "photoCredit": "Rodney Costa UniBH",
+      "visited": true,
+      "rating": 8.83,
+      "beerTemp": null
     },
     {
       "id": 4,
@@ -54,7 +63,10 @@
       "desc": "Clássico mineiro revisitado: costelinha, linguiça, couve e angu juntos num prato que é puro afeto.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09112719/jatoindo_tremdeminas_bh_2026_pauloti_unibh-5234.jpg",
       "photoCredit": "Paulo Ti UniBH",
-      "champion": true
+      "champion": true,
+      "visited": true,
+      "rating": 9.5,
+      "beerTemp": null
     },
     {
       "id": 5,
@@ -65,7 +77,10 @@
       "dish": "Di Juei",
       "desc": "Corte suíno suculento com mandioca cozida e couve crispy. Simplicidade e sabor de boteco raiz.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09112825/leodaquadra_dijuei_bh_2026_pauloti_unibh-4097.jpg",
-      "photoCredit": "Paulo Ti UniBH"
+      "photoCredit": "Paulo Ti UniBH",
+      "visited": true,
+      "rating": 8.17,
+      "beerTemp": null
     },
     {
       "id": 6,
@@ -76,7 +91,10 @@
       "dish": "Buraquim Quente",
       "desc": "Minipães de sal com gergelim, recheados com carne de panela e finalizados com queijo canastra e couve crispy.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09110856/222_buraquimquente_bh_2026_pauloti_unibh-4859.jpg",
-      "photoCredit": "Paulo Ti UniBH"
+      "photoCredit": "Paulo Ti UniBH",
+      "visited": false,
+      "rating": null,
+      "beerTemp": null
     },
     {
       "id": 7,
@@ -87,7 +105,10 @@
       "dish": "On co tô",
       "desc": "Moelinha de frango escondida sob purê de alho-poró e crispy de cebola dourado. Petisco surpreendente.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09111007/azouquefogobar_oncoto_bh_2026_rodneycosta_unibh-4638.jpg",
-      "photoCredit": "Rodney Costa UniBH"
+      "photoCredit": "Rodney Costa UniBH",
+      "visited": false,
+      "rating": null,
+      "beerTemp": null
     },
     {
       "id": 8,
@@ -98,7 +119,10 @@
       "dish": "Pastel Pega no Poró",
       "desc": "Pastel de alho-poró com queijo, acompanhado de farofa de couve, costelinha, gremolata e molho de goiaba.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09111008/baiuca_pastelpeganoporo_bh_2026_pauloti_unibh-4013.jpg",
-      "photoCredit": "Paulo Ti UniBH"
+      "photoCredit": "Paulo Ti UniBH",
+      "visited": false,
+      "rating": null,
+      "beerTemp": null
     },
     {
       "id": 9,
@@ -109,7 +133,10 @@
       "dish": "Com a Barriga no Fogão",
       "desc": "Barriga de porco de panela cozida, fritas de mandioca e espinafre, farofa de couve e molho especial.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09111551/barestabelecimento_comabarriganofogo_bh_2026_rodneycosta_unibh-5068.jpg",
-      "photoCredit": "Rodney Costa UniBH"
+      "photoCredit": "Rodney Costa UniBH",
+      "visited": false,
+      "rating": null,
+      "beerTemp": null
     },
     {
       "id": 10,
@@ -120,7 +147,10 @@
       "dish": "Joelho do Vovô Pig",
       "desc": "Joelho de porco com milho assado, polenta cremosa e mostarda refogada. Prato que abraça e aquece.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09111555/maniamineira_joelhodavovopig_bh_2026_pauloti_unibh-3996.jpg",
-      "photoCredit": "Paulo Ti UniBH"
+      "photoCredit": "Paulo Ti UniBH",
+      "visited": false,
+      "rating": null,
+      "beerTemp": null
     },
     {
       "id": 11,
@@ -131,7 +161,10 @@
       "dish": "Verde que te quero rabo!",
       "desc": "Rabada desfiada com cuscuz, vinagrete de alho-poró e creme verde de agrião. Tradição com frescor.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09111807/becorestaurante_verdequetequerorabo_bh_2026_pauloti_unibh-4495.jpg",
-      "photoCredit": "Paulo Ti UniBH"
+      "photoCredit": "Paulo Ti UniBH",
+      "visited": false,
+      "rating": null,
+      "beerTemp": null
     },
     {
       "id": 12,
@@ -142,7 +175,10 @@
       "dish": "Nascif Corrêa",
       "desc": "Musseline de couve-flor, ragu de lombo, chucrute de repolho e gergelim, acompanhada de nachos.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09111810/boimajor_nacifcorrea_bh_2026_rodneycosta_unibh-4323.jpg",
-      "photoCredit": "Rodney Costa UniBH"
+      "photoCredit": "Rodney Costa UniBH",
+      "visited": false,
+      "rating": null,
+      "beerTemp": null
     },
     {
       "id": 13,
@@ -154,7 +190,10 @@
       "desc": "Picadinho de carne bovina, acompanhado de sunomono de talo de couve, torradas e nuvem de queijo parmesão.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09112026/cafepalhares_picadimdecarne_bh_2026_rodneycosta_unibh-4797.jpg",
       "photoCredit": "Rodney Costa UniBH",
-      "champion": true
+      "champion": true,
+      "visited": false,
+      "rating": null,
+      "beerTemp": null
     },
     {
       "id": 14,
@@ -165,7 +204,10 @@
       "dish": "Tesouro Escondido",
       "desc": "Croquete de couve-flor, batata e ora-pro-nóbis com proteína de soja. Servido com molho de queijo e chips de batata-doce.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/02/12060043/cdb26_kv-1536x864.png",
-      "photoCredit": "Divulgação Comida di Buteco"
+      "photoCredit": "Divulgação Comida di Buteco",
+      "visited": false,
+      "rating": null,
+      "beerTemp": null
     },
     {
       "id": 15,
@@ -176,7 +218,10 @@
       "dish": "Gira Gosto",
       "desc": "Bolinho de espinafre recheado de costelinha e queijo. Acompanha molho de alho e geleia de abacaxi picante.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09112352/donadora_giragosto_bh_2026_pauloti_unibh-4112.jpg",
-      "photoCredit": "Paulo Ti UniBH"
+      "photoCredit": "Paulo Ti UniBH",
+      "visited": false,
+      "rating": null,
+      "beerTemp": null
     },
     {
       "id": 16,
@@ -187,7 +232,10 @@
       "dish": "Vulcão Oásis Quió",
       "desc": "Disco de carne recheada com creme de rúcula, guarnecido de polenta mole, molho e mostarda crocante.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09112504/espetinhosaopedroquio_vulcaonooasisquio_bh_2026_rodneycosta_unibh-4430.jpg",
-      "photoCredit": "Rodney Costa UniBH"
+      "photoCredit": "Rodney Costa UniBH",
+      "visited": false,
+      "rating": null,
+      "beerTemp": null
     },
     {
       "id": 17,
@@ -198,7 +246,10 @@
       "dish": "Bolim com Nóbis",
       "desc": "Bolinho de mandioca com linguiça, acompanhado de molho pesto de ora-pro-nóbis. Criatividade botequeira!",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09112614/grafficabar_bolmcomnobris_bh_2026_pauloamorim_unibh-3381.jpg",
-      "photoCredit": "Paulo Amorim UniBH"
+      "photoCredit": "Paulo Amorim UniBH",
+      "visited": false,
+      "rating": null,
+      "beerTemp": null
     },
     {
       "id": 18,
@@ -209,7 +260,10 @@
       "dish": "Prova procê vê, criatura",
       "desc": "Canudo de pastel recheado de rabada e requeijão de raspa com maionese de agrião. Cremoso e irresistível.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09112832/mamute_provaprocevecriatura_bh_2026_rodneycosta_unibh-3876.jpg",
-      "photoCredit": "Rodney Costa UniBH"
+      "photoCredit": "Rodney Costa UniBH",
+      "visited": false,
+      "rating": null,
+      "beerTemp": null
     },
     {
       "id": 19,
@@ -220,7 +274,10 @@
       "dish": "Porco na Lama",
       "desc": "Lombo de panela com ora-pro-nóbis, batata e maionese de cebola picante. Sabor de quintal mineiro.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/16112227/pedecana_porconalama_joaovictor_unibh-3298.jpg",
-      "photoCredit": "João Victor UniBH"
+      "photoCredit": "João Victor UniBH",
+      "visited": false,
+      "rating": null,
+      "beerTemp": null
     },
     {
       "id": 20,
@@ -230,8 +287,11 @@
       "address": "Rua Pium-I, 686",
       "dish": "Porco Escaldado Popeye",
       "desc": "Cubos de pernil mergulhados num escaldado de farinha de fubá torrada e espinafre refogado.",
-      "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09113155/poizebar_porcoescaladadoopeye_bh_2026_rodneycosta_unibh-4690.jpg",
-      "photoCredit": "Rodney Costa UniBH"
+      "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09113155/poizebar_porcoescaldadoopeye_bh_2026_rodneycosta_unibh-4690.jpg",
+      "photoCredit": "Rodney Costa UniBH",
+      "visited": false,
+      "rating": null,
+      "beerTemp": null
     },
     {
       "id": 21,
@@ -243,7 +303,10 @@
       "desc": "Petisco exclusivo do ex-campeão: sabores nostálgicos da cozinha mineira em releitura contemporânea e criativa.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09113518/santuarioretro_dugibi_bh_2026_pauloti_unibh-4873.jpg",
       "photoCredit": "Paulo Ti UniBH",
-      "champion": true
+      "champion": true,
+      "visited": false,
+      "rating": null,
+      "beerTemp": null
     },
     {
       "id": 22,
@@ -254,7 +317,10 @@
       "dish": "Di Joelho",
       "desc": "Joelho de porco defumado com chucrute, maionese de batata e chutney de abacaxi. Agridoce perfeito.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09113633/viadeslandes_dijoelho_bh_2026_pauloti_unibh-4933.jpg",
-      "photoCredit": "Paulo Ti UniBH"
+      "photoCredit": "Paulo Ti UniBH",
+      "visited": false,
+      "rating": null,
+      "beerTemp": null
     },
     {
       "id": 23,
@@ -265,7 +331,10 @@
       "dish": "Esconde-Esconde",
       "desc": "Escondidinho de alho-poró recheado com carne de boi desfiada, acompanhado por torradas crocantes.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09113736/xambar_escondeesconde_bh_2026_rodneycosta_unibh-4581.jpg",
-      "photoCredit": "Rodney Costa UniBH"
+      "photoCredit": "Rodney Costa UniBH",
+      "visited": false,
+      "rating": null,
+      "beerTemp": null
     },
     {
       "id": 24,
@@ -276,7 +345,10 @@
       "dish": "Brasileirinho",
       "desc": "Sobrecoxa de frango no molho de cebola queimada, acompanhada de angu na cama de mostarda.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09111336/bardonelson_brasileirinho_bh_2026_rodneycosta_unibh-4559.jpg",
-      "photoCredit": "Rodney Costa UniBH"
+      "photoCredit": "Rodney Costa UniBH",
+      "visited": true,
+      "rating": 8.0,
+      "beerTemp": -3.3
     },
     {
       "id": 25,
@@ -287,7 +359,10 @@
       "dish": "Até quem não gosta come",
       "desc": "Couve-flor empanada no queijo parmesão com geleia da casa. A verdura que conquista até os resistentes!",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09111447/bardudu_atequemnaogostacome_bh_2026_pauloti_unibh-4066.jpg",
-      "photoCredit": "Paulo Ti UniBH"
+      "photoCredit": "Paulo Ti UniBH",
+      "visited": true,
+      "rating": 9.33,
+      "beerTemp": -1.4
     },
     {
       "id": 26,
@@ -298,7 +373,10 @@
       "dish": "Canela Suada",
       "desc": "Ossobuco ao molho, com ora-pro-nóbis refogado no alho e na farinha de milho, cebola-roxa e cheiro-verde.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09111548/bardomagrelo_canelasuada_bh_2026_pauloti_unibh-3415.jpg",
-      "photoCredit": "Paulo Ti UniBH"
+      "photoCredit": "Paulo Ti UniBH",
+      "visited": true,
+      "rating": 8.2,
+      "beerTemp": 0.8
     },
     {
       "id": 27,
@@ -309,7 +387,10 @@
       "dish": "Bem-casados",
       "desc": "Harmonioso casamento de carnes e verduras que traduz a essência da cozinha de boteco mineiro.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09111549/bardobranco_bemcasado_bh_2026_isaquerodrigues_unibh-3534.jpg",
-      "photoCredit": "Isaque Rodrigues UniBH"
+      "photoCredit": "Isaque Rodrigues UniBH",
+      "visited": true,
+      "rating": 7.75,
+      "beerTemp": -4.0
     },
     {
       "id": 28,
@@ -320,7 +401,10 @@
       "dish": "O Segredo da Força do Lampião",
       "desc": "Prato poderoso com carne nordestina encontrando as verduras mineiras: uma fusão de histórias e sabores.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09111700/bartematico_osegredodaforcadolampiao_bh_2026_rodneycosta_unibh-4664.jpg",
-      "photoCredit": "Rodney Costa UniBH"
+      "photoCredit": "Rodney Costa UniBH",
+      "visited": false,
+      "rating": null,
+      "beerTemp": null
     },
     {
       "id": 29,
@@ -331,7 +415,10 @@
       "dish": "Espírito de Porco",
       "desc": "Corte suíno com molho baiano e toque de verduras frescas. Uma viagem de sabores no coração de BH.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09112031/cantinhodabaiana_espiritodeporco_bh_2026_rodneycosta_unibh-4418.jpg",
-      "photoCredit": "Rodney Costa UniBH"
+      "photoCredit": "Rodney Costa UniBH",
+      "visited": true,
+      "rating": 7.67,
+      "beerTemp": null
     },
     {
       "id": 30,
@@ -342,7 +429,10 @@
       "dish": "Sabor Ancestral",
       "desc": "Charutinho de repolho-roxo recheado com ragu de pernil. Creme de abóbora com glass de bacon e crispy de couve.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09112135/barcasamojuba_saborancestral_bh_2026_pauloti_unibh-4980.jpg",
-      "photoCredit": "Paulo Ti UniBH"
+      "photoCredit": "Paulo Ti UniBH",
+      "visited": false,
+      "rating": null,
+      "beerTemp": null
     },
     {
       "id": 31,
@@ -353,7 +443,10 @@
       "dish": "Firmamento",
       "desc": "Corte bovino ao molho escuro, acompanhado de purê de couve-flor e crispy de batata. Prato estelar!",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09112249/cosmos_firmamento_bh_2026_julianunes_unibh-3756.jpg",
-      "photoCredit": "Julia Nunes UniBH"
+      "photoCredit": "Julia Nunes UniBH",
+      "visited": true,
+      "rating": 8.86,
+      "beerTemp": -3.3
     },
     {
       "id": 32,
@@ -364,7 +457,10 @@
       "dish": "Espinafrou a Trouxinha",
       "desc": "Trouxinha de espinafre recheada com carne e queijo, finalizada com molho especial da casa.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09112608/galpaoflordocampo_espinafrouatrouxinha_bh_2026_rodneycosta_unibh-3862.jpg",
-      "photoCredit": "Rodney Costa UniBH"
+      "photoCredit": "Rodney Costa UniBH",
+      "visited": false,
+      "rating": null,
+      "beerTemp": null
     },
     {
       "id": 33,
@@ -375,7 +471,10 @@
       "dish": "Moela ao molho com Peixinho da Horta pra nadar!",
       "desc": "Moela ao molho encorpado, acompanhada de almeirão refogado (o 'peixinho da horta') e farofa.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09112615/iracema_moelaaomolhocompeixinhodahortapronadar_bh_2026_pauloti_unibh-4030.jpg",
-      "photoCredit": "Paulo Ti UniBH"
+      "photoCredit": "Paulo Ti UniBH",
+      "visited": false,
+      "rating": null,
+      "beerTemp": null
     },
     {
       "id": 34,
@@ -386,7 +485,10 @@
       "dish": "Prosa Verde e Roxa",
       "desc": "Combinação de vegetais verdes e roxos com proteína em prato que é pura poesia gastronômica.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09112724/kobesemporiumbar_prosaverdeeroxa_bh_2026_rodneycosta_unibh-4146.jpg",
-      "photoCredit": "Rodney Costa UniBH"
+      "photoCredit": "Rodney Costa UniBH",
+      "visited": true,
+      "rating": 8.0,
+      "beerTemp": -3.9
     },
     {
       "id": 35,
@@ -397,7 +499,10 @@
       "dish": "Kostelinha Tropical",
       "desc": "Costelinha suína com toque tropical de frutas e couve crispy. Sabor que surpreende em cada mordida.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09112722/koqueirosbar_kostelinhatropical_bh_2026_juliacristine_unibh-3514.jpg",
-      "photoCredit": "Julia Cristine UniBH"
+      "photoCredit": "Julia Cristine UniBH",
+      "visited": true,
+      "rating": 8.0,
+      "beerTemp": -5.9
     },
     {
       "id": 36,
@@ -408,7 +513,10 @@
       "dish": "Porkin do Popeye",
       "desc": "Iscas de porco com purê de espinafre e molho especial. Popeye aprovaria cada garfada!",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09112827/locomotivasbar_porkimpopeye_bh_2026_rodneycosta_unibh-4302.jpg",
-      "photoCredit": "Rodney Costa UniBH"
+      "photoCredit": "Rodney Costa UniBH",
+      "visited": true,
+      "rating": 9.67,
+      "beerTemp": -7.3
     },
     {
       "id": 37,
@@ -419,7 +527,10 @@
       "dish": "Lambuzado",
       "desc": "Costelinha caramelizada com ora-pro-nóbis e crispy de batata-doce. Petisco que deixa os dedos e a alma lambuzados.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09113043/oratoriobar_lambuzado_bh_2026_rodneycosta_unibh-4675.jpg",
-      "photoCredit": "Rodney Costa UniBH"
+      "photoCredit": "Rodney Costa UniBH",
+      "visited": false,
+      "rating": null,
+      "beerTemp": null
     },
     {
       "id": 38,
@@ -430,7 +541,10 @@
       "dish": "Tô Ki",
       "desc": "Petisco criativo com mistura de quitandas mineiras, couve e proteína em apresentação que impressiona.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09113303/quitandasdatianice_toki_bh_2026_rodneycosta_unibh-4358.jpg",
-      "photoCredit": "Rodney Costa UniBH"
+      "photoCredit": "Rodney Costa UniBH",
+      "visited": true,
+      "rating": 8.33,
+      "beerTemp": -2.1
     },
     {
       "id": 39,
@@ -441,7 +555,10 @@
       "dish": "Mama mia!",
       "desc": "Inspiração italiana com sotaque mineiro: ragu encorpado com verduras frescas sobre base caprichada.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09113416/santaboemia_mamamia_bh_2026_rodneycosta_unibh-4596.jpg",
-      "photoCredit": "Rodney Costa UniBH"
+      "photoCredit": "Rodney Costa UniBH",
+      "visited": false,
+      "rating": null,
+      "beerTemp": null
     },
     {
       "id": 40,
@@ -452,7 +569,10 @@
       "dish": "Bendita Porpeta",
       "desc": "Porpeta de cupim recheada com alho-poró e queijo canastra, ao molho de tomate da casa. Acompanha farofa com ora-pro-nóbis.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09111113/barbenditabaderna_benditaporpeta_bh_2026_pauloti_unibh-5051.jpg",
-      "photoCredit": "Paulo Ti UniBH"
+      "photoCredit": "Paulo Ti UniBH",
+      "visited": false,
+      "rating": null,
+      "beerTemp": null
     },
     {
       "id": 41,
@@ -463,7 +583,10 @@
       "dish": "Ajoelhou tem que rezar",
       "desc": "Joelho de porco acompanhado de ora-pro-nóbis e polenta frita. Quem prova, ajoelha de satisfação!",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09111119/bardagisa_ajoelhoutemquerezar_giovanaevilyn_unibh-3157.jpg",
-      "photoCredit": "Giovana Evilyn UniBH"
+      "photoCredit": "Giovana Evilyn UniBH",
+      "visited": true,
+      "rating": 8.33,
+      "beerTemp": -2.7
     },
     {
       "id": 42,
@@ -474,7 +597,10 @@
       "dish": "Tilápia Roletera",
       "desc": "Roletes de filé de tilápia empanado, recheados com mix de rúcula, muçarela e tomate seco. Acompanha molho especial.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09111338/bardopeixinho_tilapiaroletera_bh_2026_isaquerodrigues_unibh-3830.jpg",
-      "photoCredit": "Isaque Rodrigues UniBH"
+      "photoCredit": "Isaque Rodrigues UniBH",
+      "visited": false,
+      "rating": null,
+      "beerTemp": null
     },
     {
       "id": 43,
@@ -485,7 +611,10 @@
       "dish": "Frango Raiz",
       "desc": "Sobrecoxa ensopada com ora-pro-nóbis e polenta. Receita que remete ao fogão a lenha da vovó.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09112028/camisolabar_frangoraiz_bh_2026_vicentealexandre_unibh-3575.jpg",
-      "photoCredit": "Vicente Alexandre UniBH"
+      "photoCredit": "Vicente Alexandre UniBH",
+      "visited": false,
+      "rating": null,
+      "beerTemp": null
     },
     {
       "id": 44,
@@ -496,7 +625,10 @@
       "dish": "Coisa de Vó",
       "desc": "Pescoço de boi marinado com couve-flor ao molho branco especial e fios de alho-poró frito.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09112354/donajugastrobar_coisadevo_isaquerodrigues_unibh-3289.jpg",
-      "photoCredit": "Isaque Rodrigues UniBH"
+      "photoCredit": "Isaque Rodrigues UniBH",
+      "visited": true,
+      "rating": 9.4,
+      "beerTemp": -3.3
     },
     {
       "id": 45,
@@ -507,7 +639,10 @@
       "dish": "Sonho de Salsa",
       "desc": "Bombom salgado com o sabor e o frescor da salsa e molho de alho com beterraba. Uma surpresa deliciosa.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09112357/emporiolais_sanhodesalsa_bh_206_pauloti_unibh-5026-1024x684.jpg",
-      "photoCredit": "Paulo Ti UniBH"
+      "photoCredit": "Paulo Ti UniBH",
+      "visited": false,
+      "rating": null,
+      "beerTemp": null
     },
     {
       "id": 46,
@@ -518,7 +653,10 @@
       "dish": "Uai, Traíra não Traí!",
       "desc": "Traíra com purê de mandioca e crispy de couve, banana-da-terra e batata chips. Molho melado e de maracujá.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09113304/recantodatraira_trairanaotrai_bh_2026_isacrodrigues_unibh-3792.jpg",
-      "photoCredit": "Isaque Rodrigues UniBH"
+      "photoCredit": "Isaque Rodrigues UniBH",
+      "visited": false,
+      "rating": null,
+      "beerTemp": null
     },
     {
       "id": 47,
@@ -529,7 +667,10 @@
       "dish": "Pode comer que não é pecado",
       "desc": "Maçã de peito cozida com milho-verde e couve crispy com alho. Leveza com muito sabor.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09113411/resenhadanaty_podecomerquenaoepecado_bh_2026_rodneycosta_unibh-4649.jpg",
-      "photoCredit": "Rodney Costa UniBH"
+      "photoCredit": "Rodney Costa UniBH",
+      "visited": false,
+      "rating": null,
+      "beerTemp": null
     },
     {
       "id": 48,
@@ -540,7 +681,10 @@
       "dish": "Dona Farofa e Sr. Porquinho",
       "desc": "Farofa de espinafre, agrião e alho-poró na manteiga, servida com costelinha caipira pururucada e vinagrete de abacaxi.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09113523/spetim_donafarofaesrporquinho_bh_2026_pauloti_unibh-5204.jpg",
-      "photoCredit": "Paulo Ti UniBH"
+      "photoCredit": "Paulo Ti UniBH",
+      "visited": false,
+      "rating": null,
+      "beerTemp": null
     },
     {
       "id": 49,
@@ -551,7 +695,10 @@
       "dish": "Brasileirinho Raiz",
       "desc": "Petisco simples e honesto: corte bovino com verduras da horta e temperos mineiros de raiz.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09111228/bardobem_brsileirinhoraiz_bh_2026_rodneycosta_unibh-5080.jpg",
-      "photoCredit": "Rodney Costa UniBH"
+      "photoCredit": "Rodney Costa UniBH",
+      "visited": false,
+      "rating": null,
+      "beerTemp": null
     },
     {
       "id": 50,
@@ -562,7 +709,10 @@
       "dish": "Esfera Suína do Momô",
       "desc": "Bolinha de carne suína recheada com queijo e ervas frescas, servida com molho especial. Pequena e poderosa!",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09111335/bardomomo_esferasuina_rodneycosta_unibh-3114.jpg",
-      "photoCredit": "Rodney Costa UniBH"
+      "photoCredit": "Rodney Costa UniBH",
+      "visited": false,
+      "rating": null,
+      "beerTemp": null
     },
     {
       "id": 51,
@@ -573,7 +723,10 @@
       "dish": "Trem de Minas",
       "desc": "Clássico mineiro em versão botequeira: carnes, couve e mandioca como Minas manda fazer.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09111812/boteco86_tremdeminas_bh_2026_pauloti_unibh-4902.jpg",
-      "photoCredit": "Paulo Ti UniBH"
+      "photoCredit": "Paulo Ti UniBH",
+      "visited": false,
+      "rating": null,
+      "beerTemp": null
     },
     {
       "id": 52,
@@ -584,7 +737,10 @@
       "dish": "Porco Atolado na Lama",
       "desc": "Lombo suíno atolado em mandioca cozida com ora-pro-nóbis e molho encorpado da casa.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09112030/cantinaartequintal_porcoatoladonalama_juliacristine_unibh-3312.jpg",
-      "photoCredit": "Julia Cristine UniBH"
+      "photoCredit": "Julia Cristine UniBH",
+      "visited": false,
+      "rating": null,
+      "beerTemp": null
     },
     {
       "id": 53,
@@ -595,7 +751,10 @@
       "dish": "Botox Mineiro",
       "desc": "Costela bovina com couve-flor gratinada e molho especial. Prato que 'rejuvenesce' de tão bom!",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09112937/mulao_botoxmineiro_bh_2026_rodneycosta_unibh-4240.jpg",
-      "photoCredit": "Rodney Costa UniBH"
+      "photoCredit": "Rodney Costa UniBH",
+      "visited": false,
+      "rating": null,
+      "beerTemp": null
     },
     {
       "id": 54,
@@ -607,7 +766,10 @@
       "desc": "Ex-campeão de volta ao ringue com petisco nostálgico inspirado nas histórias em quadrinhos e nos sabores de sempre.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09113518/santuarioretro_dugibi_bh_2026_pauloti_unibh-4873.jpg",
       "photoCredit": "Paulo Ti UniBH",
-      "champion": true
+      "champion": true,
+      "visited": false,
+      "rating": null,
+      "beerTemp": null
     },
     {
       "id": 55,
@@ -619,7 +781,10 @@
       "desc": "Mix vegano com linguiça de espinafre, pastel de ora-pro-nóbis, torresmo de milho e molho de alho. Ex-campeão 2019!",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09113626/tanganica_triovegano_bh_2026_pauloti_unibh-4057.jpg",
       "photoCredit": "Paulo Ti UniBH",
-      "champion": true
+      "champion": true,
+      "visited": false,
+      "rating": null,
+      "beerTemp": null
     },
     {
       "id": 56,
@@ -630,7 +795,10 @@
       "dish": "Pé no Rabo (Homenagem ao Tonhão)",
       "desc": "Homenagem afetiva: pé e rabo de porco ao molho com ora-pro-nóbis, receita que conta uma história de família.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09113630/bartoninhoaltoforno_penorabo_bh_2026_pauloti_unibh-5193.jpg",
-      "photoCredit": "Paulo Ti UniBH"
+      "photoCredit": "Paulo Ti UniBH",
+      "visited": true,
+      "rating": 8.0,
+      "beerTemp": -2.1
     },
     {
       "id": 57,
@@ -641,7 +809,10 @@
       "dish": "Tião Véio",
       "desc": "Corte bovino ao molho com verduras da horta, no estilo rústico e saboroso do Tião de sempre.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/25074325/tiaovei_2026_belohorizonte.jpg",
-      "photoCredit": "Divulgação Comida di Buteco"
+      "photoCredit": "Divulgação Comida di Buteco",
+      "visited": false,
+      "rating": null,
+      "beerTemp": null
     },
     {
       "id": 58,
@@ -652,7 +823,10 @@
       "dish": "Porco à Mineira",
       "desc": "Lombo suíno ao molho mineiro com couve refogada e mandioca dourada. Clássico que nunca erra.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09111658/barstellaoficial_porcoamineira_bh_2026_rodneycosta_unibh-4700.jpg",
-      "photoCredit": "Rodney Costa UniBH"
+      "photoCredit": "Rodney Costa UniBH",
+      "visited": true,
+      "rating": 6.67,
+      "beerTemp": -8.0
     },
     {
       "id": 59,
@@ -663,7 +837,10 @@
       "dish": "O Giro du Aio Poró!",
       "desc": "Girassol de batatas assadas no azeite de ervas, frango desfiado com bacon, envolto em cream cheese e alho-poró, finalizado com queijo maçaricado.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09112137/chapamagica_girodoaioporo_bh_2026_kaiqueamorim_unibh-3799.jpg",
-      "photoCredit": "Kaique Amorim UniBH"
+      "photoCredit": "Kaique Amorim UniBH",
+      "visited": true,
+      "rating": 7.5,
+      "beerTemp": -2.6
     },
     {
       "id": 60,
@@ -674,7 +851,10 @@
       "dish": "Pescoço do Dino",
       "desc": "Pescoço de boi com farofa de alho e brócolis no vapor. Grande e saboroso como um dinossauro!",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09112245/campanhiadodino_pescocodeboidodino_rodneycosta_unibh-3209.jpg",
-      "photoCredit": "Rodney Costa UniBH"
+      "photoCredit": "Rodney Costa UniBH",
+      "visited": true,
+      "rating": 9.0,
+      "beerTemp": -6.6
     },
     {
       "id": 61,
@@ -685,7 +865,10 @@
       "dish": "Sereia do Bar",
       "desc": "Peixe ao molho especial com verduras da horta, servido em apresentação que encanta os olhos e o paladar.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09112610/garaggevintage_seriodobar_bh_2026_kaiqueamorim_unibh-3686.jpg",
-      "photoCredit": "Kaique Amorim UniBH"
+      "photoCredit": "Kaique Amorim UniBH",
+      "visited": true,
+      "rating": 7.83,
+      "beerTemp": -5.3
     },
     {
       "id": 62,
@@ -696,7 +879,10 @@
       "dish": "IVOquei o Porco",
       "desc": "Porco ao molho com ervas frescas e crispy de verduras. Um 'ivo' de sabor em cada garfada!",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09112717/ivogrill_ivoqueioporco_bh_2026_joaovictor_unibh-3950.jpg",
-      "photoCredit": "João Victor UniBH"
+      "photoCredit": "João Victor UniBH",
+      "visited": true,
+      "rating": 8.67,
+      "beerTemp": -6.0
     },
     {
       "id": 63,
@@ -707,7 +893,10 @@
       "dish": "Lanche do Popeye",
       "desc": "Lanche caprichado com recheio de espinafre, frango e queijo. Popeye aprovaria com honras!",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09113047/paradadosabor_lanchedepopeye_bh_2026_pauloti_unibh-5163.jpg",
-      "photoCredit": "Paulo Ti UniBH"
+      "photoCredit": "Paulo Ti UniBH",
+      "visited": true,
+      "rating": 7.75,
+      "beerTemp": null
     },
     {
       "id": 64,
@@ -718,7 +907,10 @@
       "dish": "Sô Forte Uai",
       "desc": "Frango robusto e saboroso com couve e mandioca. Prato forte que mostra toda a força do boteco mineiro.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09113158/queremosfrango_soforteuai_bh_2026_rodneycosta_unibh-4390.jpg",
-      "photoCredit": "Rodney Costa UniBH"
+      "photoCredit": "Rodney Costa UniBH",
+      "visited": true,
+      "rating": 9.0,
+      "beerTemp": -3.3
     },
     {
       "id": 65,
@@ -729,7 +921,10 @@
       "dish": "Menu de Minas",
       "desc": "Um cardápio inteiro em um prato: canjiquinha, pão de queijo, mix de carnes com alho-poró e pesto de espinafre.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09113737/zebolachabar_menudosgerais_bh_2026_pauloti_unibh-5144.jpg",
-      "photoCredit": "Paulo Ti UniBH"
+      "photoCredit": "Paulo Ti UniBH",
+      "visited": false,
+      "rating": null,
+      "beerTemp": null
     },
     {
       "id": 66,
@@ -741,7 +936,10 @@
       "desc": "Repolho ao creme com ragu de fraldinha. Petisco do ex-campeão 2018 que une tradição e inovação.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09111012/barbambu_tocomnagunamao_bh_2026_isaquerodrigues_unibh-3461.jpg",
       "photoCredit": "Isaque Rodrigues UniBH",
-      "champion": true
+      "champion": true,
+      "visited": false,
+      "rating": null,
+      "beerTemp": null
     },
     {
       "id": 67,
@@ -752,7 +950,10 @@
       "dish": "Cadim de Nós",
       "desc": "Bolinho de carne recheado com alho-poró, requeijão e queijo, com farofa de couve com torresmo e molho.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09111222/bardapraca_cadimdenos_bh_2026_pauloti_unibh-4502.jpg",
-      "photoCredit": "Paulo Ti UniBH"
+      "photoCredit": "Paulo Ti UniBH",
+      "visited": false,
+      "rating": null,
+      "beerTemp": null
     },
     {
       "id": 68,
@@ -763,7 +964,10 @@
       "dish": "Tesouro caipira com encanto da horta",
       "desc": "Corte suíno ao molho, creme de mandioca, farofa de couve com bacon e acelga. Tesouro do interior!",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09111224/bardasilvania_tesourocaipiracomencantodahorta_bh_2026_giovanaevelyn_unibh-3364.jpg",
-      "photoCredit": "Giovana Evelyn UniBH"
+      "photoCredit": "Giovana Evelyn UniBH",
+      "visited": false,
+      "rating": null,
+      "beerTemp": null
     },
     {
       "id": 69,
@@ -774,7 +978,10 @@
       "dish": "Fraldinha Suprema",
       "desc": "Fraldinha com creme de espinafre, crispy de cebola e geleia de tomate. Prato que conquista pela apresentação e sabor.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09111333/bardokim_fraldinhasupreme_bh_2026_pauloti_unibh-4724.jpg",
-      "photoCredit": "Paulo Ti UniBH"
+      "photoCredit": "Paulo Ti UniBH",
+      "visited": false,
+      "rating": null,
+      "beerTemp": null
     },
     {
       "id": 70,
@@ -785,7 +992,10 @@
       "dish": "Maçã de peito à moda do primo",
       "desc": "Maçã de peito com batata-doce e mostarda. Receita de família passada de geração em geração.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/16114137/whatsapp-image-2026-03-16-at-14.39.03-1536x1024.jpeg",
-      "photoCredit": "Divulgação Comida di Buteco"
+      "photoCredit": "Divulgação Comida di Buteco",
+      "visited": true,
+      "rating": 8.0,
+      "beerTemp": -7.3
     },
     {
       "id": 71,
@@ -796,7 +1006,10 @@
       "dish": "Leitão e Eva no Paraíso",
       "desc": "Costelinha suína, polenta com queijo e ora-pro-nóbis. Um paraíso de sabores em cada mordida!",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09111441/bardoregis_leilaoeevanoparaiso_bh_2026_giovanaevelyn_unibh-3344.jpg",
-      "photoCredit": "Giovana Evelyn UniBH"
+      "photoCredit": "Giovana Evelyn UniBH",
+      "visited": true,
+      "rating": 7.5,
+      "beerTemp": -0.9
     },
     {
       "id": 72,
@@ -807,7 +1020,10 @@
       "dish": "A Copa é Nossa",
       "desc": "Copa lombo assado com escarola refogada no alho. Acompanha farofa de soja. Campeão de futebol e de sabor!",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09111445/bardosmeninos_acopaenossa_bh_2026_pauloti_unibh-4886.jpg",
-      "photoCredit": "Paulo Ti UniBH"
+      "photoCredit": "Paulo Ti UniBH",
+      "visited": true,
+      "rating": 9.33,
+      "beerTemp": null
     },
     {
       "id": 73,
@@ -818,7 +1034,10 @@
       "dish": "Sabores da Roça",
       "desc": "Suflê de milho-verde recheado com carne cozida, acompanhado de mostarda. Roça servida com elegância.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09111010/bomsabor_saboresdaroca_bh_2026_pauloti_unibh-5218.jpg",
-      "photoCredit": "Paulo Ti UniBH"
+      "photoCredit": "Paulo Ti UniBH",
+      "visited": true,
+      "rating": 8.67,
+      "beerTemp": -3.9
     },
     {
       "id": 74,
@@ -829,7 +1048,10 @@
       "dish": "Marinheiro Popeye",
       "desc": "Panqueca de espinafre recheada com carne bovina e bacon, envolvida em molho e parmesão. Com banana-da-terra!",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09111553/juntojuntinho_marinheiropopeye_bh_2026_julianunes_unibh-3395.jpg",
-      "photoCredit": "Julia Nunes UniBH"
+      "photoCredit": "Julia Nunes UniBH",
+      "visited": true,
+      "rating": 8.0,
+      "beerTemp": -3.9
     },
     {
       "id": 75,
@@ -840,7 +1062,10 @@
       "dish": "Pé na Roça",
       "desc": "Dobradinha com pé de porco, calabresa, feijão-branco e crispy de couve. Pé firme na tradição!",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09111704/barzimdosamigos_penaroca_bh_2026_joaovictor_unibh-3489.jpg",
-      "photoCredit": "João Victor UniBH"
+      "photoCredit": "João Victor UniBH",
+      "visited": true,
+      "rating": 8.5,
+      "beerTemp": -7.3
     },
     {
       "id": 76,
@@ -851,7 +1076,10 @@
       "dish": "Boi Bumbá",
       "desc": "Carne de boi cozida ao molho de alho-poró, batata e bacon. Festa de sabores em cada colherada!",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09111914/botequimburitis_boibumba_bh_2026_pauloti_unibh-4077.jpg",
-      "photoCredit": "Paulo Ti UniBH"
+      "photoCredit": "Paulo Ti UniBH",
+      "visited": false,
+      "rating": null,
+      "beerTemp": null
     },
     {
       "id": 77,
@@ -862,7 +1090,10 @@
       "dish": "Escondidão Tô D'Boa",
       "desc": "Pernil cozido com molho, creme de batata com muçarela, couve agridoce. Escondido de bom que é!",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09111918/butecotodeboa_escondidinhotodeboa_bh_2026_rodneycosta_unibh-3587.jpg",
-      "photoCredit": "Rodney Costa UniBH"
+      "photoCredit": "Rodney Costa UniBH",
+      "visited": true,
+      "rating": 10.0,
+      "beerTemp": -7.3
     },
     {
       "id": 78,
@@ -873,7 +1104,10 @@
       "dish": "Nuhhh!!! de Rocha Véi",
       "desc": "Escondidinho de carne de panela com agrião, coberto de purê de couve-flor e queijo gratinado.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09111920/butecosbar_nuhderochavei_bh_2026_rodneycosta_unibh-5132.jpg",
-      "photoCredit": "Rodney Costa UniBH"
+      "photoCredit": "Rodney Costa UniBH",
+      "visited": true,
+      "rating": 8.2,
+      "beerTemp": -5.3
     },
     {
       "id": 79,
@@ -884,7 +1118,10 @@
       "dish": "Quituti Árabe",
       "desc": "Charuto de repolho recheado com arroz e carne moída. Acompanha disco de kafta grelhado e molho.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09111922/butiquim325_quitutiarabe_bh_2026_vicentealexandre_unibh-3630.jpg",
-      "photoCredit": "Vicente Alexandre UniBH"
+      "photoCredit": "Vicente Alexandre UniBH",
+      "visited": false,
+      "rating": null,
+      "beerTemp": null
     },
     {
       "id": 80,
@@ -895,7 +1132,10 @@
       "dish": "Fondue de Buteco",
       "desc": "Trouxinhas de bacon e lombo recheado com ricota e espinafre, acompanhado de fondue de queijos e abacaxi.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09112138/choperiaamericanortesul_fonduedebuteco_bh_2026_julianunes_unibh-3674.jpg",
-      "photoCredit": "Julia Nunes UniBH"
+      "photoCredit": "Julia Nunes UniBH",
+      "visited": false,
+      "rating": null,
+      "beerTemp": null
     },
     {
       "id": 81,
@@ -906,7 +1146,10 @@
       "dish": "O Sabor na Lata",
       "desc": "Carne de lata suína, acompanhada de molho sugo com almeirão. Sabor de boteco guardado com carinho.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09112140/choppdaesquina_sabornalata_bh_2026_rodneycosta_unibh-5096.jpg",
-      "photoCredit": "Rodney Costa UniBH"
+      "photoCredit": "Rodney Costa UniBH",
+      "visited": true,
+      "rating": 7.0,
+      "beerTemp": -3.1
     },
     {
       "id": 82,
@@ -917,7 +1160,10 @@
       "dish": "Rabada Embriagada",
       "desc": "Rabada ao vinho com agrião e batata. Uma rabada que bebeu bem e ficou mais gostosa ainda!",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09112243/comidaeprosa_rabadaembriagada_ludmylasandrin_unibh-3894.jpg",
-      "photoCredit": "Ludmyla Sandrin UniBH"
+      "photoCredit": "Ludmyla Sandrin UniBH",
+      "visited": false,
+      "rating": null,
+      "beerTemp": null
     },
     {
       "id": 83,
@@ -928,7 +1174,10 @@
       "dish": "Couve-flor à Cervejeira",
       "desc": "Paleta cozida na cerveja preta com calabresa e champignon, acompanhada de purê de couve-flor cremoso.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09112247/conectadosbar_couvefloracervejeira_bh_2026_rodneycosta_unibh-5113.jpg",
-      "photoCredit": "Rodney Costa UniBH"
+      "photoCredit": "Rodney Costa UniBH",
+      "visited": false,
+      "rating": null,
+      "beerTemp": null
     },
     {
       "id": 84,
@@ -939,7 +1188,10 @@
       "dish": "Moela da Tia",
       "desc": "Moela ao molho de tomate e alho-poró, acompanhada de minipães franceses e cheiro-verde.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09112506/espettinho.com_moeladatia_bh_2026_rodneycosta_unibh-4452.jpg",
-      "photoCredit": "Rodney Costa UniBH"
+      "photoCredit": "Rodney Costa UniBH",
+      "visited": false,
+      "rating": null,
+      "beerTemp": null
     },
     {
       "id": 85,
@@ -950,7 +1202,10 @@
       "dish": "Costelinha do Papai",
       "desc": "Costelinha suada, farofa de milho com bacon acompanhada de almeirão refogado. Carinho de pai no prato!",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/02/12060043/cdb26_kv-1536x864.png",
-      "photoCredit": "Divulgação Comida di Buteco"
+      "photoCredit": "Divulgação Comida di Buteco",
+      "visited": false,
+      "rating": null,
+      "beerTemp": null
     },
     {
       "id": 86,
@@ -961,7 +1216,10 @@
       "dish": "Atolacoxa",
       "desc": "Coxinhas de frango com queijo ao molho de goiabada levemente apimentada. Acompanha creme de rúcula.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09113050/pedegoiaba_atolacoxa_bh_2026_rodneycosta_unibh-4135.jpg",
-      "photoCredit": "Rodney Costa UniBH"
+      "photoCredit": "Rodney Costa UniBH",
+      "visited": true,
+      "rating": 7.67,
+      "beerTemp": -5.9
     },
     {
       "id": 87,
@@ -972,7 +1230,10 @@
       "dish": "Músculo do Popeye",
       "desc": "Músculo com purê de batata ao molho pesto de espinafre. Acompanhado de melado de cana e vitamina do Popeye.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09113156/pradobeer_musculodopopeye_bh_2026_pauloti_unibh-4945.jpg",
-      "photoCredit": "Paulo Ti UniBH"
+      "photoCredit": "Paulo Ti UniBH",
+      "visited": false,
+      "rating": null,
+      "beerTemp": null
     },
     {
       "id": 88,
@@ -983,7 +1244,10 @@
       "dish": "Charuteco Caipira",
       "desc": "Charuto de couve recheado com ragu de linguiça, com bolacha de acelga e crispy de alho-poró. Acompanha cachaça da roça!",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09113159/quintaldolouzada_charuteco_isaquerodrigues_unibh-3203.jpg",
-      "photoCredit": "Isaque Rodrigues UniBH"
+      "photoCredit": "Isaque Rodrigues UniBH",
+      "visited": true,
+      "rating": 7.5,
+      "beerTemp": -7.3
     },
     {
       "id": 89,
@@ -994,7 +1258,10 @@
       "dish": "Sou Marinheiro Popeye",
       "desc": "Prexecas de espinafre sob molho pomodoro, gratinadas com queijo e acompanhadas de batatas, bacon e pimenta.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09113301/quioxquecarioca_souomarinheiropopeye_bh_2026_pauloti_unibh-5175.jpg",
-      "photoCredit": "Paulo Ti UniBH"
+      "photoCredit": "Paulo Ti UniBH",
+      "visited": false,
+      "rating": null,
+      "beerTemp": null
     },
     {
       "id": 90,
@@ -1005,7 +1272,10 @@
       "dish": "Maria das Trouxas",
       "desc": "Trouxas de couve recheadas com bacalhau ao molho branco. Encontro da cozinha mineira com o Atlântico.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09113306/barreforma_maviadastrouxas_bh_2026_rodneycosta_unibh-4343.jpg",
-      "photoCredit": "Rodney Costa UniBH"
+      "photoCredit": "Rodney Costa UniBH",
+      "visited": true,
+      "rating": 7.25,
+      "beerTemp": -3.9
     },
     {
       "id": 91,
@@ -1016,7 +1286,10 @@
       "dish": "Boi Enrolado",
       "desc": "Costela de boi com arroz, enrolada no repolho sob molho e coberta com queijo gratinado.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09113413/sospub_boienrolado_bh_2026_rodneycosta_unibh-5057.jpg",
-      "photoCredit": "Rodney Costa UniBH"
+      "photoCredit": "Rodney Costa UniBH",
+      "visited": false,
+      "rating": null,
+      "beerTemp": null
     },
     {
       "id": 92,
@@ -1028,7 +1301,10 @@
       "desc": "Risoto de canjica com couve, bacon, linguiça e costelinha com mostarda de jabuticaba, servido com crispy de alho-poró e chips de jiló.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09113632/usmotoca_risotomineiro_bh_2026_rodneycosta_unibh-4269.jpg",
       "photoCredit": "Rodney Costa UniBH",
-      "champion": true
+      "champion": true,
+      "visited": false,
+      "rating": null,
+      "beerTemp": null
     },
     {
       "id": 93,
@@ -1039,7 +1315,10 @@
       "dish": "Porco Amostarda",
       "desc": "Costela suína no purê de moranga com tapenade de mostarda. Combinação que amostarda do bom!",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09110859/alexandresbar_porcoamostarda_pauloti_unibh-3271.jpg",
-      "photoCredit": "Paulo Ti UniBH"
+      "photoCredit": "Paulo Ti UniBH",
+      "visited": false,
+      "rating": null,
+      "beerTemp": null
     },
     {
       "id": 94,
@@ -1050,7 +1329,10 @@
       "dish": "Chucrute de Mineiro",
       "desc": "Vinagrete de repolho, costelão de boi ao molho, batatas-bravas, farofa de bacon e chutney de abacaxi.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09110903/armazemsantaamelia_chucretedemineiro_bh_2026_rodneycosta_unibh-3650.jpg",
-      "photoCredit": "Rodney Costa UniBH"
+      "photoCredit": "Rodney Costa UniBH",
+      "visited": false,
+      "rating": null,
+      "beerTemp": null
     },
     {
       "id": 95,
@@ -1061,7 +1343,10 @@
       "dish": "Kaftei Vossa Vontade",
       "desc": "Kafta recheada com queijo, acompanha batata da mamãe, salada americana e molhos. Sua vontade, realizada!",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09111229/bardodedinho_kafteivossamensagem_bh_2026_isabelaaraujo_unibh-3503.jpg",
-      "photoCredit": "Isabela Araújo UniBH"
+      "photoCredit": "Isabela Araújo UniBH",
+      "visited": true,
+      "rating": 8.2,
+      "beerTemp": -3.2
     },
     {
       "id": 96,
@@ -1072,7 +1357,10 @@
       "dish": "Porquinho Melado",
       "desc": "Costelinha de porco ao melaço de rapadura, acompanhada de purê de batata com cenoura e alho-poró.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09111656/barpompeu_porquinhomelado_isabelaaraujo_unibh-3547.jpg",
-      "photoCredit": "Isabela Araújo UniBH"
+      "photoCredit": "Isabela Araújo UniBH",
+      "visited": true,
+      "rating": 7.75,
+      "beerTemp": null
     },
     {
       "id": 97,
@@ -1083,7 +1371,10 @@
       "dish": "Flor de Minas",
       "desc": "Sobrecoxa desossada e empanada com mix de verduras, acompanhada de molho. Delicada como uma flor!",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09111702/barrigudinha_flordeminas_bh_2026_luizafernandes_unibh-3472.jpg",
-      "photoCredit": "Luiza Fernandes UniBH"
+      "photoCredit": "Luiza Fernandes UniBH",
+      "visited": false,
+      "rating": null,
+      "beerTemp": null
     },
     {
       "id": 98,
@@ -1094,7 +1385,10 @@
       "dish": "Conceição",
       "desc": "Blend de carne recheado com queijo ao molho, gratinado, acompanhado de purê de canjica e pesto de couve.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09111805/bazim_conceicao_bh_2026_pauloti_unibh-4811.jpg",
-      "photoCredit": "Paulo Ti UniBH"
+      "photoCredit": "Paulo Ti UniBH",
+      "visited": false,
+      "rating": null,
+      "beerTemp": null
     },
     {
       "id": 99,
@@ -1105,7 +1399,10 @@
       "dish": "Bello Murro",
       "desc": "Batatinhas ao murro cobertas com pernil desfiado, repolho roxo e farofa de quiabo com calabresa e passas.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09111809/bellabar_bellomurro_bh_2026_pauloti_unibh-4781.jpg",
-      "photoCredit": "Paulo Ti UniBH"
+      "photoCredit": "Paulo Ti UniBH",
+      "visited": false,
+      "rating": null,
+      "beerTemp": null
     },
     {
       "id": 100,
@@ -1116,7 +1413,10 @@
       "dish": "Sabores de Vó Maria",
       "desc": "Costelinha ao molho com rapadura, acompanhada de canjiquinha cremosa e couve crispy. Abraço de vó!",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09111916/botecodolele_saboresdavomaria_isabelaaraujo_unibh-3258.jpg",
-      "photoCredit": "Isabela Araújo UniBH"
+      "photoCredit": "Isabela Araújo UniBH",
+      "visited": false,
+      "rating": null,
+      "beerTemp": null
     },
     {
       "id": 101,
@@ -1127,7 +1427,10 @@
       "dish": "Língua Dobrada",
       "desc": "Língua com dobradinha bovina, pele suína e champignon. Acompanha purê de couve-flor cremoso.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09112024/butiquimonceta_linguadobradacomchampignonepuredecouveflor_bh_2026_rodneycosta_unibh-4256.jpg",
-      "photoCredit": "Rodney Costa UniBH"
+      "photoCredit": "Rodney Costa UniBH",
+      "visited": true,
+      "rating": 7.5,
+      "beerTemp": -6.6
     },
     {
       "id": 102,
@@ -1138,7 +1441,10 @@
       "dish": "Linguiça Estourada Cipoeiro",
       "desc": "Linguiça estourada com pimenta-biquinho, angu de milho-verde frito, ora-pro-nóbis e geleia de goiabada.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09112242/cipoeiro_linguicaestouradacipoeiro_bh_2026_rodneycosta_unibh-3437.jpg",
-      "photoCredit": "Rodney Costa UniBH"
+      "photoCredit": "Rodney Costa UniBH",
+      "visited": false,
+      "rating": null,
+      "beerTemp": null
     },
     {
       "id": 103,
@@ -1149,7 +1455,10 @@
       "dish": "Glu Glu à Baiana",
       "desc": "Pescoço de peru à baiana, com temperos nordestinos encontrando as verduras mineiras em fusão única.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09112350/deckboibabrasa_glugluabaiana_bh_2026_pauloti_unibh-4994.jpg",
-      "photoCredit": "Paulo Ti UniBH"
+      "photoCredit": "Paulo Ti UniBH",
+      "visited": false,
+      "rating": null,
+      "beerTemp": null
     },
     {
       "id": 104,
@@ -1160,7 +1469,10 @@
       "dish": "Musconóbis",
       "desc": "Músculo acompanhado de polenta e ora-pro-nóbis. A realeza dos espetinhos com o nobre da horta!",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09112503/espetinhoreiefamilia_musconobes_bh_2026_rodneycosta_unibh-4218.jpg",
-      "photoCredit": "Rodney Costa UniBH"
+      "photoCredit": "Rodney Costa UniBH",
+      "visited": true,
+      "rating": 8.0,
+      "beerTemp": -8.7
     },
     {
       "id": 105,
@@ -1171,7 +1483,10 @@
       "dish": "Charuto, Fumaça e Farofa",
       "desc": "Charuto de repolho com carne moída no molho, manjericão e farofa de banana-da-terra. Puro teatro gastronômico!",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09112721/juzebar_charutofumacaefarofa_bh_2026_pauloti_unibh-3959.jpg",
-      "photoCredit": "Paulo Ti UniBH"
+      "photoCredit": "Paulo Ti UniBH",
+      "visited": true,
+      "rating": 8.25,
+      "beerTemp": -7.8
     },
     {
       "id": 106,
@@ -1182,7 +1497,10 @@
       "dish": "Costela na sombra da couve",
       "desc": "Costela assada ao barbecue de goiabada, farofa de couve com bacon finalizada no crispy de couve e aligot de batata.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09112829/magnificoquintal_costelanasombradacouve_bh_2026_rodneycosta_unibh-4286.jpg",
-      "photoCredit": "Rodney Costa UniBH"
+      "photoCredit": "Rodney Costa UniBH",
+      "visited": true,
+      "rating": 8.2,
+      "beerTemp": null
     },
     {
       "id": 107,
@@ -1193,7 +1511,10 @@
       "dish": "A Vaca no Vinho",
       "desc": "Costela ao vinho com bambá de couve. Quando a vaca bebe vinho, o resultado é puro prazer!",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09112830/magrelosbar_avacanovinho_bh_2026_isaquerodrigues_unibh-3716.jpg",
-      "photoCredit": "Isaque Rodrigues UniBH"
+      "photoCredit": "Isaque Rodrigues UniBH",
+      "visited": false,
+      "rating": null,
+      "beerTemp": null
     },
     {
       "id": 108,
@@ -1204,7 +1525,10 @@
       "dish": "Talento Mineiro",
       "desc": "Angu, carne de porco braseada e couve refogada no azeite e alho. O talento de Minas em um prato só.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09112935/mineirobeer_talentomineiro_bh_2026_julianunes_unibh-3702.jpg",
-      "photoCredit": "Julia Nunes UniBH"
+      "photoCredit": "Julia Nunes UniBH",
+      "visited": false,
+      "rating": null,
+      "beerTemp": null
     },
     {
       "id": 109,
@@ -1215,7 +1539,10 @@
       "dish": "Trem bão de panela",
       "desc": "Maçã de peito cozida com batata, cebola e linguiça, acompanhada de torradas e conserva de acelga.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09112940/nubar_trembaodepanela_bh_2026_rodneycosta_unibh-4398.jpg",
-      "photoCredit": "Rodney Costa UniBH"
+      "photoCredit": "Rodney Costa UniBH",
+      "visited": false,
+      "rating": null,
+      "beerTemp": null
     },
     {
       "id": 110,
@@ -1226,7 +1553,10 @@
       "dish": "Locro por Minas",
       "desc": "Pé e orelha de porco, milho de canjica, galinha e ora-pro-nóbis. Um locro que virou mineiro de coração!",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09113045/parada1095_locroporminas_bh_2026_rodneycosta_unibh-3929.jpg",
-      "photoCredit": "Rodney Costa UniBH"
+      "photoCredit": "Rodney Costa UniBH",
+      "visited": false,
+      "rating": null,
+      "beerTemp": null
     },
     {
       "id": 111,
@@ -1237,7 +1567,10 @@
       "dish": "Catifunda",
       "desc": "Charutos de couve recheados com carne suína, cobertos por molho. Acompanha farofa. Fundão de sabor!",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09113153/planetalupulo_catifunda_bh_2026_pauloti_unibh-4839.jpg",
-      "photoCredit": "Paulo Ti UniBH"
+      "photoCredit": "Paulo Ti UniBH",
+      "visited": true,
+      "rating": 8.0,
+      "beerTemp": -5.2
     },
     {
       "id": 112,
@@ -1248,7 +1581,10 @@
       "dish": "De Picanha com a Vida",
       "desc": "Picanha suína com chutney de tomate picante, batata rústica com pesto de couve e espinafre.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09113307/reidapicanha_depicanhacaomavida_bh_2026_pauloti_unibh-4527.jpg",
-      "photoCredit": "Paulo Ti UniBH"
+      "photoCredit": "Paulo Ti UniBH",
+      "visited": true,
+      "rating": 7.0,
+      "beerTemp": null
     },
     {
       "id": 113,
@@ -1259,7 +1595,10 @@
       "dish": "Polpetta do Rei",
       "desc": "Almôndegas de tilápia ao molho de tomate e alho-poró, acompanhadas de torradas. Rei do mar na mesa do boteco!",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09113409/reidopeixe_polpettasdorei_bh_2026_pauloti_unibh-4918.jpg",
-      "photoCredit": "Paulo Ti UniBH"
+      "photoCredit": "Paulo Ti UniBH",
+      "visited": false,
+      "rating": null,
+      "beerTemp": null
     },
     {
       "id": 114,
@@ -1270,7 +1609,10 @@
       "dish": "Atoladinho de boi bebum",
       "desc": "Ragu de lombinho bovino com aligot de mandioca e crispy de couve. Um boi que bebeu e ficou atolado de sabor!",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09113414/santesquinabutequim_atoladimdeboibebum_bh_2026_pauloti_unibh-3975.jpg",
-      "photoCredit": "Paulo Ti UniBH"
+      "photoCredit": "Paulo Ti UniBH",
+      "visited": false,
+      "rating": null,
+      "beerTemp": null
     },
     {
       "id": 115,
@@ -1281,7 +1623,10 @@
       "dish": "Só Vem",
       "desc": "Linguiça artesanal recheada com alho-poró, finalizada com queijo derretido. Só vem, que você não vai se arrepender!",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09113521/sobar_sovem_bh_2026_pauloti_unibh-5007.jpg",
-      "photoCredit": "Paulo Ti UniBH"
+      "photoCredit": "Paulo Ti UniBH",
+      "visited": false,
+      "rating": null,
+      "beerTemp": null
     },
     {
       "id": 116,
@@ -1292,7 +1637,10 @@
       "dish": "Trio da Roça",
       "desc": "Sambiquira, torresmo e couve-flor à milanesa, acompanhados de creme de alho-poró. Trio poderoso!",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09113628/tocadoogro_triodaroca_bh_2026_rodneycosta_unibh-3916.jpg",
-      "photoCredit": "Rodney Costa UniBH"
+      "photoCredit": "Rodney Costa UniBH",
+      "visited": true,
+      "rating": 8.83,
+      "beerTemp": 0.7
     },
     {
       "id": 117,
@@ -1303,7 +1651,10 @@
       "dish": "Porcoró",
       "desc": "Iscas de filé-mignon suíno, acompanhadas de batatas salteadas no creme de alho-poró e farofa.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09113739/zoobar_procoro_bh_2026_rodneycosta_unibh-4379.jpg",
-      "photoCredit": "Rodney Costa UniBH"
+      "photoCredit": "Rodney Costa UniBH",
+      "visited": false,
+      "rating": null,
+      "beerTemp": null
     },
     {
       "id": 118,
@@ -1314,7 +1665,10 @@
       "dish": "Ossadinha Atolada",
       "desc": "Pescoço de boi com mandioca cozida e agrião, acompanhado de paçoca de carne de sol e torresmo.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09110901/andradesbeer_ossadinhaatolada_bh_2026_rodneycosta_unibh-4615.jpg",
-      "photoCredit": "Rodney Costa UniBH"
+      "photoCredit": "Rodney Costa UniBH",
+      "visited": true,
+      "rating": 9.5,
+      "beerTemp": -4.6
     },
     {
       "id": 119,
@@ -1325,7 +1679,10 @@
       "dish": "No Peito e na Raiz",
       "desc": "Maçã de peito com couve, acompanhada de purê de mandioca. Força total com raízes bem fincadas em Minas.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09111005/avalancheespeteria_nopeitonaraiz_bh_2026_pauloti_unibh-4514.jpg",
-      "photoCredit": "Paulo Ti UniBH"
+      "photoCredit": "Paulo Ti UniBH",
+      "visited": false,
+      "rating": null,
+      "beerTemp": null
     },
     {
       "id": 120,
@@ -1336,7 +1693,10 @@
       "dish": "Chuleta Descontraída",
       "desc": "Chuleta empanada, molho bechamel com repolho, bacon crispy salpicado, acompanhada de um delicioso melaço agridoce.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09111115/bardacintia_chuletadescontraida_bh_2026_pauloti_unibh-5257.jpg",
-      "photoCredit": "Paulo Ti UniBH"
+      "photoCredit": "Paulo Ti UniBH",
+      "visited": false,
+      "rating": null,
+      "beerTemp": null
     },
     {
       "id": 121,
@@ -1347,7 +1707,10 @@
       "dish": "Boca quente, coração mole",
       "desc": "Pernil assado, acompanhado de tomate recheado com pimenta, geleia de maracujá e finalizado com queijo e couve crispy.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09111117/bardafia_lomboquentecoracaomole_vicentealexandre_unibh-3148.jpg",
-      "photoCredit": "Vicente Alexandre UniBH"
+      "photoCredit": "Vicente Alexandre UniBH",
+      "visited": false,
+      "rating": null,
+      "beerTemp": null
     },
     {
       "id": 122,
@@ -1358,7 +1721,10 @@
       "dish": "Popeye Mineiro",
       "desc": "Parmegiana de alcatra regada com molho, manjericão e muçarela. Acompanhada de molho bechamel de espinafre e torradas.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09111121/bardalu_popeyemineiro_bh_2026_rodneycosta_unibh-4185.jpg",
-      "photoCredit": "Rodney Costa UniBH"
+      "photoCredit": "Rodney Costa UniBH",
+      "visited": false,
+      "rating": null,
+      "beerTemp": null
     },
     {
       "id": 123,
@@ -1369,7 +1735,10 @@
       "dish": "Na Boca do Boi",
       "desc": "Língua de boi ao molho de cerveja escura, com agrião e acompanhada de pães artesanais.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09111331/bardojoao_nabocadopovo_bh_2026_rodneycosta_unibh-4472.jpg",
-      "photoCredit": "Rodney Costa UniBH"
+      "photoCredit": "Rodney Costa UniBH",
+      "visited": false,
+      "rating": null,
+      "beerTemp": null
     },
     {
       "id": 124,
@@ -1380,7 +1749,10 @@
       "dish": "Poró de Gala e Costela na Panela",
       "desc": "Costelinha suína servida com purê de batata ao alho-poró e queijo gratinado, acompanhada de barbecue mineiro.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09112356/donasuica_porodegalaecostelanapanela_bh_2026_rodneycosta_unibh-4460.jpg",
-      "photoCredit": "Rodney Costa UniBH"
+      "photoCredit": "Rodney Costa UniBH",
+      "visited": false,
+      "rating": null,
+      "beerTemp": null
     },
     {
       "id": 125,
@@ -1391,7 +1763,10 @@
       "dish": "Vaca Louca na Horta",
       "desc": "Acém com osso, servido com purê de couve-flor, regado com pesto de alho-poró e finalizado com couve crispy. Acompanha torradas.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09112501/espetinhodotilias_vacaloucanahorta_bh_2026_rodneycosta_unibh-3561.jpg",
-      "photoCredit": "Rodney Costa UniBH"
+      "photoCredit": "Rodney Costa UniBH",
+      "visited": true,
+      "rating": 7.29,
+      "beerTemp": 0.3
     },
     {
       "id": 126,
@@ -1402,7 +1777,10 @@
       "dish": "Minas no Prato",
       "desc": "Angu com suã ao molho com bacon e linguiça calabresa, alho-poró e queijo, acompanhado de mostarda refogada e torresmo.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09112938/nossospetim_minasnoprato_bh_2026_pauloti_unibh-4755.jpg",
-      "photoCredit": "Paulo Ti UniBH"
+      "photoCredit": "Paulo Ti UniBH",
+      "visited": false,
+      "rating": null,
+      "beerTemp": null
     },
     {
       "id": 127,
@@ -1413,7 +1791,10 @@
       "dish": "Osôbuco di Suá",
       "desc": "Ossobuco suíno com ora-pro-nóbis na polenta com queijo coalho e cebola mais alho no vinagrete.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09112941/ofinodoalho_ossobucodisua_bh_2026_isaquerodrigues_unibh-3603.jpg",
-      "photoCredit": "Isaque Rodrigues UniBH"
+      "photoCredit": "Isaque Rodrigues UniBH",
+      "visited": false,
+      "rating": null,
+      "beerTemp": null
     },
     {
       "id": 128,
@@ -1424,7 +1805,10 @@
       "dish": "Rolê do Justino",
       "desc": "Bife de boi à rolê, purê de abóbora com espinafre, acompanhado com caldo da carne e queijo coalho grelhado.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09113520/seujustino_roledojustino_fernandaoliveira_unibh-3183.jpg",
-      "photoCredit": "Fernanda Oliveira UniBH"
+      "photoCredit": "Fernanda Oliveira UniBH",
+      "visited": true,
+      "rating": 8.83,
+      "beerTemp": -3.3
     },
     {
       "id": 129,
@@ -1435,7 +1819,10 @@
       "dish": "Costela Véia de Guerra",
       "desc": "Costela de boi com mandioca cozida, almeirão refogado e acompanhada de farofa. Uma guerreira que nunca decepciona.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09113525/sunsetbar_costelaveiadeguerra_bh_2026_rodneycosta_unibh-3325.jpg",
-      "photoCredit": "Rodney Costa UniBH"
+      "photoCredit": "Rodney Costa UniBH",
+      "visited": false,
+      "rating": null,
+      "beerTemp": null
     }
   ]
 }
