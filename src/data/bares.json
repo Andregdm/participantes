@@ -100,7 +100,7 @@
       "address": "Rua Monte Alegre, 160",
       "dish": "Com a Barriga no Fogão",
       "desc": "Barriga de porco de panela cozida, fritas de mandioca e espinafre, farofa de couve e molho especial.",
-      "photo": ""
+      "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09111551/barestabelecimento_comabarriganofogo_bh_2026_rodneycosta_unibh-5068.jpg"
     },
     {
       "id": 10,
@@ -110,7 +110,7 @@
       "address": "Rua Paracatu, 1099",
       "dish": "Joelho do Vovô Pig",
       "desc": "Joelho de porco com milho assado, polenta cremosa e mostarda refogada. Prato que abraça e aquece.",
-      "photo": "https://images.unsplash.com/photo-1544025162-d76694265947?w=400&q=80"
+      "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09111555/maniamineira_joelhodavovopig_bh_2026_pauloti_unibh-3996.jpg"
     },
     {
       "id": 11,
@@ -120,7 +120,7 @@
       "address": "Rua dos Tamoios, 232",
       "dish": "Verde que te quero rabo!",
       "desc": "Rabada desfiada com cuscuz, vinagrete de alho-poró e creme verde de agrião. Tradição com frescor.",
-      "photo": "https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=400&q=80"
+      "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09111807/becorestaurante_verdequetequerorabo_bh_2026_pauloti_unibh-4495.jpg"
     },
     {
       "id": 12,
@@ -130,7 +130,7 @@
       "address": "Rua Major Lopes, 7",
       "dish": "Nascif Corrêa",
       "desc": "Musseline de couve-flor, ragu de lombo, chucrute de repolho e gergelim, acompanhada de nachos.",
-      "photo": "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=400&q=80"
+      "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09111810/boimajor_nacifcorrea_bh_2026_rodneycosta_unibh-4323.jpg"
     },
     {
       "id": 13,
@@ -140,18 +140,18 @@
       "address": "Rua dos Tupinambás, 638",
       "dish": "Picadim",
       "desc": "Picadinho de carne bovina, acompanhado de sunomono de talo de couve, torradas e nuvem de queijo parmesão.",
-      "photo": "https://images.unsplash.com/photo-1544025162-d76694265947?w=400&q=80",
+      "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09112026/cafepalhares_picadimdecarne_bh_2026_rodneycosta_unibh-4797.jpg",
       "champion": true
     },
     {
       "id": 14,
-      "name": "Casa da Madrinha",
+      "name": "Casa da Madrinha - Deixaram a competição",
       "region": "Centro-Sul",
       "neighborhood": "Barro Preto",
       "address": "Av. Barbacena, 212",
       "dish": "Tesouro Escondido",
       "desc": "Croquete de couve-flor, batata e ora-pro-nóbis com proteína de soja. Servido com molho de queijo e chips de batata-doce.",
-      "photo": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=400&q=80"
+      "photo": ""
     },
     {
       "id": 15,
@@ -161,7 +161,7 @@
       "address": "Rua Rio de Janeiro, 1205",
       "dish": "Gira Gosto",
       "desc": "Bolinho de espinafre recheado de costelinha e queijo. Acompanha molho de alho e geleia de abacaxi picante.",
-      "photo": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=400&q=80"
+      "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09112352/donadora_giragosto_bh_2026_pauloti_unibh-4112.jpg"
     },
     {
       "id": 16,
@@ -171,7 +171,7 @@
       "address": "Rua Cristina, 870",
       "dish": "Vulcão Oásis Quió",
       "desc": "Disco de carne recheada com creme de rúcula, guarnecido de polenta mole, molho e mostarda crocante.",
-      "photo": "https://images.unsplash.com/photo-1551782450-17144efb9c50?w=400&q=80"
+      "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09112504/espetinhosaopedroquio_vulcaonooasisquio_bh_2026_rodneycosta_unibh-4430.jpg"
     },
     {
       "id": 17,
@@ -181,7 +181,7 @@
       "address": "Av. Augusto de Lima, 233",
       "dish": "Bolim com Nóbis",
       "desc": "Bolinho de mandioca com linguiça, acompanhado de molho pesto de ora-pro-nóbis. Criatividade botequeira!",
-      "photo": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=400&q=80"
+      "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09112614/grafficabar_bolmcomnobris_bh_2026_pauloamorim_unibh-3381.jpg"
     },
     {
       "id": 18,
@@ -191,7 +191,7 @@
       "address": "Rua Brás Cubas, 116",
       "dish": "Prova procê vê, criatura",
       "desc": "Canudo de pastel recheado de rabada e requeijão de raspa com maionese de agrião. Cremoso e irresistível.",
-      "photo": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=400&q=80"
+      "photo": ""
     },
     {
       "id": 19,
@@ -201,7 +201,7 @@
       "address": "Rua Flórida, 15",
       "dish": "Porco na Lama",
       "desc": "Lombo de panela com ora-pro-nóbis, batata e maionese de cebola picante. Sabor de quintal mineiro.",
-      "photo": "https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?w=400&q=80"
+      "photo": ""
     },
     {
       "id": 20,
