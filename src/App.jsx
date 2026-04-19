@@ -22,6 +22,22 @@ function CheckCircle({ d }) {
   );
 }
 
+function ThermometerIcon({ temp }) {
+  const getColor = () => {
+    if (temp === null) return "#aaa";
+    if (temp < -5) return "#2980b9";
+    if (temp < -3) return "#3498db";
+    if (temp >= -3 && temp <= 1) return "#2ecc71";
+    if (temp > 1 && temp <= 3) return "#f1c40f";
+    return "#e74c3c";
+  };
+  return (
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke={getColor()} strokeWidth="2">
+      <path d="M12 9v8m-4-8a4 4 0 1 1 8 0m-4-6v2m-2 4a4 4 0 1 0 4 0"/>
+    </svg>
+  );
+}
+
 export default function App() {
   const [visited, setVisited] = useState(() => {
     try { return new Set(JSON.parse(localStorage.getItem("cdb26v") || "[]")) } catch { return new Set() }
@@ -188,7 +204,7 @@ export default function App() {
               </div>
             ) : (
               fr !== "Todas" ? (
-                <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill,minmax(265px,1fr))", gap: "1.2rem" }}>
+                <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill,minmax(280px,1fr))", gap: "1.2rem" }}>
                   {filtered.map(b => <Card key={b.id} b={b} visited={visited} favorites={favorites} tv={tv} tf={tf} exp={exp} setExp={setExp} imgErr={imgErr} setImgErr={setImgErr} />)}
                 </div>
               ) : (
@@ -199,7 +215,7 @@ export default function App() {
                       <h2 style={{ margin: 0, fontSize: "1.1rem", fontWeight: 700, color: REGION_COLOR[region], fontFamily: "sans-serif", letterSpacing: "0.01em" }}>{region}</h2>
                       <span style={{ background: REGION_COLOR[region] + "18", color: REGION_COLOR[region], borderRadius: "20px", padding: "2px 10px", fontSize: "0.72rem", fontFamily: "sans-serif", fontWeight: 700 }}>{grouped[region].length} bares</span>
                     </div>
-                    <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill,minmax(265px,1fr))", gap: "1.1rem" }}>
+                    <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill,minmax(280px,1fr))", gap: "1.1rem" }}>
                       {grouped[region].map(b => <Card key={b.id} b={b} visited={visited} favorites={favorites} tv={tv} tf={tf} exp={exp} setExp={setExp} imgErr={imgErr} setImgErr={setImgErr} />)}
                     </div>
                   </section>
@@ -225,6 +241,18 @@ function Card({ b, visited, favorites, tv, tf, exp, setExp, imgErr, setImgErr })
   const isV = visited.has(b.id), isF = favorites.has(b.id), isE = exp === b.id;
   const rc = REGION_COLOR[b.region] || "#555";
   const hasErr = imgErr.has(b.id);
+  const hasRating = b.rating !== null && b.rating !== undefined;
+  const hasBeerTemp = b.beerTemp !== null && b.beerTemp !== undefined;
+  const hasVisitedByParticipants = b.visited === true;
+  
+  const getTempColor = (temp) => {
+    if (temp === null) return "#aaa";
+    if (temp < -5) return "#2980b9";
+    if (temp < -3) return "#3498db";
+    if (temp >= -3 && temp <= 1) return "#2ecc71";
+    if (temp > 1 && temp <= 3) return "#f1c40f";
+    return "#e74c3c";
+  };
   
   return (
     <article className="bc" style={{ background: "#fff", borderRadius: "14px", border: `2px solid ${isF ? "#e74c3c" : isV ? "#27ae60" : "#e8e0d0"}`, overflow: "hidden", boxShadow: "0 2px 8px rgba(0,0,0,0.06)", position: "relative" }}>
@@ -240,7 +268,7 @@ function Card({ b, visited, favorites, tv, tf, exp, setExp, imgErr, setImgErr })
         <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: "45px", background: "linear-gradient(transparent,rgba(0,0,0,0.3))", pointerEvents: "none" }}/>
       </div>
       
-      {/* CRÉDITO DA FOTO - posicionado abaixo da imagem */}
+      {/* CRÉDITO DA FOTO */}
       {b.photoCredit && b.photoCredit !== "" && (
         <div style={{ 
           padding: "0.25rem 0.75rem", 
@@ -267,10 +295,83 @@ function Card({ b, visited, favorites, tv, tf, exp, setExp, imgErr, setImgErr })
             <button onClick={() => tv(b.id)} style={{ background: "none", border: "none", padding: "4px", display: "flex" }}><CheckCircle d={isV}/></button>
           </div>
         </div>
+        
+        {/* INFO RATING & BEER TEMP */}
+        <div style={{ 
+          display: "flex", 
+          justifyContent: "space-between", 
+          alignItems: "center", 
+          marginTop: "0.5rem",
+          padding: "0.35rem 0",
+          borderTop: "1px solid #f0ebe0",
+          borderBottom: "1px solid #f0ebe0"
+        }}>
+          <div style={{ display: "flex", alignItems: "center", gap: "6px" }}>
+            {hasVisitedByParticipants ? (
+              <span style={{ 
+                display: "flex", 
+                alignItems: "center", 
+                gap: "3px",
+                fontSize: "0.65rem", 
+                fontFamily: "sans-serif", 
+                color: "#27ae60",
+                fontWeight: 600
+              }}>
+                <CheckCircle d={true} /> Visitado pelo time
+              </span>
+            ) : (
+              <span style={{ 
+                fontSize: "0.65rem", 
+                fontFamily: "sans-serif", 
+                color: "#bbb"
+              }}>
+                ⏳ Aguardando visita
+              </span>
+            )}
+          </div>
+          {hasBeerTemp && (
+            <div style={{ display: "flex", alignItems: "center", gap: "3px" }}>
+              <ThermometerIcon temp={b.beerTemp} />
+              <span style={{ 
+                fontSize: "0.7rem", 
+                fontFamily: "sans-serif", 
+                fontWeight: 600,
+                color: getTempColor(b.beerTemp)
+              }}>
+                {b.beerTemp}°C
+              </span>
+            </div>
+          )}
+        </div>
+        
         <div style={{ background: rc + "12", border: `1px solid ${rc}22`, borderRadius: "7px", padding: "0.42rem 0.7rem", margin: "0.55rem 0" }}>
           <div style={{ fontSize: "0.58rem", fontFamily: "sans-serif", color: "#aaa", textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: "1px" }}>Petisco</div>
           <div style={{ fontSize: "0.83rem", fontWeight: 700, color: rc, fontFamily: "sans-serif", lineHeight: 1.2 }}>{b.dish}</div>
         </div>
+        
+        {/* RATING - Apenas valor numérico 0-10 */}
+        {hasRating && (
+          <div style={{ 
+            display: "flex", 
+            alignItems: "center", 
+            justifyContent: "flex-end",
+            marginBottom: "0.55rem"
+          }}>
+            <span style={{ 
+              fontSize: "0.85rem", 
+              fontFamily: "sans-serif", 
+              fontWeight: 700, 
+              color: "#f39c12",
+              background: "#fff8e8",
+              padding: "0.2rem 0.6rem",
+              borderRadius: "20px",
+              border: "1px solid #fde3a7"
+            }}>
+              ⭐ {b.rating.toFixed(1)} / 10
+            </span>
+          </div>
+        )}
+        
         <p style={{ fontSize: "0.76rem", color: "#555", lineHeight: 1.55, margin: "0 0 0.4rem", fontWeight: 300 }}>
           {isE ? b.desc : b.desc.slice(0, 88) + (b.desc.length > 88 ? "…" : "")}
         </p>
