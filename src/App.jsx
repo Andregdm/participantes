@@ -296,7 +296,7 @@ function Card({ b, visited, favorites, tv, tf, exp, setExp, imgErr, setImgErr })
           </div>
         </div>
         
-        {/* INFO RATING & BEER TEMP */}
+        {/* INFO VISITA DO TIME, RATING E TEMPERATURA - Tudo na mesma linha */}
         <div style={{ 
           display: "flex", 
           justifyContent: "space-between", 
@@ -304,33 +304,58 @@ function Card({ b, visited, favorites, tv, tf, exp, setExp, imgErr, setImgErr })
           marginTop: "0.5rem",
           padding: "0.35rem 0",
           borderTop: "1px solid #f0ebe0",
-          borderBottom: "1px solid #f0ebe0"
+          borderBottom: "1px solid #f0ebe0",
+          gap: "8px",
+          flexWrap: "wrap"
         }}>
-          <div style={{ display: "flex", alignItems: "center", gap: "6px" }}>
+          {/* Status da visita do time */}
+          <div style={{ display: "flex", alignItems: "center", gap: "4px", flexShrink: 0 }}>
             {hasVisitedByParticipants ? (
-              <span style={{ 
-                display: "flex", 
-                alignItems: "center", 
-                gap: "3px",
-                fontSize: "0.65rem", 
-                fontFamily: "sans-serif", 
-                color: "#27ae60",
-                fontWeight: 600
-              }}>
-                <CheckCircle d={true} /> Visitado pelo time
-              </span>
+              <>
+                <CheckCircle d={true} />
+                <span style={{ 
+                  fontSize: "0.68rem", 
+                  fontFamily: "sans-serif", 
+                  color: "#27ae60",
+                  fontWeight: 600,
+                  whiteSpace: "nowrap"
+                }}>
+                  Time visitou
+                </span>
+              </>
             ) : (
-              <span style={{ 
-                fontSize: "0.65rem", 
-                fontFamily: "sans-serif", 
-                color: "#bbb"
-              }}>
-                ⏳ Aguardando visita
-              </span>
+              <>
+                <span style={{ fontSize: "0.68rem", fontFamily: "sans-serif", color: "#bbb" }}>⏳</span>
+                <span style={{ 
+                  fontSize: "0.68rem", 
+                  fontFamily: "sans-serif", 
+                  color: "#bbb",
+                  whiteSpace: "nowrap"
+                }}>
+                  Aguardando
+                </span>
+              </>
             )}
           </div>
+          
+          {/* Nota do time */}
+          {hasRating && (
+            <div style={{ display: "flex", alignItems: "center", gap: "4px", flexShrink: 0 }}>
+              <span style={{ fontSize: "0.7rem", color: "#f39c12" }}>⭐</span>
+              <span style={{ 
+                fontSize: "0.7rem", 
+                fontFamily: "sans-serif", 
+                fontWeight: 700, 
+                color: "#f39c12"
+              }}>
+                {b.rating.toFixed(1)}
+              </span>
+            </div>
+          )}
+          
+          {/* Temperatura da cerveja */}
           {hasBeerTemp && (
-            <div style={{ display: "flex", alignItems: "center", gap: "3px" }}>
+            <div style={{ display: "flex", alignItems: "center", gap: "3px", flexShrink: 0 }}>
               <ThermometerIcon temp={b.beerTemp} />
               <span style={{ 
                 fontSize: "0.7rem", 
@@ -348,29 +373,6 @@ function Card({ b, visited, favorites, tv, tf, exp, setExp, imgErr, setImgErr })
           <div style={{ fontSize: "0.58rem", fontFamily: "sans-serif", color: "#aaa", textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: "1px" }}>Petisco</div>
           <div style={{ fontSize: "0.83rem", fontWeight: 700, color: rc, fontFamily: "sans-serif", lineHeight: 1.2 }}>{b.dish}</div>
         </div>
-        
-        {/* RATING - Apenas valor numérico 0-10 */}
-        {hasRating && (
-          <div style={{ 
-            display: "flex", 
-            alignItems: "center", 
-            justifyContent: "flex-end",
-            marginBottom: "0.55rem"
-          }}>
-            <span style={{ 
-              fontSize: "0.85rem", 
-              fontFamily: "sans-serif", 
-              fontWeight: 700, 
-              color: "#f39c12",
-              background: "#fff8e8",
-              padding: "0.2rem 0.6rem",
-              borderRadius: "20px",
-              border: "1px solid #fde3a7"
-            }}>
-              ⭐ {b.rating.toFixed(1)} / 10
-            </span>
-          </div>
-        )}
         
         <p style={{ fontSize: "0.76rem", color: "#555", lineHeight: 1.55, margin: "0 0 0.4rem", fontWeight: 300 }}>
           {isE ? b.desc : b.desc.slice(0, 88) + (b.desc.length > 88 ? "…" : "")}
