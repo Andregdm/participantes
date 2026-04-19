@@ -225,11 +225,12 @@ function Card({ b, visited, favorites, tv, tf, exp, setExp, imgErr, setImgErr })
   const isV = visited.has(b.id), isF = favorites.has(b.id), isE = exp === b.id;
   const rc = REGION_COLOR[b.region] || "#555";
   const hasErr = imgErr.has(b.id);
+  
   return (
     <article className="bc" style={{ background: "#fff", borderRadius: "14px", border: `2px solid ${isF ? "#e74c3c" : isV ? "#27ae60" : "#e8e0d0"}`, overflow: "hidden", boxShadow: "0 2px 8px rgba(0,0,0,0.06)", position: "relative" }}>
       <div style={{ height: "4px", background: rc }}/>
       <div style={{ overflow: "hidden", height: "185px", position: "relative", background: rc + "11", cursor: "pointer" }} onClick={() => setExp(isE ? null : b.id)}>
-        {!hasErr ? (
+        {!hasErr && b.photo ? (
           <img className="bi" src={b.photo} alt={b.dish} style={{ width: "100%", height: "185px", objectFit: "cover", display: "block" }} onError={() => setImgErr(s => new Set([...s, b.id]))}/>
         ) : (
           <div style={{ height: "185px", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "2.8rem", background: `linear-gradient(135deg,${rc}18,${rc}33)` }}>🍽️</div>
@@ -238,6 +239,23 @@ function Card({ b, visited, favorites, tv, tf, exp, setExp, imgErr, setImgErr })
         {isV && <div style={{ position: "absolute", top: 8, left: 8, background: "rgba(39,174,96,0.9)", borderRadius: "6px", padding: "3px 8px", fontSize: "0.65rem", fontFamily: "sans-serif", fontWeight: 700, color: "#fff" }}>✓ Visitado</div>}
         <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: "45px", background: "linear-gradient(transparent,rgba(0,0,0,0.3))", pointerEvents: "none" }}/>
       </div>
+      
+      {/* CRÉDITO DA FOTO - posicionado abaixo da imagem */}
+      {b.photoCredit && b.photoCredit !== "" && (
+        <div style={{ 
+          padding: "0.25rem 0.75rem", 
+          background: "#f5f0e8", 
+          fontSize: "0.6rem", 
+          fontFamily: "sans-serif", 
+          color: "#888",
+          textAlign: "right",
+          borderBottom: "1px solid #eee",
+          letterSpacing: "0.02em"
+        }}>
+          📷 {b.photoCredit}
+        </div>
+      )}
+      
       <div style={{ padding: "0.9rem 1rem 0.75rem" }}>
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start" }}>
           <div style={{ flex: 1, minWidth: 0 }}>
