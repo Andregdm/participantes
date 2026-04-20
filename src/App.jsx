@@ -152,13 +152,19 @@ export default function App() {
                 <Logo size={85}/>
               </div>
               <div>
-                <div className="header-title" style={{ color: BRAND.goldLt }}>
-                  Belo Horizonte · 10 Abr – 10 Mai 2026
-                </div>
+                {/* Título principal */}
                 <h1 className="main-title" style={{ color: "#fff" }}>Participantes di Buteco</h1>
+
+                {/* Subtítulo com edição e tema */}
                 <div className="main-subtitle" style={{ color: "#9BBFCE" }}>
                   Guia da 26ª Edição do Comida di Buteco ·
                   <span style={{ color: BRAND.goldLt }}> "Somos Todos Verduras"</span>
+                </div>
+
+                {/* Informações de período e preço (movidas para baixo do subtítulo) */}
+                <div className="header-info" style={{ marginTop: "0.5rem" }}>
+                  <span className="header-period">10 Abr – 10 Mai 2026</span>
+                  <span className="header-price">Petiscos a R$ 40</span>
                 </div>
               </div>
             </div>
