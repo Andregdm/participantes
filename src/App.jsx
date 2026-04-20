@@ -3,7 +3,7 @@ import data from "./data/bares.json";
 import logoImg from "./data/logo.png";
 import "./App.css";
 
-// ─── BRAND PALETTE (extraída da logo) ───
+// ─── BRAND PALETTE ────────────────────────────────────────────────────────
 const BRAND = {
   navy:    "#1C2D6E",
   navyDk:  "#131f50",
@@ -14,7 +14,7 @@ const BRAND = {
   white:   "#FFFFFF",
 };
 
-// ─── FUNÇÃO PARA NORMALIZAR TEXTOS ───
+// ─── FUNÇÃO PARA NORMALIZAR TEXTOS ─────────────────────────────────────────
 const normalizeText = (text) => {
   if (!text) return "";
   return text
@@ -25,7 +25,7 @@ const normalizeText = (text) => {
     .replace(/\s+/g, " ");
 };
 
-// ─── TOKENS DE TEMA ──────────────────────────────────────────────────
+// ─── TOKENS DE TEMA ────────────────────────────────────────────────────────
 const THEMES = {
   light: {
     bg:           "#F5EFE0",
@@ -46,7 +46,6 @@ const THEMES = {
     bannerBg:     `linear-gradient(90deg, ${BRAND.navyDk}, ${BRAND.navy})`,
     mapFooterBg:  "#FAF7F0",
     footerBg:     BRAND.navyDk,
-    scrollThumb:  "#C8B890",
     inputBg:      "#FAF7F0",
     glassBg:      "rgba(255,255,255,0.75)",
     glassBorder:  "rgba(255,255,255,0.4)",
@@ -70,7 +69,6 @@ const THEMES = {
     bannerBg:     `linear-gradient(90deg, #090C18, #101428)`,
     mapFooterBg:  "#21242F",
     footerBg:     "#090C18",
-    scrollThumb:  "#404666",
     inputBg:      "#21242F",
     glassBg:      "rgba(26,29,38,0.85)",
     glassBorder:  "rgba(255,255,255,0.08)",
@@ -81,7 +79,7 @@ const REGION_COLOR = data.regions;
 const BARS = data.bars;
 const REGIONS = ["Todas", ...Object.keys(REGION_COLOR)];
 
-// ─── COMPONENTE LOGO ─────────────────────────────────────────────────────
+// ─── COMPONENTE LOGO ────────────────────────────────────────────────────────
 function Logo({ size = 80 }) {
   return (
     <img 
@@ -99,7 +97,7 @@ function Logo({ size = 80 }) {
   );
 }
 
-// ─── ÍCONES ──────────────────────────────────────────────────────────────
+// ─── ÍCONES (mantidos como estão) ───────────────────────────────────────────
 function HeartIcon({ f }) {
   return (
     <svg width="17" height="17" viewBox="0 0 24 24" fill={f ? "#C0392B" : "none"} stroke={f ? "#C0392B" : "#999"} strokeWidth="2">
@@ -151,7 +149,7 @@ function IgIcon({ color = "currentColor" }) {
   );
 }
 
-// ─── HELPERS DE TEMPERATURA ──────────────────────────────────────────────
+// ─── HELPERS DE TEMPERATURA ─────────────────────────────────────────────────
 const getTempColor = (t) => {
   if (t === null) return "#95a5a6";
   if (t < -3) return "#2980B9";
@@ -170,7 +168,7 @@ const getTempBg = (t) => {
   return "rgba(231,76,60,0.15)";
 };
 
-// ─── APP PRINCIPAL ────────────────────────────────────────────────────────
+// ─── APP PRINCIPAL ──────────────────────────────────────────────────────────
 export default function App() {
   const [dark, setDark] = useState(() => {
     try { return localStorage.getItem("cdb26theme") === "dark"; } catch { return false; }
@@ -253,34 +251,29 @@ export default function App() {
   const clearFilters = () => { setFv(false); setFf(false); setFr("Todas"); setQ(""); setOnlyTeam(false); setSortBy("none"); };
 
   return (
-    <div style={{ fontFamily: "Georgia, serif", background: T.bg, minHeight: "100vh", transition: "background .25s, color .25s" }}>
+    <div className="app-container" style={{ background: T.bg }}>
       {/* HEADER */}
       <header style={{ background: T.headerBg }}>
         <div className="instagram-bar">
           <IgIcon color={BRAND.goldLt} />
           <span style={{ color: "#ccc" }}>Curadoria realizada pelo perfil do Instagram</span>
-          <a href="https://www.instagram.com/ParticipantesdiButeco" target="_blank" rel="noopener noreferrer"
-            style={{ color: BRAND.goldLt, fontWeight: 700 }}>
+          <a href="https://www.instagram.com/ParticipantesdiButeco" target="_blank" rel="noopener noreferrer" className="instagram-link" style={{ color: BRAND.goldLt }}>
             @ParticipantesdiButeco
           </a>
           <span style={{ color: "#777" }}>— siga para dicas e novidades!</span>
         </div>
 
         <div className="header-content">
-          <div style={{ display: "flex", alignItems: "center", gap: "2rem", flexWrap: "wrap" }}>
+          <div className="d-flex align-center gap-2 flex-wrap">
             <div className="header-logo-title">
               <div className="logo-container" style={{ border: `3px solid ${BRAND.gold}66`, boxShadow: `0 0 32px ${BRAND.gold}44, 0 8px 20px rgba(0,0,0,0.3)` }}>
                 <Logo size={85} />
               </div>
               <div>
-                <div style={{ fontFamily: "sans-serif", fontSize: "0.68rem", letterSpacing: "0.35em", textTransform: "uppercase", color: BRAND.goldLt, marginBottom: "0.35rem", opacity: 0.95 }}>
-                  Belo Horizonte · 10 Abr – 10 Mai 2026
-                </div>
-                <h1 style={{ fontSize: "clamp(1.8rem, 5vw, 3rem)", fontWeight: 700, margin: "0 0 0.2rem", lineHeight: 1.05, color: "#fff", letterSpacing: "-0.01em" }}>
-                  Participantes di Buteco
-                </h1>
-                <div style={{ fontSize: "0.88rem", fontStyle: "italic", color: "#9BBFCE", fontWeight: 300, lineHeight: 1.45, maxWidth: "500px" }}>
-                  Guia da 26ª Edição do Comida di Buteco · <span style={{ color: BRAND.goldLt, fontWeight: 500 }}>"Somos Todos Verduras"</span>
+                <div className="header-title" style={{ color: BRAND.goldLt }}>Belo Horizonte · 10 Abr – 10 Mai 2026</div>
+                <h1 className="main-title" style={{ color: "#fff" }}>Participantes di Buteco</h1>
+                <div className="main-subtitle" style={{ color: "#9BBFCE" }}>
+                  Guia da 26ª Edição do Comida di Buteco · <span style={{ color: BRAND.goldLt }}>"Somos Todos Verduras"</span>
                 </div>
               </div>
             </div>
@@ -337,13 +330,13 @@ export default function App() {
 
       {/* ABA MAPA */}
       {tab === "mapa" && (
-        <div style={{ maxWidth: "1200px", margin: "2rem auto", padding: "0 1.5rem" }}>
-          <div style={{ background: T.surface, borderRadius: "16px", overflow: "hidden", boxShadow: `0 4px 28px rgba(0,0,0,${dark ? "0.5" : "0.1"})`, border: `1px solid ${T.border}` }}>
-            <div style={{ background: T.bannerBg, padding: "1.2rem 1.8rem", display: "flex", alignItems: "center", gap: "15px" }}>
+        <div className="max-width-1200 px-15 mt-2">
+          <div className="map-card" style={{ background: T.surface, borderRadius: "16px", overflow: "hidden", boxShadow: `0 4px 28px rgba(0,0,0,${dark ? "0.5" : "0.1"})`, border: `1px solid ${T.border}` }}>
+            <div className="map-header" style={{ background: T.bannerBg, padding: "1.2rem 1.8rem", display: "flex", alignItems: "center", gap: "15px" }}>
               <Logo size={45} />
               <div>
-                <div style={{ color: "#fff", fontWeight: 700, fontFamily: "sans-serif", fontSize: "1rem" }}>Mapa Personalizado — Comida di Buteco 2026 BH</div>
-                <div style={{ color: BRAND.goldLt, fontSize: "0.74rem", fontFamily: "sans-serif", opacity: 0.85 }}>Todos os bares participantes marcados · Curadoria @ParticipantesdiButeco</div>
+                <div className="map-header-title" style={{ color: "#fff" }}>Mapa Personalizado — Comida di Buteco 2026 BH</div>
+                <div className="map-header-subtitle" style={{ color: BRAND.goldLt }}>Todos os bares participantes marcados · Curadoria @ParticipantesdiButeco</div>
               </div>
             </div>
             <div className="map-container" style={{ background: dark ? "#111" : "#f0ebe0" }}>
@@ -354,12 +347,11 @@ export default function App() {
                 allowFullScreen
               />
             </div>
-            <div style={{ padding: "0.9rem 1.8rem", background: T.mapFooterBg, borderTop: `1px solid ${T.border}`, display: "flex", alignItems: "center", gap: "8px" }}>
+            <div className="map-footer" style={{ padding: "0.9rem 1.8rem", background: T.mapFooterBg, borderTop: `1px solid ${T.border}`, display: "flex", alignItems: "center", gap: "8px" }}>
               <IgIcon color={BRAND.navy} />
-              <span style={{ fontSize: "0.78rem", color: T.textMuted, fontFamily: "sans-serif" }}>
+              <span className="map-footer-text" style={{ color: T.textMuted }}>
                 Mapa criado por{" "}
-                <a href="https://www.instagram.com/ParticipantesdiButeco" target="_blank" rel="noopener noreferrer"
-                  style={{ color: BRAND.navy, fontWeight: 700 }}>
+                <a href="https://www.instagram.com/ParticipantesdiButeco" target="_blank" rel="noopener noreferrer" style={{ color: BRAND.navy }}>
                   @ParticipantesdiButeco
                 </a>{" "}· Siga para atualizações e dicas do concurso
               </span>
@@ -448,13 +440,13 @@ export default function App() {
                 </button>
               )}
 
-              <div style={{ marginLeft: "auto", fontSize: "0.75rem", color: T.textFaint, fontFamily: "sans-serif", whiteSpace: "nowrap" }}>
+              <div className="filter-counter" style={{ color: T.textFaint }}>
                 {filteredAndSorted.length} / {BARS.length}
               </div>
             </div>
           </div>
 
-          <div style={{ maxWidth: "1200px", margin: "1.8rem auto 0", padding: "0 1.5rem" }}>
+          <div className="max-width-1200 px-15 mt-2">
             <div
               onClick={() => setTab("mapa")}
               className="map-cta"
@@ -462,25 +454,21 @@ export default function App() {
             >
               <Logo size={38} />
               <div>
-                <div style={{ color: "#fff", fontWeight: 700, fontFamily: "sans-serif", fontSize: "0.95rem" }}>Ver Mapa Interativo dos Bares</div>
-                <div style={{ color: BRAND.goldLt, fontSize: "0.73rem", fontFamily: "sans-serif", opacity: 0.85 }}>
+                <div className="cta-title" style={{ color: "#fff" }}>Ver Mapa Interativo dos Bares</div>
+                <div className="cta-subtitle" style={{ color: BRAND.goldLt }}>
                   Todos os bares marcados no mapa personalizado · Curadoria @ParticipantesdiButeco
                 </div>
               </div>
-              <span style={{ marginLeft: "auto", color: BRAND.goldLt, fontSize: "1.3rem" }}>→</span>
+              <span className="cta-arrow" style={{ color: BRAND.goldLt }}>→</span>
             </div>
           </div>
 
-          <main style={{ maxWidth: "1200px", margin: "0 auto", padding: "1.8rem 1.5rem 3.5rem" }}>
+          <main className="max-width-1200 px-15" style={{ margin: "0 auto", padding: "1.8rem 1.5rem 3.5rem" }}>
             {filteredAndSorted.length === 0 ? (
               <div className="empty-state">
                 <div className="empty-icon">🔍</div>
-                <p style={{ fontFamily: "sans-serif", color: T.textMuted }}>Nenhum bar encontrado com esses filtros.</p>
-                <button
-                  onClick={clearFilters}
-                  className="empty-button"
-                  style={{ background: BRAND.navy, color: "#fff" }}
-                >
+                <p className="empty-state-text" style={{ color: T.textMuted }}>Nenhum bar encontrado com esses filtros.</p>
+                <button onClick={clearFilters} className="empty-button" style={{ background: BRAND.navy, color: "#fff" }}>
                   Limpar filtros
                 </button>
               </div>
@@ -490,7 +478,7 @@ export default function App() {
               </div>
             ) : (
               regionKeys.map(region => (
-                <section key={region} style={{ marginBottom: "2.8rem" }}>
+                <section key={region} className="section-margin">
                   <div className="region-header" style={{ borderBottom: `2px solid ${REGION_COLOR[region]}30` }}>
                     <div className="region-color-bar" style={{ background: REGION_COLOR[region] }} />
                     <h2 className="region-title" style={{ color: REGION_COLOR[region] }}>{region}</h2>
@@ -515,22 +503,15 @@ export default function App() {
         </div>
         <div className="footer-credit">
           <IgIcon color={BRAND.goldLt} />
-          <span style={{ fontFamily: "sans-serif", fontSize: "0.85rem", color: "#aaa" }}>
+          <span className="cookie-text" style={{ color: "#aaa" }}>
             Curadoria:{" "}
-            <a href="https://www.instagram.com/ParticipantesdiButeco" target="_blank" rel="noopener noreferrer"
-              style={{ color: BRAND.goldLt, fontWeight: 700 }}>
+            <a href="https://www.instagram.com/ParticipantesdiButeco" target="_blank" rel="noopener noreferrer" style={{ color: BRAND.goldLt }}>
               @ParticipantesdiButeco
             </a>
           </span>
         </div>
-        <p className="footer-text">
-          Comida di Buteco 2026 · 26ª Edição · Belo Horizonte · 10 abr – 10 mai · Petiscos a R$ 40
-        </p>
-        <button
-          onClick={() => setDark(d => !d)}
-          className="footer-theme-toggle"
-          style={{ color: dark ? BRAND.goldLt : "#ccc" }}
-        >
+        <p className="footer-text">Comida di Buteco 2026 · 26ª Edição · Belo Horizonte · 10 abr – 10 mai · Petiscos a R$ 40</p>
+        <button onClick={() => setDark(d => !d)} className="footer-theme-toggle" style={{ color: dark ? BRAND.goldLt : "#ccc" }}>
           {dark ? <SunIcon /> : <MoonIcon />}
           {dark ? "Modo Claro" : "Modo Escuro"}
         </button>
@@ -550,8 +531,8 @@ function Card({ b, visited, favorites, tv, tf, exp, setExp, imgErr, setImgErr, T
   const borderColor = isF ? BRAND.red : isV ? "#27ae60" : T.cardBorder;
 
   return (
-    <article className="bc" style={{ background: T.cardBg, borderRadius: "14px", border: `2px solid ${borderColor}`, overflow: "hidden", boxShadow: `0 2px 10px rgba(0,0,0,${dark ? "0.3" : "0.07"})`, position: "relative", transition: "background .25s, border .25s" }}>
-      <div className="region-color-bar-top" style={{ height: "4px", background: rc }} />
+    <article className="card" style={{ background: T.cardBg, border: `2px solid ${borderColor}`, boxShadow: `0 2px 10px rgba(0,0,0,${dark ? "0.3" : "0.07"})` }}>
+      <div className="region-color-bar-top" style={{ background: rc }} />
 
       <div className="card-image" style={{ background: rc + "18" }} onClick={() => setExp(isE ? null : b.id)}>
         {!hasErr && b.photo ? (
@@ -572,7 +553,7 @@ function Card({ b, visited, favorites, tv, tf, exp, setExp, imgErr, setImgErr, T
 
       <div className="card-content">
         <div className="card-header">
-          <div style={{ flex: 1, minWidth: 0 }}>
+          <div className="flex-grow-1" style={{ flex: 1, minWidth: 0 }}>
             <h3 className="card-title" style={{ color: T.text }}>{b.name}</h3>
             <div className="card-subtitle" style={{ color: T.textFaint }}>
               {b.neighborhood} · <span style={{ color: rc, fontWeight: 600 }}>{b.region}</span>
@@ -601,9 +582,9 @@ function Card({ b, visited, favorites, tv, tf, exp, setExp, imgErr, setImgErr, T
           </div>
 
           {hasRating && (
-            <div className="rating-badge">
-              <span className="rating-star">⭐</span>
-              <span className="rating-value">{b.rating.toFixed(1)}</span>
+            <div className="rating-badge" style={{ background: BRAND.navy }}>
+              <span className="rating-star" style={{ color: BRAND.goldLt }}>⭐</span>
+              <span className="rating-value" style={{ color: "#fff" }}>{b.rating.toFixed(1)}</span>
             </div>
           )}
 
@@ -611,7 +592,7 @@ function Card({ b, visited, favorites, tv, tf, exp, setExp, imgErr, setImgErr, T
             <div className="temp-badge" style={{ background: getTempBg(b.beerTemp), border: `1px solid ${getTempColor(b.beerTemp)}30` }}>
               <span className="temp-icon" style={{ color: getTempColor(b.beerTemp) }}>🌡️</span>
               <span className="temp-value" style={{ color: getTempColor(b.beerTemp) }}>{b.beerTemp}°C</span>
-              {b.beerTemp < -5 && <span style={{ fontSize: "0.58rem", marginLeft: "1px" }}>❄️</span>}
+              {b.beerTemp < -5 && <span className="snow-icon" style={{ fontSize: "0.58rem", marginLeft: "1px" }}>❄️</span>}
             </div>
           )}
         </div>
