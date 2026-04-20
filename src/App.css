@@ -179,7 +179,7 @@ select option { background: #fff;     color: #1C1A14; }
 .stat-card:hover { transform: translateY(-2px); }
 
 .stat-value { font-size: 1.8rem; font-weight: 700; color: #fff; line-height: 1; }
-.stat-label { font-size: 0.75rem; font-family: sans-serif; text-transform: uppercase; letter-spacing: 0.1em; margin-top: 4px; opacity: 0.85; }
+.stat-label { font-size: 0.75rem; font-family: sans-serif; color: #fff; text-transform: uppercase; letter-spacing: 0.1em; margin-top: 4px; opacity: 0.85; }
 
 /* =============================================
    TABS
