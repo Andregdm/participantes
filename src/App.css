@@ -1,5 +1,5 @@
 /* ============================================
-   VARIÁVEIS CSS E RESET
+   RESET E ESTILOS GLOBAIS
    ============================================ */
 
 *,
@@ -10,7 +10,102 @@
 
 body {
   margin: 0;
+  padding: 0;
   font-family: Georgia, serif;
+  transition: background 0.25s, color 0.25s;
+}
+
+/* ============================================
+   SCROLLBAR PERSONALIZADA
+   ============================================ */
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #C8B890;
+  border-radius: 3px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #404666;
+}
+
+/* ============================================
+   ANIMAÇÕES DOS CARDS
+   ============================================ */
+
+.bc {
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.bc:hover {
+  box-shadow: 0 10px 32px rgba(0, 0, 0, 0.14) !important;
+  transform: translateY(-3px);
+}
+
+.dark .bc:hover {
+  box-shadow: 0 10px 32px rgba(0, 0, 0, 0.4) !important;
+}
+
+.bi {
+  transition: transform 0.4s;
+}
+
+.bc:hover .bi {
+  transform: scale(1.06);
+}
+
+/* ============================================
+   BOTÕES E LINKS
+   ============================================ */
+
+button {
+  cursor: pointer;
+}
+
+a {
+  transition: opacity 0.15s;
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
+/* ============================================
+   INPUTS E FORMULÁRIOS
+   ============================================ */
+
+input::placeholder {
+  color: #9E9280;
+}
+
+.dark input::placeholder {
+  color: #605A6E;
+}
+
+select option {
+  background: #FFFFFF;
+  color: #1C1A14;
+}
+
+.dark select option {
+  background: #1A1D26;
+  color: #EDE8DC;
+}
+
+/* ============================================
+   DARK MODE TOGGLE
+   ============================================ */
+
+.dm-toggle {
+  transition: transform 0.15s, opacity 0.15s;
+}
+
+.dm-toggle:hover {
+  opacity: 0.85;
+  transform: scale(1.05);
 }
 
 /* ============================================
@@ -21,6 +116,7 @@ body {
   width: 100%;
 }
 
+/* Instagram bar */
 .instagram-bar {
   background: rgba(0, 0, 0, 0.35);
   padding: 0.45rem 1.5rem;
@@ -39,14 +135,17 @@ body {
   color: #F4D03F;
   font-weight: 700;
   text-decoration: none;
+  letter-spacing: 0.04em;
 }
 
+/* Header container */
 .header-container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 1.8rem 1.5rem 0;
 }
 
+/* Header main layout */
 .header-main {
   display: flex;
   align-items: flex-end;
@@ -55,6 +154,7 @@ body {
   gap: 1.5rem;
 }
 
+/* Logo e título lado a lado */
 .header-logo-wrapper {
   display: flex;
   align-items: center;
@@ -78,6 +178,7 @@ body {
   text-transform: uppercase;
   color: #F4D03F;
   margin-bottom: 0.25rem;
+  opacity: 0.9;
 }
 
 .header-main-title {
@@ -94,12 +195,14 @@ body {
   font-style: italic;
   color: #9BBFCE;
   font-weight: 300;
+  line-height: 1.4;
 }
 
 .header-sub span {
   color: #F4D03F;
 }
 
+/* Stats cards */
 .header-stats {
   display: flex;
   gap: 0.65rem;
@@ -114,6 +217,11 @@ body {
   min-width: 68px;
   backdrop-filter: blur(8px);
   border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.2s;
+}
+
+.stat-card:hover {
+  transform: translateY(-2px);
 }
 
 .stat-value {
@@ -130,8 +238,10 @@ body {
   text-transform: uppercase;
   letter-spacing: 0.07em;
   margin-top: 2px;
+  opacity: 0.85;
 }
 
+/* Dark mode toggle button */
 .header-theme-toggle {
   background: rgba(255, 255, 255, 0.12);
   border: 1.5px solid rgba(255, 255, 255, 0.25);
@@ -145,6 +255,12 @@ body {
   backdrop-filter: blur(8px);
   cursor: pointer;
   transition: all 0.15s;
+  flex-shrink: 0;
+}
+
+.header-theme-toggle:hover {
+  transform: scale(1.05);
+  opacity: 0.85;
 }
 
 .dark .header-theme-toggle {
@@ -153,6 +269,7 @@ body {
   color: #F4D03F;
 }
 
+/* Tabs */
 .header-tabs {
   display: flex;
   margin-top: 1.4rem;
@@ -179,7 +296,7 @@ body {
 }
 
 /* ============================================
-   FILTER BAR
+   FILTER BAR (STICKY)
    ============================================ */
 
 .filter-bar {
@@ -201,6 +318,7 @@ body {
   flex-wrap: wrap;
 }
 
+/* Search input */
 .search-container {
   flex: 2 1 180px;
   position: relative;
@@ -224,6 +342,7 @@ body {
   border: 1.5px solid;
 }
 
+/* Selects */
 .selects-container {
   display: flex;
   gap: 0.5rem;
@@ -240,6 +359,7 @@ body {
   border: 1.5px solid;
 }
 
+/* Filter pills */
 .pills-container {
   display: flex;
   gap: 0.5rem;
@@ -260,6 +380,10 @@ body {
   border: 2px solid;
 }
 
+.filter-pill:hover {
+  transform: translateY(-1px);
+}
+
 .clear-pill {
   padding: 0.42rem 0.88rem;
   border-radius: 20px;
@@ -269,6 +393,7 @@ body {
   border: 1px solid;
 }
 
+/* Filter counter */
 .filter-counter {
   margin-left: auto;
   font-size: 0.73rem;
@@ -277,7 +402,7 @@ body {
 }
 
 /* ============================================
-   MAP CTA
+   MAP CTA BANNER
    ============================================ */
 
 .map-cta-wrapper {
@@ -295,6 +420,11 @@ body {
   cursor: pointer;
   box-shadow: 0 2px 14px rgba(28, 45, 110, 0.2);
   border: 1px solid rgba(28, 45, 110, 0.33);
+  transition: transform 0.2s;
+}
+
+.map-cta:hover {
+  transform: translateX(4px);
 }
 
 .map-cta-title {
@@ -357,6 +487,11 @@ body {
   position: relative;
   width: 100%;
   padding-bottom: 56.25%;
+  background: #f0ebe0;
+}
+
+.dark .map-iframe-wrapper {
+  background: #111;
 }
 
 .map-iframe-wrapper iframe {
@@ -401,6 +536,7 @@ body {
   margin-bottom: 2.5rem;
 }
 
+/* Region header */
 .region-header {
   display: flex;
   align-items: center;
@@ -431,10 +567,7 @@ body {
   font-weight: 700;
 }
 
-/* ============================================
-   CARDS GRID
-   ============================================ */
-
+/* Cards grid */
 .cards-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -448,7 +581,7 @@ body {
 .card {
   border-radius: 14px;
   overflow: hidden;
-  transition: box-shadow 0.2s, transform 0.2s;
+  transition: box-shadow 0.2s, transform 0.2s, background 0.25s, border 0.25s;
   border: 2px solid;
 }
 
@@ -457,10 +590,16 @@ body {
   transform: translateY(-2px);
 }
 
+.dark .card:hover {
+  box-shadow: 0 10px 32px rgba(0, 0, 0, 0.4);
+}
+
+/* Card region strip */
 .card-region-strip {
   height: 4px;
 }
 
+/* Card photo */
 .card-photo {
   overflow: hidden;
   height: 185px;
@@ -488,6 +627,7 @@ body {
   font-size: 2.8rem;
 }
 
+/* Badges */
 .card-champion-badge {
   position: absolute;
   top: 8px;
@@ -527,6 +667,7 @@ body {
   pointer-events: none;
 }
 
+/* Photo credit */
 .card-photo-credit {
   padding: 0.2rem 0.75rem;
   font-size: 0.58rem;
@@ -535,6 +676,7 @@ body {
   border-bottom: 1px solid;
 }
 
+/* Card content */
 .card-content {
   padding: 0.85rem 1rem 0.8rem;
 }
@@ -576,6 +718,7 @@ body {
   cursor: pointer;
 }
 
+/* Info bar (glassmorphism) */
 .card-info-bar {
   display: flex;
   align-items: center;
@@ -586,8 +729,10 @@ body {
   backdrop-filter: blur(10px);
   border-radius: 9px;
   border: 1px solid;
+  transition: background 0.25s, border 0.25s;
 }
 
+/* Team status */
 .card-team-status {
   display: flex;
   align-items: center;
@@ -598,6 +743,7 @@ body {
   font-weight: 600;
 }
 
+/* Rating badge */
 .card-rating {
   display: flex;
   align-items: center;
@@ -616,6 +762,7 @@ body {
   color: #F4D03F;
 }
 
+/* Temperature badge */
 .card-temp {
   display: flex;
   align-items: center;
@@ -629,11 +776,13 @@ body {
   border: 1px solid;
 }
 
+/* Petisco container */
 .card-petisco {
   border-radius: 7px;
   padding: 0.4rem 0.7rem;
   margin: 0.5rem 0;
   border: 1px solid;
+  transition: background 0.25s, border 0.25s;
 }
 
 .card-petisco-label {
@@ -651,6 +800,7 @@ body {
   line-height: 1.2;
 }
 
+/* Description */
 .card-description {
   font-size: 0.75rem;
   line-height: 1.55;
@@ -658,6 +808,7 @@ body {
   font-weight: 300;
 }
 
+/* Address */
 .card-address {
   font-size: 0.67rem;
   font-family: sans-serif;
@@ -666,6 +817,7 @@ body {
   margin-bottom: 0.35rem;
 }
 
+/* Expand button */
 .card-expand-btn {
   background: none;
   border: none;
@@ -710,6 +862,11 @@ body {
   font-weight: 700;
   cursor: pointer;
   color: #fff;
+  transition: transform 0.15s, background 0.15s;
+}
+
+.empty-button:hover {
+  transform: translateY(-1px);
 }
 
 /* ============================================
