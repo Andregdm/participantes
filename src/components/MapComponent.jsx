@@ -53,49 +53,4 @@ const MapComponent = ({ T, dark }) => (
   </div>
 );
 
-export default MapComponent;                            height: "100%",
-                            border: "none"
-                        }}
-                        title="Mapa Comida di Buteco 2026 BH"
-                        allowFullScreen
-                        loading="lazy"
-                    />
-                </div>
-
-                {/* Rodapé do mapa */}
-                <div
-                    style={{
-                        padding: "0.9rem 1.8rem",
-                        background: T.mapFooterBg,
-                        borderTop: `1px solid ${T.border}`,
-                        display: "flex",
-                        alignItems: "center",
-                        gap: "8px"
-                    }}
-                >
-                    <IgIcon color={BRAND.navy} />
-                    <span
-                        style={{
-                            fontSize: "0.78rem",
-                            color: T.textMuted,
-                            fontFamily: "sans-serif"
-                        }}
-                    >
-                        Mapa criado por{" "}
-                        <a
-                            href="https://www.instagram.com/ParticipantesdiButeco"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            style={{ color: BRAND.navy, fontWeight: 700 }}
-                        >
-                            @ParticipantesdiButeco
-                        </a>{" "}
-                        · Siga para atualizações e dicas do concurso
-                    </span>
-                </div>
-            </div>
-        </div>
-    );
-};
-
 export default MapComponent;
