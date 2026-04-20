@@ -21,7 +21,7 @@
   border-radius: 3px;
 }
 
-/* Variação para tema escuro (será sobrescrita via JS) */
+/* Tema escuro para scrollbar */
 .dark ::-webkit-scrollbar-thumb {
   background: #404666;
 }
@@ -62,6 +62,8 @@
 
 button {
   cursor: pointer;
+  background: none;
+  border: none;
 }
 
 /* ============================================
@@ -70,6 +72,7 @@ button {
 
 a {
   transition: opacity 0.15s;
+  text-decoration: none;
 }
 
 a:hover {
@@ -87,6 +90,10 @@ input::placeholder {
 /* Tema escuro para placeholder */
 .dark input::placeholder {
   color: #605A6E;
+}
+
+select {
+  cursor: pointer;
 }
 
 select option {
@@ -122,15 +129,11 @@ select option {
   background: rgba(255, 255, 255, 0.12);
   border-radius: 50%;
   padding: 8px;
-  border: 3px solid #E8A82066;
-  box-shadow: 0 0 32px #E8A82044, 0 8px 20px rgba(0, 0, 0, 0.3);
   transition: all 0.3s ease;
 }
 
 .logo-container:hover {
   transform: scale(1.02);
-  border-color: #E8A820aa;
-  box-shadow: 0 0 40px #E8A82066, 0 8px 25px rgba(0, 0, 0, 0.35);
 }
 
 /* ============================================
@@ -251,7 +254,6 @@ select option {
   border-radius: 9px;
   gap: 6px;
   flex-wrap: wrap;
-  border: 1px solid rgba(255, 255, 255, 0.4);
   transition: background 0.25s, border 0.25s;
 }
 
@@ -342,8 +344,6 @@ select option {
    ============================================ */
 
 .expand-btn {
-  background: none;
-  border: none;
   font-size: 0.71rem;
   padding: 0;
   font-weight: 700;
@@ -522,6 +522,11 @@ select option {
    SEARCH INPUT
    ============================================ */
 
+.search-wrapper {
+  flex: 2 1 220px;
+  position: relative;
+}
+
 .search-input {
   width: 100%;
   padding: 0.5rem 0.8rem 0.5rem 2rem;
@@ -553,6 +558,87 @@ select option {
 }
 
 /* ============================================
+   FILTERS GROUP
+   ============================================ */
+
+.filters-group {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.filters-container {
+  display: flex;
+  gap: 0.6rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* ============================================
+   HEADER INSTAGRAM BAR
+   ============================================ */
+
+.instagram-bar {
+  background: rgba(0, 0, 0, 0.35);
+  padding: 0.45rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  font-size: 0.76rem;
+  font-family: sans-serif;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+/* ============================================
+   HEADER CONTENT
+   ============================================ */
+
+.header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 0;
+}
+
+.header-logo-title {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex: 1;
+  min-width: 300px;
+}
+
+.header-stats {
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+/* ============================================
+   TABS
+   ============================================ */
+
+.tabs-container {
+  display: flex;
+  margin-top: 1.8rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.tab-button {
+  background: none;
+  border: none;
+  padding: 0.85rem 1.5rem;
+  font-size: 0.9rem;
+  font-family: sans-serif;
+  transition: all 0.15s;
+  letter-spacing: 0.01em;
+  margin-bottom: -1px;
+  cursor: pointer;
+}
+
+/* ============================================
    PHOTO CREDIT
    ============================================ */
 
@@ -561,9 +647,157 @@ select option {
   font-size: 0.58rem;
   font-family: sans-serif;
   text-align: right;
-  border-bottom: 1px solid #E2D8C0;
+  transition: background 0.25s, border-color 0.25s, color 0.25s;
 }
 
-.dark .photo-credit {
-  border-bottom: 1px solid #2E3245;
+/* ============================================
+   CARD CONTENT
+   ============================================ */
+
+.card-content {
+  padding: 0.85rem 1rem 0.8rem;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.card-title {
+  margin: 0 0 2px;
+  font-size: 0.92rem;
+  font-weight: 700;
+  font-family: sans-serif;
+  line-height: 1.2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.card-subtitle {
+  font-size: 0.67rem;
+  font-family: sans-serif;
+}
+
+.card-actions {
+  display: flex;
+  gap: 2px;
+  flex-shrink: 0;
+  margin-left: 6px;
+}
+
+.action-button {
+  background: none;
+  border: none;
+  padding: 4px;
+  display: flex;
+  cursor: pointer;
+}
+
+/* ============================================
+   TEAM VISIT STATUS
+   ============================================ */
+
+.team-visit-status {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+.team-visit-text {
+  font-size: 0.68rem;
+  font-family: sans-serif;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.team-waiting-text {
+  font-size: 0.68rem;
+  font-family: sans-serif;
+  white-space: nowrap;
+}
+
+/* ============================================
+   CARD IMAGE CONTAINER
+   ============================================ */
+
+.card-image {
+  overflow: hidden;
+  height: 185px;
+  position: relative;
+  cursor: pointer;
+}
+
+.card-img {
+  width: 100%;
+  height: 185px;
+  object-fit: cover;
+  display: block;
+}
+
+.card-img-fallback {
+  height: 185px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.8rem;
+}
+
+.image-gradient {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50px;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.35));
+  pointer-events: none;
+}
+
+/* ============================================
+   REGION COLOR BAR
+   ============================================ */
+
+.region-color-bar-top {
+  height: 4px;
+}
+
+/* ============================================
+   MAP CONTAINER
+   ============================================ */
+
+.map-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+}
+
+.map-iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* ============================================
+   STICKY FILTERS
+   ============================================ */
+
+.sticky-filters {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  transition: background 0.25s;
+}
+
+.sticky-filters-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.8rem 1.5rem;
+  display: flex;
+  gap: 0.6rem;
+  align-items: center;
+  flex-wrap: wrap;
 }
