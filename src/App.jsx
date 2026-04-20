@@ -1,9 +1,9 @@
 import React, { useState, useMemo, useCallback, useEffect, lazy, Suspense } from "react";
 import data from "./data/bares.json";
-import logoImg from "./data/logo.png";
+import logoImg from "./logo.png";
 import "./App.css";
 
-// ─── OTIMIZAÇÃO 1: Extrair constantes que não mudam ─────────────────────────
+// ─── BRAND PALETTE ────────────────────────────────────────────────────────
 const BRAND = {
   navy:    "#1C2D6E",
   navyDk:  "#131f50",
@@ -14,7 +14,7 @@ const BRAND = {
   white:   "#FFFFFF",
 };
 
-// ─── OTIMIZAÇÃO 2: Pré-calcular temas como constantes ───────────────────────
+// ─── TEMAS ────────────────────────────────────────────────────────────────
 const THEMES = {
   light: {
     bg:           "#F5EFE0",
@@ -68,35 +68,7 @@ const REGION_COLOR = data.regions;
 const BARS = data.bars;
 const REGIONS = ["Todas", ...Object.keys(REGION_COLOR)];
 
-// ─── OTIMIZAÇÃO 3: Mapeamento de cores de temperatura pré-calculado ──────────
-const TEMP_COLORS = {
-  veryCold: "#2980B9",
-  cold: "#27AE60",
-  cool: "#F39C12",
-  warm: "#E67E22",
-  hot: "#C0392B",
-  default: "#95a5a6"
-};
-
-const getTempColor = (t) => {
-  if (t === null) return TEMP_COLORS.default;
-  if (t < -3) return TEMP_COLORS.veryCold;
-  if (t <= 1) return TEMP_COLORS.cold;
-  if (t <= 3) return TEMP_COLORS.cool;
-  if (t <= 6) return TEMP_COLORS.warm;
-  return TEMP_COLORS.hot;
-};
-
-const getTempBg = (t) => {
-  if (t === null) return "rgba(0,0,0,0.05)";
-  if (t < -3) return "rgba(52,152,219,0.15)";
-  if (t <= 1)  return "rgba(46,204,113,0.15)";
-  if (t <= 3)  return "rgba(243,156,18,0.15)";
-  if (t <= 6)  return "rgba(230,126,34,0.15)";
-  return "rgba(231,76,60,0.15)";
-};
-
-// ─── OTIMIZAÇÃO 4: Função de normalização memoizada ──────────────────────────
+// ─── FUNÇÃO PARA NORMALIZAR TEXTOS ─────────────────────────────────────────
 const normalizeText = (text) => {
   if (!text) return "";
   return text
@@ -107,50 +79,27 @@ const normalizeText = (text) => {
     .replace(/\s+/g, " ");
 };
 
-// ─── OTIMIZAÇÃO 5: Componentes de ícone memoizados ───────────────────────────
-const HeartIcon = React.memo(({ f }) => (
-  <svg width="17" height="17" viewBox="0 0 24 24" fill={f ? "#C0392B" : "none"} stroke={f ? "#C0392B" : "#999"} strokeWidth="2">
-    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
-  </svg>
-));
+// ─── HELPERS DE TEMPERATURA ─────────────────────────────────────────────────
+const getTempColor = (t) => {
+  if (t === null) return "#95a5a6";
+  if (t < -3) return "#2980B9";
+  if (t <= 1) return "#27AE60";
+  if (t <= 3) return "#F39C12";
+  if (t <= 6) return "#E67E22";
+  return "#C0392B";
+};
 
-const CheckCircle = React.memo(({ d }) => (
-  <svg width="17" height="17" viewBox="0 0 24 24" fill={d ? "#27ae60" : "none"} stroke={d ? "#27ae60" : "#999"} strokeWidth="2">
-    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
-    <polyline points="22 4 12 14.01 9 11.01"/>
-  </svg>
-));
+const getTempBg = (t) => {
+  if (t === null) return "rgba(0,0,0,0.05)";
+  if (t < -3) return "rgba(52,152,219,0.15)";
+  if (t <= 1) return "rgba(46,204,113,0.15)";
+  if (t <= 3) return "rgba(243,156,18,0.15)";
+  if (t <= 6) return "rgba(230,126,34,0.15)";
+  return "rgba(231,76,60,0.15)";
+};
 
-const MoonIcon = React.memo(() => (
-  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
-  </svg>
-));
-
-const SunIcon = React.memo(() => (
-  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-    <circle cx="12" cy="12" r="5"/>
-    <line x1="12" y1="1" x2="12" y2="3"/>
-    <line x1="12" y1="21" x2="12" y2="23"/>
-    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
-    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
-    <line x1="1" y1="12" x2="3" y2="12"/>
-    <line x1="21" y1="12" x2="23" y2="12"/>
-    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
-    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
-  </svg>
-));
-
-const IgIcon = React.memo(({ color = "currentColor" }) => (
-  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2">
-    <rect x="2" y="2" width="20" height="20" rx="5"/>
-    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
-    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
-  </svg>
-));
-
-// ─── OTIMIZAÇÃO 6: Componente Logo memoizado ─────────────────────────────────
-const Logo = React.memo(({ size = 80 }) => (
+// ─── COMPONENTE LOGO ────────────────────────────────────────────────────────
+const Logo = ({ size = 80 }) => (
   <img 
     src={logoImg} 
     alt="Participantes di Buteco Logo" 
@@ -163,13 +112,55 @@ const Logo = React.memo(({ size = 80 }) => (
       boxShadow: `0 0 0 4px ${BRAND.gold}55, 0 0 0 8px rgba(255,255,255,0.1), 0 8px 24px rgba(0,0,0,0.2)`
     }}
   />
-));
+);
 
-// ─── OTIMIZAÇÃO 7: Lazy loading do componente Mapa ───────────────────────────
+// ─── ÍCONES ─────────────────────────────────────────────────────────────────
+const HeartIcon = ({ f }) => (
+  <svg width="17" height="17" viewBox="0 0 24 24" fill={f ? "#C0392B" : "none"} stroke={f ? "#C0392B" : "#999"} strokeWidth="2">
+    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+  </svg>
+);
+
+const CheckCircle = ({ d }) => (
+  <svg width="17" height="17" viewBox="0 0 24 24" fill={d ? "#27ae60" : "none"} stroke={d ? "#27ae60" : "#999"} strokeWidth="2">
+    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+    <polyline points="22 4 12 14.01 9 11.01"/>
+  </svg>
+);
+
+const MoonIcon = () => (
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+  </svg>
+);
+
+const SunIcon = () => (
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+    <circle cx="12" cy="12" r="5"/>
+    <line x1="12" y1="1" x2="12" y2="3"/>
+    <line x1="12" y1="21" x2="12" y2="23"/>
+    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+    <line x1="1" y1="12" x2="3" y2="12"/>
+    <line x1="21" y1="12" x2="23" y2="12"/>
+    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+  </svg>
+);
+
+const IgIcon = ({ color = "currentColor" }) => (
+  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="2">
+    <rect x="2" y="2" width="20" height="20" rx="5"/>
+    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+  </svg>
+);
+
+// ─── COMPONENTE MAPA (lazy loading) ─────────────────────────────────────────
 const MapComponent = lazy(() => import("./components/MapComponent"));
 
-// ─── OTIMIZAÇÃO 8: Componente Card memoizado com comparação customizada ──────
-const Card = React.memo(({ b, visited, favorites, onToggleVisit, onToggleFavorite, expandedId, onToggleExpand, imgErr, onImgError, T, dark }) => {
+// ─── COMPONENTE CARD ────────────────────────────────────────────────────────
+const Card = ({ b, visited, favorites, onToggleVisit, onToggleFavorite, expandedId, onToggleExpand, imgErr, onImgError, T, dark }) => {
   const isV = visited.has(b.id);
   const isF = favorites.has(b.id);
   const isE = expandedId === b.id;
@@ -180,7 +171,6 @@ const Card = React.memo(({ b, visited, favorites, onToggleVisit, onToggleFavorit
   const teamVisited = b.visited === true;
   const borderColor = isF ? BRAND.red : isV ? "#27ae60" : T.cardBorder;
 
-  // ─── OTIMIZAÇÃO 9: Handlers memoizados localmente ─────────────────────────
   const handleImageError = useCallback(() => onImgError(b.id), [b.id, onImgError]);
   const handleToggleVisit = useCallback(() => onToggleVisit(b.id), [b.id, onToggleVisit]);
   const handleToggleFavorite = useCallback(() => onToggleFavorite(b.id), [b.id, onToggleFavorite]);
@@ -209,7 +199,7 @@ const Card = React.memo(({ b, visited, favorites, onToggleVisit, onToggleFavorit
 
       <div className="card-content">
         <div className="card-header">
-          <div className="flex-grow-1" style={{ flex: 1, minWidth: 0 }}>
+          <div style={{ flex: 1, minWidth: 0 }}>
             <h3 className="card-title" style={{ color: T.text }}>{b.name}</h3>
             <div className="card-subtitle" style={{ color: T.textFaint }}>
               {b.neighborhood} · <span style={{ color: rc, fontWeight: 600 }}>{b.region}</span>
@@ -248,7 +238,7 @@ const Card = React.memo(({ b, visited, favorites, onToggleVisit, onToggleFavorit
             <div className="temp-badge" style={{ background: getTempBg(b.beerTemp), border: `1px solid ${getTempColor(b.beerTemp)}30` }}>
               <span className="temp-icon" style={{ color: getTempColor(b.beerTemp) }}>🌡️</span>
               <span className="temp-value" style={{ color: getTempColor(b.beerTemp) }}>{b.beerTemp}°C</span>
-              {b.beerTemp < -5 && <span className="snow-icon" style={{ fontSize: "0.58rem", marginLeft: "1px" }}>❄️</span>}
+              {b.beerTemp < -5 && <span style={{ fontSize: "0.58rem", marginLeft: "1px" }}>❄️</span>}
             </div>
           )}
         </div>
@@ -275,45 +265,73 @@ const Card = React.memo(({ b, visited, favorites, onToggleVisit, onToggleFavorit
       </div>
     </article>
   );
-}, (prevProps, nextProps) => {
-  // ─── OTIMIZAÇÃO 10: Comparação customizada para evitar re-renders ─────────
-  return (
-    prevProps.b.id === nextProps.b.id &&
-    prevProps.visited === nextProps.visited &&
-    prevProps.favorites === nextProps.favorites &&
-    prevProps.expandedId === nextProps.expandedId &&
-    prevProps.imgErr === nextProps.imgErr &&
-    prevProps.T === nextProps.T &&
-    prevProps.dark === nextProps.dark
-  );
-});
-
-// ─── OTIMIZAÇÃO 11: Hook customizado para localStorage ───────────────────────
-const useLocalStorage = (key, initialValue) => {
-  const [value, setValue] = useState(() => {
-    try {
-      const item = localStorage.getItem(key);
-      return item ? JSON.parse(item) : initialValue;
-    } catch {
-      return initialValue;
-    }
-  });
-
-  useEffect(() => {
-    try {
-      localStorage.setItem(key, JSON.stringify(value));
-    } catch {}
-  }, [key, value]);
-
-  return [value, setValue];
 };
 
-// ─── OTIMIZAÇÃO 12: Hook customizado para filtros e ordenação ────────────────
-const useFilteredBars = (bars, filters, sortBy) => {
-  return useMemo(() => {
-    let result = bars.filter(b => {
-      if (filters.onlyVisited && !filters.visited.has(b.id)) return false;
-      if (filters.onlyFavorites && !filters.favorites.has(b.id)) return false;
+// ─── COMPONENTE PRINCIPAL ────────────────────────────────────────────────────
+export default function App() {
+  // Estado do tema
+  const [dark, setDark] = useState(() => {
+    try { return localStorage.getItem("cdb26theme") === "dark"; } catch { return false; }
+  });
+
+  // Estado dos dados
+  const [visited, setVisited] = useState(() => {
+    try { return new Set(JSON.parse(localStorage.getItem("cdb26v") || "[]")); } catch { return new Set(); }
+  });
+  const [favorites, setFavorites] = useState(() => {
+    try { return new Set(JSON.parse(localStorage.getItem("cdb26f") || "[]")); } catch { return new Set(); }
+  });
+
+  // Estado dos filtros
+  const [filters, setFilters] = useState({
+    onlyVisited: false,
+    onlyFavorites: false,
+    region: "Todas",
+    search: "",
+    onlyTeam: false
+  });
+  
+  const [sortBy, setSortBy] = useState("none");
+  const [expandedId, setExpandedId] = useState(null);
+  const [tab, setTab] = useState("bares");
+  const [imgErr, setImgErr] = useState(new Set());
+
+  const T = dark ? THEMES.dark : THEMES.light;
+
+  // Persistência do tema
+  useEffect(() => {
+    try { localStorage.setItem("cdb26theme", dark ? "dark" : "light"); } catch {}
+    if (dark) {
+      document.body.classList.add("dark");
+    } else {
+      document.body.classList.remove("dark");
+    }
+  }, [dark]);
+
+  // Persistência dos dados
+  useEffect(() => {
+    try { localStorage.setItem("cdb26v", JSON.stringify([...visited])); } catch {}
+  }, [visited]);
+
+  useEffect(() => {
+    try { localStorage.setItem("cdb26f", JSON.stringify([...favorites])); } catch {}
+  }, [favorites]);
+
+  // Pré-processamento dos dados
+  const barsWithNormalized = useMemo(() => {
+    return BARS.map(bar => ({
+      ...bar,
+      normalizedName: normalizeText(bar.name),
+      normalizedDish: normalizeText(bar.dish),
+      normalizedNeighborhood: normalizeText(bar.neighborhood),
+    }));
+  }, []);
+
+  // Filtragem e ordenação
+  const filteredAndSorted = useMemo(() => {
+    let result = barsWithNormalized.filter(b => {
+      if (filters.onlyVisited && !visited.has(b.id)) return false;
+      if (filters.onlyFavorites && !favorites.has(b.id)) return false;
       if (filters.region !== "Todas" && b.region !== filters.region) return false;
       if (filters.onlyTeam && !b.visited) return false;
       if (filters.search) {
@@ -332,69 +350,25 @@ const useFilteredBars = (bars, filters, sortBy) => {
     }
     
     return result;
-  }, [bars, filters, sortBy]);
-};
+  }, [barsWithNormalized, filters, visited, favorites, sortBy]);
 
-// ─── OTIMIZAÇÃO 13: Componente principal otimizado ───────────────────────────
-export default function App() {
-  // ─── OTIMIZAÇÃO 14: Estado unificado com useReducer? Não, mas agrupado ────
-  const [dark, setDark] = useLocalStorage("cdb26theme", false);
-  const [visited, setVisited] = useLocalStorage("cdb26v", new Set());
-  const [favorites, setFavorites] = useLocalStorage("cdb26f", new Set());
-  
-  // ─── OTIMIZAÇÃO 15: Estado dos filtros agrupado ───────────────────────────
-  const [filters, setFilters] = useState({
-    onlyVisited: false,
-    onlyFavorites: false,
-    region: "Todas",
-    search: "",
-    onlyTeam: false
-  });
-  
-  const [sortBy, setSortBy] = useState("none");
-  const [expandedId, setExpandedId] = useState(null);
-  const [tab, setTab] = useState("bares");
-  const [imgErr, setImgErr] = useState(new Set());
-
-  const T = dark ? THEMES.dark : THEMES.light;
-
-  // ─── OTIMIZAÇÃO 16: Pré-processamento dos dados uma única vez ──────────────
-  const barsWithNormalized = useMemo(() => {
-    return BARS.map(bar => ({
-      ...bar,
-      normalizedName: normalizeText(bar.name),
-      normalizedDish: normalizeText(bar.dish),
-      normalizedNeighborhood: normalizeText(bar.neighborhood),
-    }));
-  }, []);
-
-  // ─── OTIMIZAÇÃO 17: Aplicação de filtros e ordenação ──────────────────────
-  const filteredAndSorted = useFilteredBars(barsWithNormalized, {
-    visited,
-    favorites,
-    region: filters.region,
-    search: filters.search,
-    onlyTeam: filters.onlyTeam,
-    onlyVisited: filters.onlyVisited,
-    onlyFavorites: filters.onlyFavorites
-  }, sortBy);
-
-  // ─── OTIMIZAÇÃO 18: Agrupamento por região memoizado ──────────────────────
+  // Agrupamento por região
   const grouped = useMemo(() => {
     const g = {};
     filteredAndSorted.forEach(b => { (g[b.region] = g[b.region] || []).push(b); });
     return g;
   }, [filteredAndSorted]);
+
   const regionKeys = useMemo(() => Object.keys(grouped).sort(), [grouped]);
 
-  // ─── OTIMIZAÇÃO 19: Handlers memoizados com useCallback ────────────────────
+  // Handlers
   const handleToggleVisit = useCallback((id) => {
     setVisited(prev => {
       const newSet = new Set(prev);
       newSet.has(id) ? newSet.delete(id) : newSet.add(id);
       return newSet;
     });
-  }, [setVisited]);
+  }, []);
 
   const handleToggleFavorite = useCallback((id) => {
     setFavorites(prev => {
@@ -402,7 +376,7 @@ export default function App() {
       newSet.has(id) ? newSet.delete(id) : newSet.add(id);
       return newSet;
     });
-  }, [setFavorites]);
+  }, []);
 
   const handleToggleExpand = useCallback((id) => {
     setExpandedId(prev => prev === id ? null : id);
@@ -429,69 +403,12 @@ export default function App() {
 
   const hasActiveFilters = filters.onlyVisited || filters.onlyFavorites || filters.region !== "Todas" || filters.search || filters.onlyTeam || sortBy !== "none";
 
-  // ─── OTIMIZAÇÃO 20: Aplicar classe dark no body ───────────────────────────
-  useEffect(() => {
-    if (dark) {
-      document.body.classList.add("dark");
-    } else {
-      document.body.classList.remove("dark");
-    }
-  }, [dark]);
-
-  // ─── OTIMIZAÇÃO 21: Memoizar estatísticas para evitar recálculo ───────────
+  // Estatísticas memoizadas
   const stats = useMemo(() => [
     { v: BARS.length, l: "Bares" },
     { v: visited.size, l: "Eu visitei" },
     { v: favorites.size, l: "Favoritos" }
   ], [visited.size, favorites.size]);
-
-  // ─── OTIMIZAÇÃO 22: Memoizar opções de ordenação ──────────────────────────
-  const sortOptions = useMemo(() => [
-    { value: "none", label: "📋 Ordenar" },
-    { value: "rating", label: "⭐ Maior nota" },
-    { value: "beerTemp", label: "🌡️ Mais gelada" }
-  ], []);
-
-  // ─── OTIMIZAÇÃO 23: Memoizar botões de filtro ─────────────────────────────
-  const filterButtons = useMemo(() => [
-    { 
-      key: "onlyTeam", 
-      active: filters.onlyTeam, 
-      label: "Time visitou", 
-      ac: "#27ae60", 
-      acBg: dark ? "#0d2c1a" : "#eafaf1", 
-      acText: "#1a5c30",
-      icon: <CheckCircle d={filters.onlyTeam} />
-    },
-    { 
-      key: "onlyVisited", 
-      active: filters.onlyVisited, 
-      label: "Eu visitei", 
-      ac: "#27ae60", 
-      acBg: dark ? "#0d2c1a" : "#eafaf1", 
-      acText: "#1a5c30",
-      icon: <CheckCircle d={filters.onlyVisited} />
-    },
-    { 
-      key: "onlyFavorites", 
-      active: filters.onlyFavorites, 
-      label: "Favoritos", 
-      ac: BRAND.red, 
-      acBg: dark ? "#2c0d0d" : "#fdf0ed", 
-      acText: "#c0392b",
-      icon: <HeartIcon f={filters.onlyFavorites} />
-    }
-  ], [filters.onlyTeam, filters.onlyVisited, filters.onlyFavorites, dark]);
-
-  // ─── OTIMIZAÇÃO 24: Componente do mapa com lazy loading ────────────────────
-  const renderMapTab = useMemo(() => {
-    if (tab !== "mapa") return null;
-    return (
-      <Suspense fallback={<div className="loading-state">Carregando mapa...</div>}>
-        <MapComponent T={T} dark={dark} BRAND={BRAND} Logo={Logo} IgIcon={IgIcon} />
-      </Suspense>
-    );
-  }, [tab, T, dark]);
 
   return (
     <div className="app-container" style={{ background: T.bg }}>
@@ -500,14 +417,14 @@ export default function App() {
         <div className="instagram-bar">
           <IgIcon color={BRAND.goldLt} />
           <span style={{ color: "#ccc" }}>Curadoria realizada pelo perfil do Instagram</span>
-          <a href="https://www.instagram.com/ParticipantesdiButeco" target="_blank" rel="noopener noreferrer" className="instagram-link" style={{ color: BRAND.goldLt }}>
+          <a href="https://www.instagram.com/ParticipantesdiButeco" target="_blank" rel="noopener noreferrer" style={{ color: BRAND.goldLt, fontWeight: 700 }}>
             @ParticipantesdiButeco
           </a>
           <span style={{ color: "#777" }}>— siga para dicas e novidades!</span>
         </div>
 
         <div className="header-content">
-          <div className="d-flex align-center gap-2 flex-wrap">
+          <div style={{ display: "flex", alignItems: "center", gap: "2rem", flexWrap: "wrap" }}>
             <div className="header-logo-title">
               <div className="logo-container" style={{ border: `3px solid ${BRAND.gold}66`, boxShadow: `0 0 32px ${BRAND.gold}44, 0 8px 20px rgba(0,0,0,0.3)` }}>
                 <Logo size={85} />
@@ -575,9 +492,13 @@ export default function App() {
       </header>
 
       {/* CONTEÚDO DINÂMICO */}
-      {tab === "mapa" ? renderMapTab : (
+      {tab === "mapa" ? (
+        <Suspense fallback={<div className="loading-state" style={{ textAlign: "center", padding: "3rem" }}>Carregando mapa...</div>}>
+          <MapComponent T={T} dark={dark} BRAND={BRAND} Logo={Logo} IgIcon={IgIcon} />
+        </Suspense>
+      ) : (
         <>
-          {/* FILTROS STICKY */}
+          {/* FILTROS */}
           <div className="sticky-filters" style={{ background: T.filterBg, borderBottom: `1px solid ${T.filterBorder}`, boxShadow: `0 2px 12px rgba(0,0,0,${dark ? "0.4" : "0.07"})` }}>
             <div className="sticky-filters-inner">
               <div className="search-wrapper">
@@ -618,25 +539,48 @@ export default function App() {
                     fontWeight: sortBy !== "none" ? 700 : 400
                   }}
                 >
-                  {sortOptions.map(opt => <option key={opt.value} value={opt.value}>{opt.label}</option>)}
+                  <option value="none">📋 Ordenar</option>
+                  <option value="rating">⭐ Maior nota</option>
+                  <option value="beerTemp">🌡️ Mais gelada</option>
                 </select>
               </div>
 
               <div className="filters-group">
-                {filterButtons.map(btn => (
-                  <button
-                    key={btn.key}
-                    onClick={() => handleFilterChange(btn.key, !btn.active)}
-                    className="filter-pill"
-                    style={{
-                      border: `2px solid ${btn.active ? btn.ac : T.border}`,
-                      background: btn.active ? btn.acBg : T.surface,
-                      color: btn.active ? btn.acText : T.textMuted,
-                    }}
-                  >
-                    {btn.icon} {btn.label}
-                  </button>
-                ))}
+                <button
+                  onClick={() => handleFilterChange("onlyTeam", !filters.onlyTeam)}
+                  className="filter-pill"
+                  style={{
+                    border: `2px solid ${filters.onlyTeam ? "#27ae60" : T.border}`,
+                    background: filters.onlyTeam ? (dark ? "#0d2c1a" : "#eafaf1") : T.surface,
+                    color: filters.onlyTeam ? "#1a5c30" : T.textMuted,
+                  }}
+                >
+                  <CheckCircle d={filters.onlyTeam} /> Time visitou
+                </button>
+                
+                <button
+                  onClick={() => handleFilterChange("onlyVisited", !filters.onlyVisited)}
+                  className="filter-pill"
+                  style={{
+                    border: `2px solid ${filters.onlyVisited ? "#27ae60" : T.border}`,
+                    background: filters.onlyVisited ? (dark ? "#0d2c1a" : "#eafaf1") : T.surface,
+                    color: filters.onlyVisited ? "#1a5c30" : T.textMuted,
+                  }}
+                >
+                  <CheckCircle d={filters.onlyVisited} /> Eu visitei
+                </button>
+                
+                <button
+                  onClick={() => handleFilterChange("onlyFavorites", !filters.onlyFavorites)}
+                  className="filter-pill"
+                  style={{
+                    border: `2px solid ${filters.onlyFavorites ? BRAND.red : T.border}`,
+                    background: filters.onlyFavorites ? (dark ? "#2c0d0d" : "#fdf0ed") : T.surface,
+                    color: filters.onlyFavorites ? "#c0392b" : T.textMuted,
+                  }}
+                >
+                  <HeartIcon f={filters.onlyFavorites} /> Favoritos
+                </button>
               </div>
 
               {hasActiveFilters && (
@@ -744,9 +688,9 @@ export default function App() {
         </div>
         <div className="footer-credit">
           <IgIcon color={BRAND.goldLt} />
-          <span className="cookie-text" style={{ color: "#aaa" }}>
+          <span style={{ fontFamily: "sans-serif", fontSize: "0.85rem", color: "#aaa" }}>
             Curadoria:{" "}
-            <a href="https://www.instagram.com/ParticipantesdiButeco" target="_blank" rel="noopener noreferrer" style={{ color: BRAND.goldLt }}>
+            <a href="https://www.instagram.com/ParticipantesdiButeco" target="_blank" rel="noopener noreferrer" style={{ color: BRAND.goldLt, fontWeight: 700 }}>
               @ParticipantesdiButeco
             </a>
           </span>
