@@ -127,8 +127,8 @@ export default function App() {
             <div style={{ flex: 1 }}>
               <div style={{ fontFamily: "sans-serif", fontSize: "0.68rem", letterSpacing: "0.3em", textTransform: "uppercase", color: "#80c994", marginBottom: "0.4rem" }}>Belo Horizonte · 10 Abr – 10 Mai 2026</div>
               <h1 style={{ fontSize: "clamp(1.9rem,5vw,3.2rem)", fontWeight: 700, margin: "0 0 0.2rem", lineHeight: 1.05, color: "#fff", letterSpacing: "-0.01em" }}>Participantes di Buteco</h1>
-              <div style={{ fontSize: "1rem", fontStyle: "italic", color: "#b0d8bc", fontWeight: 300, marginBottom: "0.8rem" }}>Curadoria dos Participantes para a 26ª Edição do Comida di Buteco · "Somos Todos Verduras"</div>
-              <p style={{ fontSize: "0.82rem", color: "#8ec9a0", margin: 0, maxWidth: "460px", lineHeight: 1.65, fontFamily: "sans-serif" }}>
+              <div style={{ fontSize: "1rem", fontStyle: "italic", color: "#b0d8bc", fontWeight: 300, marginBottom: "0.8rem" }}>Guia dos Participantes para a 26ª Edição do Comida di Buteco · "Somos Todos Verduras"</div>
+              <p style={{ fontSize: "0.82rem", color: "#8ec9a0", margin: 0, maxWidth: "860px", lineHeight: 1.65, fontFamily: "sans-serif" }}>
                 128 bares em disputa pelo melhor petisco de BH · Petiscos a R$ 40 · Couve, ora-pro-nóbis e taioba como protagonistas
               </p>
             </div>
