@@ -7,7 +7,7 @@
 *::after { box-sizing: border-box; }
 
 body {
-  font-size: 18px;  /* padrão é 16px, aumentar para 18px ou 20px */
+  font-size: 22px;  /* padrão é 16px, aumentar para 18px ou 20px */
   margin: 0;
   padding: 0;
   transition: background 0.25s, color 0.25s;
