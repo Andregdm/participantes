@@ -1,31 +1,31 @@
 import { useState, useMemo, useEffect } from "react";
 import data from "./data/bares.json";
-import logoImg from "./data/logo.png";
-import "./App.css"; // Importa os estilos CSS
+import logoImg from "./logo.png";
+import "./App.css";
 
-// ─── BRAND PALETTE (extraída da logo: azul marinho, vermelho, dourado, creme) ───
+// ─── BRAND PALETTE (extraída da logo) ───
 const BRAND = {
-  navy:    "#1C2D6E",   // azul marinho do banner
-  navyDk:  "#131f50",   // azul mais escuro
-  red:     "#C0392B",   // vermelho do fundo circular
-  gold:    "#E8A820",   // dourado do anel
-  goldLt:  "#F4D03F",   // dourado claro (destaques)
-  cream:   "#F5EFE0",   // creme do anel externo
+  navy:    "#1C2D6E",
+  navyDk:  "#131f50",
+  red:     "#C0392B",
+  gold:    "#E8A820",
+  goldLt:  "#F4D03F",
+  cream:   "#F5EFE0",
   white:   "#FFFFFF",
 };
 
-// ─── FUNÇÃO PARA NORMALIZAR TEXTOS (remover acentos e caracteres especiais) ───
+// ─── FUNÇÃO PARA NORMALIZAR TEXTOS ───
 const normalizeText = (text) => {
   if (!text) return "";
   return text
     .toLowerCase()
     .normalize("NFD")
-    .replace(/[\u0300-\u036f]/g, "") // Remove acentos
-    .replace(/[^\w\s]/g, "") // Remove caracteres especiais (exceto letras, números e espaços)
-    .replace(/\s+/g, " "); // Normaliza espaços
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/[^\w\s]/g, "")
+    .replace(/\s+/g, " ");
 };
 
-// ─── TOKENS DE TEMA (modo claro / escuro) ──────────────────────────────────
+// ─── TOKENS DE TEMA ──────────────────────────────────────────────────
 const THEMES = {
   light: {
     bg:           "#F5EFE0",
@@ -81,7 +81,7 @@ const REGION_COLOR = data.regions;
 const BARS = data.bars;
 const REGIONS = ["Todas", ...Object.keys(REGION_COLOR)];
 
-// ─── COMPONENTE LOGO (usando imagem externa com tamanho ampliado) ─────────
+// ─── COMPONENTE LOGO ─────────────────────────────────────────────────────
 function Logo({ size = 80 }) {
   return (
     <img 
@@ -99,7 +99,7 @@ function Logo({ size = 80 }) {
   );
 }
 
-// ─── ÍCONES ──────────────────────────────────────────────────────────────────
+// ─── ÍCONES ──────────────────────────────────────────────────────────────
 function HeartIcon({ f }) {
   return (
     <svg width="17" height="17" viewBox="0 0 24 24" fill={f ? "#C0392B" : "none"} stroke={f ? "#C0392B" : "#999"} strokeWidth="2">
@@ -151,7 +151,7 @@ function IgIcon({ color = "currentColor" }) {
   );
 }
 
-// ─── HELPERS DE TEMPERATURA ──────────────────────────────────────────────────
+// ─── HELPERS DE TEMPERATURA ──────────────────────────────────────────────
 const getTempColor = (t) => {
   if (t === null) return "#95a5a6";
   if (t < -3) return "#2980B9";
@@ -170,15 +170,13 @@ const getTempBg = (t) => {
   return "rgba(231,76,60,0.15)";
 };
 
-// ─── APP PRINCIPAL ────────────────────────────────────────────────────────────
+// ─── APP PRINCIPAL ────────────────────────────────────────────────────────
 export default function App() {
-  // Estado tema
   const [dark, setDark] = useState(() => {
     try { return localStorage.getItem("cdb26theme") === "dark"; } catch { return false; }
   });
   const T = dark ? THEMES.dark : THEMES.light;
 
-  // Aplica classe dark no body para estilos CSS
   useEffect(() => {
     if (dark) {
       document.body.classList.add("dark");
@@ -187,7 +185,6 @@ export default function App() {
     }
   }, [dark]);
 
-  // Estados dados
   const [visited, setVisited] = useState(() => {
     try { return new Set(JSON.parse(localStorage.getItem("cdb26v") || "[]")); } catch { return new Set(); }
   });
@@ -204,7 +201,6 @@ export default function App() {
   const [onlyTeam, setOnlyTeam] = useState(false);
   const [sortBy, setSortBy] = useState("none");
 
-  // PRÉ-CALCULA OS TEXTOS NORMALIZADOS PARA BUSCA MAIS RÁPIDA
   const barsWithNormalized = useMemo(() => {
     return BARS.map(bar => ({
       ...bar,
@@ -258,27 +254,22 @@ export default function App() {
 
   return (
     <div style={{ fontFamily: "Georgia, serif", background: T.bg, minHeight: "100vh", transition: "background .25s, color .25s" }}>
-      {/* ══ HEADER ══════════════════════════════════════════════════════════ */}
+      {/* HEADER */}
       <header style={{ background: T.headerBg }}>
-
-        {/* Barra Instagram */}
-        <div style={{ background: "rgba(0,0,0,0.35)", padding: "0.45rem 1.5rem", display: "flex", alignItems: "center", justifyContent: "center", gap: "7px", fontSize: "0.76rem", fontFamily: "sans-serif", flexWrap: "wrap", textAlign: "center" }}>
+        <div className="instagram-bar">
           <IgIcon color={BRAND.goldLt} />
           <span style={{ color: "#ccc" }}>Curadoria realizada pelo perfil do Instagram</span>
           <a href="https://www.instagram.com/ParticipantesdiButeco" target="_blank" rel="noopener noreferrer"
-            style={{ color: BRAND.goldLt, fontWeight: 700, textDecoration: "none", letterSpacing: "0.04em" }}>
+            style={{ color: BRAND.goldLt, fontWeight: 700 }}>
             @ParticipantesdiButeco
           </a>
           <span style={{ color: "#777" }}>— siga para dicas e novidades!</span>
         </div>
 
-        {/* Conteúdo principal do header */}
-        <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "2rem 1.5rem 0" }}>
+        <div className="header-content">
           <div style={{ display: "flex", alignItems: "center", gap: "2rem", flexWrap: "wrap" }}>
-
-            {/* LOGO + TÍTULO */}
-            <div style={{ display: "flex", alignItems: "center", gap: "1.5rem", flex: 1, minWidth: "300px" }}>
-              <div className="logo-container">
+            <div className="header-logo-title">
+              <div className="logo-container" style={{ border: `3px solid ${BRAND.gold}66`, boxShadow: `0 0 32px ${BRAND.gold}44, 0 8px 20px rgba(0,0,0,0.3)` }}>
                 <Logo size={85} />
               </div>
               <div>
@@ -294,8 +285,7 @@ export default function App() {
               </div>
             </div>
 
-            {/* Stats + Toggle modo escuro */}
-            <div style={{ display: "flex", gap: "0.8rem", alignItems: "center", flexShrink: 0 }}>
+            <div className="header-stats">
               {[{ v: BARS.length, l: "Bares" }, { v: visited.size, l: "Eu visitei" }, { v: favorites.size, l: "Favoritos" }].map(s => (
                 <div key={s.l} className="stat-card" style={{ background: T.statBg }}>
                   <div className="stat-value">{s.v}</div>
@@ -326,22 +316,18 @@ export default function App() {
             </div>
           </div>
 
-          {/* Abas */}
-          <div style={{ display: "flex", marginTop: "1.8rem", borderBottom: `1px solid rgba(255,255,255,0.12)` }}>
+          <div className="tabs-container">
             {[{ k: "bares", l: "🍺  Bares & Pratos" }, { k: "mapa", l: "🗺️  Mapa Interativo" }].map(t => (
-              <button key={t.k} onClick={() => setTab(t.k)} style={{
-                background: "none", border: "none",
-                borderBottom: `3px solid ${tab === t.k ? BRAND.goldLt : "transparent"}`,
-                color: tab === t.k ? "#fff" : "rgba(255,255,255,0.45)",
-                padding: "0.85rem 1.5rem",
-                fontSize: "0.9rem",
-                fontWeight: tab === t.k ? 700 : 400,
-                fontFamily: "sans-serif",
-                transition: "all .15s",
-                letterSpacing: "0.01em",
-                marginBottom: "-1px",
-                cursor: "pointer",
-              }}>
+              <button
+                key={t.k}
+                onClick={() => setTab(t.k)}
+                className="tab-button"
+                style={{
+                  borderBottom: `3px solid ${tab === t.k ? BRAND.goldLt : "transparent"}`,
+                  color: tab === t.k ? "#fff" : "rgba(255,255,255,0.45)",
+                  fontWeight: tab === t.k ? 700 : 400,
+                }}
+              >
                 {t.l}
               </button>
             ))}
@@ -349,7 +335,7 @@ export default function App() {
         </div>
       </header>
 
-      {/* ══ ABA MAPA ════════════════════════════════════════════════════════ */}
+      {/* ABA MAPA */}
       {tab === "mapa" && (
         <div style={{ maxWidth: "1200px", margin: "2rem auto", padding: "0 1.5rem" }}>
           <div style={{ background: T.surface, borderRadius: "16px", overflow: "hidden", boxShadow: `0 4px 28px rgba(0,0,0,${dark ? "0.5" : "0.1"})`, border: `1px solid ${T.border}` }}>
@@ -360,10 +346,10 @@ export default function App() {
                 <div style={{ color: BRAND.goldLt, fontSize: "0.74rem", fontFamily: "sans-serif", opacity: 0.85 }}>Todos os bares participantes marcados · Curadoria @ParticipantesdiButeco</div>
               </div>
             </div>
-            <div style={{ position: "relative", width: "100%", paddingBottom: "56.25%", background: dark ? "#111" : "#f0ebe0" }}>
+            <div className="map-container" style={{ background: dark ? "#111" : "#f0ebe0" }}>
               <iframe
+                className="map-iframe"
                 src="https://www.google.com/maps/d/u/0/embed?mid=1NKgMtDTJSU2KAuiadQub73yXZ4nEJLU&ehbc=2E312F&noprof=1"
-                style={{ position: "absolute", inset: 0, width: "100%", height: "100%", border: "none" }}
                 title="Mapa Comida di Buteco 2026 BH"
                 allowFullScreen
               />
@@ -373,7 +359,7 @@ export default function App() {
               <span style={{ fontSize: "0.78rem", color: T.textMuted, fontFamily: "sans-serif" }}>
                 Mapa criado por{" "}
                 <a href="https://www.instagram.com/ParticipantesdiButeco" target="_blank" rel="noopener noreferrer"
-                  style={{ color: BRAND.navy, fontWeight: 700, textDecoration: "none" }}>
+                  style={{ color: BRAND.navy, fontWeight: 700 }}>
                   @ParticipantesdiButeco
                 </a>{" "}· Siga para atualizações e dicas do concurso
               </span>
@@ -382,15 +368,12 @@ export default function App() {
         </div>
       )}
 
-      {/* ══ ABA BARES ═══════════════════════════════════════════════════════ */}
+      {/* ABA BARES */}
       {tab === "bares" && (
         <>
-          {/* Filtros sticky */}
-          <div style={{ background: T.filterBg, borderBottom: `1px solid ${T.filterBorder}`, position: "sticky", top: 0, zIndex: 20, boxShadow: `0 2px 12px rgba(0,0,0,${dark ? "0.4" : "0.07"})`, transition: "background .25s" }}>
-            <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0.8rem 1.5rem", display: "flex", gap: "0.6rem", alignItems: "center", flexWrap: "wrap" }}>
-              
-              {/* Busca */}
-              <div style={{ flex: "2 1 220px", position: "relative" }}>
+          <div className="sticky-filters" style={{ background: T.filterBg, borderBottom: `1px solid ${T.filterBorder}`, boxShadow: `0 2px 12px rgba(0,0,0,${dark ? "0.4" : "0.07"})` }}>
+            <div className="sticky-filters-inner">
+              <div className="search-wrapper">
                 <span className="search-icon" style={{ color: T.textFaint }}>🔍</span>
                 <input
                   type="text"
@@ -402,8 +385,7 @@ export default function App() {
                 />
               </div>
 
-              {/* Selects */}
-              <div style={{ display: "flex", gap: "0.6rem", flexWrap: "wrap" }}>
+              <div className="filters-group">
                 <select
                   value={fr}
                   onChange={e => setFr(e.target.value)}
@@ -435,8 +417,7 @@ export default function App() {
                 </select>
               </div>
 
-              {/* Botões filtro */}
-              <div style={{ display: "flex", gap: "0.6rem", flexWrap: "wrap" }}>
+              <div className="filters-group">
                 {[
                   { active: onlyTeam, toggle: () => setOnlyTeam(v => !v), icon: <CheckCircle d={onlyTeam}/>, label: "Time visitou", ac: "#27ae60", acBg: dark ? "#0d2c1a" : "#eafaf1", acText: "#1a5c30" },
                   { active: fv, toggle: () => setFv(v => !v), icon: <CheckCircle d={fv}/>, label: "Eu visitei", ac: "#27ae60", acBg: dark ? "#0d2c1a" : "#eafaf1", acText: "#1a5c30" },
@@ -473,7 +454,6 @@ export default function App() {
             </div>
           </div>
 
-          {/* Banner mapa CTA */}
           <div style={{ maxWidth: "1200px", margin: "1.8rem auto 0", padding: "0 1.5rem" }}>
             <div
               onClick={() => setTab("mapa")}
@@ -491,7 +471,6 @@ export default function App() {
             </div>
           </div>
 
-          {/* Grid */}
           <main style={{ maxWidth: "1200px", margin: "0 auto", padding: "1.8rem 1.5rem 3.5rem" }}>
             {filteredAndSorted.length === 0 ? (
               <div className="empty-state">
@@ -529,7 +508,7 @@ export default function App() {
         </>
       )}
 
-      {/* ══ FOOTER ══════════════════════════════════════════════════════════ */}
+      {/* FOOTER */}
       <footer style={{ background: T.footerBg, padding: "2.5rem 1.5rem", textAlign: "center" }}>
         <div className="footer-logo">
           <Logo size={50} />
@@ -539,7 +518,7 @@ export default function App() {
           <span style={{ fontFamily: "sans-serif", fontSize: "0.85rem", color: "#aaa" }}>
             Curadoria:{" "}
             <a href="https://www.instagram.com/ParticipantesdiButeco" target="_blank" rel="noopener noreferrer"
-              style={{ color: BRAND.goldLt, fontWeight: 700, textDecoration: "none" }}>
+              style={{ color: BRAND.goldLt, fontWeight: 700 }}>
               @ParticipantesdiButeco
             </a>
           </span>
@@ -560,7 +539,7 @@ export default function App() {
   );
 }
 
-// ─── CARD ─────────────────────────────────────────────────────────────────────
+// ─── CARD COMPONENT ──────────────────────────────────────────────────────────
 function Card({ b, visited, favorites, tv, tf, exp, setExp, imgErr, setImgErr, T, dark }) {
   const isV = visited.has(b.id), isF = favorites.has(b.id), isE = exp === b.id;
   const rc = REGION_COLOR[b.region] || "#555";
@@ -568,45 +547,21 @@ function Card({ b, visited, favorites, tv, tf, exp, setExp, imgErr, setImgErr, T
   const hasRating = b.rating !== null && b.rating !== undefined;
   const hasBeerTemp = b.beerTemp !== null && b.beerTemp !== undefined;
   const teamVisited = b.visited === true;
-
   const borderColor = isF ? BRAND.red : isV ? "#27ae60" : T.cardBorder;
 
   return (
-    <article
-      className="bc"
-      style={{
-        background: T.cardBg,
-        borderRadius: "14px",
-        border: `2px solid ${borderColor}`,
-        overflow: "hidden",
-        boxShadow: `0 2px 10px rgba(0,0,0,${dark ? "0.3" : "0.07"})`,
-        position: "relative",
-        transition: "background .25s, border .25s",
-      }}
-    >
-      <div style={{ height: "4px", background: rc }} />
+    <article className="bc" style={{ background: T.cardBg, borderRadius: "14px", border: `2px solid ${borderColor}`, overflow: "hidden", boxShadow: `0 2px 10px rgba(0,0,0,${dark ? "0.3" : "0.07"})`, position: "relative", transition: "background .25s, border .25s" }}>
+      <div className="region-color-bar-top" style={{ height: "4px", background: rc }} />
 
-      <div
-        style={{ overflow: "hidden", height: "185px", position: "relative", background: rc + "18", cursor: "pointer" }}
-        onClick={() => setExp(isE ? null : b.id)}
-      >
+      <div className="card-image" style={{ background: rc + "18" }} onClick={() => setExp(isE ? null : b.id)}>
         {!hasErr && b.photo ? (
-          <img
-            className="bi"
-            src={b.photo}
-            alt={b.dish}
-            style={{ width: "100%", height: "185px", objectFit: "cover", display: "block" }}
-            onError={() => setImgErr(s => new Set([...s, b.id]))}
-          />
+          <img className="bi card-img" src={b.photo} alt={b.dish} onError={() => setImgErr(s => new Set([...s, b.id]))} />
         ) : (
-          <div style={{ height: "185px", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "2.8rem", background: `linear-gradient(135deg,${rc}22,${rc}44)` }}>
-            🍽️
-          </div>
+          <div className="card-img-fallback" style={{ background: `linear-gradient(135deg,${rc}22,${rc}44)` }}>🍽️</div>
         )}
-
         {b.champion && <div className="champion-badge">🏆 Ex-campeão</div>}
         {isV && <div className="visited-badge">✓ Visitado</div>}
-        <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: "50px", background: "linear-gradient(transparent,rgba(0,0,0,0.35))", pointerEvents: "none" }} />
+        <div className="image-gradient" />
       </div>
 
       {b.photoCredit && (
@@ -615,35 +570,33 @@ function Card({ b, visited, favorites, tv, tf, exp, setExp, imgErr, setImgErr, T
         </div>
       )}
 
-      <div style={{ padding: "0.85rem 1rem 0.8rem" }}>
-        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start" }}>
+      <div className="card-content">
+        <div className="card-header">
           <div style={{ flex: 1, minWidth: 0 }}>
-            <h3 style={{ margin: "0 0 2px", fontSize: "0.92rem", fontWeight: 700, color: T.text, fontFamily: "sans-serif", lineHeight: 1.2, overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>
-              {b.name}
-            </h3>
-            <div style={{ fontSize: "0.67rem", color: T.textFaint, fontFamily: "sans-serif" }}>
+            <h3 className="card-title" style={{ color: T.text }}>{b.name}</h3>
+            <div className="card-subtitle" style={{ color: T.textFaint }}>
               {b.neighborhood} · <span style={{ color: rc, fontWeight: 600 }}>{b.region}</span>
             </div>
           </div>
-          <div style={{ display: "flex", gap: "2px", flexShrink: 0, marginLeft: "6px" }}>
-            <button onClick={() => tf(b.id)} title={isF ? "Remover favorito" : "Favoritar"} style={{ background: "none", border: "none", padding: "4px", display: "flex", cursor: "pointer" }}>
+          <div className="card-actions">
+            <button onClick={() => tf(b.id)} className="action-button" title={isF ? "Remover favorito" : "Favoritar"}>
               <HeartIcon f={isF} />
             </button>
-            <button onClick={() => tv(b.id)} title={isV ? "Desmarcar visitado" : "Marcar visitado"} style={{ background: "none", border: "none", padding: "4px", display: "flex", cursor: "pointer" }}>
+            <button onClick={() => tv(b.id)} className="action-button" title={isV ? "Desmarcar visitado" : "Marcar visitado"}>
               <CheckCircle d={isV} />
             </button>
           </div>
         </div>
 
         <div className="info-bar" style={{ background: T.glassBg, border: `1px solid ${T.glassBorder}` }}>
-          <div style={{ display: "flex", alignItems: "center", gap: "4px", flexShrink: 0 }}>
+          <div className="team-visit-status">
             {teamVisited ? (
               <>
                 <CheckCircle d={true} />
-                <span style={{ fontSize: "0.68rem", fontFamily: "sans-serif", color: "#16A085", fontWeight: 600, whiteSpace: "nowrap" }}>Time visitou</span>
+                <span className="team-visit-text" style={{ color: "#16A085" }}>Time visitou</span>
               </>
             ) : (
-              <span style={{ fontSize: "0.68rem", fontFamily: "sans-serif", color: T.textFaint, whiteSpace: "nowrap" }}>⏳ Aguardando</span>
+              <span className="team-waiting-text" style={{ color: T.textFaint }}>⏳ Aguardando</span>
             )}
           </div>
 
@@ -679,11 +632,7 @@ function Card({ b, visited, favorites, tv, tf, exp, setExp, imgErr, setImgErr, T
           </div>
         )}
 
-        <button
-          onClick={() => setExp(isE ? null : b.id)}
-          className="expand-btn"
-          style={{ color: rc }}
-        >
+        <button onClick={() => setExp(isE ? null : b.id)} className="expand-btn" style={{ color: rc }}>
           {isE ? "Menos ↑" : "Mais ↓"}
         </button>
       </div>
