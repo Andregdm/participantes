@@ -1,64 +1,4 @@
 /* ============================================
-   VARIÁVEIS CSS (TEMA)
-   ============================================ */
-
-:root {
-  --navy: #1C2D6E;
-  --navy-dark: #131f50;
-  --red: #C0392B;
-  --gold: #E8A820;
-  --gold-light: #F4D03F;
-  --cream: #F5EFE0;
-  --white: #FFFFFF;
-  
-  /* Tema claro (padrão) */
-  --bg: #F5EFE0;
-  --surface: #FFFFFF;
-  --surface-alt: #FAF7F0;
-  --border: #E2D8C0;
-  --border-strong: #C8B890;
-  --text: #1C1A14;
-  --text-muted: #6B5F48;
-  --text-faint: #9E9280;
-  --header-bg: linear-gradient(155deg, var(--navy-dark) 0%, var(--navy) 60%, #1a2860 100%);
-  --banner-bg: linear-gradient(90deg, var(--navy-dark), var(--navy));
-  --card-bg: #FFFFFF;
-  --card-border: #E2D8C0;
-  --input-bg: #FAF7F0;
-  --filter-bg: #FFFFFF;
-  --glass-bg: rgba(255, 255, 255, 0.75);
-  --glass-border: rgba(255, 255, 255, 0.4);
-  --stat-bg: rgba(255, 255, 255, 0.13);
-  --footer-bg: var(--navy-dark);
-  --scroll-thumb: #C8B890;
-  --map-footer-bg: #FAF7F0;
-}
-
-/* Tema escuro */
-.dark {
-  --bg: #0F1117;
-  --surface: #1A1D26;
-  --surface-alt: #21242F;
-  --border: #2E3245;
-  --border-strong: #404666;
-  --text: #EDE8DC;
-  --text-muted: #9A94A8;
-  --text-faint: #605A6E;
-  --header-bg: linear-gradient(155deg, #090C18 0%, #101428 60%, #0D1122 100%);
-  --banner-bg: linear-gradient(90deg, #090C18, #101428);
-  --card-bg: #1A1D26;
-  --card-border: #2E3245;
-  --input-bg: #21242F;
-  --filter-bg: #1A1D26;
-  --glass-bg: rgba(26, 29, 38, 0.85);
-  --glass-border: rgba(255, 255, 255, 0.08);
-  --stat-bg: rgba(255, 255, 255, 0.07);
-  --footer-bg: #090C18;
-  --scroll-thumb: #404666;
-  --map-footer-bg: #21242F;
-}
-
-/* ============================================
    RESET E ESTILOS GLOBAIS
    ============================================ */
 
@@ -66,11 +6,6 @@
 *::before,
 *::after {
   box-sizing: border-box;
-}
-
-body {
-  font-family: Georgia, serif;
-  transition: background 0.25s, color 0.25s;
 }
 
 /* ============================================
@@ -82,8 +17,13 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--scroll-thumb);
+  background: #C8B890;
   border-radius: 3px;
+}
+
+/* Variação para tema escuro (será sobrescrita via JS) */
+.dark ::-webkit-scrollbar-thumb {
+  background: #404666;
 }
 
 /* ============================================
@@ -99,6 +39,7 @@ body {
   transform: translateY(-3px);
 }
 
+/* Tema escuro para card hover */
 .dark .bc:hover {
   box-shadow: 0 10px 32px rgba(0, 0, 0, 0.4) !important;
 }
@@ -140,14 +81,20 @@ a:hover {
    ============================================ */
 
 input::placeholder {
-  color: var(--text-faint);
+  color: #9E9280;
+}
+
+/* Tema escuro para placeholder */
+.dark input::placeholder {
+  color: #605A6E;
 }
 
 select option {
-  background: var(--surface);
-  color: var(--text);
+  background: #FFFFFF;
+  color: #1C1A14;
 }
 
+/* Tema escuro para selects */
 .dark select option {
   background: #1A1D26;
   color: #EDE8DC;
@@ -167,7 +114,7 @@ select option {
 }
 
 /* ============================================
-   LOGO E CONTAINER
+   LOGO CONTAINER
    ============================================ */
 
 .logo-container {
@@ -175,16 +122,20 @@ select option {
   background: rgba(255, 255, 255, 0.12);
   border-radius: 50%;
   padding: 8px;
-  border: 3px solid var(--gold);
-  box-shadow: 0 0 32px rgba(232, 168, 32, 0.27), 0 8px 20px rgba(0, 0, 0, 0.3);
+  border: 3px solid #E8A82066;
+  box-shadow: 0 0 32px #E8A82044, 0 8px 20px rgba(0, 0, 0, 0.3);
   transition: all 0.3s ease;
 }
 
 .logo-container:hover {
   transform: scale(1.02);
-  border-color: rgba(232, 168, 32, 0.67);
-  box-shadow: 0 0 40px rgba(232, 168, 32, 0.4), 0 8px 25px rgba(0, 0, 0, 0.35);
+  border-color: #E8A820aa;
+  box-shadow: 0 0 40px #E8A82066, 0 8px 25px rgba(0, 0, 0, 0.35);
 }
+
+/* ============================================
+   LOGO IMAGEM
+   ============================================ */
 
 .logo-img {
   display: block;
@@ -198,47 +149,17 @@ select option {
 }
 
 /* ============================================
-   HEADER
-   ============================================ */
-
-.app-header {
-  background: var(--header-bg);
-}
-
-.header-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 2rem 1.5rem 0;
-}
-
-.logo-title-container {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-  flex: 1;
-  min-width: 300px;
-}
-
-.stats-container {
-  display: flex;
-  gap: 0.8rem;
-  align-items: center;
-  flex-shrink: 0;
-}
-
-/* ============================================
-   STATS CARDS
+   STATS CARDS (HEADER)
    ============================================ */
 
 .stat-card {
-  background: var(--stat-bg);
   border-radius: 14px;
   padding: 0.8rem 1rem;
   text-align: center;
   min-width: 75px;
   backdrop-filter: blur(8px);
   border: 1px solid rgba(255, 255, 255, 0.12);
-  transition: transform 0.2s;
+  transition: transform 0.2s, background 0.25s;
 }
 
 .stat-card:hover {
@@ -255,7 +176,7 @@ select option {
 .stat-label {
   font-size: 0.62rem;
   font-family: sans-serif;
-  color: var(--gold-light);
+  color: #F4D03F;
   text-transform: uppercase;
   letter-spacing: 0.08em;
   margin-top: 4px;
@@ -263,114 +184,13 @@ select option {
 }
 
 /* ============================================
-   ABAS
+   FILTROS E BOTÕES (PILLS)
    ============================================ */
-
-.tabs-container {
-  display: flex;
-  margin-top: 1.8rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
-}
-
-.tab-button {
-  background: none;
-  border: none;
-  padding: 0.85rem 1.5rem;
-  font-size: 0.9rem;
-  font-family: sans-serif;
-  transition: all 0.15s;
-  letter-spacing: 0.01em;
-  margin-bottom: -1px;
-  cursor: pointer;
-}
-
-.tab-button-active {
-  border-bottom: 3px solid var(--gold-light);
-  color: #fff;
-  font-weight: 700;
-}
-
-.tab-button-inactive {
-  border-bottom: 3px solid transparent;
-  color: rgba(255, 255, 255, 0.45);
-  font-weight: 400;
-}
-
-/* ============================================
-   FILTROS (STICKY)
-   ============================================ */
-
-.filter-bar {
-  background: var(--filter-bg);
-  border-bottom: 1px solid var(--border);
-  position: sticky;
-  top: 0;
-  z-index: 20;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
-  transition: background 0.25s;
-}
-
-.filter-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0.8rem 1.5rem;
-  display: flex;
-  gap: 0.6rem;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.search-container {
-  flex: 2 1 220px;
-  position: relative;
-}
-
-.search-icon {
-  position: absolute;
-  left: 10px;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 13px;
-  color: var(--text-faint);
-}
-
-.search-input {
-  width: 100%;
-  padding: 0.5rem 0.8rem 0.5rem 2rem;
-  border-radius: 8px;
-  font-size: 0.85rem;
-  outline: none;
-  transition: background 0.25s, border 0.25s;
-  border: 1.5px solid var(--border);
-  background: var(--input-bg);
-  color: var(--text);
-}
-
-.selects-container {
-  display: flex;
-  gap: 0.6rem;
-  flex-wrap: wrap;
-}
-
-.select-input {
-  padding: 0.5rem 0.8rem;
-  border-radius: 8px;
-  font-size: 0.85rem;
-  outline: none;
-  cursor: pointer;
-  transition: all 0.15s;
-}
-
-.pills-container {
-  display: flex;
-  gap: 0.6rem;
-  flex-wrap: wrap;
-}
 
 .filter-pill {
-  padding: 0.5rem 0.9rem;
+  padding: 0.42rem 0.88rem;
   border-radius: 20px;
-  font-size: 0.8rem;
+  font-size: 0.78rem;
   font-weight: 600;
   display: flex;
   align-items: center;
@@ -384,104 +204,188 @@ select option {
   transform: translateY(-1px);
 }
 
-.filter-counter {
-  margin-left: auto;
-  font-size: 0.75rem;
-  font-family: sans-serif;
-  white-space: nowrap;
-  color: var(--text-faint);
-}
-
 /* ============================================
-   MAPA
+   BADGES (CARD)
    ============================================ */
 
-.map-container {
-  max-width: 1200px;
-  margin: 2rem auto;
-  padding: 0 1.5rem;
-}
-
-.map-card {
-  border-radius: 16px;
-  overflow: hidden;
-  transition: background 0.25s, border 0.25s;
-  background: var(--surface);
-  border: 1px solid var(--border);
-}
-
-.map-header {
-  background: var(--banner-bg);
-  padding: 1.2rem 1.8rem;
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
-
-.map-title {
-  color: #fff;
-  font-weight: 700;
-  font-family: sans-serif;
-  font-size: 1rem;
-}
-
-.map-subtitle {
-  color: var(--gold-light);
-  font-size: 0.74rem;
-  font-family: sans-serif;
-  opacity: 0.85;
-}
-
-.map-iframe-wrapper {
-  position: relative;
-  width: 100%;
-  padding-bottom: 56.25%;
-  background: #f0ebe0;
-}
-
-.dark .map-iframe-wrapper {
-  background: #111;
-}
-
-.map-iframe {
+.champion-badge {
   position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  border: none;
-}
-
-.map-footer {
-  padding: 0.9rem 1.8rem;
-  background: var(--map-footer-bg);
-  border-top: 1px solid var(--border);
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.map-footer-text {
-  font-size: 0.78rem;
-  color: var(--text-muted);
+  top: 8px;
+  right: 8px;
+  background: linear-gradient(90deg, #E8A820, #F4D03F);
+  border-radius: 6px;
+  padding: 3px 8px;
+  font-size: 0.63rem;
   font-family: sans-serif;
-}
-
-.map-footer-link {
-  color: var(--navy);
   font-weight: 700;
-  text-decoration: none;
+  color: #131f50;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  z-index: 2;
 }
 
-.dark .map-footer-link {
-  color: var(--gold-light);
+.visited-badge {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  background: rgba(39, 174, 96, 0.92);
+  border-radius: 6px;
+  padding: 3px 8px;
+  font-size: 0.63rem;
+  font-family: sans-serif;
+  font-weight: 700;
+  color: #fff;
+  z-index: 2;
 }
 
 /* ============================================
-   MAPA CTA BANNER
+   INFO BAR (GLASSMORPHISM)
    ============================================ */
 
-.map-cta-banner {
-  background: var(--banner-bg);
+.info-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.55rem;
+  padding: 0.45rem 0.6rem;
+  backdrop-filter: blur(10px);
+  border-radius: 9px;
+  gap: 6px;
+  flex-wrap: wrap;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  transition: background 0.25s, border 0.25s;
+}
+
+/* Tema escuro para info-bar */
+.dark .info-bar {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* ============================================
+   PETISCO CONTAINER
+   ============================================ */
+
+.petisco-container {
+  border-radius: 7px;
+  padding: 0.4rem 0.7rem;
+  margin: 0.5rem 0;
+  transition: background 0.25s, border 0.25s;
+}
+
+.petisco-label {
+  font-size: 0.57rem;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  margin-bottom: 1px;
+}
+
+.petisco-name {
+  font-size: 0.82rem;
+  font-weight: 700;
+  font-family: sans-serif;
+  line-height: 1.2;
+}
+
+/* ============================================
+   RATING BADGE
+   ============================================ */
+
+.rating-badge {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  flex-shrink: 0;
+  background: #1C2D6E;
+  padding: 2px 9px;
+  border-radius: 20px;
+  transition: background 0.25s;
+}
+
+.rating-star {
+  font-size: 0.7rem;
+  color: #F4D03F;
+}
+
+.rating-value {
+  font-size: 0.72rem;
+  font-family: sans-serif;
+  font-weight: 700;
+  color: #fff;
+}
+
+/* ============================================
+   TEMPERATURE BADGE
+   ============================================ */
+
+.temp-badge {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  flex-shrink: 0;
+  padding: 2px 9px;
+  border-radius: 20px;
+  transition: all 0.2s ease;
+}
+
+.temp-icon {
+  font-size: 0.68rem;
+}
+
+.temp-value {
+  font-size: 0.72rem;
+  font-family: sans-serif;
+  font-weight: 700;
+}
+
+/* ============================================
+   EXPAND BUTTON
+   ============================================ */
+
+.expand-btn {
+  background: none;
+  border: none;
+  font-size: 0.71rem;
+  padding: 0;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  font-family: sans-serif;
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+
+.expand-btn:hover {
+  opacity: 0.7;
+}
+
+/* ============================================
+   ADDRESS TEXT
+   ============================================ */
+
+.address-text {
+  font-size: 0.67rem;
+  font-family: sans-serif;
+  display: flex;
+  gap: 4px;
+  margin-bottom: 0.35rem;
+}
+
+/* ============================================
+   DESCRIPTION TEXT
+   ============================================ */
+
+.description-text {
+  font-size: 0.75rem;
+  line-height: 1.55;
+  margin: 0 0 0.4rem;
+  font-weight: 300;
+}
+
+/* ============================================
+   MAP CTA BANNER
+   ============================================ */
+
+.map-cta {
   border-radius: 14px;
   padding: 1rem 1.6rem;
   display: flex;
@@ -489,55 +393,14 @@ select option {
   gap: 14px;
   cursor: pointer;
   transition: transform 0.2s, box-shadow 0.2s;
-  border: 1px solid rgba(28, 45, 110, 0.33);
 }
 
-.map-cta-banner:hover {
+.map-cta:hover {
   transform: translateX(4px);
 }
 
-.map-cta-title {
-  color: #fff;
-  font-weight: 700;
-  font-family: sans-serif;
-  font-size: 0.95rem;
-}
-
-.map-cta-subtitle {
-  color: var(--gold-light);
-  font-size: 0.73rem;
-  font-family: sans-serif;
-  opacity: 0.85;
-}
-
-.map-cta-arrow {
-  margin-left: auto;
-  color: var(--gold-light);
-  font-size: 1.3rem;
-}
-
 /* ============================================
-   MAIN E SEÇÕES
-   ============================================ */
-
-.main-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 1.8rem 1.5rem 3.5rem;
-}
-
-.region-section {
-  margin-bottom: 2.8rem;
-}
-
-.cards-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 1.3rem;
-}
-
-/* ============================================
-   CABEÇALHO DE REGIÃO
+   REGION SECTION HEADER
    ============================================ */
 
 .region-header {
@@ -570,322 +433,14 @@ select option {
 }
 
 /* ============================================
-   CARD
-   ============================================ */
-
-.card-container {
-  background: var(--card-bg);
-  border-radius: 14px;
-  overflow: hidden;
-  transition: background 0.25s, border 0.25s;
-}
-
-.region-strip {
-  height: 4px;
-}
-
-/* Foto */
-.photo-container {
-  overflow: hidden;
-  height: 185px;
-  position: relative;
-  cursor: pointer;
-}
-
-.photo-fallback {
-  height: 185px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 2.8rem;
-}
-
-/* Badges */
-.champion-badge {
-  position: absolute;
-  top: 8px;
-  right: 8px;
-  background: linear-gradient(90deg, var(--gold), var(--gold-light));
-  border-radius: 6px;
-  padding: 3px 8px;
-  font-size: 0.63rem;
-  font-family: sans-serif;
-  font-weight: 700;
-  color: var(--navy-dark);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-  z-index: 2;
-}
-
-.visited-badge {
-  position: absolute;
-  top: 8px;
-  left: 8px;
-  background: rgba(39, 174, 96, 0.92);
-  border-radius: 6px;
-  padding: 3px 8px;
-  font-size: 0.63rem;
-  font-family: sans-serif;
-  font-weight: 700;
-  color: #fff;
-  z-index: 2;
-}
-
-.photo-gradient {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 50px;
-  background: linear-gradient(transparent, rgba(0, 0, 0, 0.35));
-  pointer-events: none;
-}
-
-/* Crédito da foto */
-.photo-credit {
-  padding: 0.2rem 0.75rem;
-  background: var(--surface-alt);
-  font-size: 0.58rem;
-  font-family: sans-serif;
-  color: var(--text-faint);
-  text-align: right;
-  border-bottom: 1px solid var(--border);
-}
-
-/* Conteúdo do card */
-.card-content {
-  padding: 0.85rem 1rem 0.8rem;
-}
-
-.card-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-}
-
-.card-title {
-  margin: 0 0 2px;
-  font-size: 0.92rem;
-  font-weight: 700;
-  font-family: sans-serif;
-  line-height: 1.2;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  color: var(--text);
-}
-
-.card-subtitle {
-  font-size: 0.67rem;
-  font-family: sans-serif;
-  color: var(--text-faint);
-}
-
-/* Ações do card */
-.card-actions {
-  display: flex;
-  gap: 2px;
-  flex-shrink: 0;
-  margin-left: 6px;
-}
-
-.action-button {
-  background: none;
-  border: none;
-  padding: 4px;
-  display: flex;
-  cursor: pointer;
-}
-
-/* Info bar (glassmorphism) */
-.info-bar {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  flex-wrap: wrap;
-  margin-top: 0.55rem;
-  padding: 0.45rem 0.6rem;
-  background: var(--glass-bg);
-  backdrop-filter: blur(10px);
-  border-radius: 9px;
-  border: 1px solid var(--glass-border);
-  transition: background 0.25s, border 0.25s;
-}
-
-/* Status do time */
-.team-status {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  flex-shrink: 0;
-}
-
-.team-status-text {
-  font-size: 0.68rem;
-  font-family: sans-serif;
-  color: #16A085;
-  font-weight: 600;
-  white-space: nowrap;
-}
-
-.team-status-waiting {
-  font-size: 0.68rem;
-  font-family: sans-serif;
-  color: var(--text-faint);
-  white-space: nowrap;
-}
-
-/* Rating badge */
-.rating-badge {
-  display: flex;
-  align-items: center;
-  gap: 3px;
-  flex-shrink: 0;
-  background: var(--navy);
-  padding: 2px 9px;
-  border-radius: 20px;
-}
-
-.rating-star {
-  font-size: 0.7rem;
-  color: var(--gold-light);
-}
-
-.rating-value {
-  font-size: 0.72rem;
-  font-family: sans-serif;
-  font-weight: 700;
-  color: #fff;
-}
-
-/* Temperature badge */
-.temp-badge {
-  display: flex;
-  align-items: center;
-  gap: 3px;
-  flex-shrink: 0;
-  padding: 2px 9px;
-  border-radius: 20px;
-  transition: all 0.2s ease;
-}
-
-.temp-icon {
-  font-size: 0.68rem;
-}
-
-.temp-value {
-  font-size: 0.72rem;
-  font-family: sans-serif;
-  font-weight: 700;
-}
-
-/* Petisco container */
-.petisco-container {
-  border-radius: 7px;
-  padding: 0.4rem 0.7rem;
-  margin: 0.5rem 0;
-}
-
-.petisco-label {
-  font-size: 0.57rem;
-  font-family: sans-serif;
-  text-transform: uppercase;
-  letter-spacing: 0.09em;
-  margin-bottom: 1px;
-  color: var(--text-faint);
-}
-
-.petisco-name {
-  font-size: 0.82rem;
-  font-weight: 700;
-  font-family: sans-serif;
-  line-height: 1.2;
-}
-
-/* Descrição */
-.card-description {
-  font-size: 0.75rem;
-  line-height: 1.55;
-  margin: 0 0 0.4rem;
-  font-weight: 300;
-  color: var(--text-muted);
-}
-
-/* Endereço */
-.card-address {
-  font-size: 0.67rem;
-  font-family: sans-serif;
-  display: flex;
-  gap: 4px;
-  margin-bottom: 0.35rem;
-  color: var(--text-faint);
-}
-
-/* Expand button */
-.expand-btn {
-  background: none;
-  border: none;
-  font-size: 0.71rem;
-  padding: 0;
-  font-weight: 700;
-  text-decoration: underline;
-  text-underline-offset: 2px;
-  font-family: sans-serif;
-  cursor: pointer;
-  transition: opacity 0.15s;
-}
-
-.expand-btn:hover {
-  opacity: 0.7;
-}
-
-/* ============================================
-   ESTADO VAZIO
-   ============================================ */
-
-.empty-state {
-  text-align: center;
-  padding: 5rem 2rem;
-}
-
-.empty-icon {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-}
-
-.empty-text {
-  font-family: sans-serif;
-  color: var(--text-muted);
-}
-
-.empty-button {
-  margin-top: 1rem;
-  padding: 0.6rem 1.6rem;
-  background: var(--navy);
-  color: #fff;
-  border: none;
-  border-radius: 8px;
-  font-family: sans-serif;
-  font-weight: 700;
-  cursor: pointer;
-  transition: transform 0.15s, background 0.15s;
-}
-
-.empty-button:hover {
-  transform: translateY(-1px);
-  background: #253a8a;
-}
-
-/* ============================================
    FOOTER
    ============================================ */
 
-.app-footer {
-  background: var(--footer-bg);
-  padding: 2.5rem 1.5rem;
-  text-align: center;
-}
-
 .footer-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
   margin-bottom: 0.8rem;
 }
 
@@ -895,18 +450,6 @@ select option {
   justify-content: center;
   gap: 8px;
   margin-bottom: 0.5rem;
-}
-
-.footer-credit-text {
-  font-family: sans-serif;
-  font-size: 0.85rem;
-  color: #aaa;
-}
-
-.footer-credit-link {
-  color: var(--gold-light);
-  font-weight: 700;
-  text-decoration: none;
 }
 
 .footer-text {
@@ -937,94 +480,69 @@ select option {
 }
 
 /* ============================================
-   CLASSES ADICIONAIS PARA O APP.JSX REFATORADO
+   LOADING / EMPTY STATE
    ============================================ */
 
-/* Instagram bar */
-.instagram-bar {
-  background: rgba(0, 0, 0, 0.35);
-  padding: 0.45rem 1.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 7px;
-  font-size: 0.76rem;
-  font-family: sans-serif;
-  flex-wrap: wrap;
+.empty-state {
   text-align: center;
-  color: #ccc;
+  padding: 5rem 2rem;
 }
 
-.instagram-link {
-  color: var(--gold-light);
-  font-weight: 700;
-  text-decoration: none;
-  letter-spacing: 0.04em;
+.empty-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
 }
 
-/* Header badges */
-.header-badge {
+.empty-button {
+  margin-top: 1rem;
+  padding: 0.6rem 1.6rem;
+  border: none;
+  border-radius: 8px;
   font-family: sans-serif;
-  font-size: 0.68rem;
-  letter-spacing: 0.35em;
-  text-transform: uppercase;
-  color: var(--gold-light);
-  margin-bottom: 0.35rem;
-  opacity: 0.95;
-}
-
-.header-title {
-  font-size: clamp(1.8rem, 5vw, 3rem);
   font-weight: 700;
-  margin: 0 0 0.2rem;
-  line-height: 1.05;
-  color: #fff;
-  letter-spacing: -0.01em;
-}
-
-.header-subtitle {
-  font-size: 0.88rem;
-  font-style: italic;
-  color: #9BBFCE;
-  font-weight: 300;
-  line-height: 1.45;
-  max-width: 500px;
-}
-
-.header-subtitle-highlight {
-  color: var(--gold-light);
-  font-weight: 500;
-}
-
-/* Dark mode toggle */
-.dark-mode-toggle {
-  background: rgba(255, 255, 255, 0.12);
-  border: 2px solid rgba(255, 255, 255, 0.3);
-  border-radius: 50%;
-  width: 42px;
-  height: 42px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-  backdrop-filter: blur(8px);
-  flex-shrink: 0;
-  transition: all 0.15s;
   cursor: pointer;
+  transition: transform 0.15s, background 0.15s;
 }
 
-.dark .dark-mode-toggle {
-  background: rgba(232, 168, 32, 0.2);
-  border-color: var(--gold);
-  color: var(--gold-light);
+.empty-button:hover {
+  transform: translateY(-1px);
 }
 
-.dark-mode-toggle:hover {
-  transform: scale(1.05);
-  opacity: 0.85;
+/* ============================================
+   GRID LAYOUTS
+   ============================================ */
+
+.bars-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.3rem;
 }
 
-/* Select inputs com estados ativos */
+/* ============================================
+   SEARCH INPUT
+   ============================================ */
+
+.search-input {
+  width: 100%;
+  padding: 0.5rem 0.8rem 0.5rem 2rem;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  outline: none;
+  transition: background 0.25s, border 0.25s;
+}
+
+.search-icon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 13px;
+}
+
+/* ============================================
+   SELECT INPUTS
+   ============================================ */
+
 .select-input {
   padding: 0.5rem 0.8rem;
   border-radius: 8px;
@@ -1032,122 +550,20 @@ select option {
   outline: none;
   cursor: pointer;
   transition: all 0.15s;
-  border: 1.5px solid var(--border);
-  background: var(--input-bg);
-  color: var(--text-muted);
-  font-weight: 400;
 }
 
-.select-active {
-  border-color: var(--navy);
-  background: #e8ecf8;
-  color: var(--navy);
-  font-weight: 700;
-}
+/* ============================================
+   PHOTO CREDIT
+   ============================================ */
 
-.dark .select-active {
-  background: #1a2040;
-  border-color: var(--navy);
-  color: var(--navy);
-}
-
-/* Filter pills estados ativos */
-.filter-pill {
-  padding: 0.5rem 0.9rem;
-  border-radius: 20px;
-  font-size: 0.8rem;
-  font-weight: 600;
-  display: flex;
-  align-items: center;
-  gap: 5px;
+.photo-credit {
+  padding: 0.2rem 0.75rem;
+  font-size: 0.58rem;
   font-family: sans-serif;
-  transition: all 0.15s;
-  cursor: pointer;
-  border: 2px solid var(--border);
-  background: var(--surface);
-  color: var(--text-muted);
+  text-align: right;
+  border-bottom: 1px solid #E2D8C0;
 }
 
-.filter-pill:hover {
-  transform: translateY(-1px);
-}
-
-.pill-active {
-  border-color: #27ae60;
-}
-
-.pill-team.pill-active {
-  background: #eafaf1;
-  color: #1a5c30;
-}
-
-.dark .pill-team.pill-active {
-  background: #0d2c1a;
-  color: #27ae60;
-}
-
-.pill-visited.pill-active {
-  background: #eafaf1;
-  color: #1a5c30;
-}
-
-.dark .pill-visited.pill-active {
-  background: #0d2c1a;
-  color: #27ae60;
-}
-
-.pill-favorite.pill-active {
-  background: #fdf0ed;
-  border-color: var(--red);
-  color: var(--red);
-}
-
-.dark .pill-favorite.pill-active {
-  background: #2c0d0d;
-  color: var(--red);
-}
-
-.clear-pill {
-  border: 1px solid var(--border);
-  background: var(--surface);
-  color: var(--text-muted);
-  font-size: 0.78rem;
-}
-
-/* Map CTA container */
-.map-cta-container {
-  max-width: 1200px;
-  margin: 1.8rem auto 0;
-  padding: 0 1.5rem;
-}
-
-/* Card variants */
-.card-favorite {
-  border-color: var(--red) !important;
-}
-
-.card-visited {
-  border-color: #27ae60 !important;
-}
-
-/* Card title wrapper */
-.card-title-wrapper {
-  flex: 1;
-  min-width: 0;
-}
-
-/* Photo container image */
-.photo-container img {
-  width: 100%;
-  height: 185px;
-  object-fit: cover;
-  display: block;
-}
-
-/* App container */
-.app {
-  font-family: Georgia, serif;
-  background: var(--bg);
-  min-height: 100vh;
-  transition: background 0.25s, color 0.25s;
+.dark .photo-credit {
+  border-bottom: 1px solid #2E3245;
 }
