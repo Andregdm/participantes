@@ -10,7 +10,7 @@ import { BRAND, THEMES, BARS, REGIONS, REGION_COLOR } from "./components/constan
 import { normalizeText } from "./components/utils";
 import { HeartIcon, CheckCircle, MoonIcon, SunIcon, IgIcon } from "./components/icons";
 import { Card } from "./components/Card";
-import logoImg from "./data/logo.png";
+import logoImg from "./assets/logo.png";
 
 // Componente Logo (mantido aqui por usar logoImg)
 const Logo = ({ size = 80 }) => (
