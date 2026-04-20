@@ -1,6 +1,6 @@
 import { useState, useMemo, useEffect } from "react";
 import data from "./data/bares.json";
-import logoImg from "./src/data/logo.png"; // Importa a imagem da logo
+import logoImg from "./data/logo.png"; // Importa a imagem da logo
 
 // ─── BRAND PALETTE (extraída da logo: azul marinho, vermelho, dourado, creme) ───
 const BRAND = {
