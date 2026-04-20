@@ -24,12 +24,12 @@ function CheckCircle({ d }) {
 
 function ThermometerIcon({ temp }) {
   const getColor = () => {
-    if (temp === null) return "#aaa";
-    if (temp < -5) return "#1a5276";
-    if (temp < -3) return "#2980b9";
-    if (temp >= -3 && temp <= 1) return "#2ecc71";
-    if (temp > 1 && temp <= 3) return "#f1c40f";
-    return "#e74c3c";
+    if (temp === null) return "#95a5a6";
+    if (temp < -5) return "#ecf0f1";
+    if (temp < -3) return "#ecf0f1";
+    if (temp >= -3 && temp <= 1) return "#ecf0f1";
+    if (temp > 1 && temp <= 3) return "#ecf0f1";
+    return "#ecf0f1";
   };
   return (
     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke={getColor()} strokeWidth="2.5">
@@ -307,19 +307,39 @@ function Card({ b, visited, favorites, tv, tf, exp, setExp, imgErr, setImgErr, s
   const hasVisitedByParticipants = b.visited === true;
   
   const getTempColor = (temp) => {
-    if (temp === null) return "#aaa";
-    if (temp < -7) return "#0d3b66";
-    if (temp < -5) return "#1a5276";
-    if (temp < -3) return "#2980b9";
+    if (temp === null) return "#95a5a6";
+    if (temp < -7) return "#3498db";
+    if (temp < -5) return "#3498db";
+    if (temp < -3) return "#3498db";
     if (temp >= -3 && temp <= 1) return "#2ecc71";
     if (temp > 1 && temp <= 3) return "#f1c40f";
     if (temp > 3 && temp <= 6) return "#e67e22";
     return "#e74c3c";
   };
   
+  const getTempBackground = (temp) => {
+    if (temp === null) return "rgba(0,0,0,0.05)";
+    if (temp < -5) return "#3498db";
+    if (temp < -3) return "#3498db";
+    if (temp >= -3 && temp <= 1) return "#2ecc71";
+    if (temp > 1 && temp <= 3) return "#f1c40f";
+    if (temp > 3 && temp <= 6) return "#e67e22";
+    return "#e74c3c";
+  };
+  
+  const getTempTextColor = (temp) => {
+    if (temp === null) return "#555";
+    if (temp < -5) return "#ffffff";
+    if (temp < -3) return "#ffffff";
+    if (temp >= -3 && temp <= 1) return "#ffffff";
+    if (temp > 1 && temp <= 3) return "#2c3e50";
+    if (temp > 3 && temp <= 6) return "#ffffff";
+    return "#ffffff";
+  };
+  
   const getTempGlow = (temp) => {
     if (temp === null) return "none";
-    if (temp < -5) return "0 0 4px rgba(41,128,185,0.5)";
+    if (temp < -5) return "0 0 6px rgba(52,152,219,0.5)";
     return "none";
   };
   
@@ -365,14 +385,14 @@ function Card({ b, visited, favorites, tv, tf, exp, setExp, imgErr, setImgErr, s
           </div>
         </div>
         
-        {/* INFO VISITA DO TIME, RATING E TEMPERATURA - Fundo cinza claro */}
+        {/* INFO VISITA DO TIME, RATING E TEMPERATURA - PROPOSTA 1: PROFISSIONAL E ACESSÍVEL */}
         <div style={{ 
           display: "flex", 
           justifyContent: "space-between", 
           alignItems: "center", 
           marginTop: "0.6rem",
           padding: "0.5rem 0.6rem",
-          background: "#e8e8e8",
+          background: "#2C3E50",
           borderRadius: "10px",
           gap: "8px",
           flexWrap: "wrap"
@@ -385,7 +405,7 @@ function Card({ b, visited, favorites, tv, tf, exp, setExp, imgErr, setImgErr, s
                 <span style={{ 
                   fontSize: "0.72rem", 
                   fontFamily: "sans-serif", 
-                  color: "#2c5e2e",
+                  color: "#A3E4D7",
                   fontWeight: 600,
                   whiteSpace: "nowrap"
                 }}>
@@ -394,11 +414,11 @@ function Card({ b, visited, favorites, tv, tf, exp, setExp, imgErr, setImgErr, s
               </>
             ) : (
               <>
-                <span style={{ fontSize: "0.72rem", fontFamily: "sans-serif", color: "#888" }}>⏳</span>
+                <span style={{ fontSize: "0.72rem", fontFamily: "sans-serif", color: "#95a5a6" }}>⏳</span>
                 <span style={{ 
                   fontSize: "0.72rem", 
                   fontFamily: "sans-serif", 
-                  color: "#888",
+                  color: "#95a5a6",
                   whiteSpace: "nowrap"
                 }}>
                   Aguardando
@@ -407,45 +427,54 @@ function Card({ b, visited, favorites, tv, tf, exp, setExp, imgErr, setImgErr, s
             )}
           </div>
           
-          {/* Nota do time */}
+          {/* Nota do time - Fundo dourado com texto escuro */}
           {hasRating && (
-            <div style={{ display: "flex", alignItems: "center", gap: "4px", flexShrink: 0, background: "rgba(0,0,0,0.08)", padding: "2px 8px", borderRadius: "20px" }}>
-              <span style={{ fontSize: "0.75rem", color: "#d4a017" }}>⭐</span>
+            <div style={{ 
+              display: "flex", 
+              alignItems: "center", 
+              gap: "4px", 
+              flexShrink: 0, 
+              background: "#F39C12", 
+              padding: "2px 10px", 
+              borderRadius: "20px",
+              boxShadow: "0 1px 3px rgba(0,0,0,0.2)"
+            }}>
+              <span style={{ fontSize: "0.75rem", color: "#2C3E50" }}>⭐</span>
               <span style={{ 
                 fontSize: "0.75rem", 
                 fontFamily: "sans-serif", 
                 fontWeight: 700, 
-                color: "#d4a017"
+                color: "#2C3E50"
               }}>
                 {b.rating.toFixed(1)}
               </span>
             </div>
           )}
           
-          {/* Temperatura da cerveja */}
+          {/* Temperatura da cerveja - Fundo colorido por temperatura */}
           {hasBeerTemp && (
             <div style={{ 
               display: "flex", 
               alignItems: "center", 
               gap: "4px", 
               flexShrink: 0,
-              background: b.beerTemp < -3 ? "rgba(41,128,185,0.15)" : "rgba(0,0,0,0.05)",
-              padding: "2px 8px",
+              background: getTempBackground(b.beerTemp),
+              padding: "2px 10px",
               borderRadius: "20px",
-              boxShadow: getTempGlow(b.beerTemp)
+              boxShadow: getTempGlow(b.beerTemp),
+              transition: "all 0.2s ease"
             }}>
-              <ThermometerIcon temp={b.beerTemp} />
+              <span style={{ fontSize: "0.7rem", color: getTempTextColor(b.beerTemp) }}>🌡️</span>
               <span style={{ 
                 fontSize: "0.75rem", 
                 fontFamily: "sans-serif", 
                 fontWeight: 700,
-                color: getTempColor(b.beerTemp),
-                textShadow: b.beerTemp < -5 ? "0 0 2px rgba(0,0,0,0.2)" : "none"
+                color: getTempTextColor(b.beerTemp)
               }}>
                 {b.beerTemp}°C
               </span>
               {b.beerTemp < -5 && (
-                <span style={{ fontSize: "0.6rem", color: "#2980b9", marginLeft: "2px" }}>❄️</span>
+                <span style={{ fontSize: "0.6rem", color: "#ffffff", marginLeft: "2px", textShadow: "0 0 1px rgba(0,0,0,0.3)" }}>❄️</span>
               )}
             </div>
           )}
