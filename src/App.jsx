@@ -424,7 +424,7 @@ export default function App() {
                 <span style={{ position: "absolute", left: "10px", top: "50%", transform: "translateY(-50%)", fontSize: "13px", color: T.textFaint }}>🔍</span>
                 <input
                   type="text"
-                  placeholder="Buscar (ex: coracao encontra coração)..."
+                  placeholder="Buscar"
                   value={q}
                   onChange={e => setQ(e.target.value)}
                   style={{ width: "100%", padding: "0.5rem 0.8rem 0.5rem 2rem", border: `1.5px solid ${T.border}`, borderRadius: "8px", fontSize: "0.85rem", background: T.inputBg, color: T.text, outline: "none", transition: "background .25s, border .25s" }}
