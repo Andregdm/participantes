@@ -1,6 +1,6 @@
 import { useState, useMemo, useEffect } from "react";
 import data from "./data/bares.json";
-import logoImg from "./logo.png";
+import logoImg from "./data/logo.png";
 import "./App.css"; // Importa os estilos CSS
 
 // ─── BRAND PALETTE (extraída da logo: azul marinho, vermelho, dourado, creme) ───
