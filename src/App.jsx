@@ -133,7 +133,7 @@ export default function App() {
               </p>
             </div>
             <div style={{ display: "flex", gap: "0.7rem", flexShrink: 0 }}>
-              {[{ v: BARS.length, l: "Bares" }, { v: visited.size, l: "Visitados" }, { v: favorites.size, l: "Favoritos" }].map(s => (
+              {[{ v: BARS.length, l: "Bares" }, { v: visited.size, l: "Eu visitei" }, { v: favorites.size, l: "Favoritos" }].map(s => (
                 <div key={s.l} style={{ background: "rgba(255,255,255,0.1)", borderRadius: "12px", padding: "0.8rem 1rem", textAlign: "center", minWidth: "72px", backdropFilter: "blur(6px)" }}>
                   <div style={{ fontSize: "1.5rem", fontWeight: 700, color: "#fff", lineHeight: 1 }}>{s.v}</div>
                   <div style={{ fontSize: "0.65rem", fontFamily: "sans-serif", color: "#80c994", textTransform: "uppercase", letterSpacing: "0.06em", marginTop: "2px" }}>{s.l}</div>
@@ -228,7 +228,7 @@ export default function App() {
                 </button>
                 
                 <button onClick={() => setFv(v => !v)} style={{ padding: "0.45rem 0.9rem", borderRadius: "20px", border: `2px solid ${fv ? "#27ae60" : "#ddd"}`, background: fv ? "#eafaf1" : "#fff", color: fv ? "#1a5c30" : "#666", fontSize: "0.8rem", fontWeight: 600, display: "flex", alignItems: "center", gap: "4px", fontFamily: "sans-serif" }}>
-                  <CheckCircle d={fv} /> Visitados
+                  <CheckCircle d={fv} /> Eu visitei
                 </button>
                 
                 <button onClick={() => setFf(v => !v)} style={{ padding: "0.45rem 0.9rem", borderRadius: "20px", border: `2px solid ${ff ? "#e74c3c" : "#ddd"}`, background: ff ? "#fdf0ed" : "#fff", color: ff ? "#c0392b" : "#666", fontSize: "0.8rem", fontWeight: 600, display: "flex", alignItems: "center", gap: "4px", fontFamily: "sans-serif" }}>
