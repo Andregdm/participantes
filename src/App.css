@@ -378,3 +378,46 @@ select option { background: #fff;     color: #1C1A14; }
 .footer-theme-toggle:hover { background: rgba(255,255,255,0.15); transform: translateY(-1px); }
 
 .cookie-text { font-family: sans-serif; font-size: 0.85rem; }
+
+/* =============================================
+   HEADER INFO (período e preço)
+   ============================================= */
+
+.header-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.header-period,
+.header-price {
+  font-family: sans-serif;
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 0.2rem 0.75rem;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(4px);
+  display: inline-block;
+}
+
+.header-period {
+  color: #80c994;
+  border-left: 2px solid #80c994;
+}
+
+.header-price {
+  color: #F4D03F;
+  border-left: 2px solid #F4D03F;
+}
+
+/* Tema escuro para header-info */
+.dark .header-period {
+  background: rgba(128, 201, 148, 0.15);
+}
+
+.dark .header-price {
+  background: rgba(244, 208, 63, 0.15);
+}
