@@ -1,6 +1,6 @@
 import React, { useState, useMemo, useCallback, useEffect, lazy, Suspense } from "react";
 import data from "./data/bares.json";
-import logoImg from "./logo.png";
+import logoImg from "./data/logo.png";
 import "./App.css";
 
 // ─── BRAND PALETTE ────────────────────────────────────────────────────────
