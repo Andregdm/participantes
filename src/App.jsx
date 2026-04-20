@@ -81,7 +81,7 @@ const getTempBg = (t) => {
   return "rgba(231,76,60,0.15)";
 };
 
-// ─── ÍCONES (versões simplificadas) ─────────────────────────────────────────
+// ─── ÍCONES ─────────────────────────────────────────────────────────────────
 const HeartIcon = ({ f }) => (
   <svg width="17" height="17" viewBox="0 0 24 24" fill={f ? "#C0392B" : "none"} stroke={f ? "#C0392B" : "#999"} strokeWidth="2">
     <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
@@ -331,19 +331,23 @@ export default function App() {
       <header style={{ background: T.headerBg }}>
         <div className="instagram-bar">
           <IgIcon color={BRAND.goldLt} />
-          <span>Curadoria: <a href="https://www.instagram.com/ParticipantesdiButeco" target="_blank" rel="noopener noreferrer" style={{ color: BRAND.goldLt }}>@ParticipantesdiButeco</a></span>
+          <span style={{ color: "#ccc" }}>Curadoria realizada pelo perfil do Instagram</span>
+          <a href="https://www.instagram.com/ParticipantesdiButeco" target="_blank" rel="noopener noreferrer" style={{ color: BRAND.goldLt, fontWeight: 700 }}>
+            @ParticipantesdiButeco
+          </a>
+          <span style={{ color: "#777" }}>— siga para dicas e novidades!</span>
         </div>
 
         <div className="header-content">
           <div style={{ display: "flex", alignItems: "center", gap: "2rem", flexWrap: "wrap" }}>
             <div className="header-logo-title">
-              <div className="logo-container" style={{ border: `3px solid ${BRAND.gold}66` }}>
+              <div className="logo-container" style={{ border: `3px solid ${BRAND.gold}66`, boxShadow: `0 0 32px ${BRAND.gold}44, 0 8px 20px rgba(0,0,0,0.3)` }}>
                 <Logo size={85} />
               </div>
               <div>
                 <div className="header-title" style={{ color: BRAND.goldLt }}>Belo Horizonte · 10 Abr – 10 Mai 2026</div>
                 <h1 className="main-title" style={{ color: "#fff" }}>Participantes di Buteco</h1>
-                <div className="main-subtitle" style={{ color: "#9BBFCE" }}>Guia da 26ª Edição · "Somos Todos Verduras"</div>
+                <div className="main-subtitle" style={{ color: "#9BBFCE" }}>Guia da 26ª Edição do Comida di Buteco · <span style={{ color: BRAND.goldLt }}>"Somos Todos Verduras"</span></div>
               </div>
             </div>
 
@@ -351,7 +355,7 @@ export default function App() {
               <div className="stat-card" style={{ background: T.statBg }}><div className="stat-value">{BARS.length}</div><div className="stat-label">Bares</div></div>
               <div className="stat-card" style={{ background: T.statBg }}><div className="stat-value">{visited.size}</div><div className="stat-label">Eu visitei</div></div>
               <div className="stat-card" style={{ background: T.statBg }}><div className="stat-value">{favorites.size}</div><div className="stat-label">Favoritos</div></div>
-              <button className="dm-toggle" onClick={() => setDark(!dark)} style={{ background: dark ? "rgba(232,168,32,0.2)" : "rgba(255,255,255,0.12)", border: `2px solid ${dark ? BRAND.gold : "rgba(255,255,255,0.3)"}`, borderRadius: "50%", width: "42px", height: "42px", display: "flex", alignItems: "center", justifyContent: "center", color: dark ? BRAND.goldLt : "#fff" }}>
+              <button className="dm-toggle" onClick={() => setDark(!dark)} style={{ background: dark ? "rgba(232,168,32,0.2)" : "rgba(255,255,255,0.12)", border: `2px solid ${dark ? BRAND.gold : "rgba(255,255,255,0.3)"}`, borderRadius: "50%", width: "42px", height: "42px", display: "flex", alignItems: "center", justifyContent: "center", color: dark ? BRAND.goldLt : "#fff", backdropFilter: "blur(8px)" }}>
                 {dark ? <SunIcon /> : <MoonIcon />}
               </button>
             </div>
@@ -367,66 +371,145 @@ export default function App() {
       {/* CONTEÚDO */}
       {tab === "mapa" ? (
         <div className="max-width-1200 px-15 mt-2">
-          <div style={{ background: T.surface, borderRadius: "16px", overflow: "hidden" }}>
-            <div style={{ background: T.bannerBg, padding: "1rem 1.5rem", display: "flex", alignItems: "center", gap: "15px" }}>
-              <Logo size={40} />
-              <div><div style={{ color: "#fff", fontWeight: 700 }}>Mapa Personalizado</div><div style={{ color: BRAND.goldLt, fontSize: "0.75rem" }}>Curadoria @ParticipantesdiButeco</div></div>
+          <div style={{ background: T.surface, borderRadius: "16px", overflow: "hidden", boxShadow: `0 4px 28px rgba(0,0,0,${dark ? "0.5" : "0.1"})`, border: `1px solid ${T.border}` }}>
+            <div style={{ background: T.bannerBg, padding: "1.2rem 1.8rem", display: "flex", alignItems: "center", gap: "15px" }}>
+              <Logo size={45} />
+              <div>
+                <div style={{ color: "#fff", fontWeight: 700, fontFamily: "sans-serif", fontSize: "1rem" }}>Mapa Personalizado — Comida di Buteco 2026 BH</div>
+                <div style={{ color: BRAND.goldLt, fontSize: "0.74rem", fontFamily: "sans-serif", opacity: 0.85 }}>Todos os bares participantes marcados · Curadoria @ParticipantesdiButeco</div>
+              </div>
             </div>
             <div style={{ position: "relative", width: "100%", paddingBottom: "56.25%", background: dark ? "#111" : "#f0ebe0" }}>
               <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1NKgMtDTJSU2KAuiadQub73yXZ4nEJLU&ehbc=2E312F&noprof=1" style={{ position: "absolute", inset: 0, width: "100%", height: "100%", border: "none" }} title="Mapa" allowFullScreen loading="lazy" />
+            </div>
+            <div style={{ padding: "0.9rem 1.8rem", background: T.mapFooterBg, borderTop: `1px solid ${T.border}`, display: "flex", alignItems: "center", gap: "8px" }}>
+              <IgIcon color={BRAND.navy} />
+              <span style={{ fontSize: "0.78rem", color: T.textMuted, fontFamily: "sans-serif" }}>Mapa criado por <a href="https://www.instagram.com/ParticipantesdiButeco" target="_blank" rel="noopener noreferrer" style={{ color: BRAND.navy, fontWeight: 700 }}>@ParticipantesdiButeco</a> · Siga para atualizações e dicas do concurso</span>
             </div>
           </div>
         </div>
       ) : (
         <>
-          {/* FILTROS */}
-          <div className="sticky-filters" style={{ background: T.filterBg, borderBottom: `1px solid ${T.filterBorder}` }}>
+          {/* FILTROS - ESTILO ORIGINAL RESTAURADO */}
+          <div className="sticky-filters" style={{ background: T.filterBg, borderBottom: `1px solid ${T.filterBorder}`, boxShadow: `0 2px 12px rgba(0,0,0,${dark ? "0.4" : "0.07"})` }}>
             <div className="sticky-filters-inner">
+              {/* Busca */}
               <div className="search-wrapper">
-                <span className="search-icon">🔍</span>
-                <input type="text" placeholder="Buscar bar, prato ou bairro..." value={filters.search} onChange={e => setFilters(prev => ({ ...prev, search: e.target.value }))} className="search-input" style={{ border: `1.5px solid ${T.border}`, background: T.inputBg, color: T.text }} />
+                <span className="search-icon" style={{ color: T.textFaint }}>🔍</span>
+                <input
+                  type="text"
+                  placeholder="Bar, prato ou bairro..."
+                  value={filters.search}
+                  onChange={e => setFilters(prev => ({ ...prev, search: e.target.value }))}
+                  className="search-input"
+                  style={{ border: `1.5px solid ${T.border}`, background: T.inputBg, color: T.text }}
+                />
               </div>
 
-              <select value={filters.region} onChange={e => setFilters(prev => ({ ...prev, region: e.target.value }))} className="select-input" style={{ border: `1.5px solid ${filters.region !== "Todas" ? BRAND.navy : T.border}`, background: filters.region !== "Todas" ? (dark ? "#1a2040" : "#e8ecf8") : T.inputBg }}>
-                {REGIONS.map(r => <option key={r}>{r === "Todas" ? "📌 Regiões" : r}</option>)}
-              </select>
+              {/* Selects lado a lado */}
+              <div className="filters-group">
+                <select
+                  value={filters.region}
+                  onChange={e => setFilters(prev => ({ ...prev, region: e.target.value }))}
+                  className="select-input"
+                  style={{ 
+                    border: `1.5px solid ${filters.region !== "Todas" ? BRAND.navy : T.border}`,
+                    background: filters.region !== "Todas" ? (dark ? "#1a2040" : "#e8ecf8") : T.inputBg,
+                    color: filters.region !== "Todas" ? BRAND.navy : T.textMuted,
+                    fontWeight: filters.region !== "Todas" ? 700 : 400
+                  }}
+                >
+                  {REGIONS.map(r => <option key={r}>{r === "Todas" ? "📌 Regiões" : r}</option>)}
+                </select>
 
-              <select value={sortBy} onChange={e => setSortBy(e.target.value)} className="select-input" style={{ border: `1.5px solid ${sortBy !== "none" ? BRAND.navy : T.border}` }}>
-                <option value="none">📋 Ordenar</option>
-                <option value="rating">⭐ Maior nota</option>
-                <option value="beerTemp">🌡️ Mais gelada</option>
-              </select>
+                <select
+                  value={sortBy}
+                  onChange={e => setSortBy(e.target.value)}
+                  className="select-input"
+                  style={{ 
+                    border: `1.5px solid ${sortBy !== "none" ? BRAND.navy : T.border}`,
+                    background: sortBy !== "none" ? (dark ? "#1a2040" : "#e8ecf8") : T.inputBg,
+                    color: sortBy !== "none" ? BRAND.navy : T.textMuted,
+                    fontWeight: sortBy !== "none" ? 700 : 400
+                  }}
+                >
+                  <option value="none">📋 Ordenar</option>
+                  <option value="rating">⭐ Maior nota</option>
+                  <option value="beerTemp">🌡️ Mais gelada</option>
+                </select>
+              </div>
 
-              <button onClick={() => setFilters(prev => ({ ...prev, onlyTeam: !prev.onlyTeam }))} className="filter-pill" style={{ border: `2px solid ${filters.onlyTeam ? "#27ae60" : T.border}`, background: filters.onlyTeam ? (dark ? "#0d2c1a" : "#eafaf1") : T.surface }}>
-                <CheckCircle d={filters.onlyTeam} /> Time
-              </button>
+              {/* Botões de filtro lado a lado */}
+              <div className="filters-group">
+                <button
+                  onClick={() => setFilters(prev => ({ ...prev, onlyTeam: !prev.onlyTeam }))}
+                  className="filter-pill"
+                  style={{
+                    border: `2px solid ${filters.onlyTeam ? "#27ae60" : T.border}`,
+                    background: filters.onlyTeam ? (dark ? "#0d2c1a" : "#eafaf1") : T.surface,
+                    color: filters.onlyTeam ? "#1a5c30" : T.textMuted,
+                  }}
+                >
+                  <CheckCircle d={filters.onlyTeam} /> Time visitou
+                </button>
+                
+                <button
+                  onClick={() => setFilters(prev => ({ ...prev, onlyVisited: !prev.onlyVisited }))}
+                  className="filter-pill"
+                  style={{
+                    border: `2px solid ${filters.onlyVisited ? "#27ae60" : T.border}`,
+                    background: filters.onlyVisited ? (dark ? "#0d2c1a" : "#eafaf1") : T.surface,
+                    color: filters.onlyVisited ? "#1a5c30" : T.textMuted,
+                  }}
+                >
+                  <CheckCircle d={filters.onlyVisited} /> Visitados
+                </button>
+                
+                <button
+                  onClick={() => setFilters(prev => ({ ...prev, onlyFavorites: !prev.onlyFavorites }))}
+                  className="filter-pill"
+                  style={{
+                    border: `2px solid ${filters.onlyFavorites ? BRAND.red : T.border}`,
+                    background: filters.onlyFavorites ? (dark ? "#2c0d0d" : "#fdf0ed") : T.surface,
+                    color: filters.onlyFavorites ? "#c0392b" : T.textMuted,
+                  }}
+                >
+                  <HeartIcon f={filters.onlyFavorites} /> Favoritos
+                </button>
+              </div>
 
-              <button onClick={() => setFilters(prev => ({ ...prev, onlyVisited: !prev.onlyVisited }))} className="filter-pill" style={{ border: `2px solid ${filters.onlyVisited ? "#27ae60" : T.border}`, background: filters.onlyVisited ? (dark ? "#0d2c1a" : "#eafaf1") : T.surface }}>
-                <CheckCircle d={filters.onlyVisited} /> Eu visitei
-              </button>
+              {hasActiveFilters && (
+                <button onClick={clearFilters} className="filter-pill" style={{ border: `1px solid ${T.border}`, background: T.surface, color: T.textMuted, fontSize: "0.78rem" }}>
+                  ✕ Limpar
+                </button>
+              )}
 
-              <button onClick={() => setFilters(prev => ({ ...prev, onlyFavorites: !prev.onlyFavorites }))} className="filter-pill" style={{ border: `2px solid ${filters.onlyFavorites ? BRAND.red : T.border}`, background: filters.onlyFavorites ? (dark ? "#2c0d0d" : "#fdf0ed") : T.surface }}>
-                <HeartIcon f={filters.onlyFavorites} /> Favoritos
-              </button>
-
-              {hasActiveFilters && <button onClick={clearFilters} className="filter-pill" style={{ border: `1px solid ${T.border}`, background: T.surface }}>✕ Limpar</button>}
-              <div className="filter-counter">{filteredAndSorted.length} / {BARS.length}</div>
+              <div className="filter-counter" style={{ color: T.textFaint }}>
+                {filteredAndSorted.length} / {BARS.length}
+              </div>
             </div>
           </div>
 
           {/* BANNER MAPA */}
           <div className="max-width-1200 px-15 mt-2">
-            <div onClick={() => setTab("mapa")} className="map-cta" style={{ background: T.bannerBg }}>
-              <Logo size={35} />
-              <div><div style={{ color: "#fff" }}>Ver Mapa Interativo</div><div style={{ color: BRAND.goldLt, fontSize: "0.7rem" }}>Todos os bares no mapa</div></div>
-              <span style={{ marginLeft: "auto", color: BRAND.goldLt }}>→</span>
+            <div onClick={() => setTab("mapa")} className="map-cta" style={{ background: T.bannerBg, boxShadow: `0 2px 14px rgba(28,45,110,${dark ? "0.5" : "0.2"})`, border: `1px solid ${BRAND.navy}55` }}>
+              <Logo size={38} />
+              <div>
+                <div className="cta-title" style={{ color: "#fff" }}>Ver Mapa Interativo dos Bares</div>
+                <div className="cta-subtitle" style={{ color: BRAND.goldLt }}>Todos os bares marcados no mapa personalizado · Curadoria @ParticipantesdiButeco</div>
+              </div>
+              <span className="cta-arrow" style={{ color: BRAND.goldLt }}>→</span>
             </div>
           </div>
 
           {/* GRID DE CARDS */}
           <main className="max-width-1200 px-15" style={{ padding: "1.5rem" }}>
             {filteredAndSorted.length === 0 ? (
-              <div className="empty-state"><div className="empty-icon">🔍</div><p>Nenhum bar encontrado</p><button onClick={clearFilters} className="empty-button">Limpar filtros</button></div>
+              <div className="empty-state">
+                <div className="empty-icon">🔍</div>
+                <p>Nenhum bar encontrado com esses filtros.</p>
+                <button onClick={clearFilters} className="empty-button" style={{ background: BRAND.navy, color: "#fff" }}>Limpar filtros</button>
+              </div>
             ) : sortBy !== "none" ? (
               <div className="bars-grid">
                 {filteredAndSorted.map(b => <Card key={b.id} b={b} visited={visited} favorites={favorites} setVisited={setVisited} setFavorites={setFavorites} expandedId={expandedId} setExpandedId={setExpandedId} imgErr={imgErr} setImgErr={setImgErr} T={T} dark={dark} />)}
@@ -449,11 +532,25 @@ export default function App() {
         </>
       )}
 
-      {/* FOOTER */}
-      <footer style={{ background: T.footerBg, padding: "2rem", textAlign: "center" }}>
-        <Logo size={45} />
-        <p className="footer-text">Comida di Buteco 2026 · 26ª Edição · Belo Horizonte · Petiscos a R$ 40</p>
-        <button onClick={() => setDark(!dark)} className="footer-theme-toggle">{dark ? "☀️ Modo Claro" : "🌙 Modo Escuro"}</button>
+      {/* FOOTER - LOGO CENTRALIZADA */}
+      <footer style={{ background: T.footerBg, padding: "2.5rem 1.5rem", textAlign: "center" }}>
+        <div style={{ display: "flex", justifyContent: "center", marginBottom: "1rem" }}>
+          <Logo size={50} />
+        </div>
+        <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "8px", marginBottom: "0.5rem" }}>
+          <IgIcon color={BRAND.goldLt} />
+          <span style={{ fontFamily: "sans-serif", fontSize: "0.85rem", color: "#aaa" }}>
+            Curadoria:{" "}
+            <a href="https://www.instagram.com/ParticipantesdiButeco" target="_blank" rel="noopener noreferrer" style={{ color: BRAND.goldLt, fontWeight: 700 }}>
+              @ParticipantesdiButeco
+            </a>
+          </span>
+        </div>
+        <p className="footer-text">Comida di Buteco 2026 · 26ª Edição · Belo Horizonte · 10 abr – 10 mai · Petiscos a R$ 40</p>
+        <button onClick={() => setDark(!dark)} className="footer-theme-toggle" style={{ color: dark ? BRAND.goldLt : "#ccc" }}>
+          {dark ? <SunIcon /> : <MoonIcon />}
+          {dark ? "Modo Claro" : "Modo Escuro"}
+        </button>
       </footer>
     </div>
   );
