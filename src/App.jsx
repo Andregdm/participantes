@@ -13,10 +13,21 @@ const BRAND = {
   white:   "#FFFFFF",
 };
 
+// ─── FUNÇÃO PARA NORMALIZAR TEXTOS (remover acentos e caracteres especiais) ───
+const normalizeText = (text) => {
+  if (!text) return "";
+  return text
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "") // Remove acentos
+    .replace(/[^\w\s]/g, "") // Remove caracteres especiais (exceto letras, números e espaços)
+    .replace(/\s+/g, " "); // Normaliza espaços
+};
+
 // ─── TOKENS DE TEMA (modo claro / escuro) ──────────────────────────────────
 const THEMES = {
   light: {
-    bg:           "#F5EFE0",   // creme da logo
+    bg:           "#F5EFE0",
     surface:      "#FFFFFF",
     surfaceAlt:   "#FAF7F0",
     border:       "#E2D8C0",
@@ -185,6 +196,16 @@ export default function App() {
   const [onlyTeam, setOnlyTeam] = useState(false);
   const [sortBy, setSortBy] = useState("none");
 
+  // PRÉ-CALCULA OS TEXTOS NORMALIZADOS PARA BUSCA MAIS RÁPIDA
+  const barsWithNormalized = useMemo(() => {
+    return BARS.map(bar => ({
+      ...bar,
+      normalizedName: normalizeText(bar.name),
+      normalizedDish: normalizeText(bar.dish),
+      normalizedNeighborhood: normalizeText(bar.neighborhood),
+    }));
+  }, []);
+
   useEffect(() => {
     try { localStorage.setItem("cdb26v", JSON.stringify([...visited])); } catch {}
   }, [visited]);
@@ -199,21 +220,23 @@ export default function App() {
   const tf = (id) => setFavorites(s => { const n = new Set(s); n.has(id) ? n.delete(id) : n.add(id); return n; });
 
   const filteredAndSorted = useMemo(() => {
-    let res = BARS.filter(b => {
+    let res = barsWithNormalized.filter(b => {
       if (fv && !visited.has(b.id)) return false;
       if (ff && !favorites.has(b.id)) return false;
       if (fr !== "Todas" && b.region !== fr) return false;
       if (onlyTeam && !b.visited) return false;
       if (q) {
-        const lq = q.toLowerCase();
-        if (!b.name.toLowerCase().includes(lq) && !b.dish.toLowerCase().includes(lq) && !b.neighborhood.toLowerCase().includes(lq)) return false;
+        const normalizedQuery = normalizeText(q);
+        if (!b.normalizedName.includes(normalizedQuery) && 
+            !b.normalizedDish.includes(normalizedQuery) && 
+            !b.normalizedNeighborhood.includes(normalizedQuery)) return false;
       }
       return true;
     });
     if (sortBy === "rating") res = [...res].sort((a, b2) => (b2.rating ?? -1) - (a.rating ?? -1));
     if (sortBy === "beerTemp") res = [...res].sort((a, b2) => (a.beerTemp ?? 999) - (b2.beerTemp ?? 999));
     return res;
-  }, [fv, ff, fr, q, visited, favorites, onlyTeam, sortBy]);
+  }, [fv, ff, fr, q, visited, favorites, onlyTeam, sortBy, barsWithNormalized]);
 
   const grouped = useMemo(() => {
     const g = {};
@@ -278,7 +301,6 @@ export default function App() {
 
             {/* LOGO + TÍTULO - Espaço ampliado para a logo */}
             <div style={{ display: "flex", alignItems: "center", gap: "1.5rem", flex: 1, minWidth: "300px" }}>
-              {/* Container da logo com fundo e borda ampliados */}
               <div style={{ 
                 flexShrink: 0, 
                 background: "rgba(255,255,255,0.12)", 
@@ -312,7 +334,6 @@ export default function App() {
                 </div>
               ))}
 
-              {/* Toggle dark mode */}
               <button
                 className="dm-toggle"
                 onClick={() => setDark(d => !d)}
@@ -398,12 +419,12 @@ export default function App() {
           {/* Filtros sticky */}
           <div style={{ background: T.filterBg, borderBottom: `1px solid ${T.filterBorder}`, position: "sticky", top: 0, zIndex: 20, boxShadow: `0 2px 12px rgba(0,0,0,${dark ? "0.4" : "0.07"})`, transition: "background .25s" }}>
             <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0.8rem 1.5rem", display: "flex", gap: "0.6rem", alignItems: "center", flexWrap: "wrap" }}>
-              {/* Busca */}
-              <div style={{ flex: "2 1 200px", position: "relative" }}>
+              {/* Busca com placeholder indicando busca inteligente */}
+              <div style={{ flex: "2 1 220px", position: "relative" }}>
                 <span style={{ position: "absolute", left: "10px", top: "50%", transform: "translateY(-50%)", fontSize: "13px", color: T.textFaint }}>🔍</span>
                 <input
                   type="text"
-                  placeholder="Bar, prato ou bairro..."
+                  placeholder="Buscar (ex: coracao encontra coração)..."
                   value={q}
                   onChange={e => setQ(e.target.value)}
                   style={{ width: "100%", padding: "0.5rem 0.8rem 0.5rem 2rem", border: `1.5px solid ${T.border}`, borderRadius: "8px", fontSize: "0.85rem", background: T.inputBg, color: T.text, outline: "none", transition: "background .25s, border .25s" }}
@@ -530,7 +551,6 @@ export default function App() {
         <p style={{ margin: "0 0 0.8rem", fontSize: "0.72rem", opacity: 0.4, fontFamily: "sans-serif", color: "#fff" }}>
           Comida di Buteco 2026 · 26ª Edição · Belo Horizonte · 10 abr – 10 mai · Petiscos a R$ 40
         </p>
-        {/* Toggle modo no footer também */}
         <button
           onClick={() => setDark(d => !d)}
           style={{ background: "rgba(255,255,255,0.08)", border: `1px solid rgba(255,255,255,0.15)`, borderRadius: "20px", padding: "0.5rem 1.2rem", color: dark ? BRAND.goldLt : "#ccc", fontSize: "0.78rem", fontFamily: "sans-serif", display: "inline-flex", alignItems: "center", gap: "8px", cursor: "pointer", transition: "all 0.2s" }}
