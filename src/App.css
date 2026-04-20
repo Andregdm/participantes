@@ -9,6 +9,8 @@
 body {
   margin: 0;
   padding: 0;
+  font-size: 16px;                /* base aumentada */
+  line-height: 1.4;               /* melhor legibilidade */
   transition: background 0.25s, color 0.25s;
 }
 
@@ -50,11 +52,18 @@ select option { background: #fff;     color: #1C1A14; }
 .dark select option { background: #1A1D26; color: #EDE8DC; }
 
 /* =============================================
-   DARK MODE TOGGLE
+   DARK MODE TOGGLE (tamanho aumentado via CSS)
    ============================================= */
 
-.dm-toggle { transition: transform 0.15s, opacity 0.15s; }
-.dm-toggle:hover { opacity: 0.85; transform: scale(1.05); }
+.dm-toggle {
+  width: 48px !important;          /* sobrescreve inline style */
+  height: 48px !important;
+  transition: transform 0.15s, opacity 0.15s;
+}
+.dm-toggle:hover {
+  opacity: 0.85;
+  transform: scale(1.05);
+}
 
 /* =============================================
    LAYOUT HELPERS (apenas os efetivamente usados)
@@ -155,7 +164,7 @@ select option { background: #fff;     color: #1C1A14; }
 .logo-img:hover { transform: scale(1.05); }
 
 /* =============================================
-   STAT CARDS
+   STAT CARDS (fonte maior)
    ============================================= */
 
 .stat-card {
@@ -169,8 +178,8 @@ select option { background: #fff;     color: #1C1A14; }
 }
 .stat-card:hover { transform: translateY(-2px); }
 
-.stat-value { font-size: 1.6rem; font-weight: 700; color: #fff; line-height: 1; }
-.stat-label { font-size: 0.62rem; font-family: sans-serif; text-transform: uppercase; letter-spacing: 0.08em; margin-top: 4px; opacity: 0.85; }
+.stat-value { font-size: 1.8rem; font-weight: 700; color: #fff; line-height: 1; }
+.stat-label { font-size: 0.75rem; font-family: sans-serif; text-transform: uppercase; letter-spacing: 0.1em; margin-top: 4px; opacity: 0.85; }
 
 /* =============================================
    TABS
@@ -224,9 +233,9 @@ select option { background: #fff;     color: #1C1A14; }
 .filters-group  { display: flex; gap: 0.6rem; flex-wrap: wrap; }
 
 .filter-pill {
-  padding: 0.42rem 0.88rem;
+  padding: 0.55rem 1rem;           /* aumento do padding */
   border-radius: 20px;
-  font-size: 0.78rem;
+  font-size: 0.85rem;              /* fonte maior */
   font-weight: 600;
   display: flex;
   align-items: center;
@@ -286,7 +295,7 @@ select option { background: #fff;     color: #1C1A14; }
 .region-count     { border-radius: 20px; padding: 3px 12px; font-size: 0.72rem; font-family: sans-serif; font-weight: 700; }
 
 /* =============================================
-   CARD
+   CARD (com ajustes de fonte e borda)
    ============================================= */
 
 .card                { border-radius: 14px; overflow: hidden; position: relative; transition: background 0.25s, border 0.25s; }
@@ -299,11 +308,11 @@ select option { background: #fff;     color: #1C1A14; }
 .champion-badge { position: absolute; top: 8px; right: 8px; background: linear-gradient(90deg,#E8A820,#F4D03F); border-radius: 6px; padding: 3px 8px; font-size: 0.63rem; font-family: sans-serif; font-weight: 700; color: #131f50; z-index: 2; }
 .visited-badge  { position: absolute; top: 8px; left:  8px; background: rgba(39,174,96,0.92);              border-radius: 6px; padding: 3px 8px; font-size: 0.63rem; font-family: sans-serif; font-weight: 700; color: #fff;     z-index: 2; }
 
-.photo-credit    { padding: 0.2rem 0.75rem; font-size: 0.58rem; font-family: sans-serif; text-align: right; border-bottom-style: solid; border-bottom-width: 1px; transition: background 0.25s, color 0.25s; }
+.photo-credit    { padding: 0.2rem 0.75rem; font-size: 0.7rem; font-family: sans-serif; text-align: right; border-bottom-style: solid; border-bottom-width: 1px; transition: background 0.25s, color 0.25s; }
 .card-content    { padding: 0.85rem 1rem 0.8rem; }
 .card-header     { display: flex; justify-content: space-between; align-items: flex-start; }
-.card-title      { margin: 0 0 2px; font-size: 0.92rem; font-weight: 700; font-family: sans-serif; line-height: 1.2; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.card-subtitle   { font-size: 0.67rem; font-family: sans-serif; }
+.card-title      { margin: 0 0 2px; font-size: 1.1rem; font-weight: 700; font-family: sans-serif; line-height: 1.3; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.card-subtitle   { font-size: 0.85rem; font-family: sans-serif; }
 .card-actions    { display: flex; gap: 2px; flex-shrink: 0; margin-left: 6px; }
 .action-button   { background: none; border: none; padding: 4px; display: flex; cursor: pointer; }
 
@@ -332,7 +341,7 @@ select option { background: #fff;     color: #1C1A14; }
 .rating-star   { font-size: 0.7rem; }
 .rating-value  { font-size: 0.72rem; font-family: sans-serif; font-weight: 700; }
 
-.temp-badge  { display: flex; align-items: center; gap: 3px; flex-shrink: 0; padding: 2px 9px; border-radius: 20px; transition: all 0.2s ease; }
+.temp-badge  { display: flex; align-items: center; gap: 3px; flex-shrink: 0; padding: 2px 9px; border-radius: 20px; transition: all 0.2s ease; border-width: 2px !important; } /* borda mais grossa */
 .temp-icon   { font-size: 0.68rem; }
 .temp-value  { font-size: 0.72rem; font-family: sans-serif; font-weight: 700; }
 
@@ -342,9 +351,9 @@ select option { background: #fff;     color: #1C1A14; }
 
 .petisco-container { border-radius: 7px; padding: 0.4rem 0.7rem; margin: 0.5rem 0; transition: background 0.25s, border 0.25s; }
 .petisco-label     { font-size: 0.57rem; font-family: sans-serif; text-transform: uppercase; letter-spacing: 0.09em; margin-bottom: 1px; }
-.petisco-name      { font-size: 0.82rem; font-weight: 700; font-family: sans-serif; line-height: 1.2; }
+.petisco-name      { font-size: 1rem; font-weight: 700; font-family: sans-serif; line-height: 1.2; }
 
-.description-text  { font-size: 0.75rem; line-height: 1.55; margin: 0 0 0.4rem; font-weight: 300; }
+.description-text  { font-size: 0.9rem; line-height: 1.5; margin: 0 0 0.4rem; font-weight: 300; }
 .address-text      { font-size: 0.67rem; font-family: sans-serif; display: flex; gap: 4px; margin-bottom: 0.35rem; }
 .expand-btn        { font-size: 0.71rem; padding: 0; font-weight: 700; text-decoration: underline; text-underline-offset: 2px; font-family: sans-serif; cursor: pointer; transition: opacity 0.15s; }
 .expand-btn:hover  { opacity: 0.7; }
