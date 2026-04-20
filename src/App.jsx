@@ -1,5 +1,6 @@
 import { useState, useMemo, useEffect } from "react";
 import data from "./data/bares.json";
+import logoImg from "./src/data/logo.png"; // Importa a imagem da logo
 
 // ─── BRAND PALETTE (extraída da logo: azul marinho, vermelho, dourado, creme) ───
 const BRAND = {
@@ -68,64 +69,21 @@ const REGION_COLOR = data.regions;
 const BARS = data.bars;
 const REGIONS = ["Todas", ...Object.keys(REGION_COLOR)];
 
-// ─── LOGO SVG inline (paleta fiel à imagem enviada) ─────────────────────────
+// ─── COMPONENTE LOGO (usando imagem externa) ─────────────────────────
 function Logo({ size = 48 }) {
   return (
-    <svg width={size} height={size} viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-      <circle cx="50" cy="50" r="48" fill={BRAND.cream} stroke={BRAND.gold} strokeWidth="3"/>
-      <circle cx="50" cy="50" r="40" fill={BRAND.red}/>
-      {/* Anel dourado interior */}
-      <circle cx="50" cy="50" r="40" fill="none" stroke={BRAND.gold} strokeWidth="2"/>
-      {/* Banner azul */}
-      <rect x="10" y="42" width="80" height="22" rx="5" fill={BRAND.navy} stroke={BRAND.goldLt} strokeWidth="1.5"/>
-      {/* Texto "PARTICIPANTES" */}
-      <text x="50" y="52" textAnchor="middle" fontFamily="Arial Black, sans-serif" fontWeight="900" fontSize="8.5" fill={BRAND.white} letterSpacing="0.3">PARTICIPANTES</text>
-      {/* Texto "DI BUTECO" */}
-      <text x="50" y="61" textAnchor="middle" fontFamily="Arial Black, sans-serif" fontWeight="900" fontSize="9.5" fill={BRAND.goldLt} letterSpacing="0.3">DI BUTECO</text>
-      {/* Caneca de chopp */}
-      <g transform="translate(16,22)">
-        <rect x="0" y="4" width="10" height="14" rx="1.5" fill={BRAND.gold} stroke={BRAND.goldLt} strokeWidth="0.8"/>
-        <rect x="10" y="6" width="3" height="6" rx="1.5" fill={BRAND.gold} stroke={BRAND.goldLt} strokeWidth="0.8"/>
-        <rect x="1" y="1" width="8" height="4" rx="1" fill="white" opacity="0.85"/>
-      </g>
-      {/* Cartas de baralho */}
-      <g transform="translate(44,16) rotate(-5)">
-        <rect x="0" y="0" width="9" height="13" rx="1.5" fill="white" stroke="#ccc" strokeWidth="0.5"/>
-        <text x="4.5" y="9" textAnchor="middle" fontSize="6" fill={BRAND.red} fontWeight="bold">♥</text>
-      </g>
-      <g transform="translate(50,15)">
-        <rect x="0" y="0" width="9" height="13" rx="1.5" fill="white" stroke="#ccc" strokeWidth="0.5"/>
-        <text x="4.5" y="9" textAnchor="middle" fontSize="6" fill="#222" fontWeight="bold">♠</text>
-      </g>
-      {/* Trevo vermelho canto direito */}
-      <text x="78" y="26" fontSize="13" fill={BRAND.red} fontWeight="bold">♣</text>
-      {/* Banquinhos */}
-      <g transform="translate(37,72)">
-        <rect x="0" y="0" width="9" height="2" rx="1" fill="#1C1C1C"/>
-        <rect x="1" y="2" width="2" height="10" rx="1" fill="#2C2C2C"/>
-        <rect x="6" y="2" width="2" height="10" rx="1" fill="#2C2C2C"/>
-        <rect x="0" y="10" width="9" height="1.5" rx="0.7" fill="#2C2C2C"/>
-      </g>
-      <g transform="translate(50,70)">
-        <rect x="0" y="0" width="9" height="2" rx="1" fill={BRAND.navy}/>
-        <rect x="1" y="2" width="2" height="12" rx="1" fill={BRAND.navy}/>
-        <rect x="6" y="2" width="2" height="12" rx="1" fill={BRAND.navy}/>
-        <rect x="0" y="11" width="9" height="1.5" rx="0.7" fill={BRAND.navy}/>
-      </g>
-      <g transform="translate(63,71)">
-        <rect x="0" y="0" width="9" height="2" rx="1" fill="#888"/>
-        <rect x="1" y="2" width="2" height="11" rx="1" fill="#999"/>
-        <rect x="6" y="2" width="2" height="11" rx="1" fill="#999"/>
-        <rect x="0" y="10" width="9" height="1.5" rx="0.7" fill="#888"/>
-      </g>
-      {/* Bolinhas decorativas no anel */}
-      {[0,30,60,90,120,150,180,210,240,270,300,330].map((deg,i) => {
-        const rad = (deg * Math.PI) / 180;
-        const cx2 = 50 + 44 * Math.cos(rad);
-        const cy2 = 50 + 44 * Math.sin(rad);
-        return <circle key={i} cx={cx2} cy={cy2} r="1.5" fill="#333"/>;
-      })}
-    </svg>
+    <img 
+      src={logoImg} 
+      alt="Participantes di Buteco Logo" 
+      width={size} 
+      height={size}
+      style={{ 
+        display: "block",
+        objectFit: "contain",
+        borderRadius: "50%",
+        boxShadow: `0 0 0 3px ${BRAND.gold}55, 0 0 0 6px rgba(255,255,255,0.1)`
+      }}
+    />
   );
 }
 
