@@ -1,12 +1,10 @@
-/* ============================================
-   RESET E ESTILOS GLOBAIS
-   ============================================ */
+/* =============================================
+   RESET & GLOBAIS
+   ============================================= */
 
 *,
 *::before,
-*::after {
-  box-sizing: border-box;
-}
+*::after { box-sizing: border-box; }
 
 body {
   margin: 0;
@@ -14,565 +12,61 @@ body {
   transition: background 0.25s, color 0.25s;
 }
 
-/* ============================================
-   SCROLLBAR PERSONALIZADA
-   ============================================ */
+/* =============================================
+   SCROLLBAR
+   ============================================= */
 
-::-webkit-scrollbar {
-  width: 5px;
-}
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-thumb { background: #C8B890; border-radius: 3px; }
+.dark ::-webkit-scrollbar-thumb { background: #404666; }
 
-::-webkit-scrollbar-thumb {
-  background: #C8B890;
-  border-radius: 3px;
-}
+/* =============================================
+   ANIMAÇÕES
+   ============================================= */
 
-.dark ::-webkit-scrollbar-thumb {
-  background: #404666;
-}
-
-/* ============================================
-   ANIMAÇÕES E TRANSIÇÕES
-   ============================================ */
-
-.bc {
-  transition: box-shadow 0.2s, transform 0.2s;
-}
-
+.bc { transition: box-shadow 0.2s, transform 0.2s; }
 .bc:hover {
-  box-shadow: 0 10px 32px rgba(0, 0, 0, 0.14) !important;
+  box-shadow: 0 10px 32px rgba(0,0,0,0.14) !important;
   transform: translateY(-3px);
 }
+.dark .bc:hover { box-shadow: 0 10px 32px rgba(0,0,0,0.4) !important; }
 
-.dark .bc:hover {
-  box-shadow: 0 10px 32px rgba(0, 0, 0, 0.4) !important;
-}
+.bi { transition: transform 0.4s; }
+.bc:hover .bi { transform: scale(1.06); }
 
-.bi {
-  transition: transform 0.4s;
-}
+/* =============================================
+   ELEMENTOS BASE
+   ============================================= */
 
-.bc:hover .bi {
-  transform: scale(1.06);
-}
+button { cursor: pointer; background: none; border: none; }
+a      { transition: opacity 0.15s; text-decoration: none; }
+a:hover { opacity: 0.8; }
 
-button {
-  cursor: pointer;
-  background: none;
-  border: none;
-}
+input::placeholder { color: #9E9280; }
+.dark input::placeholder { color: #605A6E; }
 
-a {
-  transition: opacity 0.15s;
-  text-decoration: none;
-}
+select { cursor: pointer; }
+select option { background: #fff;     color: #1C1A14; }
+.dark select option { background: #1A1D26; color: #EDE8DC; }
 
-a:hover {
-  opacity: 0.8;
-}
-
-/* ============================================
-   INPUTS E FORMULÁRIOS
-   ============================================ */
-
-input::placeholder {
-  color: #9E9280;
-}
-
-.dark input::placeholder {
-  color: #605A6E;
-}
-
-select {
-  cursor: pointer;
-}
-
-select option {
-  background: #FFFFFF;
-  color: #1C1A14;
-}
-
-.dark select option {
-  background: #1A1D26;
-  color: #EDE8DC;
-}
-
-/* ============================================
+/* =============================================
    DARK MODE TOGGLE
-   ============================================ */
+   ============================================= */
 
-.dm-toggle {
-  transition: transform 0.15s, opacity 0.15s;
-}
+.dm-toggle { transition: transform 0.15s, opacity 0.15s; }
+.dm-toggle:hover { opacity: 0.85; transform: scale(1.05); }
 
-.dm-toggle:hover {
-  opacity: 0.85;
-  transform: scale(1.05);
-}
+/* =============================================
+   LAYOUT HELPERS (apenas os efetivamente usados)
+   ============================================= */
 
-/* ============================================
-   LOGO
-   ============================================ */
+.max-width-1200 { max-width: 1200px; margin: 0 auto; }
+.px-15          { padding-left: 1.5rem; padding-right: 1.5rem; }
+.mt-2           { margin-top: 2rem; }
 
-.logo-container {
-  flex-shrink: 0;
-  background: rgba(255, 255, 255, 0.12);
-  border-radius: 50%;
-  padding: 8px;
-  transition: all 0.3s ease;
-}
-
-.logo-container:hover {
-  transform: scale(1.02);
-}
-
-.logo-img {
-  display: block;
-  object-fit: contain;
-  border-radius: 50%;
-  transition: transform 0.3s ease;
-}
-
-.logo-img:hover {
-  transform: scale(1.05);
-}
-
-/* ============================================
-   STATS CARDS
-   ============================================ */
-
-.stat-card {
-  border-radius: 14px;
-  padding: 0.8rem 1rem;
-  text-align: center;
-  min-width: 75px;
-  backdrop-filter: blur(8px);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  transition: transform 0.2s, background 0.25s;
-}
-
-.stat-card:hover {
-  transform: translateY(-2px);
-}
-
-.stat-value {
-  font-size: 1.6rem;
-  font-weight: 700;
-  color: #fff;
-  line-height: 1;
-}
-
-.stat-label {
-  font-size: 0.62rem;
-  font-family: sans-serif;
-  color: #F4D03F;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  margin-top: 4px;
-  opacity: 0.85;
-}
-
-/* ============================================
-   FILTROS
-   ============================================ */
-
-.filter-pill {
-  padding: 0.42rem 0.88rem;
-  border-radius: 20px;
-  font-size: 0.78rem;
-  font-weight: 600;
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  font-family: sans-serif;
-  transition: all 0.15s;
-  cursor: pointer;
-}
-
-.filter-pill:hover {
-  transform: translateY(-1px);
-}
-
-/* ============================================
-   BADGES
-   ============================================ */
-
-.champion-badge {
-  position: absolute;
-  top: 8px;
-  right: 8px;
-  background: linear-gradient(90deg, #E8A820, #F4D03F);
-  border-radius: 6px;
-  padding: 3px 8px;
-  font-size: 0.63rem;
-  font-family: sans-serif;
-  font-weight: 700;
-  color: #131f50;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-  z-index: 2;
-}
-
-.visited-badge {
-  position: absolute;
-  top: 8px;
-  left: 8px;
-  background: rgba(39, 174, 96, 0.92);
-  border-radius: 6px;
-  padding: 3px 8px;
-  font-size: 0.63rem;
-  font-family: sans-serif;
-  font-weight: 700;
-  color: #fff;
-  z-index: 2;
-}
-
-/* ============================================
-   INFO BAR (GLASSMORPHISM)
-   ============================================ */
-
-.info-bar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 0.55rem;
-  padding: 0.45rem 0.6rem;
-  backdrop-filter: blur(10px);
-  border-radius: 9px;
-  gap: 6px;
-  flex-wrap: wrap;
-  transition: background 0.25s, border 0.25s;
-}
-
-.dark .info-bar {
-  border: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-/* ============================================
-   PETISCO CONTAINER
-   ============================================ */
-
-.petisco-container {
-  border-radius: 7px;
-  padding: 0.4rem 0.7rem;
-  margin: 0.5rem 0;
-  transition: background 0.25s, border 0.25s;
-}
-
-.petisco-label {
-  font-size: 0.57rem;
-  font-family: sans-serif;
-  text-transform: uppercase;
-  letter-spacing: 0.09em;
-  margin-bottom: 1px;
-}
-
-.petisco-name {
-  font-size: 0.82rem;
-  font-weight: 700;
-  font-family: sans-serif;
-  line-height: 1.2;
-}
-
-/* ============================================
-   RATING BADGE
-   ============================================ */
-
-.rating-badge {
-  display: flex;
-  align-items: center;
-  gap: 3px;
-  flex-shrink: 0;
-  padding: 2px 9px;
-  border-radius: 20px;
-  transition: background 0.25s;
-}
-
-.rating-star {
-  font-size: 0.7rem;
-}
-
-.rating-value {
-  font-size: 0.72rem;
-  font-family: sans-serif;
-  font-weight: 700;
-}
-
-/* ============================================
-   TEMPERATURE BADGE
-   ============================================ */
-
-.temp-badge {
-  display: flex;
-  align-items: center;
-  gap: 3px;
-  flex-shrink: 0;
-  padding: 2px 9px;
-  border-radius: 20px;
-  transition: all 0.2s ease;
-}
-
-.temp-icon {
-  font-size: 0.68rem;
-}
-
-.temp-value {
-  font-size: 0.72rem;
-  font-family: sans-serif;
-  font-weight: 700;
-}
-
-/* ============================================
-   EXPAND BUTTON
-   ============================================ */
-
-.expand-btn {
-  font-size: 0.71rem;
-  padding: 0;
-  font-weight: 700;
-  text-decoration: underline;
-  text-underline-offset: 2px;
-  font-family: sans-serif;
-  cursor: pointer;
-  transition: opacity 0.15s;
-}
-
-.expand-btn:hover {
-  opacity: 0.7;
-}
-
-/* ============================================
-   ADDRESS TEXT
-   ============================================ */
-
-.address-text {
-  font-size: 0.67rem;
-  font-family: sans-serif;
-  display: flex;
-  gap: 4px;
-  margin-bottom: 0.35rem;
-}
-
-/* ============================================
-   DESCRIPTION TEXT
-   ============================================ */
-
-.description-text {
-  font-size: 0.75rem;
-  line-height: 1.55;
-  margin: 0 0 0.4rem;
-  font-weight: 300;
-}
-
-/* ============================================
-   MAP CTA
-   ============================================ */
-
-.map-cta {
-  border-radius: 14px;
-  padding: 1rem 1.6rem;
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  cursor: pointer;
-  transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.map-cta:hover {
-  transform: translateX(4px);
-}
-
-/* ============================================
-   REGION SECTION
-   ============================================ */
-
-.region-header {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 1.2rem;
-  padding-bottom: 0.6rem;
-}
-
-.region-color-bar {
-  width: 5px;
-  height: 28px;
-  border-radius: 3px;
-}
-
-.region-title {
-  margin: 0;
-  font-size: 1.15rem;
-  font-weight: 700;
-  font-family: sans-serif;
-}
-
-.region-count {
-  border-radius: 20px;
-  padding: 3px 12px;
-  font-size: 0.72rem;
-  font-family: sans-serif;
-  font-weight: 700;
-}
-
-/* ============================================
-   FOOTER
-   ============================================ */
-
-.footer-logo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  margin-bottom: 0.8rem;
-}
-
-.footer-credit {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  margin-bottom: 0.5rem;
-}
-
-.footer-text {
-  margin: 0 0 0.8rem;
-  font-size: 0.72rem;
-  opacity: 0.4;
-  font-family: sans-serif;
-  color: #fff;
-}
-
-.footer-theme-toggle {
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  border-radius: 20px;
-  padding: 0.5rem 1.2rem;
-  font-size: 0.78rem;
-  font-family: sans-serif;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  cursor: pointer;
-  transition: all 0.2s;
-}
-
-.footer-theme-toggle:hover {
-  background: rgba(255, 255, 255, 0.15);
-  transform: translateY(-1px);
-}
-
-/* ============================================
-   EMPTY STATE
-   ============================================ */
-
-.empty-state {
-  text-align: center;
-  padding: 5rem 2rem;
-}
-
-.empty-icon {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-}
-
-.empty-button {
-  margin-top: 1rem;
-  padding: 0.6rem 1.6rem;
-  border: none;
-  border-radius: 8px;
-  font-family: sans-serif;
-  font-weight: 700;
-  cursor: pointer;
-  transition: transform 0.15s, background 0.15s;
-}
-
-.empty-button:hover {
-  transform: translateY(-1px);
-}
-
-/* ============================================
-   GRID
-   ============================================ */
-
-.bars-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 1.3rem;
-}
-
-/* ============================================
-   SEARCH
-   ============================================ */
-
-.search-wrapper {
-  flex: 2 1 220px;
-  position: relative;
-}
-
-.search-input {
-  width: 100%;
-  padding: 0.5rem 0.8rem 0.5rem 2rem;
-  border-radius: 8px;
-  font-size: 0.85rem;
-  outline: none;
-  transition: background 0.25s, border 0.25s;
-}
-
-.search-icon {
-  position: absolute;
-  left: 10px;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 13px;
-}
-
-/* ============================================
-   SELECT INPUTS
-   ============================================ */
-
-.select-input {
-  padding: 0.5rem 0.8rem;
-  border-radius: 8px;
-  font-size: 0.85rem;
-  outline: none;
-  cursor: pointer;
-  transition: all 0.15s;
-}
-
-/* ============================================
-   FILTERS GROUP
-   ============================================ */
-
-.filters-group {
-  display: flex;
-  gap: 0.6rem;
-  flex-wrap: wrap;
-}
-
-/* ============================================
-   STICKY FILTERS
-   ============================================ */
-
-.sticky-filters {
-  position: sticky;
-  top: 0;
-  z-index: 20;
-  transition: background 0.25s;
-}
-
-.sticky-filters-inner {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0.8rem 1.5rem;
-  display: flex;
-  gap: 0.6rem;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-/* ============================================
+/* =============================================
    HEADER
-   ============================================ */
+   ============================================= */
 
 .app-container {
   font-family: Georgia, serif;
@@ -581,7 +75,7 @@ select option {
 }
 
 .instagram-bar {
-  background: rgba(0, 0, 0, 0.35);
+  background: rgba(0,0,0,0.35);
   padding: 0.45rem 1.5rem;
   display: flex;
   align-items: center;
@@ -614,216 +108,6 @@ select option {
   flex-shrink: 0;
 }
 
-/* ============================================
-   TABS
-   ============================================ */
-
-.tabs-container {
-  display: flex;
-  margin-top: 1.8rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
-}
-
-.tab-button {
-  background: none;
-  border: none;
-  padding: 0.85rem 1.5rem;
-  font-size: 0.9rem;
-  font-family: sans-serif;
-  transition: all 0.15s;
-  letter-spacing: 0.01em;
-  margin-bottom: -1px;
-  cursor: pointer;
-}
-
-/* ============================================
-   CARD
-   ============================================ */
-
-.card {
-  border-radius: 14px;
-  overflow: hidden;
-  position: relative;
-  transition: background 0.25s, border 0.25s;
-}
-
-.region-color-bar-top {
-  height: 4px;
-}
-
-.card-image {
-  overflow: hidden;
-  height: 185px;
-  position: relative;
-  cursor: pointer;
-}
-
-.card-img {
-  width: 100%;
-  height: 185px;
-  object-fit: cover;
-  display: block;
-}
-
-.card-img-fallback {
-  height: 185px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 2.8rem;
-}
-
-.image-gradient {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 50px;
-  background: linear-gradient(transparent, rgba(0, 0, 0, 0.35));
-  pointer-events: none;
-}
-
-.photo-credit {
-  padding: 0.2rem 0.75rem;
-  font-size: 0.58rem;
-  font-family: sans-serif;
-  text-align: right;
-  transition: background 0.25s, border-color 0.25s, color 0.25s;
-}
-
-.card-content {
-  padding: 0.85rem 1rem 0.8rem;
-}
-
-.card-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-}
-
-.card-title {
-  margin: 0 0 2px;
-  font-size: 0.92rem;
-  font-weight: 700;
-  font-family: sans-serif;
-  line-height: 1.2;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-.card-subtitle {
-  font-size: 0.67rem;
-  font-family: sans-serif;
-}
-
-.card-actions {
-  display: flex;
-  gap: 2px;
-  flex-shrink: 0;
-  margin-left: 6px;
-}
-
-.action-button {
-  background: none;
-  border: none;
-  padding: 4px;
-  display: flex;
-  cursor: pointer;
-}
-
-/* ============================================
-   TEAM VISIT STATUS
-   ============================================ */
-
-.team-visit-status {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  flex-shrink: 0;
-}
-
-.team-visit-text {
-  font-size: 0.68rem;
-  font-family: sans-serif;
-  font-weight: 600;
-  white-space: nowrap;
-}
-
-.team-waiting-text {
-  font-size: 0.68rem;
-  font-family: sans-serif;
-  white-space: nowrap;
-}
-
-/* ============================================
-   MAP
-   ============================================ */
-
-.map-container {
-  position: relative;
-  width: 100%;
-  padding-bottom: 56.25%;
-}
-
-.map-iframe {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  border: none;
-}
-
-/* ============================================
-   UTILITÁRIOS
-   ============================================ */
-
-.max-width-1200 {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.px-15 {
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-}
-
-.mt-2 {
-  margin-top: 2rem;
-}
-
-.mb-3 {
-  margin-bottom: 3rem;
-}
-
-.text-center {
-  text-align: center;
-}
-
-.flex-wrap {
-  flex-wrap: wrap;
-}
-
-.d-flex {
-  display: flex;
-}
-
-.align-center {
-  align-items: center;
-}
-
-.gap-2 {
-  gap: 2rem;
-}
-
-.gap-1 {
-  gap: 0.6rem;
-}
-
-/* ============================================
-   HEADER TITLE
-   ============================================ */
-
 .header-title {
   font-family: sans-serif;
   font-size: 0.68rem;
@@ -849,86 +133,248 @@ select option {
   max-width: 500px;
 }
 
-/* ============================================
-   MAP HEADER
-   ============================================ */
+/* =============================================
+   LOGO
+   ============================================= */
 
-.map-header-title {
-  color: #fff;
-  font-weight: 700;
-  font-family: sans-serif;
-  font-size: 1rem;
+.logo-container {
+  flex-shrink: 0;
+  background: rgba(255,255,255,0.12);
+  border-radius: 50%;
+  padding: 8px;
+  transition: all 0.3s ease;
+}
+.logo-container:hover { transform: scale(1.02); }
+
+.logo-img {
+  display: block;
+  object-fit: contain;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+.logo-img:hover { transform: scale(1.05); }
+
+/* =============================================
+   STAT CARDS
+   ============================================= */
+
+.stat-card {
+  border-radius: 14px;
+  padding: 0.8rem 1rem;
+  text-align: center;
+  min-width: 75px;
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,0.12);
+  transition: transform 0.2s;
+}
+.stat-card:hover { transform: translateY(-2px); }
+
+.stat-value { font-size: 1.6rem; font-weight: 700; color: #fff; line-height: 1; }
+.stat-label { font-size: 0.62rem; font-family: sans-serif; text-transform: uppercase; letter-spacing: 0.08em; margin-top: 4px; opacity: 0.85; }
+
+/* =============================================
+   TABS
+   ============================================= */
+
+.tabs-container {
+  display: flex;
+  margin-top: 1.8rem;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
 }
 
-.map-header-subtitle {
-  font-size: 0.74rem;
+.tab-button {
+  background: none;
+  border: none;
+  padding: 0.85rem 1.5rem;
+  font-size: 0.9rem;
   font-family: sans-serif;
-  opacity: 0.85;
+  transition: all 0.15s;
+  letter-spacing: 0.01em;
+  margin-bottom: -1px;
+  cursor: pointer;
 }
 
-/* ============================================
-   MAP FOOTER
-   ============================================ */
+/* =============================================
+   FILTROS STICKY
+   ============================================= */
 
-.map-footer-text {
+.sticky-filters {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  transition: background 0.25s;
+}
+
+.sticky-filters-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.8rem 1.5rem;
+  display: flex;
+  gap: 0.6rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.search-wrapper { flex: 2 1 220px; position: relative; }
+.search-icon    { position: absolute; left: 10px; top: 50%; transform: translateY(-50%); font-size: 13px; }
+.search-input   { width: 100%; padding: 0.5rem 0.8rem 0.5rem 2rem; border-radius: 8px; font-size: 0.85rem; outline: none; transition: background 0.25s, border 0.25s; font-family: inherit; }
+
+.select-input   { padding: 0.5rem 0.8rem; border-radius: 8px; font-size: 0.85rem; outline: none; transition: all 0.15s; font-family: inherit; }
+
+.filters-group  { display: flex; gap: 0.6rem; flex-wrap: wrap; }
+
+.filter-pill {
+  padding: 0.42rem 0.88rem;
+  border-radius: 20px;
   font-size: 0.78rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 5px;
   font-family: sans-serif;
+  transition: all 0.15s;
+  cursor: pointer;
+}
+.filter-pill:hover { transform: translateY(-1px); }
+
+.filter-counter { margin-left: auto; font-size: 0.75rem; font-family: sans-serif; white-space: nowrap; }
+
+/* =============================================
+   MAP CTA BANNER
+   ============================================= */
+
+.map-cta {
+  border-radius: 14px;
+  padding: 1rem 1.6rem;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+.map-cta:hover { transform: translateX(4px); }
+
+.cta-title    { color: #fff; font-weight: 700; font-family: sans-serif; font-size: 0.95rem; }
+.cta-subtitle { font-size: 0.73rem; font-family: sans-serif; opacity: 0.85; }
+.cta-arrow    { margin-left: auto; font-size: 1.3rem; }
+
+/* =============================================
+   GRID
+   ============================================= */
+
+.bars-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.3rem;
 }
 
-/* ============================================
-   FILTER COUNTER
-   ============================================ */
+/* =============================================
+   SECTION / REGIÃO
+   ============================================= */
 
-.filter-counter {
-  margin-left: auto;
-  font-size: 0.75rem;
-  font-family: sans-serif;
-  white-space: nowrap;
+.section-margin { margin-bottom: 2.8rem; }
+
+.region-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 1.2rem;
+  padding-bottom: 0.6rem;
+}
+.region-color-bar { width: 5px; height: 28px; border-radius: 3px; }
+.region-title     { margin: 0; font-size: 1.15rem; font-weight: 700; font-family: sans-serif; }
+.region-count     { border-radius: 20px; padding: 3px 12px; font-size: 0.72rem; font-family: sans-serif; font-weight: 700; }
+
+/* =============================================
+   CARD
+   ============================================= */
+
+.card                { border-radius: 14px; overflow: hidden; position: relative; transition: background 0.25s, border 0.25s; }
+.region-color-bar-top{ height: 4px; }
+.card-image          { overflow: hidden; height: 185px; position: relative; cursor: pointer; }
+.card-img            { width: 100%; height: 185px; object-fit: cover; display: block; }
+.card-img-fallback   { height: 185px; display: flex; align-items: center; justify-content: center; font-size: 2.8rem; }
+.image-gradient      { position: absolute; bottom: 0; left: 0; right: 0; height: 50px; background: linear-gradient(transparent, rgba(0,0,0,0.35)); pointer-events: none; }
+
+.champion-badge { position: absolute; top: 8px; right: 8px; background: linear-gradient(90deg,#E8A820,#F4D03F); border-radius: 6px; padding: 3px 8px; font-size: 0.63rem; font-family: sans-serif; font-weight: 700; color: #131f50; z-index: 2; }
+.visited-badge  { position: absolute; top: 8px; left:  8px; background: rgba(39,174,96,0.92);              border-radius: 6px; padding: 3px 8px; font-size: 0.63rem; font-family: sans-serif; font-weight: 700; color: #fff;     z-index: 2; }
+
+.photo-credit    { padding: 0.2rem 0.75rem; font-size: 0.58rem; font-family: sans-serif; text-align: right; border-bottom-style: solid; border-bottom-width: 1px; transition: background 0.25s, color 0.25s; }
+.card-content    { padding: 0.85rem 1rem 0.8rem; }
+.card-header     { display: flex; justify-content: space-between; align-items: flex-start; }
+.card-title      { margin: 0 0 2px; font-size: 0.92rem; font-weight: 700; font-family: sans-serif; line-height: 1.2; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.card-subtitle   { font-size: 0.67rem; font-family: sans-serif; }
+.card-actions    { display: flex; gap: 2px; flex-shrink: 0; margin-left: 6px; }
+.action-button   { background: none; border: none; padding: 4px; display: flex; cursor: pointer; }
+
+/* =============================================
+   INFO BAR (glassmorphism)
+   ============================================= */
+
+.info-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.55rem;
+  padding: 0.45rem 0.6rem;
+  backdrop-filter: blur(10px);
+  border-radius: 9px;
+  gap: 6px;
+  flex-wrap: wrap;
+  transition: background 0.25s, border 0.25s;
 }
 
-/* ============================================
-   CTA TEXT
-   ============================================ */
+.team-visit-status { display: flex; align-items: center; gap: 4px; flex-shrink: 0; }
+.team-visit-text   { font-size: 0.68rem; font-family: sans-serif; font-weight: 600; white-space: nowrap; }
+.team-waiting-text { font-size: 0.68rem; font-family: sans-serif; white-space: nowrap; }
 
-.cta-title {
-  color: #fff;
-  font-weight: 700;
-  font-family: sans-serif;
-  font-size: 0.95rem;
-}
+.rating-badge  { display: flex; align-items: center; gap: 3px; flex-shrink: 0; padding: 2px 9px; border-radius: 20px; }
+.rating-star   { font-size: 0.7rem; }
+.rating-value  { font-size: 0.72rem; font-family: sans-serif; font-weight: 700; }
 
-.cta-subtitle {
-  font-size: 0.73rem;
-  font-family: sans-serif;
-  opacity: 0.85;
-}
+.temp-badge  { display: flex; align-items: center; gap: 3px; flex-shrink: 0; padding: 2px 9px; border-radius: 20px; transition: all 0.2s ease; }
+.temp-icon   { font-size: 0.68rem; }
+.temp-value  { font-size: 0.72rem; font-family: sans-serif; font-weight: 700; }
 
-.cta-arrow {
-  margin-left: auto;
-  font-size: 1.3rem;
-}
+/* =============================================
+   PETISCO
+   ============================================= */
 
-/* ============================================
-   EMPTY STATE TEXT
-   ============================================ */
+.petisco-container { border-radius: 7px; padding: 0.4rem 0.7rem; margin: 0.5rem 0; transition: background 0.25s, border 0.25s; }
+.petisco-label     { font-size: 0.57rem; font-family: sans-serif; text-transform: uppercase; letter-spacing: 0.09em; margin-bottom: 1px; }
+.petisco-name      { font-size: 0.82rem; font-weight: 700; font-family: sans-serif; line-height: 1.2; }
 
-.empty-state-text {
-  font-family: sans-serif;
-}
+.description-text  { font-size: 0.75rem; line-height: 1.55; margin: 0 0 0.4rem; font-weight: 300; }
+.address-text      { font-size: 0.67rem; font-family: sans-serif; display: flex; gap: 4px; margin-bottom: 0.35rem; }
+.expand-btn        { font-size: 0.71rem; padding: 0; font-weight: 700; text-decoration: underline; text-underline-offset: 2px; font-family: sans-serif; cursor: pointer; transition: opacity 0.15s; }
+.expand-btn:hover  { opacity: 0.7; }
 
-/* ============================================
-   SECTION MARGIN
-   ============================================ */
+/* =============================================
+   MAPA
+   ============================================= */
 
-.section-margin {
-  margin-bottom: 2.8rem;
-}
+.map-header-title    { color: #fff; font-weight: 700; font-family: sans-serif; font-size: 1rem; }
+.map-header-subtitle { font-size: 0.74rem; font-family: sans-serif; opacity: 0.85; }
+.map-footer-text     { font-size: 0.78rem; font-family: sans-serif; }
 
-/* ============================================
-   COOKIE TEXT
-   ============================================ */
+/* =============================================
+   EMPTY STATE
+   ============================================= */
 
-.cookie-text {
-  font-family: sans-serif;
-  font-size: 0.85rem;
-}
+.empty-state      { text-align: center; padding: 5rem 2rem; }
+.empty-icon       { font-size: 3rem; margin-bottom: 1rem; }
+.empty-state-text { font-family: sans-serif; }
+.empty-button     { margin-top: 1rem; padding: 0.6rem 1.6rem; border: none; border-radius: 8px; font-family: sans-serif; font-weight: 700; cursor: pointer; transition: transform 0.15s; }
+.empty-button:hover { transform: translateY(-1px); }
+
+/* =============================================
+   FOOTER
+   ============================================= */
+
+.footer-logo         { display: flex; align-items: center; justify-content: center; margin-bottom: 0.8rem; }
+.footer-credit       { display: flex; align-items: center; justify-content: center; gap: 8px; margin-bottom: 0.5rem; }
+.footer-text         { margin: 0 0 0.8rem; font-size: 0.72rem; opacity: 0.4; font-family: sans-serif; color: #fff; }
+.footer-theme-toggle { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); border-radius: 20px; padding: 0.5rem 1.2rem; font-size: 0.78rem; font-family: sans-serif; display: inline-flex; align-items: center; gap: 8px; cursor: pointer; transition: all 0.2s; }
+.footer-theme-toggle:hover { background: rgba(255,255,255,0.15); transform: translateY(-1px); }
+
+.cookie-text { font-family: sans-serif; font-size: 0.85rem; }
