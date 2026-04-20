@@ -8,7 +8,7 @@ const REGION_COLOR = data.regions;
 const BARS = data.bars;
 const REGIONS = ["Todas", ...Object.keys(REGION_COLOR)];
 
-// ─── Paleta da marca ──────────────────────────────────────────────────────────
+// ─── Paleta da marca (usada para cores dinâmicas) ─────────────────────────────
 const BRAND = {
   navy: "#1C2D6E",
   navyDk: "#131f50",
@@ -19,7 +19,7 @@ const BRAND = {
   white: "#FFFFFF",
 };
 
-// ─── Função para normalizar textos ────────────────────────────────────────────
+// ─── Função para normalizar textos (remover acentos) ─────────────────────────
 const normalizeText = (text) => {
   if (!text) return "";
   return text
@@ -30,14 +30,14 @@ const normalizeText = (text) => {
     .replace(/\s+/g, " ");
 };
 
-// ─── Helpers de temperatura ───────────────────────────────────────────────────
+// ─── Helpers de temperatura de cerveja ───────────────────────────────────────
 const TEMP_SCALE = [
-  { max: -5, color: "#2980B9", bg: "rgba(52,152,219,0.15)" },
-  { max: -3, color: "#3498DB", bg: "rgba(52,152,219,0.12)" },
-  { max: 1, color: "#27AE60", bg: "rgba(46,204,113,0.15)" },
-  { max: 3, color: "#F39C12", bg: "rgba(243,156,18,0.15)" },
-  { max: 6, color: "#E67E22", bg: "rgba(230,126,34,0.15)" },
-  { max: Infinity, color: "#C0392B", bg: "rgba(231,76,60,0.15)" },
+  { max: -5, color: "#2980B9", bg: "rgba(52,152,219,0.15)", label: "❄️ Muito gelada" },
+  { max: -3, color: "#3498DB", bg: "rgba(52,152,219,0.12)", label: "🌡️ Bem gelada" },
+  { max: 1, color: "#27AE60", bg: "rgba(46,204,113,0.15)", label: "🌡️ Ideal" },
+  { max: 3, color: "#F39C12", bg: "rgba(243,156,18,0.15)", label: "🌡️ Pouco gelada" },
+  { max: 6, color: "#E67E22", bg: "rgba(230,126,34,0.15)", label: "🌡️ Quente" },
+  { max: Infinity, color: "#C0392B", bg: "rgba(231,76,60,0.15)", label: "🔥 Muito quente" },
 ];
 const getTempStyle = (t) => TEMP_SCALE.find(s => t < s.max) ?? TEMP_SCALE[TEMP_SCALE.length - 1];
 
@@ -109,7 +109,7 @@ const SunIcon = () => (
 );
 
 // ─── Componente Logo ──────────────────────────────────────────────────────────
-const Logo = ({ size = 48 }) => (
+const Logo = ({ size = 80 }) => (
   <img
     src={logoImg}
     alt="Participantes di Buteco Logo"
@@ -117,24 +117,26 @@ const Logo = ({ size = 48 }) => (
     height={size}
     className="logo-img"
     style={{
-      boxShadow: `0 0 0 3px ${BRAND.gold}55, 0 0 0 6px rgba(255,255,255,0.1)`
+      width: size,
+      height: size,
+      boxShadow: `0 0 0 4px ${BRAND.gold}55, 0 0 0 8px rgba(255,255,255,0.1), 0 8px 24px rgba(0,0,0,0.2)`
     }}
   />
 );
 
-// ─── Sub-componente: Stat card ────────────────────────────────────────────────
-const StatCard = ({ value, label, bg }) => (
-  <div className="stat-card" style={{ background: bg }}>
+// ─── Sub-componente: Stat card do header ──────────────────────────────────────
+const StatCard = ({ value, label }) => (
+  <div className="stat-card">
     <div className="stat-value">{value}</div>
     <div className="stat-label">{label}</div>
   </div>
 );
 
-// ─── Sub-componente: RegionHeader ─────────────────────────────────────────────
+// ─── Sub-componente: Cabeçalho de seção regional ──────────────────────────────
 const RegionHeader = ({ region, count }) => {
   const color = REGION_COLOR[region];
   return (
-    <div className="region-header">
+    <div className="region-header" style={{ borderBottom: `2px solid ${color}30` }}>
       <div className="region-color-bar" style={{ background: color }} />
       <h2 className="region-title" style={{ color }}>{region}</h2>
       <span className="region-count" style={{ background: color + "22", color }}>
@@ -144,13 +146,48 @@ const RegionHeader = ({ region, count }) => {
   );
 };
 
-// ─── Sub-componente: FilterBar ────────────────────────────────────────────────
-const FilterBar = ({ T, q, setQ, fr, setFr, sortBy, setSortBy, onlyTeam, setOnlyTeam, fv, setFv, ff, setFf, total, shown, onClear }) => {
+// ─── Sub-componente: Aba do mapa ──────────────────────────────────────────────
+const MapTab = () => (
+  <div className="map-container">
+    <div className="map-card">
+      <div className="map-header">
+        <Logo size={45} />
+        <div>
+          <div className="map-title">Mapa Personalizado — Comida di Buteco 2026 BH</div>
+          <div className="map-subtitle">Todos os bares participantes marcados · Curadoria @ParticipantesdiButeco</div>
+        </div>
+      </div>
+      <div className="map-iframe-wrapper">
+        <iframe
+          className="map-iframe"
+          src="https://www.google.com/maps/d/u/0/embed?mid=1NKgMtDTJSU2KAuiadQub73yXZ4nEJLU&ehbc=2E312F&noprof=1"
+          title="Mapa Comida di Buteco 2026 BH"
+          allowFullScreen
+        />
+      </div>
+      <div className="map-footer">
+        <IgIcon color={BRAND.navy} />
+        <span className="map-footer-text">
+          Mapa criado por{" "}
+          <a href="https://www.instagram.com/ParticipantesdiButeco" target="_blank" rel="noopener noreferrer" className="map-footer-link">
+            @ParticipantesdiButeco
+          </a>{" "}· Siga para atualizações e dicas do concurso
+        </span>
+      </div>
+    </div>
+  </div>
+);
+
+// ─── Sub-componente: Barra de filtros sticky ──────────────────────────────────
+const FilterBar = ({ q, setQ, fr, setFr, sortBy, setSortBy, onlyTeam, setOnlyTeam, fv, setFv, ff, setFf, total, shown, onClear }) => {
   const hasFilters = fv || ff || fr !== "Todas" || q || onlyTeam || sortBy !== "none";
 
+  const getSelectStyle = (active) => active ? "select-input select-active" : "select-input";
+
   return (
-    <div className="filter-bar" style={{ background: T.filterBg, borderBottomColor: T.border }}>
+    <div className="filter-bar">
       <div className="filter-container">
+        {/* Busca */}
         <div className="search-container">
           <span className="search-icon">🔍</span>
           <input
@@ -159,16 +196,15 @@ const FilterBar = ({ T, q, setQ, fr, setFr, sortBy, setSortBy, onlyTeam, setOnly
             placeholder="Buscar (ex: coracao encontra coração)..."
             value={q}
             onChange={e => setQ(e.target.value)}
-            style={{ borderColor: T.border, background: T.inputBg, color: T.text }}
           />
         </div>
 
+        {/* Selects */}
         <div className="selects-container">
           <select 
             value={fr} 
             onChange={e => setFr(e.target.value)} 
-            className="select-input"
-            style={{ borderColor: fr !== "Todas" ? BRAND.navy : T.border, background: fr !== "Todas" ? (T === THEMES.dark ? "#1a2040" : "#e8ecf8") : T.inputBg, color: fr !== "Todas" ? BRAND.navy : T.textMuted }}
+            className={getSelectStyle(fr !== "Todas")}
           >
             {REGIONS.map(r => <option key={r}>{r === "Todas" ? "📌 Regiões" : r}</option>)}
           </select>
@@ -176,8 +212,7 @@ const FilterBar = ({ T, q, setQ, fr, setFr, sortBy, setSortBy, onlyTeam, setOnly
           <select 
             value={sortBy} 
             onChange={e => setSortBy(e.target.value)} 
-            className="select-input"
-            style={{ borderColor: sortBy !== "none" ? BRAND.navy : T.border, background: sortBy !== "none" ? (T === THEMES.dark ? "#1a2040" : "#e8ecf8") : T.inputBg, color: sortBy !== "none" ? BRAND.navy : T.textMuted }}
+            className={getSelectStyle(sortBy !== "none")}
           >
             <option value="none">📋 Ordenar</option>
             <option value="rating">⭐ Maior nota</option>
@@ -185,39 +220,37 @@ const FilterBar = ({ T, q, setQ, fr, setFr, sortBy, setSortBy, onlyTeam, setOnly
           </select>
         </div>
 
+        {/* Pills */}
         <div className="pills-container">
           <button 
             onClick={() => setOnlyTeam(v => !v)} 
-            className={`filter-pill ${onlyTeam ? 'active' : ''}`}
-            style={{ borderColor: onlyTeam ? "#27ae60" : T.border, background: onlyTeam ? (T === THEMES.dark ? "#0d2c1a" : "#eafaf1") : T.surface, color: onlyTeam ? "#1a5c30" : T.textMuted }}
+            className={`filter-pill ${onlyTeam ? 'pill-active pill-team' : ''}`}
           >
             <CheckIcon active={onlyTeam} /> Time visitou
           </button>
           
           <button 
             onClick={() => setFv(v => !v)} 
-            className={`filter-pill ${fv ? 'active' : ''}`}
-            style={{ borderColor: fv ? "#27ae60" : T.border, background: fv ? (T === THEMES.dark ? "#0d2c1a" : "#eafaf1") : T.surface, color: fv ? "#1a5c30" : T.textMuted }}
+            className={`filter-pill ${fv ? 'pill-active pill-visited' : ''}`}
           >
             <CheckIcon active={fv} /> Eu visitei
           </button>
           
           <button 
             onClick={() => setFf(v => !v)} 
-            className={`filter-pill ${ff ? 'active' : ''}`}
-            style={{ borderColor: ff ? BRAND.red : T.border, background: ff ? (T === THEMES.dark ? "#2c0d0d" : "#fdf0ed") : T.surface, color: ff ? BRAND.red : T.textMuted }}
+            className={`filter-pill ${ff ? 'pill-active pill-favorite' : ''}`}
           >
             <HeartIcon active={ff} /> Favoritos
           </button>
         </div>
 
         {hasFilters && (
-          <button onClick={onClear} className="clear-pill" style={{ borderColor: T.border, background: T.surface, color: T.textMuted }}>
+          <button onClick={onClear} className="filter-pill clear-pill">
             ✕ Limpar
           </button>
         )}
 
-        <span className="filter-counter" style={{ color: T.textFaint }}>
+        <span className="filter-counter">
           {shown} / {total}
         </span>
       </div>
@@ -225,94 +258,102 @@ const FilterBar = ({ T, q, setQ, fr, setFr, sortBy, setSortBy, onlyTeam, setOnly
   );
 };
 
-// ─── Sub-componente: Card ─────────────────────────────────────────────────────
-function Card({ b, isV, isF, isE, onToggleVisited, onToggleFav, onToggleExpand, hasImgErr, onImgErr, T }) {
+// ─── Sub-componente: Card de bar ──────────────────────────────────────────────
+function Card({ b, isV, isF, isE, onToggleVisited, onToggleFav, onToggleExpand, hasImgErr, onImgErr }) {
   const rc = REGION_COLOR[b.region] || "#555";
   const tmp = b.beerTemp != null ? getTempStyle(b.beerTemp) : null;
 
   return (
-    <article className="card" style={{ background: T.cardBg, borderColor: isF ? BRAND.red : isV ? "#27ae60" : T.cardBorder }}>
-      <div className="card-region-strip" style={{ background: rc }} />
+    <article className={`card-container ${isF ? 'card-favorite' : isV ? 'card-visited' : ''}`}>
+      <div className="region-strip" style={{ background: rc }} />
 
-      <div className="card-photo" onClick={onToggleExpand}>
+      {/* Foto */}
+      <div className="photo-container" onClick={onToggleExpand}>
         {!hasImgErr && b.photo ? (
-          <img src={b.photo} alt={b.dish} onError={onImgErr} />
+          <img className="bi" src={b.photo} alt={b.dish} onError={onImgErr} />
         ) : (
-          <div className="card-photo-fallback" style={{ background: `linear-gradient(135deg,${rc}22,${rc}44)` }}>🍽️</div>
+          <div className="photo-fallback" style={{ background: `linear-gradient(135deg,${rc}22,${rc}44)` }}>
+            🍽️
+          </div>
         )}
-        {b.champion && <div className="card-champion-badge">🏆 Ex-campeão</div>}
-        {isV && <div className="card-visited-badge">✓ Visitado</div>}
-        <div className="card-photo-gradient" />
+        {b.champion && <div className="champion-badge">🏆 Ex-campeão</div>}
+        {isV && <div className="visited-badge">✓ Visitado</div>}
+        <div className="photo-gradient" />
       </div>
 
+      {/* Crédito da foto */}
       {b.photoCredit && (
-        <div className="card-photo-credit" style={{ background: T.surfaceAlt, color: T.textFaint, borderBottomColor: T.border }}>
+        <div className="photo-credit">
           📷 {b.photoCredit}
         </div>
       )}
 
+      {/* Conteúdo */}
       <div className="card-content">
         <div className="card-header">
-          <div>
-            <h3 className="card-title" style={{ color: T.text }}>{b.name}</h3>
-            <div className="card-subtitle" style={{ color: T.textFaint }}>
-              {b.neighborhood} · <span style={{ color: rc }}>{b.region}</span>
+          <div className="card-title-wrapper">
+            <h3 className="card-title">{b.name}</h3>
+            <div className="card-subtitle">
+              {b.neighborhood} · <span style={{ color: rc, fontWeight: 600 }}>{b.region}</span>
             </div>
           </div>
           <div className="card-actions">
-            <button onClick={onToggleFav} className="card-action-btn">
+            <button onClick={onToggleFav} className="action-button" title={isF ? "Remover favorito" : "Favoritar"}>
               <HeartIcon active={isF} />
             </button>
-            <button onClick={onToggleVisited} className="card-action-btn">
+            <button onClick={onToggleVisited} className="action-button" title={isV ? "Desmarcar visitado" : "Marcar visitado"}>
               <CheckIcon active={isV} />
             </button>
           </div>
         </div>
 
-        <div className="card-info-bar" style={{ background: T.glassBg, borderColor: T.glassBorder }}>
-          <div className="card-team-status">
+        {/* Info bar */}
+        <div className="info-bar">
+          <div className="team-status">
             {b.visited ? (
               <>
                 <CheckIcon active={true} />
-                <span style={{ color: "#16A085" }}>Time visitou</span>
+                <span className="team-status-text">Time visitou</span>
               </>
             ) : (
-              <span style={{ color: T.textFaint }}>⏳ Aguardando</span>
+              <span className="team-status-waiting">⏳ Aguardando</span>
             )}
           </div>
           
           {b.rating != null && (
-            <div className="card-rating" style={{ background: BRAND.navy }}>
-              <span>⭐</span>
-              <span>{b.rating.toFixed(1)}</span>
+            <div className="rating-badge">
+              <span className="rating-star">⭐</span>
+              <span className="rating-value">{b.rating.toFixed(1)}</span>
             </div>
           )}
           
           {tmp && (
-            <div className="card-temp" style={{ background: tmp.bg, borderColor: tmp.color + "30" }}>
-              <span style={{ color: tmp.color }}>🌡️</span>
-              <span style={{ color: tmp.color }}>{b.beerTemp}°C</span>
-              {b.beerTemp < -5 && <span>❄️</span>}
+            <div className="temp-badge" style={{ background: tmp.bg, border: `1px solid ${tmp.color}30` }}>
+              <span className="temp-icon" style={{ color: tmp.color }}>🌡️</span>
+              <span className="temp-value" style={{ color: tmp.color }}>{b.beerTemp}°C</span>
+              {b.beerTemp < -5 && <span style={{ fontSize: "0.58rem", marginLeft: "1px" }}>❄️</span>}
             </div>
           )}
         </div>
 
-        <div className="card-petisco" style={{ background: rc + "14", borderColor: rc + "25" }}>
-          <div className="card-petisco-label" style={{ color: T.textFaint }}>Petisco</div>
-          <div className="card-petisco-name" style={{ color: rc }}>{b.dish}</div>
+        {/* Petisco */}
+        <div className="petisco-container" style={{ background: rc + "14", border: `1px solid ${rc}25` }}>
+          <div className="petisco-label">Petisco</div>
+          <div className="petisco-name" style={{ color: rc }}>{b.dish}</div>
         </div>
 
-        <p className="card-description" style={{ color: T.textMuted }}>
-          {isE ? b.desc : `${b.desc.slice(0, 88)}${b.desc.length > Klase88 ? "…" : ""}`}
+        {/* Descrição */}
+        <p className="card-description">
+          {isE ? b.desc : `${b.desc.slice(0, 88)}${b.desc.length > 88 ? "…" : ""}`}
         </p>
         
         {isE && (
-          <div className="card-address" style={{ color: T.textFaint }}>
+          <div className="card-address">
             <span>📍</span><span>{b.address} – {b.neighborhood}, BH</span>
           </div>
         )}
 
-        <button onClick={onToggleExpand} className="card-expand-btn" style={{ color: rc }}>
+        <button onClick={onToggleExpand} className="expand-btn" style={{ color: rc }}>
           {isE ? "Menos ↑" : "Mais ↓"}
         </button>
       </div>
@@ -322,29 +363,38 @@ function Card({ b, isV, isF, isE, onToggleVisited, onToggleFav, onToggleExpand, 
 
 // ─── Componente principal ─────────────────────────────────────────────────────
 export default function App() {
+  // Persistência de estado
   const [dark, setDark] = useState(() => ls.get("cdb26theme", null) === "dark");
   const [visited, setVisited] = useState(() => initSet("cdb26v"));
   const [favorites, setFavorites] = useState(() => initSet("cdb26f"));
+
+  useEffect(() => ls.set("cdb26theme", dark ? "dark" : "light"), [dark]);
+  useEffect(() => ls.set("cdb26v", [...visited]), [visited]);
+  useEffect(() => ls.set("cdb26f", [...favorites]), [favorites]);
+
+  // Aplica classe dark no body para estilos CSS
+  useEffect(() => {
+    if (dark) {
+      document.body.classList.add("dark");
+    } else {
+      document.body.classList.remove("dark");
+    }
+  }, [dark]);
+
+  // Filtros
   const [fv, setFv] = useState(false);
   const [ff, setFf] = useState(false);
   const [fr, setFr] = useState("Todas");
   const [q, setQ] = useState("");
   const [onlyTeam, setOnlyTeam] = useState(false);
   const [sortBy, setSortBy] = useState("none");
+
+  // UI
   const [tab, setTab] = useState("bares");
   const [exp, setExp] = useState(null);
   const [imgErr, setImgErr] = useState(new Set());
 
-  const T = dark ? THEMES.dark : THEMES.light;
-
-  useEffect(() => ls.set("cdb26theme", dark ? "dark" : "light"), [dark]);
-  useEffect(() => ls.set("cdb26v", [...visited]), [visited]);
-  useEffect(() => ls.set("cdb26f", [...favorites]), [favorites]);
-  useEffect(() => {
-    if (dark) document.body.classList.add("dark");
-    else document.body.classList.remove("dark");
-  }, [dark]);
-
+  // Pré-cálculo dos textos normalizados para busca
   const barsWithNormalized = useMemo(() => {
     return BARS.map(bar => ({
       ...bar,
@@ -359,6 +409,7 @@ export default function App() {
   const toggleExp = (id) => setExp(prev => prev === id ? null : id);
   const clearFilters = () => { setFv(false); setFf(false); setFr("Todas"); setQ(""); setOnlyTeam(false); setSortBy("none"); };
 
+  // Filtragem + ordenação
   const filteredAndSorted = useMemo(() => {
     const result = barsWithNormalized.filter(b => {
       if (fv && !visited.has(b.id)) return false;
@@ -366,8 +417,10 @@ export default function App() {
       if (fr !== "Todas" && b.region !== fr) return false;
       if (onlyTeam && !b.visited) return false;
       if (q) {
-        const nq = normalizeText(q);
-        return b.normalizedName.includes(nq) || b.normalizedDish.includes(nq) || b.normalizedNeighborhood.includes(nq);
+        const normalizedQuery = normalizeText(q);
+        return b.normalizedName.includes(normalizedQuery) ||
+               b.normalizedDish.includes(normalizedQuery) ||
+               b.normalizedNeighborhood.includes(normalizedQuery);
       }
       return true;
     });
@@ -376,12 +429,16 @@ export default function App() {
     return result;
   }, [fv, ff, fr, q, visited, favorites, onlyTeam, sortBy, barsWithNormalized]);
 
-  const grouped = filteredAndSorted.reduce((acc, b) => {
-    (acc[b.region] ??= []).push(b);
-    return acc;
-  }, {});
+  // Agrupamento por região
+  const grouped = useMemo(() => {
+    return filteredAndSorted.reduce((acc, b) => {
+      (acc[b.region] ??= []).push(b);
+      return acc;
+    }, {});
+  }, [filteredAndSorted]);
   const regionKeys = Object.keys(grouped).sort();
 
+  // Grid de cards
   const renderGrid = (bars) => (
     <div className="cards-grid">
       {bars.map(b => (
@@ -393,84 +450,76 @@ export default function App() {
           onToggleFav={() => toggleFavorite(b.id)}
           onToggleExpand={() => toggleExp(b.id)}
           onImgErr={() => setImgErr(s => new Set([...s, b.id]))}
-          T={T}
         />
       ))}
     </div>
   );
 
   return (
-    <div className="app" style={{ background: T.bg }}>
-      {/* HEADER */}
-      <header className="app-header" style={{ background: T.headerBg }}>
+    <div className="app">
+      {/* ══ HEADER ══════════════════════════════════════════════════════════ */}
+      <header className="app-header">
+        {/* Barra Instagram */}
         <div className="instagram-bar">
           <IgIcon color={BRAND.goldLt} />
           <span>Curadoria realizada pelo perfil do Instagram</span>
-          <a href="https://www.instagram.com/ParticipantesdiButeco" target="_blank" rel="noopener noreferrer">@ParticipantesdiButeco</a>
+          <a href="https://www.instagram.com/ParticipantesdiButeco" target="_blank" rel="noopener noreferrer" className="instagram-link">
+            @ParticipantesdiButeco
+          </a>
           <span>— siga para dicas e novidades!</span>
         </div>
 
         <div className="header-container">
-          <div className="header-main">
-            <div className="header-logo-wrapper">
-              <div className="header-logo-container">
-                <Logo size={64} />
-              </div>
-              <div className="header-title-wrapper">
-                <div className="header-date">Belo Horizonte · 10 Abr – 10 Mai 2026</div>
-                <h1 className="header-main-title">Participantes di Buteco</h1>
-                <div className="header-sub">Guia da 26ª Edição do Comida di Buteco · <span>"Somos Todos Verduras"</span></div>
-              </div>
+          <div className="logo-title-container">
+            <div className="logo-container">
+              <Logo size={85} />
             </div>
-
-            <div className="header-stats">
-              <StatCard value={BARS.length} label="Bares" bg={T.statBg} />
-              <StatCard value={visited.size} label="Eu visitei" bg={T.statBg} />
-              <StatCard value={favorites.size} label="Favoritos" bg={T.statBg} />
-              <button className="header-theme-toggle" onClick={() => setDark(d => !d)}>
-                {dark ? <SunIcon /> : <MoonIcon />}
-              </button>
+            <div>
+              <div className="header-badge">Belo Horizonte · 10 Abr – 10 Mai 2026</div>
+              <h1 className="header-title">Participantes di Buteco</h1>
+              <div className="header-subtitle">
+                Guia da 26ª Edição do Comida di Buteco · <span className="header-subtitle-highlight">"Somos Todos Verduras"</span>
+              </div>
             </div>
           </div>
 
-          <div className="header-tabs">
-            <button className={`header-tab ${tab === "bares" ? "active" : ""}`} onClick={() => setTab("bares")}>🍺  Bares & Pratos</button>
-            <button className={`header-tab ${tab === "mapa" ? "active" : ""}`} onClick={() => setTab("mapa")}>🗺️  Mapa Interativo</button>
+          <div className="stats-container">
+            {[{ v: BARS.length, l: "Bares" }, { v: visited.size, l: "Eu visitei" }, { v: favorites.size, l: "Favoritos" }].map(s => (
+              <StatCard key={s.l} value={s.v} label={s.l} />
+            ))}
+            
+            <button
+              onClick={() => setDark(d => !d)}
+              className="dark-mode-toggle"
+              title={dark ? "Modo claro" : "Modo escuro"}
+            >
+              {dark ? <SunIcon /> : <MoonIcon />}
+            </button>
           </div>
+        </div>
+
+        {/* Abas */}
+        <div className="tabs-container">
+          {[{ k: "bares", l: "🍺  Bares & Pratos" }, { k: "mapa", l: "🗺️  Mapa Interativo" }].map(t => (
+            <button
+              key={t.k}
+              onClick={() => setTab(t.k)}
+              className={`tab-button ${tab === t.k ? 'tab-button-active' : 'tab-button-inactive'}`}
+            >
+              {t.l}
+            </button>
+          ))}
         </div>
       </header>
 
-      {/* MAP TAB */}
-      {tab === "mapa" && (
-        <div className="map-container">
-          <div className="map-card" style={{ background: T.surface, borderColor: T.border }}>
-            <div className="map-card-header" style={{ background: T.bannerBg }}>
-              <Logo size={36} />
-              <div>
-                <div className="map-card-title">Mapa Personalizado — Comida di Buteco 2026 BH</div>
-                <div className="map-card-subtitle">Todos os bares participantes marcados · Curadoria @ParticipantesdiButeco</div>
-              </div>
-            </div>
-            <div className="map-iframe-wrapper">
-              <iframe
-                src="https://www.google.com/maps/d/u/0/embed?mid=1NKgMtDTJSU2KAuiadQub73yXZ4nEJLU&ehbc=2E312F&noprof=1"
-                title="Mapa Comida di Buteco 2026 BH"
-                allowFullScreen
-              />
-            </div>
-            <div className="map-card-footer" style={{ background: T.surfaceAlt, borderTopColor: T.border }}>
-              <IgIcon color={BRAND.navy} />
-              <span>Mapa criado por <a href="https://www.instagram.com/ParticipantesdiButeco" target="_blank" rel="noopener noreferrer">@ParticipantesdiButeco</a> · Siga para atualizações e dicas do concurso</span>
-            </div>
-          </div>
-        </div>
-      )}
+      {/* ══ ABA MAPA ════════════════════════════════════════════════════════ */}
+      {tab === "mapa" && <MapTab />}
 
-      {/* BARS TAB */}
+      {/* ══ ABA BARES ═══════════════════════════════════════════════════════ */}
       {tab === "bares" && (
         <>
           <FilterBar
-            T={T} q={q} setQ={setQ} fr={fr} setFr={setFr}
+            q={q} setQ={setQ} fr={fr} setFr={setFr}
             sortBy={sortBy} setSortBy={setSortBy}
             onlyTeam={onlyTeam} setOnlyTeam={setOnlyTeam}
             fv={fv} setFv={setFv} ff={ff} setFf={setFf}
@@ -478,12 +527,15 @@ export default function App() {
             onClear={clearFilters}
           />
 
-          <div className="map-cta-wrapper">
-            <div className="map-cta" onClick={() => setTab("mapa")} style={{ background: T.bannerBg }}>
-              <Logo size={32} />
+          {/* Banner CTA do mapa */}
+          <div className="map-cta-container">
+            <div onClick={() => setTab("mapa")} className="map-cta-banner">
+              <Logo size={38} />
               <div>
                 <div className="map-cta-title">Ver Mapa Interativo dos Bares</div>
-                <div className="map-cta-subtitle">Todos os bares marcados no mapa personalizado · Curadoria @ParticipantesdiButeco</div>
+                <div className="map-cta-subtitle">
+                  Todos os bares marcados no mapa personalizado · Curadoria @ParticipantesdiButeco
+                </div>
               </div>
               <span className="map-cta-arrow">→</span>
             </div>
@@ -493,8 +545,10 @@ export default function App() {
             {filteredAndSorted.length === 0 ? (
               <div className="empty-state">
                 <div className="empty-icon">🔍</div>
-                <p>Nenhum bar encontrado com esses filtros.</p>
-                <button className="empty-button" onClick={clearFilters} style={{ background: BRAND.navy }}>Limpar filtros</button>
+                <p className="empty-text">Nenhum bar encontrado com esses filtros.</p>
+                <button onClick={clearFilters} className="empty-button">
+                  Limpar filtros
+                </button>
               </div>
             ) : sortBy !== "none" ? (
               renderGrid(filteredAndSorted)
@@ -510,44 +564,31 @@ export default function App() {
         </>
       )}
 
-      {/* FOOTER */}
-      <footer className="app-footer" style={{ background: T.footerBg }}>
+      {/* ══ FOOTER ══════════════════════════════════════════════════════════ */}
+      <footer className="app-footer">
         <div className="footer-logo">
-          <Logo size={40} />
+          <Logo size={50} />
         </div>
         <div className="footer-credit">
           <IgIcon color={BRAND.goldLt} />
-          <span>Curadoria: <a href="https://www.instagram.com/ParticipantesdiButeco" target="_blank" rel="noopener noreferrer">@ParticipantesdiButeco</a></span>
+          <span className="footer-credit-text">
+            Curadoria:{" "}
+            <a href="https://www.instagram.com/ParticipantesdiButeco" target="_blank" rel="noopener noreferrer" className="footer-credit-link">
+              @ParticipantesdiButeco
+            </a>
+          </span>
         </div>
-        <p className="footer-text">Comida di Buteco 2026 · 26ª Edição · Belo Horizonte · 10 abr – 10 mai · Petiscos a R$ 40</p>
-        <button className="footer-theme-toggle" onClick={() => setDark(d => !d)} style={{ color: dark ? BRAND.goldLt : "#ccc" }}>
+        <p className="footer-text">
+          Comida di Buteco 2026 · 26ª Edição · Belo Horizonte · 10 abr – 10 mai · Petiscos a R$ 40
+        </p>
+        <button
+          onClick={() => setDark(d => !d)}
+          className="footer-theme-toggle"
+          style={{ color: dark ? BRAND.goldLt : "#ccc" }}
+        >
           {dark ? <SunIcon /> : <MoonIcon />} {dark ? "Modo Claro" : "Modo Escuro"}
         </button>
       </footer>
     </div>
   );
 }
-
-// ─── Temas ────────────────────────────────────────────────────────────────────
-const THEMES = {
-  light: {
-    bg: "#F5EFE0", surface: "#FFF", surfaceAlt: "#FAF7F0",
-    border: "#E2D8C0", text: "#1C1A14", textMuted: "#6B5F48", textFaint: "#9E9280",
-    headerBg: `linear-gradient(155deg, ${BRAND.navyDk} 0%, ${BRAND.navy} 60%, #1a2860 100%)`,
-    bannerBg: `linear-gradient(90deg, ${BRAND.navyDk}, ${BRAND.navy})`,
-    cardBg: "#FFF", cardBorder: "#E2D8C0",
-    inputBg: "#FAF7F0", filterBg: "#FFF",
-    glassBg: "rgba(255,255,255,0.75)", glassBorder: "rgba(255,255,255,0.4)",
-    statBg: "rgba(255,255,255,0.13)", footerBg: BRAND.navyDk,
-  },
-  dark: {
-    bg: "#0F1117", surface: "#1A1D26", surfaceAlt: "#21242F",
-    border: "#2E3245", text: "#EDE8DC", textMuted: "#9A94A8", textFaint: "#605A6E",
-    headerBg: `linear-gradient(155deg, #090C18 0%, #101428 60%, #0D1122 100%)`,
-    bannerBg: `linear-gradient(90deg, #090C18, #101428)`,
-    cardBg: "#1A1D26", cardBorder: "#2E3245",
-    inputBg: "#21242F", filterBg: "#1A1D26",
-    glassBg: "rgba(26,29,38,0.85)", glassBorder: "rgba(255,255,255,0.08)",
-    statBg: "rgba(255,255,255,0.07)", footerBg: "#090C18",
-  },
-};
