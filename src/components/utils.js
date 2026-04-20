@@ -1,31 +1,19 @@
-// ═══════════════════════════════════════════════════════════════════════════════
-// FUNÇÕES UTILITÁRIAS
-// ═══════════════════════════════════════════════════════════════════════════════
+import { TEMP_SCALE } from "./constants";
 
-export const normalizeText = (text) => {
-    if (!text) return "";
-    return text
-        .toLowerCase()
+// Busca sem acentos: "coração" → "coracao"
+export const normalizeText = (text) =>
+  text
+    ? text.toLowerCase()
         .normalize("NFD")
         .replace(/[\u0300-\u036f]/g, "")
         .replace(/[^\w\s]/g, "")
-        .replace(/\s+/g, " ");
-};
+        .replace(/\s+/g, " ")
+    : "";
 
-export const getTempColor = (t) => {
-    if (t === null) return "#95a5a6";
-    if (t < -3) return "#2980B9";
-    if (t <= 1) return "#27AE60";
-    if (t <= 3) return "#F39C12";
-    if (t <= 6) return "#E67E22";
-    return "#C0392B";
-};
+// Retorna { color, bg } para uma dada temperatura
+export const getTempStyle = (t) =>
+  t == null ? null : (TEMP_SCALE.find(s => t < s.max) ?? TEMP_SCALE.at(-1));
 
-export const getTempBg = (t) => {
-    if (t === null) return "rgba(0,0,0,0.05)";
-    if (t < -3) return "rgba(52,152,219,0.15)";
-    if (t <= 1) return "rgba(46,204,113,0.15)";
-    if (t <= 3) return "rgba(243,156,18,0.15)";
-    if (t <= 6) return "rgba(230,126,34,0.15)";
-    return "rgba(231,76,60,0.15)";
-};
+// Mantidos por compatibilidade com Card.jsx (serão removidos na próxima limpeza)
+export const getTempColor = (t) => getTempStyle(t)?.color ?? "#95a5a6";
+export const getTempBg    = (t) => getTempStyle(t)?.bg    ?? "rgba(0,0,0,0.05)";
