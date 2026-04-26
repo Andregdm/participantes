@@ -441,3 +441,8 @@ select option { background: #fff;     color: #1C1A14; }
   width: 48px !important;
   height: 48px !important;
 }
+
+.card-title a:hover {
+  text-decoration: underline !important;
+  opacity: 0.8;
+}
