@@ -152,8 +152,8 @@ export default function App() {
                 <Logo size={85}/>
               </div>
               <div>
-                {/* Título principal */}
-                <h1 className="main-title" style={{ color: "#fff" }}>Participantes di Buteco</h1>
+                {/* Título principal - cor agora definida pelo CSS */}
+                <h1 className="main-title">Participantes di Buteco</h1>
 
                 {/* Subtítulo com edição e tema */}
                 <div className="main-subtitle" style={{ color: "#9BBFCE" }}>
@@ -189,8 +189,7 @@ export default function App() {
                   background:     dark ? "rgba(232,168,32,0.2)" : "rgba(255,255,255,0.12)",
                   border:         `2px solid ${dark ? BRAND.gold : "rgba(255,255,255,0.3)"}`,
                   borderRadius:   "50%",
-                  width:          "42px",
-                  height:         "42px",
+                  /* width e height removidos: agora controlados pelo CSS */
                   display:        "flex",
                   alignItems:     "center",
                   justifyContent: "center",
