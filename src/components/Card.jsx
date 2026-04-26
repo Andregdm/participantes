@@ -17,13 +17,16 @@ export const Card = ({
   const rc  = REGION_COLOR[b.region] ?? "#555";
   const tmp = getTempStyle(b.beerTemp);
 
-  // Handlers estáveis — useCallback no nível do componente (correto per Rules of Hooks)
+  // Handlers estáveis
   const handleImgError = useCallback(() => onImgError(b.id),       [b.id, onImgError]);
   const handleVisit    = useCallback(() => onToggleVisit(b.id),    [b.id, onToggleVisit]);
   const handleFav      = useCallback(() => onToggleFavorite(b.id), [b.id, onToggleFavorite]);
   const handleExpand   = useCallback(() => onToggleExpand(b.id),   [b.id, onToggleExpand]);
 
   const borderColor = isF ? BRAND.red : isV ? "#27ae60" : T.cardBorder;
+
+  // Verifica se existe link do Instagram
+  const instaLink = b.instagramPost || b.instagramUrl; // adapte o nome do campo conforme seu JSON
 
   return (
     <article
@@ -76,8 +79,23 @@ export const Card = ({
         {/* Nome + ações */}
         <div className="card-header">
           <div style={{ flex: 1, minWidth: 0 }}>
-            <h3 className="card-title"      style={{ color: T.text }}>    {b.name}</h3>
-            <div className="card-subtitle"  style={{ color: T.textFaint }}>
+            {/* Título do bar com link para o Instagram, se disponível */}
+            <h3 className="card-title" style={{ color: T.text }}>
+              {instaLink ? (
+                <a
+                  href={instaLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ color: T.text, textDecoration: "none", borderBottom: `1px dotted ${rc}` }}
+                  title="Ver post no Instagram"
+                >
+                  {b.name}
+                </a>
+              ) : (
+                b.name
+              )}
+            </h3>
+            <div className="card-subtitle" style={{ color: T.textFaint }}>
               {b.neighborhood} · <span style={{ color: rc, fontWeight: 600 }}>{b.region}</span>
             </div>
           </div>
