@@ -24,7 +24,8 @@
       "visited": false,
       "rating": null,
       "beerTemp": null,
-      "url": "https://comidadibuteco.com.br/buteco/3100-revision-v1/"
+      "url": "https://comidadibuteco.com.br/buteco/3100-revision-v1/",
+      "instagramPost": null
     },
     {
       "id": 2,
@@ -32,14 +33,15 @@
       "region": "Pampulha",
       "neighborhood": "Santa Rosa",
       "address": "R. David Alves do Vale, 68 | Santa Rosa, Belo Horizonte - MG",
-      "dish": "Porco Amostarda",
-      "desc": "Costela suína no purê de moranga com tapenade de mostarda. Combinação que amostarda do bom!",
+      "dish": "Porco “AMOSTARDA”",
+      "desc": "Costela suína no purê de moranga com tapenade de mostarda com azeitona preta.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09110859/alexandresbar_porcoamostarda_pauloti_unibh-3271.jpg",
       "photoCredit": "Paulo Ti UniBH",
       "visited": false,
       "rating": null,
       "beerTemp": null,
-      "url": "https://comidadibuteco.com.br/buteco/alexandres-bar/"
+      "url": "https://comidadibuteco.com.br/buteco/alexandres-bar/",
+      "instagramPost": null
     },
     {
       "id": 3,
@@ -52,9 +54,10 @@
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09110901/andradesbeer_ossadinhaatolada_bh_2026_rodneycosta_unibh-4615.jpg",
       "photoCredit": "Rodney Costa UniBH",
       "visited": true,
-      "rating": 9.5,
+      "rating": 9.29,
       "beerTemp": -4.6,
-      "url": "https://comidadibuteco.com.br/buteco/andrades-beer/"
+      "url": "https://comidadibuteco.com.br/buteco/andrades-beer/",
+      "instagramPost": null
     },
     {
       "id": 4,
@@ -63,13 +66,14 @@
       "neighborhood": "Santa Amélia",
       "address": "Rua da Sinfonia, 253 | Santa Amélia, Belo Horizonte - MG",
       "dish": "Chucrute de Mineiro",
-      "desc": "Vinagrete de repolho, costelão de boi ao molho, batatas-bravas, farofa de bacon e chutney de abacaxi.",
+      "desc": "Vinagrete de repolho, costelão de boi ao molho do Armazém, acompanhado de batatas-bravas, farofa de bacon crocante e chutney de abacaxi com pimenta-dedo-de-moça.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09110903/armazemsantaamelia_chucretedemineiro_bh_2026_rodneycosta_unibh-3650.jpg",
       "photoCredit": "Rodney Costa UniBH",
-      "visited": false,
-      "rating": null,
+      "visited": true,
+      "rating": 8.5,
       "beerTemp": null,
-      "url": "https://comidadibuteco.com.br/buteco/armazem-santa-amelia/"
+      "url": "https://comidadibuteco.com.br/buteco/armazem-santa-amelia/",
+      "instagramPost": null
     },
     {
       "id": 5,
@@ -78,13 +82,14 @@
       "neighborhood": "São João Batista",
       "address": "R. Doutor Álvaro Camargos, 1113 | São Belo Horizonte - MG",
       "dish": "No Peito e na Raiz",
-      "desc": "Maçã de peito com couve, acompanhada de purê de mandioca. Força total com raízes bem fincadas em Minas.",
+      "desc": "Maçã de peito cozida com couve ao alho, acompanhada de purê cremoso de mandioca.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09111005/avalancheespeteria_nopeitonaraiz_bh_2026_pauloti_unibh-4514.jpg",
       "photoCredit": "Paulo Ti UniBH",
-      "visited": false,
-      "rating": null,
+      "visited": true,
+      "rating": 8.8,
       "beerTemp": null,
-      "url": "https://comidadibuteco.com.br/buteco/avalanche-bar-e-restaurante/"
+      "url": "https://comidadibuteco.com.br/buteco/avalanche-bar-e-restaurante/",
+      "instagramPost": null
     },
     {
       "id": 6,
@@ -93,13 +98,14 @@
       "neighborhood": "Serra",
       "address": "Rua do Ouro, 835 | Serra, Belo Horizonte - MG",
       "dish": "On co tô",
-      "desc": "Moelinha de frango escondida sob purê de alho-poró e crispy de cebola dourado. Petisco surpreendente.",
+      "desc": "Moelinha de frango escondida sob purê de alho-poró e crispy de cebola.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09111007/azouquefogobar_oncoto_bh_2026_rodneycosta_unibh-4638.jpg",
       "photoCredit": "Rodney Costa UniBH",
-      "visited": false,
-      "rating": null,
-      "beerTemp": null,
-      "url": "https://comidadibuteco.com.br/buteco/azougue-fogo-e-bar/"
+      "visited": true,
+      "rating": 7.5,
+      "beerTemp": -4.6,
+      "url": "https://comidadibuteco.com.br/buteco/azougue-fogo-e-bar/",
+      "instagramPost": null
     },
     {
       "id": 7,
@@ -108,13 +114,14 @@
       "neighborhood": "Funcionários",
       "address": "R. Piauí, 1884 | Funcionários, Belo Horizonte - MG",
       "dish": "Pastel Pega no Poró",
-      "desc": "Pastel de alho-poró com queijo, acompanhado de farofa de couve, costelinha, gremolata e molho de goiaba.",
+      "desc": "Pastel de alho-poró com queijo canastra acompanhado de farofa de couve, costelinha, gremolata e molho de goiabada.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09111008/baiuca_pastelpeganoporo_bh_2026_pauloti_unibh-4013.jpg",
       "photoCredit": "Paulo Ti UniBH",
       "visited": false,
       "rating": null,
       "beerTemp": null,
-      "url": "https://comidadibuteco.com.br/buteco/baiuca/"
+      "url": "https://comidadibuteco.com.br/buteco/baiuca/",
+      "instagramPost": null
     },
     {
       "id": 8,
@@ -123,14 +130,15 @@
       "neighborhood": "Salgado Filho",
       "address": "R. Divisa Nova, 670 | Belo Horizonte - MG",
       "dish": "Tô com ragu na mão",
-      "desc": "Repolho ao creme com ragu de fraldinha. Petisco do ex-campeão 2018 que une tradição e inovação.",
+      "desc": "Repolho ao creme com ragu de fraldinha.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09111012/barbambu_tocomnagunamao_bh_2026_isaquerodrigues_unibh-3461.jpg",
       "photoCredit": "Isaque Rodrigues UniBH",
-      "champion": true,
       "visited": false,
       "rating": null,
       "beerTemp": null,
-      "url": "https://comidadibuteco.com.br/buteco/barbambu/"
+      "url": "https://comidadibuteco.com.br/buteco/barbambu/",
+      "champion": true,
+      "instagramPost": null
     },
     {
       "id": 9,
@@ -138,14 +146,15 @@
       "region": "Nordeste",
       "neighborhood": "União",
       "address": "R. Silva Fortes, 47 | União, Belo Horizonte - MG",
-      "dish": "Bendita Porpeta",
-      "desc": "Porpeta de cupim recheada com alho-poró e queijo canastra, ao molho de tomate da casa. Acompanha farofa com ora-pro-nóbis.",
+      "dish": "Bendita porpeta",
+      "desc": "Porpeta de cupim recheada com alho-poró e queijo canastra, ao molho de tomate da casa. Acompanha: farofa de costela (suína) com ora-pro-nóbis",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09111113/barbenditabaderna_benditaporpeta_bh_2026_pauloti_unibh-5051.jpg",
       "photoCredit": "Paulo Ti UniBH",
       "visited": false,
       "rating": null,
       "beerTemp": null,
-      "url": "https://comidadibuteco.com.br/buteco/bar-bendita-baderna/"
+      "url": "https://comidadibuteco.com.br/buteco/bar-bendita-baderna/",
+      "instagramPost": null
     },
     {
       "id": 10,
@@ -154,13 +163,14 @@
       "neighborhood": "São João Batista",
       "address": "R. Pastor Rui Franco, 257 | São João Batista (Venda Nova), Belo Horizonte - MG",
       "dish": "Chuleta Descontraída",
-      "desc": "Chuleta empanada, molho bechamel com repolho, bacon crispy salpicado, acompanhada de um delicioso melaço agridoce.",
+      "desc": "Chuleta empanada, molho bechamel com repolho, bacon crispy salpicado por cima, acompanhada de um delicioso melaço para dar um toque agridoce ao prato.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09111115/bardacintia_chuletadescontraida_bh_2026_pauloti_unibh-5257.jpg",
       "photoCredit": "Paulo Ti UniBH",
       "visited": false,
       "rating": null,
       "beerTemp": null,
-      "url": "https://comidadibuteco.com.br/buteco/bar-da-cintia/"
+      "url": "https://comidadibuteco.com.br/buteco/bar-da-cintia/",
+      "instagramPost": null
     },
     {
       "id": 11,
@@ -169,13 +179,14 @@
       "neighborhood": "Santa Mônica",
       "address": "R. dos Astecas, 2722 | Santa Mônica, Belo Horizonte - MG",
       "dish": "Boca quente, coração mole",
-      "desc": "Pernil assado, acompanhado de tomate recheado com pimenta, geleia de maracujá e finalizado com queijo e couve crispy.",
+      "desc": "Pernil assado, acompanhado de tomate recheado com pimenta-dedo-de-moça, geleia de maracujá e finalizado com queijo minas e couve crispy.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09111117/bardafia_lomboquentecoracaomole_vicentealexandre_unibh-3148.jpg",
       "photoCredit": "Vicente Alexandre UniBH",
-      "visited": false,
-      "rating": null,
+      "visited": true,
+      "rating": 8.8,
       "beerTemp": null,
-      "url": "https://comidadibuteco.com.br/buteco/bar-da-fia/"
+      "url": "https://comidadibuteco.com.br/buteco/bar-da-fia/",
+      "instagramPost": null
     },
     {
       "id": 12,
@@ -184,13 +195,14 @@
       "neighborhood": "Fernão Dias",
       "address": "Rua Maria Ferreira da Silva, 367 | Belo Horizonte - MG",
       "dish": "Ajoelhou tem que rezar",
-      "desc": "Joelho de porco acompanhado de ora-pro-nóbis e polenta frita. Quem prova, ajoelha de satisfação!",
+      "desc": "Joelho de porco acompanhado de ora-pro-nóbis e polenta frita.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09111119/bardagisa_ajoelhoutemquerezar_giovanaevilyn_unibh-3157.jpg",
       "photoCredit": "Giovana Evilyn UniBH",
       "visited": true,
       "rating": 8.33,
       "beerTemp": -2.7,
-      "url": "https://comidadibuteco.com.br/buteco/bar-da-gisa/"
+      "url": "https://comidadibuteco.com.br/buteco/bar-da-gisa/",
+      "instagramPost": null
     },
     {
       "id": 13,
@@ -199,13 +211,14 @@
       "neighborhood": "São João Batista",
       "address": "R. Geralda Marinho, 41 | São João Batista (Venda Nova), Belo Horizonte - MG",
       "dish": "Popeye Mineiro",
-      "desc": "Parmegiana de alcatra regada com molho, manjericão e muçarela. Acompanhada de molho bechamel de espinafre e torradas.",
+      "desc": "Parmegiana de alcatra regada com molho pomodoro artesanal, manjericão e muçarela derretida. Acompanhada de molho bechamel de espinafre e torradas rústicas.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09111121/bardalu_popeyemineiro_bh_2026_rodneycosta_unibh-4185.jpg",
       "photoCredit": "Rodney Costa UniBH",
-      "visited": false,
-      "rating": null,
-      "beerTemp": null,
-      "url": "https://comidadibuteco.com.br/buteco/bar-da-lu/"
+      "visited": true,
+      "rating": 8.2,
+      "beerTemp": -4.2,
+      "url": "https://comidadibuteco.com.br/buteco/bar-da-lu/",
+      "instagramPost": null
     },
     {
       "id": 14,
@@ -214,13 +227,14 @@
       "neighborhood": "Calafate",
       "address": "Rua Oeste, 517 | Calafate, Belo Horizonte - MG",
       "dish": "Cadim de Nós",
-      "desc": "Bolinho de carne recheado com alho-poró, requeijão e queijo, com farofa de couve com torresmo e molho.",
+      "desc": "Bolinho de carne recheado com alho-poró, requeijão e queijo parmesão, com farofa de couve com torresmo e molho da casa.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09111222/bardapraca_cadimdenos_bh_2026_pauloti_unibh-4502.jpg",
       "photoCredit": "Paulo Ti UniBH",
       "visited": false,
       "rating": null,
       "beerTemp": null,
-      "url": "https://comidadibuteco.com.br/buteco/bar-da-praca/"
+      "url": "https://comidadibuteco.com.br/buteco/bar-da-praca/",
+      "instagramPost": null
     },
     {
       "id": 15,
@@ -229,13 +243,14 @@
       "neighborhood": "Camargos",
       "address": "R. Soares Nogueira, 801 | Camargos, Belo Horizonte - MG",
       "dish": "Tesouro caipira com encanto da horta",
-      "desc": "Corte suíno ao molho, creme de mandioca, farofa de couve com bacon e acelga. Tesouro do interior!",
+      "desc": "Corte suíno ao molho curto, creme de mandioca, farofa de couve com bacon e acelga fresca ao alho.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09111224/bardasilvania_tesourocaipiracomencantodahorta_bh_2026_giovanaevelyn_unibh-3364.jpg",
       "photoCredit": "Giovana Evelyn UniBH",
       "visited": false,
       "rating": null,
       "beerTemp": null,
-      "url": "https://comidadibuteco.com.br/buteco/bar-da-silvania/"
+      "url": "https://comidadibuteco.com.br/buteco/bar-da-silvania/",
+      "instagramPost": null
     },
     {
       "id": 16,
@@ -243,14 +258,15 @@
       "region": "Barreiro",
       "neighborhood": "Santa Helena",
       "address": "R. Arthur Luchesi, 356 | Santa Helena (Barreiro), Belo Horizonte - MG",
-      "dish": "Trio Mineiro-Bão Di Mais",
-      "desc": "Um trio irresistível que celebra a cozinha de Minas: carninha de panela, couve refogada e angu cremoso em perfeita harmonia.",
+      "dish": "Trio Mineiro-Bão di Mais",
+      "desc": "Maçã de peito cozida com molho da casa, purê de batata com queijo, couve com bacon.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09111226/bardobartolomeu_triomineirobaodemais_bh_2026_rodneycosta_unibh-4207.jpg",
       "photoCredit": "Rodney Costa UniBH",
       "visited": true,
       "rating": 7.5,
       "beerTemp": null,
-      "url": "https://comidadibuteco.com.br/buteco/bar-do-bartolomeu/"
+      "url": "https://comidadibuteco.com.br/buteco/bar-do-bartolomeu/",
+      "instagramPost": null
     },
     {
       "id": 17,
@@ -259,13 +275,14 @@
       "neighborhood": "Álvaro Camargos",
       "address": "Rua Vicentina Coutinho Camargos, 100 | Álvaro Camargos, Belo Horizonte - MG",
       "dish": "Brasileirinho Raiz",
-      "desc": "Petisco simples e honesto: corte bovino com verduras da horta e temperos mineiros de raiz.",
+      "desc": "Ossobuco com angu ‘molin’, ‘temperadim’, com couve rasgadinha e molho da casa.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09111228/bardobem_brsileirinhoraiz_bh_2026_rodneycosta_unibh-5080.jpg",
       "photoCredit": "Rodney Costa UniBH",
       "visited": false,
       "rating": null,
       "beerTemp": null,
-      "url": "https://comidadibuteco.com.br/buteco/bar-do-bem/"
+      "url": "https://comidadibuteco.com.br/buteco/bar-do-bem/",
+      "instagramPost": null
     },
     {
       "id": 18,
@@ -274,13 +291,14 @@
       "neighborhood": "Santa Amélia",
       "address": "Avenida Guarapari, 872 | Belo Horizonte - MG",
       "dish": "Kaftei Vossa Vontade",
-      "desc": "Kafta recheada com queijo, acompanha batata da mamãe, salada americana e molhos. Sua vontade, realizada!",
+      "desc": "Kafta recheada com queijo, acompanha batata da mamãe e salada americana. Com molhos da casa.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09111229/bardodedinho_kafteivossamensagem_bh_2026_isabelaaraujo_unibh-3503.jpg",
       "photoCredit": "Isabela Araújo UniBH",
       "visited": true,
       "rating": 8.2,
       "beerTemp": -3.2,
-      "url": "https://comidadibuteco.com.br/buteco/3121-revision-v1/"
+      "url": "https://comidadibuteco.com.br/buteco/3121-revision-v1/",
+      "instagramPost": null
     },
     {
       "id": 19,
@@ -289,13 +307,14 @@
       "neighborhood": "São João Batista",
       "address": "R. Geralda Marinho, 117 | Belo Horizonte - MG",
       "dish": "Na Boca do Boi",
-      "desc": "Língua de boi ao molho de cerveja escura, com agrião e acompanhada de pães artesanais.",
+      "desc": "Língua de boi ao molho de cerveja escura, com agrião, acompanhada de pães.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09111331/bardojoao_nabocadopovo_bh_2026_rodneycosta_unibh-4472.jpg",
       "photoCredit": "Rodney Costa UniBH",
-      "visited": false,
-      "rating": null,
+      "visited": true,
+      "rating": 8.0,
       "beerTemp": null,
-      "url": "https://comidadibuteco.com.br/buteco/3125-revision-v1/"
+      "url": "https://comidadibuteco.com.br/buteco/3125-revision-v1/",
+      "instagramPost": null
     },
     {
       "id": 20,
@@ -304,13 +323,14 @@
       "neighborhood": "Palmeiras",
       "address": "Rua Júlio de Castilho, 1071 | Palmeiras, Belo Horizonte - MG",
       "dish": "Fraldinha Suprema",
-      "desc": "Fraldinha com creme de espinafre, crispy de cebola e geleia de tomate. Prato que conquista pela apresentação e sabor.",
+      "desc": "Fraldinha com creme de espinafre com crispy de cebola e geleia de tomate.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09111333/bardokim_fraldinhasupreme_bh_2026_pauloti_unibh-4724.jpg",
       "photoCredit": "Paulo Ti UniBH",
-      "visited": false,
-      "rating": null,
-      "beerTemp": null,
-      "url": "https://comidadibuteco.com.br/buteco/bar-do-kim/"
+      "visited": true,
+      "rating": 8.67,
+      "beerTemp": -5.2,
+      "url": "https://comidadibuteco.com.br/buteco/bar-do-kim/",
+      "instagramPost": null
     },
     {
       "id": 21,
@@ -319,13 +339,14 @@
       "neighborhood": "Padre Eustáquio",
       "address": "Avenida Coronel José Benjamim, 777 | Belo Horizonte - MG",
       "dish": "Esfera Suína do Momô",
-      "desc": "Bolinha de carne suína recheada com queijo e ervas frescas, servida com molho especial. Pequena e poderosa!",
+      "desc": "Almôndega de linguiça suína recheada com pimenta-biquinho ao molho de tomate. Acompanhada de farofa de torresmo, ninho de couve com ovo de codorna e muçarela.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09111335/bardomomo_esferasuina_rodneycosta_unibh-3114.jpg",
       "photoCredit": "Rodney Costa UniBH",
-      "visited": false,
-      "rating": null,
-      "beerTemp": null,
-      "url": "https://comidadibuteco.com.br/buteco/3520-revision-v1/"
+      "visited": true,
+      "rating": 8.67,
+      "beerTemp": -6.6,
+      "url": "https://comidadibuteco.com.br/buteco/3520-revision-v1/",
+      "instagramPost": null
     },
     {
       "id": 22,
@@ -340,7 +361,8 @@
       "visited": true,
       "rating": 8.0,
       "beerTemp": -3.3,
-      "url": "https://comidadibuteco.com.br/buteco/bar-do-nelson/"
+      "url": "https://comidadibuteco.com.br/buteco/bar-do-nelson/",
+      "instagramPost": null
     },
     {
       "id": 23,
@@ -349,13 +371,14 @@
       "neighborhood": "Cachoeirinha",
       "address": "Avenida Bernardo de Vasconcelos, 1824 | Belo Horizonte - MG",
       "dish": "Tilápia Roletera",
-      "desc": "Roletes de filé de tilápia empanado, recheados com mix de rúcula, muçarela e tomate seco. Acompanha molho especial.",
+      "desc": "Roletes de filé de tilápia empanado, recheados com mix de rúcula, muçarela e tomate seco. Acompanha molho especial da casa.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09111338/bardopeixinho_tilapiaroletera_bh_2026_isaquerodrigues_unibh-3830.jpg",
       "photoCredit": "Isaque Rodrigues UniBH",
       "visited": false,
       "rating": null,
       "beerTemp": null,
-      "url": "https://comidadibuteco.com.br/buteco/bar-do-peixinho/"
+      "url": "https://comidadibuteco.com.br/buteco/bar-do-peixinho/",
+      "instagramPost": null
     },
     {
       "id": 24,
@@ -364,13 +387,14 @@
       "neighborhood": "Nova Suíssa",
       "address": "Avenida Amazonas, 4649 | Nova Suíça, Belo Horizonte - MG",
       "dish": "Maçã de peito à moda do primo",
-      "desc": "Maçã de peito com batata-doce e mostarda. Receita de família passada de geração em geração.",
+      "desc": "Maçã de peito com batata-doce e mostarda.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/16114137/whatsapp-image-2026-03-16-at-14.39.03-1536x1024.jpeg",
       "photoCredit": "Divulgação Comida di Buteco",
       "visited": true,
       "rating": 8.0,
       "beerTemp": -7.3,
-      "url": "https://comidadibuteco.com.br/buteco/bar-do-primo/"
+      "url": "https://comidadibuteco.com.br/buteco/bar-do-primo/",
+      "instagramPost": null
     },
     {
       "id": 25,
@@ -379,13 +403,14 @@
       "neighborhood": "Jardim América",
       "address": "R. Gávea, 422 | Jardim América, Belo Horizonte - MG",
       "dish": "Leitão e Eva no Paraíso",
-      "desc": "Costelinha suína, polenta com queijo e ora-pro-nóbis. Um paraíso de sabores em cada mordida!",
+      "desc": "Costelinha suína, polenta com queijo e ora-pro-nóbis.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09111441/bardoregis_leilaoeevanoparaiso_bh_2026_giovanaevelyn_unibh-3344.jpg",
       "photoCredit": "Giovana Evelyn UniBH",
       "visited": true,
       "rating": 7.5,
       "beerTemp": -0.9,
-      "url": "https://comidadibuteco.com.br/buteco/24790-revision-v1/"
+      "url": "https://comidadibuteco.com.br/buteco/24790-revision-v1/",
+      "instagramPost": null
     },
     {
       "id": 26,
@@ -393,14 +418,15 @@
       "region": "Norte",
       "neighborhood": "Planalto",
       "address": "Avenida Doutor Cristiano Guimarães, 2570 | Planalto, Belo Horizonte - MG",
-      "dish": "Tião Véio",
-      "desc": "Corte bovino ao molho com verduras da horta, no estilo rústico e saboroso do Tião de sempre.",
+      "dish": "Tião Veio",
+      "desc": "Costelinha suína braseada, torresminho à pururuca, couve refogada na manteiga, alho e limão, farofa de torresmo e molho de abacaxi com pimenta.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/25074325/tiaovei_2026_belohorizonte.jpg",
       "photoCredit": "Divulgação Comida di Buteco",
       "visited": false,
       "rating": null,
       "beerTemp": null,
-      "url": "https://comidadibuteco.com.br/buteco/bar-do-tiao-2/"
+      "url": "https://comidadibuteco.com.br/buteco/bar-do-tiao-2/",
+      "instagramPost": null
     },
     {
       "id": 27,
@@ -408,14 +434,15 @@
       "region": "Oeste",
       "neighborhood": "Salgado Filho",
       "address": "Rua Lindolfo Deodoro, 503 - A | Salgado Filho, Belo Horizonte - MG",
-      "dish": "A Copa é Nossa",
-      "desc": "Copa lombo assado com escarola refogada no alho. Acompanha farofa de soja. Campeão de futebol e de sabor!",
+      "dish": "A copa é nossa",
+      "desc": "Copa lombo assado com escarola refogada no alho. Acompanha farofa de soja.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09111445/bardosmeninos_acopaenossa_bh_2026_pauloti_unibh-4886.jpg",
       "photoCredit": "Paulo Ti UniBH",
       "visited": true,
       "rating": 9.33,
       "beerTemp": null,
-      "url": "https://comidadibuteco.com.br/buteco/bar-dos-meninos/"
+      "url": "https://comidadibuteco.com.br/buteco/bar-dos-meninos/",
+      "instagramPost": null
     },
     {
       "id": 28,
@@ -424,13 +451,14 @@
       "neighborhood": "Esplanada",
       "address": "R. Vinte e Oito de Setembro, 229 | Esplanada, Belo Horizonte - MG",
       "dish": "Até quem não gosta come",
-      "desc": "Couve-flor empanada no queijo parmesão com geleia da casa. A verdura que conquista até os resistentes!",
+      "desc": "Couve-flor empanada no queijo parmesão com geleia da casa.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09111447/bardudu_atequemnaogostacome_bh_2026_pauloti_unibh-4066.jpg",
       "photoCredit": "Paulo Ti UniBH",
       "visited": true,
       "rating": 9.33,
       "beerTemp": -1.4,
-      "url": "https://comidadibuteco.com.br/buteco/bar-du-du/"
+      "url": "https://comidadibuteco.com.br/buteco/bar-du-du/",
+      "instagramPost": null
     },
     {
       "id": 29,
@@ -445,7 +473,8 @@
       "visited": true,
       "rating": 8.2,
       "beerTemp": 0.8,
-      "url": "https://comidadibuteco.com.br/buteco/bar-du-magrelo/"
+      "url": "https://comidadibuteco.com.br/buteco/bar-du-magrelo/",
+      "instagramPost": null
     },
     {
       "id": 30,
@@ -454,13 +483,14 @@
       "neighborhood": "Nova Suíssa",
       "address": "R. Java, 386 | Nova Suíça, Belo Horizonte - MG",
       "dish": "Sabores da Roça",
-      "desc": "Suflê de milho-verde recheado com carne cozida, acompanhado de mostarda. Roça servida com elegância.",
+      "desc": "Suflê de milho-verde, recheado com carne cozida à moda da casa, acompanhado de mostarda refogada.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09111010/bomsabor_saboresdaroca_bh_2026_pauloti_unibh-5218.jpg",
       "photoCredit": "Paulo Ti UniBH",
       "visited": true,
       "rating": 8.67,
       "beerTemp": -3.9,
-      "url": "https://comidadibuteco.com.br/buteco/bar-e-restaurante-bom-sabor/"
+      "url": "https://comidadibuteco.com.br/buteco/bar-e-restaurante-bom-sabor/",
+      "instagramPost": null
     },
     {
       "id": 31,
@@ -468,14 +498,15 @@
       "region": "Leste",
       "neighborhood": "Sagrada Família",
       "address": "Rua Pitangui, 3197 | Belo Horizonte - MG",
-      "dish": "Bem-casados",
-      "desc": "Harmonioso casamento de carnes e verduras que traduz a essência da cozinha de boteco mineiro.",
+      "dish": "Bem Casados",
+      "desc": "Torresmo de barriga, batata recheada com creme e carne desfiada, charuto de couve.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09111549/bardobranco_bemcasado_bh_2026_isaquerodrigues_unibh-3534.jpg",
       "photoCredit": "Isaque Rodrigues UniBH",
       "visited": true,
       "rating": 7.75,
       "beerTemp": -4.0,
-      "url": "https://comidadibuteco.com.br/buteco/bar-e-restaurante-do-branco/"
+      "url": "https://comidadibuteco.com.br/buteco/bar-e-restaurante-do-branco/",
+      "instagramPost": null
     },
     {
       "id": 32,
@@ -483,14 +514,15 @@
       "region": "Centro-Sul",
       "neighborhood": "Serra",
       "address": "R. Monte Alegre, 160 | Serra, Belo Horizonte - MG",
-      "dish": "Com a Barriga no Fogão",
-      "desc": "Barriga de porco de panela cozida, fritas de mandioca e espinafre, farofa de couve e molho especial.",
+      "dish": "Com a barriga no fogão",
+      "desc": "Barriga de porco de panela (pancetta) cozida com cebolas, pimentões, molho inglês, “fritas” de mandioca e espinafre, farofa de couve e molho de abacaxi.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09111551/barestabelecimento_comabarriganofogo_bh_2026_rodneycosta_unibh-5068.jpg",
       "photoCredit": "Rodney Costa UniBH",
       "visited": false,
       "rating": null,
       "beerTemp": null,
-      "url": "https://comidadibuteco.com.br/buteco/bar-estabelecimento/"
+      "url": "https://comidadibuteco.com.br/buteco/bar-estabelecimento/",
+      "instagramPost": null
     },
     {
       "id": 33,
@@ -499,13 +531,14 @@
       "neighborhood": "Prado",
       "address": "Rua Cura D'Ars, 542 | Prado, Belo Horizonte - MG",
       "dish": "Marinheiro Popeye",
-      "desc": "Panqueca de espinafre recheada com carne bovina e bacon, envolvida em molho e parmesão. Com banana-da-terra!",
+      "desc": "Panqueca de espinafre recheada com carne bovina e bacon envolvida com molho de tomate natural e parmesão. Acompanhada por um mix de verduras e fatias de banana-da-terra.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09111553/juntojuntinho_marinheiropopeye_bh_2026_julianunes_unibh-3395.jpg",
       "photoCredit": "Julia Nunes UniBH",
       "visited": true,
       "rating": 8.0,
       "beerTemp": -3.9,
-      "url": "https://comidadibuteco.com.br/buteco/bar-junto-juntinho/"
+      "url": "https://comidadibuteco.com.br/buteco/bar-junto-juntinho/",
+      "instagramPost": null
     },
     {
       "id": 34,
@@ -514,13 +547,14 @@
       "neighborhood": "Santo Agostinho",
       "address": "Rua Paracatu, 1099 | Santo Agostinho, Belo Horizonte - MG",
       "dish": "Joelho do Vovô Pig",
-      "desc": "Joelho de porco com milho assado, polenta cremosa e mostarda refogada. Prato que abraça e aquece.",
+      "desc": "Joelho de porco com milho assado, polenta e mostarda refogada.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09111555/maniamineira_joelhodavovopig_bh_2026_pauloti_unibh-3996.jpg",
       "photoCredit": "Paulo Ti UniBH",
       "visited": false,
       "rating": null,
       "beerTemp": null,
-      "url": "https://comidadibuteco.com.br/buteco/5668-revision-v1/"
+      "url": "https://comidadibuteco.com.br/buteco/5668-revision-v1/",
+      "instagramPost": null
     },
     {
       "id": 35,
@@ -529,13 +563,14 @@
       "neighborhood": "Itapoã",
       "address": "R. São Miguel, 779 - antigo 1243 | Itapoã, Belo Horizonte - MG",
       "dish": "Porquinho Melado",
-      "desc": "Costelinha de porco ao melaço de rapadura, acompanhada de purê de batata com cenoura e alho-poró.",
+      "desc": "Costelinha de porco ao melaço de rapadura, limão-capeta e cachaça. Acompanhada de purê de batata, com cenoura e alho-poró.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09111656/barpompeu_porquinhomelado_isabelaaraujo_unibh-3547.jpg",
       "photoCredit": "Isabela Araújo UniBH",
       "visited": true,
       "rating": 7.75,
       "beerTemp": null,
-      "url": "https://comidadibuteco.com.br/buteco/3135-revision-v1/"
+      "url": "https://comidadibuteco.com.br/buteco/3135-revision-v1/",
+      "instagramPost": null
     },
     {
       "id": 36,
@@ -544,13 +579,14 @@
       "neighborhood": "Guarani",
       "address": "Av. Saramenha, 1599 | Guarani, Belo Horizonte - MG",
       "dish": "Porco à Mineira",
-      "desc": "Lombo suíno ao molho mineiro com couve refogada e mandioca dourada. Clássico que nunca erra.",
+      "desc": "Costelinha suína ao molho agridoce de goiaba com ragu de pernil, servida sobre polenta com muçarela, crispy de acelga e torradinhas de acompanhamento.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09111658/barstellaoficial_porcoamineira_bh_2026_rodneycosta_unibh-4700.jpg",
       "photoCredit": "Rodney Costa UniBH",
       "visited": true,
-      "rating": 6.67,
+      "rating": 6.8,
       "beerTemp": -8.0,
-      "url": "https://comidadibuteco.com.br/buteco/bar-stella/"
+      "url": "https://comidadibuteco.com.br/buteco/bar-stella/",
+      "instagramPost": null
     },
     {
       "id": 37,
@@ -559,13 +595,14 @@
       "neighborhood": "Santa Tereza",
       "address": "R. Pirite, 187 | Santa Teresa, Belo Horizonte - MG",
       "dish": "O Segredo da Força do Lampião",
-      "desc": "Prato poderoso com carne nordestina encontrando as verduras mineiras: uma fusão de histórias e sabores.",
+      "desc": "Polenta com costelinha suína e molho de espinafre.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09111700/bartematico_osegredodaforcadolampiao_bh_2026_rodneycosta_unibh-4664.jpg",
       "photoCredit": "Rodney Costa UniBH",
       "visited": false,
       "rating": null,
       "beerTemp": null,
-      "url": "https://comidadibuteco.com.br/buteco/bar-tematico-sta-teresa-2/"
+      "url": "https://comidadibuteco.com.br/buteco/bar-tematico-sta-teresa-2/",
+      "instagramPost": null
     },
     {
       "id": 38,
@@ -574,13 +611,14 @@
       "neighborhood": "Alípio de Melo",
       "address": "Av. dos Engenheiros, 1071 | Alípio de Melo, Belo Horizonte - MG",
       "dish": "Flor de Minas",
-      "desc": "Sobrecoxa desossada e empanada com mix de verduras, acompanhada de molho. Delicada como uma flor!",
+      "desc": "Sobrecoxa desossada e empanada com mix de verduras: couve, brócolis, couve-flor, repolho, tomate-cereja. Acompanhada de molho de manteiga com alho e cebola.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09111702/barrigudinha_flordeminas_bh_2026_luizafernandes_unibh-3472.jpg",
       "photoCredit": "Luiza Fernandes UniBH",
       "visited": false,
       "rating": null,
       "beerTemp": null,
-      "url": "https://comidadibuteco.com.br/buteco/barrigudinha-buteco/"
+      "url": "https://comidadibuteco.com.br/buteco/barrigudinha-buteco/",
+      "instagramPost": null
     },
     {
       "id": 39,
@@ -589,13 +627,14 @@
       "neighborhood": "Jardim América",
       "address": "R. Lindolfo de Azevedo, 1263 | Jardim América, Belo Horizonte - MG",
       "dish": "Pé na Roça",
-      "desc": "Dobradinha com pé de porco, calabresa, feijão-branco e crispy de couve. Pé firme na tradição!",
+      "desc": "Dobradinha com pé de porco, calabresa, feijão-branco e crispy de couve.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09111704/barzimdosamigos_penaroca_bh_2026_joaovictor_unibh-3489.jpg",
       "photoCredit": "João Victor UniBH",
       "visited": true,
       "rating": 8.5,
       "beerTemp": -7.3,
-      "url": "https://comidadibuteco.com.br/buteco/barzim-dos-amigos/"
+      "url": "https://comidadibuteco.com.br/buteco/barzim-dos-amigos/",
+      "instagramPost": null
     },
     {
       "id": 40,
@@ -604,13 +643,14 @@
       "neighborhood": "Dona Clara",
       "address": "R. Min. Orozimbo Nonato, 1053 | Dona Clara, Belo Horizonte - MG",
       "dish": "Conceição",
-      "desc": "Blend de carne recheado com queijo ao molho, gratinado, acompanhado de purê de canjica e pesto de couve.",
+      "desc": "Blend de carne recheada com queijo ao molho de tomate da casa, gratinada com queijo, acompanhada de purê de canjica de milho branco e pesto de couve.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09111805/bazim_conceicao_bh_2026_pauloti_unibh-4811.jpg",
       "photoCredit": "Paulo Ti UniBH",
       "visited": false,
       "rating": null,
       "beerTemp": null,
-      "url": "https://comidadibuteco.com.br/buteco/bazin-bar/"
+      "url": "https://comidadibuteco.com.br/buteco/bazin-bar/",
+      "instagramPost": null
     },
     {
       "id": 41,
@@ -619,13 +659,14 @@
       "neighborhood": "Centro",
       "address": "R. dos Tamoios, 232 | Centro, Belo Horizonte - MG",
       "dish": "Verde que te quero rabo!",
-      "desc": "Rabada desfiada com cuscuz, vinagrete de alho-poró e creme verde de agrião. Tradição com frescor.",
+      "desc": "Rabada desfiada com cuscuz, acompanhada de vinagrete de alho-poró e creme verde de agrião.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09111807/becorestaurante_verdequetequerorabo_bh_2026_pauloti_unibh-4495.jpg",
       "photoCredit": "Paulo Ti UniBH",
       "visited": false,
       "rating": null,
       "beerTemp": null,
-      "url": "https://comidadibuteco.com.br/buteco/beco-restaurante/"
+      "url": "https://comidadibuteco.com.br/buteco/beco-restaurante/",
+      "instagramPost": null
     },
     {
       "id": 42,
@@ -634,13 +675,14 @@
       "neighborhood": "Alípio de Melo",
       "address": "Rua dos Odontólogos, 422 | Belo Horizonte - MG",
       "dish": "Bello Murro",
-      "desc": "Batatinhas ao murro cobertas com pernil desfiado, repolho roxo e farofa de quiabo com calabresa e passas.",
+      "desc": "Batatinhas ao murro, douradas na manteiga com mostarda, cobertas com pernil desfiado, repolho-roxo e farofa crocante de quiabo com calabresa e passas.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09111809/bellabar_bellomurro_bh_2026_pauloti_unibh-4781.jpg",
       "photoCredit": "Paulo Ti UniBH",
       "visited": false,
       "rating": null,
       "beerTemp": null,
-      "url": "https://comidadibuteco.com.br/buteco/bella-bar-e-restaurante/"
+      "url": "https://comidadibuteco.com.br/buteco/bella-bar-e-restaurante/",
+      "instagramPost": null
     },
     {
       "id": 43,
@@ -649,13 +691,14 @@
       "neighborhood": "São Pedro",
       "address": "R. Major Lopes, 7 | São Pedro, Belo Horizonte - MG",
       "dish": "Nascif Corrêa",
-      "desc": "Musseline de couve-flor, ragu de lombo, chucrute de repolho e gergelim, acompanhada de nachos.",
+      "desc": "Musseline de couve-flor, ragu de lombo defumado desconstruído, chucrute de repolho e semente de gergelim, acompanhada de nachos.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09111810/boimajor_nacifcorrea_bh_2026_rodneycosta_unibh-4323.jpg",
       "photoCredit": "Rodney Costa UniBH",
-      "visited": false,
-      "rating": null,
-      "beerTemp": null,
-      "url": "https://comidadibuteco.com.br/buteco/boi-major/"
+      "visited": true,
+      "rating": 9.0,
+      "beerTemp": -0.3,
+      "url": "https://comidadibuteco.com.br/buteco/boi-major/",
+      "instagramPost": null
     },
     {
       "id": 44,
@@ -664,13 +707,14 @@
       "neighborhood": "Padre Eustáquio",
       "address": "R. Jacarina, 86 | Padre Eustáquio, Belo Horizonte - MG",
       "dish": "Trem de Minas",
-      "desc": "Clássico mineiro em versão botequeira: carnes, couve e mandioca como Minas manda fazer.",
+      "desc": "Bolinho de aipim recheado com torresmo de barriga desfiado e couve. Acompanha maionese de limão.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09111812/boteco86_tremdeminas_bh_2026_pauloti_unibh-4902.jpg",
       "photoCredit": "Paulo Ti UniBH",
-      "visited": false,
-      "rating": null,
-      "beerTemp": null,
-      "url": "https://comidadibuteco.com.br/buteco/boteco-86/"
+      "visited": true,
+      "rating": 8.5,
+      "beerTemp": -0.8,
+      "url": "https://comidadibuteco.com.br/buteco/boteco-86/",
+      "instagramPost": null
     },
     {
       "id": 45,
@@ -679,13 +723,14 @@
       "neighborhood": "Buritis",
       "address": "Rua Vitório Magnavacca, 39 | Buritis, Belo Horizonte - MG",
       "dish": "Boi Bumbá",
-      "desc": "Carne de boi cozida ao molho de alho-poró, batata e bacon. Festa de sabores em cada colherada!",
+      "desc": "Carne de boi cozida ao molho de alho-poró, batata e bacon.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09111914/botequimburitis_boibumba_bh_2026_pauloti_unibh-4077.jpg",
       "photoCredit": "Paulo Ti UniBH",
-      "visited": false,
-      "rating": null,
-      "beerTemp": null,
-      "url": "https://comidadibuteco.com.br/buteco/botequim-buritis/"
+      "visited": true,
+      "rating": 8.0,
+      "beerTemp": -3.2,
+      "url": "https://comidadibuteco.com.br/buteco/botequim-buritis/",
+      "instagramPost": null
     },
     {
       "id": 46,
@@ -694,13 +739,14 @@
       "neighborhood": "Dona Clara",
       "address": "R. Líbero Badaró, 493 | Dona Clara, Belo Horizonte - MG",
       "dish": "Sabores de Vó Maria",
-      "desc": "Costelinha ao molho com rapadura, acompanhada de canjiquinha cremosa e couve crispy. Abraço de vó!",
+      "desc": "Costelinha ao molho de cerveja preta com rapadura acompanhada de canjiquinha cremosa e couve crispy.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09111916/botecodolele_saboresdavomaria_isabelaaraujo_unibh-3258.jpg",
       "photoCredit": "Isabela Araújo UniBH",
       "visited": false,
       "rating": null,
       "beerTemp": null,
-      "url": "https://comidadibuteco.com.br/buteco/3151-autosave-v1/"
+      "url": "https://comidadibuteco.com.br/buteco/3151-autosave-v1/",
+      "instagramPost": null
     },
     {
       "id": 47,
@@ -708,14 +754,15 @@
       "region": "Oeste",
       "neighborhood": "Jardim Atlântico",
       "address": "Av. Virgílio de Melo Franco, 400 | Jardim Atlântico, Belo Horizonte - MG",
-      "dish": "Escondidão Tô D'Boa",
-      "desc": "Pernil cozido com molho, creme de batata com muçarela, couve agridoce. Escondido de bom que é!",
+      "dish": "Escondidão Tô D’ Boa",
+      "desc": "Pernil cozido com molho especial, creme de batata com queijo muçarela, couve agridoce.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09111918/butecotodeboa_escondidinhotodeboa_bh_2026_rodneycosta_unibh-3587.jpg",
       "photoCredit": "Rodney Costa UniBH",
       "visited": true,
       "rating": 10.0,
       "beerTemp": -7.3,
-      "url": "https://comidadibuteco.com.br/buteco/buteco-to-dboa/"
+      "url": "https://comidadibuteco.com.br/buteco/buteco-to-dboa/",
+      "instagramPost": null
     },
     {
       "id": 48,
@@ -723,14 +770,15 @@
       "region": "Oeste",
       "neighborhood": "Jardim Atlântico",
       "address": "R. Ernesto Braga, 2 | Jardim Atlântico, Belo Horizonte - MG",
-      "dish": "Nuhhh!!! de Rocha Véi",
-      "desc": "Escondidinho de carne de panela com agrião, coberto de purê de couve-flor e queijo gratinado.",
+      "dish": "Nuhhh!!! de Rocha véi",
+      "desc": "Escondidim de carne de panela ao moio de cerveja preta com agrião, coberto com trem de um purê de couve-flor que nuhhh!. E, para ficar ainda mió, pra terminar, um queijinho gratinadim por cima de tudim. Vai tamém um pãozinho quentim e farofinha de vó, para aproveitar até o final.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09111920/butecosbar_nuhderochavei_bh_2026_rodneycosta_unibh-5132.jpg",
       "photoCredit": "Rodney Costa UniBH",
       "visited": true,
       "rating": 8.2,
       "beerTemp": -5.3,
-      "url": "https://comidadibuteco.com.br/buteco/3145-revision-v1/"
+      "url": "https://comidadibuteco.com.br/buteco/3145-revision-v1/",
+      "instagramPost": null
     },
     {
       "id": 49,
@@ -739,13 +787,14 @@
       "neighborhood": "Prado",
       "address": "Avenida Francisco Sá, 325 | Belo Horizonte - MG",
       "dish": "Quituti Árabe",
-      "desc": "Charuto de repolho recheado com arroz e carne moída. Acompanha disco de kafta grelhado e molho.",
+      "desc": "Charuto de repolho recheado com arroz, carne moída e especiarias. Acompanhado de disco de kafta grelhado com molho da casa.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09111922/butiquim325_quitutiarabe_bh_2026_vicentealexandre_unibh-3630.jpg",
       "photoCredit": "Vicente Alexandre UniBH",
       "visited": false,
       "rating": null,
       "beerTemp": null,
-      "url": "https://comidadibuteco.com.br/buteco/butiquim-325/"
+      "url": "https://comidadibuteco.com.br/buteco/butiquim-325/",
+      "instagramPost": null
     },
     {
       "id": 50,
@@ -754,13 +803,14 @@
       "neighborhood": "Itapoã",
       "address": "Av. Gen. Olímpio Mourão Filho, 754 | Itapoã, Belo Horizonte - MG",
       "dish": "Língua Dobrada",
-      "desc": "Língua com dobradinha bovina, pele suína e champignon. Acompanha purê de couve-flor cremoso.",
+      "desc": "Língua com dobradinha bovina, pele suína e champignon. Acompanha: purê de couve-flor.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09112024/butiquimonceta_linguadobradacomchampignonepuredecouveflor_bh_2026_rodneycosta_unibh-4256.jpg",
       "photoCredit": "Rodney Costa UniBH",
       "visited": true,
-      "rating": 7.5,
+      "rating": 7.86,
       "beerTemp": -6.6,
-      "url": "https://comidadibuteco.com.br/buteco/butiquim-on-ce-ta/"
+      "url": "https://comidadibuteco.com.br/buteco/butiquim-on-ce-ta/",
+      "instagramPost": null
     },
     {
       "id": 51,
@@ -769,14 +819,15 @@
       "neighborhood": "Centro",
       "address": "Rua dos Tupinambás, 638 | Centro, Belo Horizonte - MG",
       "dish": "Picadim",
-      "desc": "Picadinho de carne bovina, acompanhado de sunomono de talo de couve, torradas e nuvem de queijo parmesão.",
+      "desc": "Picadinho de carne bovina, acompanhado de sunomono de talo de couve, torradas e finalizado com nuvem de queijo parmesão.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09112026/cafepalhares_picadimdecarne_bh_2026_rodneycosta_unibh-4797.jpg",
       "photoCredit": "Rodney Costa UniBH",
       "champion": true,
       "visited": false,
       "rating": null,
       "beerTemp": null,
-      "url": "https://comidadibuteco.com.br/buteco/3149-revision-v1/"
+      "url": "https://comidadibuteco.com.br/buteco/3149-revision-v1/",
+      "instagramPost": null
     },
     {
       "id": 52,
@@ -785,13 +836,14 @@
       "neighborhood": "Cidade Nova",
       "address": "R. Luther King, 242 | Cidade Nova, Belo Horizonte - MG",
       "dish": "Frango Raiz",
-      "desc": "Sobrecoxa ensopada com ora-pro-nóbis e polenta. Receita que remete ao fogão a lenha da vovó.",
+      "desc": "Sobrecoxa ensopada com ora-pro-nóbis e polenta.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09112028/camisolabar_frangoraiz_bh_2026_vicentealexandre_unibh-3575.jpg",
       "photoCredit": "Vicente Alexandre UniBH",
       "visited": false,
       "rating": null,
       "beerTemp": null,
-      "url": "https://comidadibuteco.com.br/buteco/camisola-bar/"
+      "url": "https://comidadibuteco.com.br/buteco/camisola-bar/",
+      "instagramPost": null
     },
     {
       "id": 53,
@@ -800,7 +852,7 @@
       "neighborhood": "Caiçara",
       "address": "R. Realengo, 150 | Caiçara, Belo Horizonte - MG",
       "dish": "Porco Atolado na Lama",
-      "desc": "Lombo suíno atolado em mandioca cozida com ora-pro-nóbis e molho encorpado da casa.",
+      "desc": "Carne e pé de porco, molho de tomate e cebola. Acompanha tempurá de ora-pro-nóbis, refogado de mostarda e creme de milho.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09112030/cantinaartequintal_porcoatoladonalama_juliacristine_unibh-3312.jpg",
       "photoCredit": "Julia Cristine UniBH",
       "visited": false,
@@ -815,13 +867,14 @@
       "neighborhood": "São Geraldo",
       "address": "R. Itaité, 422 | São Geraldo, Belo Horizonte - MG",
       "dish": "Espírito de Porco",
-      "desc": "Corte suíno com molho baiano e toque de verduras frescas. Uma viagem de sabores no coração de BH.",
+      "desc": "Bisteca ao molho com purê de batata com alho-poró.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09112031/cantinhodabaiana_espiritodeporco_bh_2026_rodneycosta_unibh-4418.jpg",
       "photoCredit": "Rodney Costa UniBH",
       "visited": true,
-      "rating": 7.67,
+      "rating": 7.5,
       "beerTemp": null,
-      "url": "https://comidadibuteco.com.br/buteco/cantinho-da-baiana/"
+      "url": "https://comidadibuteco.com.br/buteco/cantinho-da-baiana/",
+      "instagramPost": null
     },
     {
       "id": 55,
@@ -830,13 +883,14 @@
       "neighborhood": "Santa Tereza",
       "address": "Rua Mármore, 817 | Belo Horizonte - MG",
       "dish": "Sabor Ancestral",
-      "desc": "Charutinho de repolho-roxo recheado com ragu de pernil. Creme de abóbora com glass de bacon e crispy de couve.",
+      "desc": "Charutinho de repolho-roxo recheado com ragu de pernil, acompanha creme de abóbora regado com glass de bacon e crispy de couve.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09112135/barcasamojuba_saborancestral_bh_2026_pauloti_unibh-4980.jpg",
       "photoCredit": "Paulo Ti UniBH",
       "visited": false,
       "rating": null,
       "beerTemp": null,
-      "url": "https://comidadibuteco.com.br/buteco/casa-mojuba/"
+      "url": "https://comidadibuteco.com.br/buteco/casa-mojuba/",
+      "instagramPost": null
     },
     {
       "id": 56,
@@ -844,14 +898,15 @@
       "region": "Norte",
       "neighborhood": "Guarani",
       "address": "Av. Waldomiro Lobo, 305 | Guarani, Belo Horizonte - MG",
-      "dish": "O Giro du Aio Poró!",
-      "desc": "Girassol de batatas assadas no azeite de ervas, frango desfiado com bacon, envolto em cream cheese e alho-poró, finalizado com queijo maçaricado.",
+      "dish": "O Giro du Aio-Poró!",
+      "desc": "Girassol de batatas assadas no azeite de ervas, frango desfiado com bacon, envolto em cream cheese e alho-poró e finalizado com queijo maçaricado.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09112137/chapamagica_girodoaioporo_bh_2026_kaiqueamorim_unibh-3799.jpg",
       "photoCredit": "Kaique Amorim UniBH",
       "visited": true,
-      "rating": 7.5,
+      "rating": 7.4,
       "beerTemp": -2.6,
-      "url": "https://comidadibuteco.com.br/buteco/chapa-magica/"
+      "url": "https://comidadibuteco.com.br/buteco/chapa-magica/",
+      "instagramPost": null
     },
     {
       "id": 57,
@@ -860,13 +915,14 @@
       "neighborhood": "Estrela do Oriente",
       "address": "R. Chico Rei, 190 | Estrela do Oriente, Belo Horizonte - MG",
       "dish": "Fondue de Buteco",
-      "desc": "Trouxinhas de bacon e lombo recheado com ricota e espinafre, acompanhado de fondue de queijos e abacaxi.",
+      "desc": "Trouxinhas de bacon, lombo recheado com ricota e espinafre acompanhado de um fondue de queijos mineiros, abacaxi com molho agridoce.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09112138/choperiaamericanortesul_fonduedebuteco_bh_2026_julianunes_unibh-3674.jpg",
       "photoCredit": "Julia Nunes UniBH",
       "visited": false,
       "rating": null,
       "beerTemp": null,
-      "url": "https://comidadibuteco.com.br/buteco/choperia-america-norte-sul/"
+      "url": "https://comidadibuteco.com.br/buteco/choperia-america-norte-sul/",
+      "instagramPost": null
     },
     {
       "id": 58,
@@ -875,13 +931,14 @@
       "neighborhood": "Nova Granada",
       "address": "R. Garret, 263 | Nova Granada, Belo Horizonte - MG",
       "dish": "O Sabor na Lata",
-      "desc": "Carne de lata suína, acompanhada de molho sugo com almeirão. Sabor de boteco guardado com carinho.",
+      "desc": "Carne de lata suína, acompanhada de molho sugo com almeirão.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09112140/choppdaesquina_sabornalata_bh_2026_rodneycosta_unibh-5096.jpg",
       "photoCredit": "Rodney Costa UniBH",
       "visited": true,
       "rating": 7.0,
       "beerTemp": -3.1,
-      "url": "https://comidadibuteco.com.br/buteco/chopp-da-esquina/"
+      "url": "https://comidadibuteco.com.br/buteco/chopp-da-esquina/",
+      "instagramPost": null
     },
     {
       "id": 59,
@@ -890,13 +947,14 @@
       "neighborhood": "Castelo",
       "address": "Rua Desembargador José Satyro, 451 | Belo Horizonte - MG",
       "dish": "Linguiça Estourada Cipoeiro",
-      "desc": "Linguiça estourada com pimenta-biquinho, angu de milho-verde frito, ora-pro-nóbis e geleia de goiabada.",
+      "desc": "Linguiça estourada com pimenta-biquinho, acompanhada de angu de milho-verde frito, ora-pro-nóbis e geleia de goiabada.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09112242/cipoeiro_linguicaestouradacipoeiro_bh_2026_rodneycosta_unibh-3437.jpg",
       "photoCredit": "Rodney Costa UniBH",
       "visited": false,
       "rating": null,
       "beerTemp": null,
-      "url": "https://comidadibuteco.com.br/buteco/cipoeiro-bar/"
+      "url": "https://comidadibuteco.com.br/buteco/cipoeiro-bar/",
+      "instagramPost": null
     },
     {
       "id": 60,
@@ -905,13 +963,14 @@
       "neighborhood": "Prado",
       "address": "Av. Francisco Sá, 306 | Belo Horizonte - MG",
       "dish": "Rabada Embriagada",
-      "desc": "Rabada ao vinho com agrião e batata. Uma rabada que bebeu bem e ficou mais gostosa ainda!",
+      "desc": "Rabada ao vinho com agrião e batata.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09112243/comidaeprosa_rabadaembriagada_ludmylasandrin_unibh-3894.jpg",
       "photoCredit": "Ludmyla Sandrin UniBH",
       "visited": false,
       "rating": null,
       "beerTemp": null,
-      "url": "https://comidadibuteco.com.br/buteco/comida-prosa/"
+      "url": "https://comidadibuteco.com.br/buteco/comida-prosa/",
+      "instagramPost": null
     },
     {
       "id": 61,
@@ -920,13 +979,14 @@
       "neighborhood": "Floramar",
       "address": "Avenida Joaquim Clemente, 682 | Floramar, Belo Horizonte - MG",
       "dish": "Pescoço do Dino",
-      "desc": "Pescoço de boi com farofa de alho e brócolis no vapor. Grande e saboroso como um dinossauro!",
+      "desc": "Pescoço de boi com farofa de alho e brócolis no vapor.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09112245/campanhiadodino_pescocodeboidodino_rodneycosta_unibh-3209.jpg",
       "photoCredit": "Rodney Costa UniBH",
       "visited": true,
-      "rating": 9.0,
+      "rating": 8.8,
       "beerTemp": -6.6,
-      "url": "https://comidadibuteco.com.br/buteco/companhia-do-dino/"
+      "url": "https://comidadibuteco.com.br/buteco/companhia-do-dino/",
+      "instagramPost": null
     },
     {
       "id": 62,
@@ -934,14 +994,15 @@
       "region": "Oeste",
       "neighborhood": "Prado",
       "address": "Av. Francisco Sá, 280 | Prado, Belo Horizonte - MG",
-      "dish": "Couve-flor à Cervejeira",
-      "desc": "Paleta cozida na cerveja preta com calabresa e champignon, acompanhada de purê de couve-flor cremoso.",
+      "dish": "Couve-flor á cervejeira",
+      "desc": "Paleta cozida na cerveja preta, com calabresa e champignon, acompanhada de purê de couve-flor.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09112247/conectadosbar_couvefloracervejeira_bh_2026_rodneycosta_unibh-5113.jpg",
       "photoCredit": "Rodney Costa UniBH",
       "visited": false,
       "rating": null,
       "beerTemp": null,
-      "url": "https://comidadibuteco.com.br/buteco/conectados-bar/"
+      "url": "https://comidadibuteco.com.br/buteco/conectados-bar/",
+      "instagramPost": null
     },
     {
       "id": 63,
@@ -950,13 +1011,14 @@
       "neighborhood": "Santa Inês",
       "address": "R. Vicente Risola, 1305 | Santa Inês, Belo Horizonte - MG",
       "dish": "Firmamento",
-      "desc": "Corte bovino ao molho escuro, acompanhado de purê de couve-flor e crispy de batata. Prato estelar!",
+      "desc": "Carne de porco, farofa de couve, tiras de bacon e molho de geleia de abacaxi com pimenta.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09112249/cosmos_firmamento_bh_2026_julianunes_unibh-3756.jpg",
       "photoCredit": "Julia Nunes UniBH",
       "visited": true,
-      "rating": 8.86,
+      "rating": 8.71,
       "beerTemp": -3.3,
-      "url": "https://comidadibuteco.com.br/buteco/cosmos/"
+      "url": "https://comidadibuteco.com.br/buteco/cosmos/",
+      "instagramPost": null
     },
     {
       "id": 64,
@@ -965,13 +1027,14 @@
       "neighborhood": "Manacás",
       "address": "R. Desembargador José Satyro, 302 | Manacás, Belo Horizonte - MG",
       "dish": "Glu Glu à Baiana",
-      "desc": "Pescoço de peru à baiana, com temperos nordestinos encontrando as verduras mineiras em fusão única.",
+      "desc": "Pescoço de peru à baiana.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09112350/deckboibabrasa_glugluabaiana_bh_2026_pauloti_unibh-4994.jpg",
       "photoCredit": "Paulo Ti UniBH",
-      "visited": false,
-      "rating": null,
+      "visited": true,
+      "rating": 8.0,
       "beerTemp": null,
-      "url": "https://comidadibuteco.com.br/buteco/deck-boi-na-brasa/"
+      "url": "https://comidadibuteco.com.br/buteco/deck-boi-na-brasa/",
+      "instagramPost": null
     },
     {
       "id": 65,
@@ -980,13 +1043,14 @@
       "neighborhood": "Centro",
       "address": "R. Rio de Janeiro, 1205 | Centro, Belo Horizonte - MG",
       "dish": "Gira Gosto",
-      "desc": "Bolinho de espinafre recheado de costelinha e queijo. Acompanha molho de alho e geleia de abacaxi picante.",
+      "desc": "Bolinho crocante de espinafre, recheado de costelinha e queijo. Acompanha molho de alho e geleia de abacaxi picante.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09112352/donadora_giragosto_bh_2026_pauloti_unibh-4112.jpg",
       "photoCredit": "Paulo Ti UniBH",
-      "visited": false,
-      "rating": null,
-      "beerTemp": null,
-      "url": "https://comidadibuteco.com.br/buteco/dona-dora/"
+      "visited": true,
+      "rating": 9.0,
+      "beerTemp": -8.0,
+      "url": "https://comidadibuteco.com.br/buteco/dona-dora/",
+      "instagramPost": null
     },
     {
       "id": 66,
@@ -995,13 +1059,14 @@
       "neighborhood": "Jardim Vitória",
       "address": "Rua dos Borges, 1520 | Jardim Vitória, Belo Horizonte - MG",
       "dish": "Coisa de Vó",
-      "desc": "Pescoço de boi marinado com couve-flor ao molho branco especial e fios de alho-poró frito.",
+      "desc": "Pescoço de boi (acém) marinado. Acompanhado de couve-flor com molho branco especial e fios de alho-poró frito.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09112354/donajugastrobar_coisadevo_isaquerodrigues_unibh-3289.jpg",
       "photoCredit": "Isaque Rodrigues UniBH",
       "visited": true,
-      "rating": 9.4,
+      "rating": 9.2,
       "beerTemp": -3.3,
-      "url": "https://comidadibuteco.com.br/buteco/dona-ju-gastro-bar/"
+      "url": "https://comidadibuteco.com.br/buteco/dona-ju-gastro-bar/",
+      "instagramPost": null
     },
     {
       "id": 67,
@@ -1010,13 +1075,14 @@
       "neighborhood": "São João Batista",
       "address": "Av. João Samaha, 390 | São João Batista (Venda Nova), Belo Horizonte - MG",
       "dish": "Poró de Gala e Costela na Panela",
-      "desc": "Costelinha suína servida com purê de batata ao alho-poró e queijo gratinado, acompanhada de barbecue mineiro.",
+      "desc": "Costelinha suína de panela, servida com purê de batata ao alho-poró e queijo gratinado, acompanhada de barbecue mineiro.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09112356/donasuica_porodegalaecostelanapanela_bh_2026_rodneycosta_unibh-4460.jpg",
       "photoCredit": "Rodney Costa UniBH",
       "visited": false,
       "rating": null,
       "beerTemp": null,
-      "url": "https://comidadibuteco.com.br/buteco/3157-revision-v1/"
+      "url": "https://comidadibuteco.com.br/buteco/3157-revision-v1/",
+      "instagramPost": null
     },
     {
       "id": 68,
@@ -1025,13 +1091,14 @@
       "neighborhood": "Cachoeirinha",
       "address": "Rua Olavo Andrade, 195 | Belo Horizonte - MG",
       "dish": "Sonho de Salsa",
-      "desc": "Bombom salgado com o sabor e o frescor da salsa e molho de alho com beterraba. Uma surpresa deliciosa.",
+      "desc": "Bombom salgado com o sabor e o frescor da salsa e molho de alho com beterraba.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09112357/emporiolais_sanhodesalsa_bh_206_pauloti_unibh-5026-1024x684.jpg",
       "photoCredit": "Paulo Ti UniBH",
       "visited": false,
       "rating": null,
       "beerTemp": null,
-      "url": "https://comidadibuteco.com.br/buteco/emporio-lais/"
+      "url": "https://comidadibuteco.com.br/buteco/emporio-lais/",
+      "instagramPost": null
     },
     {
       "id": 69,
@@ -1040,13 +1107,14 @@
       "neighborhood": "Barreiro",
       "address": "R. São Paulo da Cruz, 357 | Barreiro, Belo Horizonte - MG",
       "dish": "Ora pro Boi",
-      "desc": "Cubos de carne bovina grelhados no espeto, servidos com ora-pro-nóbis refogado e farofa crocante.",
+      "desc": "Coxão mole, purê de batata e ora-pro-nóbis.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09112459/espetinhodoboi_oraproboi_bh_2026_pauloti_unibh-4969.jpg",
       "photoCredit": "Paulo Ti UniBH",
       "visited": true,
       "rating": 8.25,
       "beerTemp": null,
-      "url": "https://comidadibuteco.com.br/buteco/espetinho-do-boi/"
+      "url": "https://comidadibuteco.com.br/buteco/espetinho-do-boi/",
+      "instagramPost": null
     },
     {
       "id": 70,
@@ -1054,14 +1122,15 @@
       "region": "Venda Nova",
       "neighborhood": "Mantiqueira",
       "address": "Praça Manoel Batista Baía, 235 | Belo Horizonte - MG",
-      "dish": "Vaca Louca na Horta",
-      "desc": "Acém com osso, servido com purê de couve-flor, regado com pesto de alho-poró e finalizado com couve crispy. Acompanha torradas.",
+      "dish": "Vaca Louca Na Horta",
+      "desc": "Acém com osso, servido com purê de couve-flor, regado com aromático pesto de alho-poró e finalizado com couve crispy. Acompanha torradas de alho-poró.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09112501/espetinhodotilias_vacaloucanahorta_bh_2026_rodneycosta_unibh-3561.jpg",
       "photoCredit": "Rodney Costa UniBH",
       "visited": true,
-      "rating": 7.29,
+      "rating": 7.11,
       "beerTemp": 0.3,
-      "url": "https://comidadibuteco.com.br/buteco/espetinho-do-tilias/"
+      "url": "https://comidadibuteco.com.br/buteco/espetinho-do-tilias/",
+      "instagramPost": null
     },
     {
       "id": 71,
@@ -1070,13 +1139,14 @@
       "neighborhood": "Santa Amélia",
       "address": "Av. Guarapari, 1281 | Belo Horizonte - MG",
       "dish": "Musconóbis",
-      "desc": "Músculo acompanhado de polenta e ora-pro-nóbis. A realeza dos espetinhos com o nobre da horta!",
+      "desc": "Músculo, acompanhado de polenta e ora-pro-nóbis.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09112503/espetinhoreiefamilia_musconobes_bh_2026_rodneycosta_unibh-4218.jpg",
       "photoCredit": "Rodney Costa UniBH",
       "visited": true,
       "rating": 8.0,
       "beerTemp": -8.7,
-      "url": "https://comidadibuteco.com.br/buteco/espetinho-rei-e-familia/"
+      "url": "https://comidadibuteco.com.br/buteco/espetinho-rei-e-familia/",
+      "instagramPost": null
     },
     {
       "id": 72,
@@ -1084,14 +1154,15 @@
       "region": "Centro-Sul",
       "neighborhood": "São Pedro",
       "address": "Rua Cristina, 870 | Belo Horizonte - MG",
-      "dish": "Vulcão Oásis Quió",
-      "desc": "Disco de carne recheada com creme de rúcula, guarnecido de polenta mole, molho e mostarda crocante.",
+      "dish": "Vulcão oásis Quió",
+      "desc": "Disco de carne recheada com creme de rúcula, guarnecido de polenta mole, molho da casa, mostarda crocante.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09112504/espetinhosaopedroquio_vulcaonooasisquio_bh_2026_rodneycosta_unibh-4430.jpg",
       "photoCredit": "Rodney Costa UniBH",
       "visited": false,
       "rating": null,
       "beerTemp": null,
-      "url": "https://comidadibuteco.com.br/buteco/espetinho-sao-pedro-quio/"
+      "url": "https://comidadibuteco.com.br/buteko/espetinho-sao-pedro-quio/",
+      "instagramPost": null
     },
     {
       "id": 73,
@@ -1099,14 +1170,15 @@
       "region": "Oeste",
       "neighborhood": "Buritis",
       "address": "R. Eli Seabra Filho, 510 | Buritis, Belo Horizonte - MG",
-      "dish": "Moela da Tia",
-      "desc": "Moela ao molho de tomate e alho-poró, acompanhada de minipães franceses e cheiro-verde.",
+      "dish": "“Moela da Tia”",
+      "desc": "Moela ao molho de tomate caseiro e alho-poró. Temperada com bacon e páprica defumada. Acompanhada de minipães franceses e cheiro-verde.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09112506/espettinho.com_moeladatia_bh_2026_rodneycosta_unibh-4452.jpg",
       "photoCredit": "Rodney Costa UniBH",
-      "visited": false,
-      "rating": null,
-      "beerTemp": null,
-      "url": "https://comidadibuteco.com.br/buteco/espetinho-com/"
+      "visited": true,
+      "rating": 6.5,
+      "beerTemp": -5.9,
+      "url": "https://comidadibuteco.com.br/buteco/espetinho-com/",
+      "instagramPost": null
     },
     {
       "id": 74,
@@ -1115,13 +1187,14 @@
       "neighborhood": "Santa Efigênia",
       "address": "Rua Coronel Otávio Diniz, 449 | Belo Horizonte - MG",
       "dish": "Espinafrou a Trouxinha",
-      "desc": "Trouxinha de espinafre recheada com carne e queijo, finalizada com molho especial da casa.",
+      "desc": "Trouxinha de lombo recheada com espinafre, ricota e abacaxi, acompanhada de bolinho de espinafre com ricota e molho da redução do caldo da carne (demi-glace).",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09112608/galpaoflordocampo_espinafrouatrouxinha_bh_2026_rodneycosta_unibh-3862.jpg",
       "photoCredit": "Rodney Costa UniBH",
       "visited": false,
       "rating": null,
       "beerTemp": null,
-      "url": "https://comidadibuteco.com.br/buteco/galpao-flor-do-campo/"
+      "url": "https://comidadibuteco.com.br/buteco/galpao-flor-do-campo/",
+      "instagramPost": null
     },
     {
       "id": 75,
@@ -1130,13 +1203,14 @@
       "neighborhood": "Planalto",
       "address": "Av. Doutor Cristiano Guimarães, 1258 | Planalto, Belo Horizonte - MG",
       "dish": "Sereia do Bar",
-      "desc": "Peixe ao molho especial com verduras da horta, servido em apresentação que encanta os olhos e o paladar.",
+      "desc": "Tiras de tilápia empanadas com gergelim, purê de batata com espinafre, cebola ao suco de morango e molho especial.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09112610/garaggevintage_seriodobar_bh_2026_kaiqueamorim_unibh-3686.jpg",
       "photoCredit": "Kaique Amorim UniBH",
       "visited": true,
-      "rating": 7.83,
+      "rating": 7.57,
       "beerTemp": -5.3,
-      "url": "https://comidadibuteco.com.br/buteco/garagge-vintage/"
+      "url": "https://comidadibuteco.com.br/buteco/garagge-vintage/",
+      "instagramPost": null
     },
     {
       "id": 76,
@@ -1145,13 +1219,14 @@
       "neighborhood": "Grajaú",
       "address": "Rua Contria, 1459 | Grajaú, Belo Horizonte - MG",
       "dish": "Costelinha do Papai",
-      "desc": "Costelinha suada, farofa de milho com bacon acompanhada de almeirão refogado. Carinho de pai no prato!",
+      "desc": "Costelinha suada, farofa de milho com bacon acompanhado de almeirão refogado.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/02/12060043/cdb26_kv-1536x864.png",
       "photoCredit": "Divulgação Comida di Buteco",
       "visited": false,
       "rating": null,
       "beerTemp": null,
-      "url": "https://comidadibuteco.com.br/buteco/geraldin-da-cida/"
+      "url": "https://comidadibuteco.com.br/buteco/geraldin-da-cida/",
+      "instagramPost": null
     },
     {
       "id": 77,
@@ -1159,14 +1234,15 @@
       "region": "Barreiro",
       "neighborhood": "Milionários",
       "address": "R. Amílcar Cabral, 515 | Milionários, Belo Horizonte - MG",
-      "dish": "Coxa Supreme ao Alho Poró",
-      "desc": "Sobrecoxa empanada e dourada, servida sobre cama de alho-poró caramelizado e molho especial da casa.",
+      "dish": "Coxa Supreme ao Alho-Poró",
+      "desc": "Coxa de frango recheada com cream cheese e alho-poró, servida com um molho especial da casa.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09112612/goldengrill_coxasuprimeaoalhoporo_bh_2026_rodneycosta_unibh-4571.jpg",
       "photoCredit": "Rodney Costa UniBH",
       "visited": true,
-      "rating": 8.83,
+      "rating": 9.33,
       "beerTemp": null,
-      "url": "https://comidadibuteco.com.br/buteco/golden-grill/"
+      "url": "https://comidadibuteco.com.br/buteco/golden-grill/",
+      "instagramPost": null
     },
     {
       "id": 78,
@@ -1175,13 +1251,14 @@
       "neighborhood": "Centro",
       "address": "Av. Augusto de Lima, 233 | Belo Horizonte - MG",
       "dish": "Bolim com Nóbis",
-      "desc": "Bolinho de mandioca com linguiça, acompanhado de molho pesto de ora-pro-nóbis. Criatividade botequeira!",
+      "desc": "Bolinho de mandioca com linguiça calabresa, com molho pesto de ora-pro-nóbis.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09112614/grafficabar_bolmcomnobris_bh_2026_pauloamorim_unibh-3381.jpg",
       "photoCredit": "Paulo Amorim UniBH",
       "visited": false,
       "rating": null,
       "beerTemp": null,
-      "url": "https://comidadibuteco.com.br/buteco/graffica-bar/"
+      "url": "https://comidadibuteco.com.br/buteco/graffica-bar/",
+      "instagramPost": null
     },
     {
       "id": 79,
@@ -1189,14 +1266,15 @@
       "region": "Leste",
       "neighborhood": "Santa Tereza",
       "address": "R. Almandina, 56 | Santa Teresa, Belo Horizonte - MG",
-      "dish": "Moela ao molho com Peixinho da Horta pra nadar!",
-      "desc": "Moela ao molho encorpado, acompanhada de almeirão refogado (o 'peixinho da horta') e farofa.",
+      "dish": "Moela ao molho com peixinho da horta pra nadar!",
+      "desc": "Moelinha ao molho acompanhada de crocantes folhas de peixinho da horta empanadas e fritas.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09112615/iracema_moelaaomolhocompeixinhodahortapronadar_bh_2026_pauloti_unibh-4030.jpg",
       "photoCredit": "Paulo Ti UniBH",
       "visited": false,
       "rating": null,
       "beerTemp": null,
-      "url": "https://comidadibuteco.com.br/buteco/iracema-bar/"
+      "url": "https://comidadibuteco.com.br/buteco/iracema-bar/",
+      "instagramPost": null
     },
     {
       "id": 80,
@@ -1205,13 +1283,14 @@
       "neighborhood": "Planalto",
       "address": "Rua Professor Tristão da Cunha, 183 | Planalto, Belo Horizonte - MG",
       "dish": "IVOquei o Porco",
-      "desc": "Porco ao molho com ervas frescas e crispy de verduras. Um 'ivo' de sabor em cada garfada!",
+      "desc": "Bolinho de linguiça recheado com couve e queijo. Acompanha molho da casa.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09112717/ivogrill_ivoqueioporco_bh_2026_joaovictor_unibh-3950.jpg",
       "photoCredit": "João Victor UniBH",
       "visited": true,
-      "rating": 8.67,
+      "rating": 9.0,
       "beerTemp": -6.0,
-      "url": "https://comidadibuteco.com.br/buteco/ivo-grill/"
+      "url": "https://comidadibuteco.com.br/buteco/ivo-grill/",
+      "instagramPost": null
     },
     {
       "id": 81,
@@ -1220,14 +1299,15 @@
       "neighborhood": "Barreiro",
       "address": "R. Benjamim Dias, 379 | Barreiro, Belo Horizonte - MG",
       "dish": "Trem de Minas",
-      "desc": "Clássico mineiro revisitado: costelinha, linguiça, couve e angu juntos num prato que é puro afeto.",
+      "desc": "Hot de copa lombo recheado com agrião, pancetta. Acompanhado de molho especial.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09112719/jatoindo_tremdeminas_bh_2026_pauloti_unibh-5234.jpg",
       "photoCredit": "Paulo Ti UniBH",
       "champion": true,
       "visited": true,
-      "rating": 9.5,
+      "rating": 9.4,
       "beerTemp": null,
-      "url": "https://comidadibuteco.com.br/buteco/3165-revision-v1/"
+      "url": "https://comidadibuteco.com.br/buteco/3165-revision-v1/",
+      "instagramPost": null
     },
     {
       "id": 82,
@@ -1236,13 +1316,14 @@
       "neighborhood": "Jardim Atlântico",
       "address": "R. Carlos Sá, 180 | Jardim Atlântico, Belo Horizonte - MG",
       "dish": "Charuto, Fumaça e Farofa",
-      "desc": "Charuto de repolho com carne moída no molho, manjericão e farofa de banana-da-terra. Puro teatro gastronômico!",
+      "desc": "Charuto de repolho com carne moída no molho de tomate caseiro, manjericão e farofa de banana-da-terra.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09112721/juzebar_charutofumacaefarofa_bh_2026_pauloti_unibh-3959.jpg",
       "photoCredit": "Paulo Ti UniBH",
       "visited": true,
       "rating": 8.25,
       "beerTemp": -7.8,
-      "url": "https://comidadibuteco.com.br/buteco/juze-bar/"
+      "url": "https://comidadibuteco.com.br/buteco/juze-bar/",
+      "instagramPost": null
     },
     {
       "id": 83,
@@ -1251,13 +1332,14 @@
       "neighborhood": "Santa Tereza",
       "address": "R. Professor Raimundo Nonato, 31 - A | Santa Tereza, Belo Horizonte - MG",
       "dish": "Prosa Verde e Roxa",
-      "desc": "Combinação de vegetais verdes e roxos com proteína em prato que é pura poesia gastronômica.",
+      "desc": "Almôndega aberta na chapa com repolho ao vinho e molho de alface.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09112724/kobesemporiumbar_prosaverdeeroxa_bh_2026_rodneycosta_unibh-4146.jpg",
       "photoCredit": "Rodney Costa UniBH",
       "visited": true,
       "rating": 8.0,
       "beerTemp": -3.9,
-      "url": "https://comidadibuteco.com.br/buteco/kobes-emporium-bar/"
+      "url": "https://comidadibuteco.com.br/buteco/kobes-emporium-bar/",
+      "instagramPost": null
     },
     {
       "id": 84,
@@ -1266,13 +1348,14 @@
       "neighborhood": "Sagrada Família",
       "address": "Av. Silviano Brandão, 1293 | Sagrada Família, Belo Horizonte - MG",
       "dish": "Kostelinha Tropical",
-      "desc": "Costelinha suína com toque tropical de frutas e couve crispy. Sabor que surpreende em cada mordida.",
+      "desc": "Costelinha suína, acompanhada de repolho-roxo refogado na manteiga com amendoim torrado e farofa de banana com alho-poró.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09112722/koqueirosbar_kostelinhatropical_bh_2026_juliacristine_unibh-3514.jpg",
       "photoCredit": "Julia Cristine UniBH",
       "visited": true,
       "rating": 8.0,
       "beerTemp": -5.9,
-      "url": "https://comidadibuteco.com.br/buteco/3169-revision-v1/"
+      "url": "https://comidadibuteco.com.br/buteco/3169-revision-v1/",
+      "instagramPost": null
     },
     {
       "id": 85,
@@ -1281,13 +1364,14 @@
       "neighborhood": "Barreiro",
       "address": "R. Oliveira Lisboa, 107 | Barreiro, Belo Horizonte - MG",
       "dish": "Di Juei",
-      "desc": "Corte suíno suculento com mandioca cozida e couve crispy. Simplicidade e sabor de boteco raiz.",
+      "desc": "Joelho de porco em postas, mergulhado na canjiquinha com bacon e taioba na manteiga.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09112825/leodaquadra_dijuei_bh_2026_pauloti_unibh-4097.jpg",
       "photoCredit": "Paulo Ti UniBH",
       "visited": true,
-      "rating": 8.17,
+      "rating": 8.14,
       "beerTemp": null,
-      "url": "https://comidadibuteco.com.br/buteco/leo-da-quadra/"
+      "url": "https://comidadibuteco.com.br/buteco/leo-da-quadra/",
+      "instagramPost": null
     },
     {
       "id": 86,
@@ -1296,13 +1380,14 @@
       "neighborhood": "Santa Inês",
       "address": "R. Carmésia, 568 | Santa Inês, Belo Horizonte - MG",
       "dish": "Porkin do Popeye",
-      "desc": "Iscas de porco com purê de espinafre e molho especial. Popeye aprovaria cada garfada!",
+      "desc": "Croquete de barriga suína, recheada com mix de espinafre e provolone. Acompanha: chimichurri de lemon pepper.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09112827/locomotivasbar_porkimpopeye_bh_2026_rodneycosta_unibh-4302.jpg",
       "photoCredit": "Rodney Costa UniBH",
       "visited": true,
       "rating": 9.67,
       "beerTemp": -7.3,
-      "url": "https://comidadibuteco.com.br/buteco/locomotivas-bar/"
+      "url": "https://comidadibuteco.com.br/buteco/locomotivas-bar/",
+      "instagramPost": null
     },
     {
       "id": 87,
@@ -1317,7 +1402,8 @@
       "visited": true,
       "rating": 8.2,
       "beerTemp": null,
-      "url": "https://comidadibuteco.com.br/buteco/magnifico-quintal/"
+      "url": "https://comidadibuteco.com.br/buteco/magnifico-quintal/",
+      "instagramPost": null
     },
     {
       "id": 88,
@@ -1326,13 +1412,14 @@
       "neighborhood": "Serrano",
       "address": "Av. Serrana, 635 | Belo Horizonte - MG",
       "dish": "A Vaca no Vinho",
-      "desc": "Costela ao vinho com bambá de couve. Quando a vaca bebe vinho, o resultado é puro prazer!",
+      "desc": "Costela ao vinho com bamba de couve.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09112830/magrelosbar_avacanovinho_bh_2026_isaquerodrigues_unibh-3716.jpg",
       "photoCredit": "Isaque Rodrigues UniBH",
       "visited": false,
       "rating": null,
       "beerTemp": null,
-      "url": "https://comidadibuteco.com.br/buteco/magrelos-bar/"
+      "url": "https://comidadibuteco.com.br/buteco/magrelos-bar/",
+      "instagramPost": null
     },
     {
       "id": 89,
@@ -1341,13 +1428,14 @@
       "neighborhood": "Cruzeiro",
       "address": "R. Brás Cubas, 116 | Cruzeiro, Belo Horizonte - MG",
       "dish": "Prova procê vê, criatura",
-      "desc": "Canudo de pastel recheado de rabada e requeijão de raspa com maionese de agrião. Cremoso e irresistível.",
+      "desc": "Canudo de pastel, recheado de rabada e requeijão de raspa com maionese de agrião.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09112832/mamute_provaprocevecriatura_bh_2026_rodneycosta_unibh-3876.jpg",
       "photoCredit": "Rodney Costa UniBH",
       "visited": false,
       "rating": null,
       "beerTemp": null,
-      "url": "https://comidadibuteco.com.br/buteco/mamute-gastrobar/"
+      "url": "https://comidadibuteco.com.br/buteco/mamute-gastrobar/",
+      "instagramPost": null
     },
     {
       "id": 90,
@@ -1356,13 +1444,14 @@
       "neighborhood": "Castelo",
       "address": "R. Romualdo Lopes Cançado, 399 | Castelo, Belo Horizonte - MG",
       "dish": "Talento Mineiro",
-      "desc": "Angu, carne de porco braseada e couve refogada no azeite e alho. O talento de Minas em um prato só.",
+      "desc": "Angu, carne de porco braseada e couve refogada no azeite e alho.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09112935/mineirobeer_talentomineiro_bh_2026_julianunes_unibh-3702.jpg",
       "photoCredit": "Julia Nunes UniBH",
       "visited": false,
       "rating": null,
       "beerTemp": null,
-      "url": "https://comidadibuteco.com.br/buteco/mineiros-beer/"
+      "url": "https://comidadibuteco.com.br/buteco/mineiros-beer/",
+      "instagramPost": null
     },
     {
       "id": 91,
@@ -1371,13 +1460,14 @@
       "neighborhood": "Caiçara",
       "address": "R. Marambaia, 291 | Caiçara, Belo Horizonte - MG",
       "dish": "Botox Mineiro",
-      "desc": "Costela bovina com couve-flor gratinada e molho especial. Prato que 'rejuvenesce' de tão bom!",
+      "desc": "Pé de galinha ensopado com angu de moinho de pedra e farofa de banana-da-terra e almeirão.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09112937/mulao_botoxmineiro_bh_2026_rodneycosta_unibh-4240.jpg",
       "photoCredit": "Rodney Costa UniBH",
-      "visited": false,
-      "rating": null,
-      "beerTemp": null,
-      "url": "https://comidadibuteco.com.br/buteco/3177-revision-v1/"
+      "visited": true,
+      "rating": 8.0,
+      "beerTemp": -5.2,
+      "url": "https://comidadibuteco.com.br/buteco/3177-revision-v1/",
+      "instagramPost": null
     },
     {
       "id": 92,
@@ -1386,13 +1476,14 @@
       "neighborhood": "Santa Mônica",
       "address": "Rua dos Astecas, 3219 | Santa Mônica, Belo Horizonte - MG",
       "dish": "Minas no Prato",
-      "desc": "Angu com suã ao molho com bacon e linguiça calabresa, alho-poró e queijo, acompanhado de mostarda refogada e torresmo.",
+      "desc": "Angu cremoso servido com suã ao molho com bacon e linguiça calabresa, alho-poró e queijo, acompanhado de mostarda refogada e espetinho de torresmo de barriga crocante.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09112938/nossospetim_minasnoprato_bh_2026_pauloti_unibh-4755.jpg",
       "photoCredit": "Paulo Ti UniBH",
-      "visited": false,
-      "rating": null,
+      "visited": true,
+      "rating": 9.0,
       "beerTemp": null,
-      "url": "https://comidadibuteco.com.br/buteco/nosso-spetim/"
+      "url": "https://comidadibuteco.com.br/buteco/nossospetim/",
+      "instagramPost": null
     },
     {
       "id": 93,
@@ -1401,13 +1492,14 @@
       "neighborhood": "Alípio de Melo",
       "address": "Avenida dos Engenheiros, 843 | Belo Horizonte - MG",
       "dish": "Trem bão de panela",
-      "desc": "Maçã de peito cozida com batata, cebola e linguiça, acompanhada de torradas e conserva de acelga.",
+      "desc": "Maçã de peito cozida com batata, cebola e linguiça calabresa, acompanhada de torradas e conserva de acelga.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09112940/nubar_trembaodepanela_bh_2026_rodneycosta_unibh-4398.jpg",
       "photoCredit": "Rodney Costa UniBH",
       "visited": false,
       "rating": null,
       "beerTemp": null,
-      "url": "https://comidadibuteco.com.br/buteco/nubar/"
+      "url": "https://comidadibuteco.com.br/buteco/nubar/",
+      "instagramPost": null
     },
     {
       "id": 94,
@@ -1415,14 +1507,15 @@
       "region": "Venda Nova",
       "neighborhood": "Minascaixa",
       "address": "R. Capitão Sérgio Pires, 41 | Minascaixa, Belo Horizonte - MG",
-      "dish": "Osôbuco di Suá",
+      "dish": "Osôbuco di suá",
       "desc": "Ossobuco suíno com ora-pro-nóbis na polenta com queijo coalho e cebola mais alho no vinagrete.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09112941/ofinodoalho_ossobucodisua_bh_2026_isaquerodrigues_unibh-3603.jpg",
       "photoCredit": "Isaque Rodrigues UniBH",
       "visited": false,
       "rating": null,
       "beerTemp": null,
-      "url": "https://comidadibuteco.com.br/buteco/o-fino-do-alho/"
+      "url": "https://comidadibuteco.com.br/buteco/o-fino-do-alho/",
+      "instagramPost": null
     },
     {
       "id": 95,
@@ -1431,13 +1524,14 @@
       "neighborhood": "Santa Efigênia",
       "address": "Av. Brasil, 161 | Santa Efigênia, Belo Horizonte - MG",
       "dish": "Lambuzado",
-      "desc": "Costelinha caramelizada com ora-pro-nóbis e crispy de batata-doce. Petisco que deixa os dedos e a alma lambuzados.",
+      "desc": "Pernil de porco com agrião fresco e batata bolinha. Acompanhado de torradas da casa.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09113043/oratoriobar_lambuzado_bh_2026_rodneycosta_unibh-4675.jpg",
       "photoCredit": "Rodney Costa UniBH",
       "visited": false,
       "rating": null,
       "beerTemp": null,
-      "url": "https://comidadibuteco.com.br/buteco/oratorio-bar/"
+      "url": "https://comidadibuteco.com.br/buteco/oratorio-bar/",
+      "instagramPost": null
     },
     {
       "id": 96,
@@ -1446,13 +1540,14 @@
       "neighborhood": "Alípio de Melo",
       "address": "Avenida dos Engenheiros, 1095 | Alípio de Melo, Belo Horizonte - MG",
       "dish": "Locro por Minas",
-      "desc": "Pé e orelha de porco, milho de canjica, galinha e ora-pro-nóbis. Um locro que virou mineiro de coração!",
+      "desc": "Pé de porco e orelha, milho de canjica, galinha e ora-pro-nóbis.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09113045/parada1095_locroporminas_bh_2026_rodneycosta_unibh-3929.jpg",
       "photoCredit": "Rodney Costa UniBH",
       "visited": false,
       "rating": null,
       "beerTemp": null,
-      "url": "https://comidadibuteco.com.br/buteco/parada-10-95-bar/"
+      "url": "https://comidadibuteco.com.br/buteco/parada-10-95-bar/",
+      "instagramPost": null
     },
     {
       "id": 97,
@@ -1461,13 +1556,14 @@
       "neighborhood": "Planalto",
       "address": "Av. General Carlos Guedes, 346 | Planalto, Belo Horizonte - MG",
       "dish": "Lanche do Popeye",
-      "desc": "Lanche caprichado com recheio de espinafre, frango e queijo. Popeye aprovaria com honras!",
+      "desc": "Filé-mignon suíno ao molho de espinafre com catupiry e creme de leite, acompanha torradas na manteiga de ervas.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09113047/paradadosabor_lanchedepopeye_bh_2026_pauloti_unibh-5163.jpg",
       "photoCredit": "Paulo Ti UniBH",
       "visited": true,
       "rating": 7.75,
       "beerTemp": null,
-      "url": "https://comidadibuteco.com.br/buteco/parada-do-sabor/"
+      "url": "https://comidadibuteco.com.br/buteco/parada-do-sabor/",
+      "instagramPost": null
     },
     {
       "id": 98,
@@ -1476,13 +1572,14 @@
       "neighborhood": "Carmo",
       "address": "R. Flórida, 15 | Belo Horizonte - MG",
       "dish": "Porco na Lama",
-      "desc": "Lombo de panela com ora-pro-nóbis, batata e maionese de cebola picante. Sabor de quintal mineiro.",
+      "desc": "Lombo de panela com ora-pro-nóbis, batata baby, maionese de cebola picante.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/16112227/pedecana_porconalama_joaovictor_unibh-3298.jpg",
       "photoCredit": "João Victor UniBH",
-      "visited": false,
-      "rating": null,
-      "beerTemp": null,
-      "url": "https://comidadibuteco.com.br/buteco/pe-de-cana-3/"
+      "visited": true,
+      "rating": 8.8,
+      "beerTemp": -2.6,
+      "url": "https://comidadibuteco.com.br/buteco/pe-de-cana-3/",
+      "instagramPost": null
     },
     {
       "id": 99,
@@ -1491,13 +1588,14 @@
       "neighborhood": "Nova Suíssa",
       "address": "Av. Amazonas, 4676 | Nova Suíça, Belo Horizonte - MG",
       "dish": "Atolacoxa",
-      "desc": "Coxinhas de frango com queijo ao molho de goiabada levemente apimentada. Acompanha creme de rúcula.",
+      "desc": "Coxinhas de frango com queijo ao molho de goiabada levemente apimentada e defumada. Acompanha: creme de rúcula.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09113050/pedegoiaba_atolacoxa_bh_2026_rodneycosta_unibh-4135.jpg",
       "photoCredit": "Rodney Costa UniBH",
       "visited": true,
       "rating": 7.67,
       "beerTemp": -5.9,
-      "url": "https://comidadibuteco.com.br/buteco/3179-revision-v1/"
+      "url": "https://comidadibuteco.com.br/buteco/3179-revision-v1/",
+      "instagramPost": null
     },
     {
       "id": 100,
@@ -1506,13 +1604,14 @@
       "neighborhood": "Santa Amélia",
       "address": "Av. Guarapari, 108 | Santa Amélia, Belo Horizonte - MG",
       "dish": "Catifunda",
-      "desc": "Charutos de couve recheados com carne suína, cobertos por molho. Acompanha farofa. Fundão de sabor!",
+      "desc": "Charutos de couve recheados com carne suína, cobertos por molho artesanal de tomates frescos. Acompanha farofa da casa.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09113153/planetalupulo_catifunda_bh_2026_pauloti_unibh-4839.jpg",
       "photoCredit": "Paulo Ti UniBH",
       "visited": true,
       "rating": 8.0,
       "beerTemp": -5.2,
-      "url": "https://comidadibuteco.com.br/buteco/planeta-lupulo/"
+      "url": "https://comidadibuteco.com.br/buteco/planeta-lupulo/",
+      "instagramPost": null
     },
     {
       "id": 101,
@@ -1520,14 +1619,15 @@
       "region": "Centro-Sul",
       "neighborhood": "Cruzeiro",
       "address": "R. Pium-I, 686 | Cruzeiro, Belo Horizonte - MG",
-      "dish": "Porco Escaldado Popeye",
-      "desc": "Cubos de pernil mergulhados num escaldado de farinha de fubá torrada e espinafre refogado.",
+      "dish": "Porco escaldado Popeye",
+      "desc": "Cubos de pernil mergulhado num escaldado de farinha de fubá torrada e espinafre refogado na manteiga.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09113155/poizebar_porcoescaladadoopeye_bh_2026_rodneycosta_unibh-4690.jpg",
       "photoCredit": "Rodney Costa UniBH",
       "visited": false,
       "rating": null,
       "beerTemp": null,
-      "url": "https://comidadibuteco.com.br/buteco/poize-bar-e-petisqueira/"
+      "url": "https://comidadibuteco.com.br/buteco/poize-bar-e-petisqueira/",
+      "instagramPost": null
     },
     {
       "id": 102,
@@ -1536,13 +1636,14 @@
       "neighborhood": "Prado",
       "address": "Av. Francisco Sá, 590 | Prado, Belo Horizonte - MG",
       "dish": "Músculo do Popeye",
-      "desc": "Músculo com purê de batata ao molho pesto de espinafre. Acompanhado de melado de cana e vitamina do Popeye.",
+      "desc": "Músculo com purê de batata e molho pesto de espinafre. Acompanhado de melado de cana e vitamina do Popeye.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09113156/pradobeer_musculodopopeye_bh_2026_pauloti_unibh-4945.jpg",
       "photoCredit": "Paulo Ti UniBH",
       "visited": false,
       "rating": null,
       "beerTemp": null,
-      "url": "https://comidadibuteco.com.br/buteco/prado-beer/"
+      "url": "https://comidadibuteco.com.br/buteco/prado-beer/",
+      "instagramPost": null
     },
     {
       "id": 103,
@@ -1550,14 +1651,15 @@
       "region": "Norte",
       "neighborhood": "Floramar",
       "address": "Avenida Joaquim Clemente, 730 | Belo Horizonte - MG",
-      "dish": "Sô Forte Uai",
-      "desc": "Frango robusto e saboroso com couve e mandioca. Prato forte que mostra toda a força do boteco mineiro.",
+      "dish": "Sô forte uai",
+      "desc": "Mingau de mandioca com couve rasgada, músculo ao vinho, mandiocas fritas e torradinhas caseiras.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09113158/queremosfrango_soforteuai_bh_2026_rodneycosta_unibh-4390.jpg",
       "photoCredit": "Rodney Costa UniBH",
       "visited": true,
       "rating": 9.0,
       "beerTemp": -3.3,
-      "url": "https://comidadibuteco.com.br/buteco/queremos-frango/"
+      "url": "https://comidadibuteco.com.br/buteco/queremos-frango/",
+      "instagramPost": null
     },
     {
       "id": 104,
@@ -1566,13 +1668,14 @@
       "neighborhood": "Nova Suíssa",
       "address": "Rua Gávea, 358 | Belo Horizonte - MG",
       "dish": "Charuteco Caipira",
-      "desc": "Charuto de couve recheado com ragu de linguiça, com bolacha de acelga e crispy de alho-poró. Acompanha cachaça da roça!",
+      "desc": "Charuto de couve recheado com ragu de linguiça, com bolacha de acelga e crispy de alho-poró. Acompanha: cachaça da roça.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09113159/quintaldolouzada_charuteco_isaquerodrigues_unibh-3203.jpg",
       "photoCredit": "Isaque Rodrigues UniBH",
       "visited": true,
       "rating": 7.5,
       "beerTemp": -7.3,
-      "url": "https://comidadibuteco.com.br/buteco/quintal-do-louzada/"
+      "url": "https://comidadibuteco.com.br/buteco/quintal-do-louzada/",
+      "instagramPost": null
     },
     {
       "id": 105,
@@ -1581,13 +1684,14 @@
       "neighborhood": "Buritis",
       "address": "Rua Henrique Badaró Portugal, 157 | Buritis, Belo Horizonte - MG",
       "dish": "Sou Marinheiro Popeye",
-      "desc": "Prexecas de espinafre sob molho pomodoro, gratinadas com queijo e acompanhadas de batatas, bacon e pimenta.",
+      "desc": "Prexecas de espinafre, sob molho pomodoro, gratinadas com queijo e acompanhadas de batatas bolinhas em conserva bem temperadas com alho, bacon e pimenta-calabresa. Servidas com pesto de espinafre e manjericão.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09113301/quioxquecarioca_souomarinheiropopeye_bh_2026_pauloti_unibh-5175.jpg",
       "photoCredit": "Paulo Ti UniBH",
-      "visited": false,
-      "rating": null,
-      "beerTemp": null,
-      "url": "https://comidadibuteco.com.br/buteco/quioxque-butiquim-carioca/"
+      "visited": true,
+      "rating": 4.5,
+      "beerTemp": -5.2,
+      "url": "https://comidadibuteco.com.br/buteco/quioxque-butiquim-carioca/",
+      "instagramPost": null
     },
     {
       "id": 106,
@@ -1596,13 +1700,14 @@
       "neighborhood": "Horto",
       "address": "R. Alabastro, 146 | Horto, Belo Horizonte - MG",
       "dish": "Tô Ki",
-      "desc": "Petisco criativo com mistura de quitandas mineiras, couve e proteína em apresentação que impressiona.",
+      "desc": "Iscas de paleta suína e copa lombo salteadas com cebola-roxa, pimentões, cenoura, cebolinha, acelga, alho-poró e molho agridoce da casa. Acompanha salada de manga com pimentões, pimenta-dedo-de-moça, mel e croutons da casa.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09113303/quitandasdatianice_toki_bh_2026_rodneycosta_unibh-4358.jpg",
       "photoCredit": "Rodney Costa UniBH",
       "visited": true,
       "rating": 8.33,
       "beerTemp": -2.1,
-      "url": "https://comidadibuteco.com.br/buteco/quitandas-da-tia-nice-bar/"
+      "url": "https://comidadibuteco.com.br/buteco/quitandas-da-tia-nice-bar/",
+      "instagramPost": null
     },
     {
       "id": 107,
@@ -1610,14 +1715,15 @@
       "region": "Nordeste",
       "neighborhood": "União",
       "address": "Rua Alberto Cintra, 47 | Belo Horizonte - MG",
-      "dish": "Uai, Traíra não Traí!",
-      "desc": "Traíra com purê de mandioca e crispy de couve, banana-da-terra e batata chips. Molho melado e de maracujá.",
+      "dish": "Uai, Traíra não Traí",
+      "desc": "Traíra com purê de mandioca e crispy de couve, banana-da-terra e batata chips. Acompanha: molho melado e molho de maracujá.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09113304/recantodatraira_trairanaotrai_bh_2026_isacrodrigues_unibh-3792.jpg",
       "photoCredit": "Isaque Rodrigues UniBH",
       "visited": false,
       "rating": null,
       "beerTemp": null,
-      "url": "https://comidadibuteco.com.br/buteco/recanto-da-traira/"
+      "url": "https://comidadibuteco.com.br/buteco/recanto-da-traira/",
+      "instagramPost": null
     },
     {
       "id": 108,
@@ -1626,13 +1732,14 @@
       "neighborhood": "Nova Suíssa",
       "address": "Rua Joaquim Nabuco, 577 | Belo Horizonte - MG",
       "dish": "Maria das Trouxas",
-      "desc": "Trouxas de couve recheadas com bacalhau ao molho branco. Encontro da cozinha mineira com o Atlântico.",
+      "desc": "Trouxas de couve recheadas com bacalhau cremoso ao molho branco.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09113306/barreforma_maviadastrouxas_bh_2026_rodneycosta_unibh-4343.jpg",
       "photoCredit": "Rodney Costa UniBH",
       "visited": true,
       "rating": 7.25,
       "beerTemp": -3.9,
-      "url": "https://comidadibuteco.com.br/buteco/reforma/"
+      "url": "https://comidadibuteco.com.br/buteco/reforma/",
+      "instagramPost": null
     },
     {
       "id": 109,
@@ -1640,14 +1747,15 @@
       "region": "Pampulha",
       "neighborhood": "Dona Clara",
       "address": "Avenida Sebastião de Brito, 400 | Belo Horizonte - MG",
-      "dish": "De Picanha com a Vida",
-      "desc": "Picanha suína com chutney de tomate picante, batata rústica com pesto de couve e espinafre.",
+      "dish": "De picanha com a vida",
+      "desc": "Picanha suína, acompanhada de chutney de tomate-cereja picante, batata rústica com pesto de couve e espinafre.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09113307/reidapicanha_depicanhacaomavida_bh_2026_pauloti_unibh-4527.jpg",
       "photoCredit": "Paulo Ti UniBH",
       "visited": true,
       "rating": 7.0,
       "beerTemp": null,
-      "url": "https://comidadibuteco.com.br/buteco/rei-da-picanha/"
+      "url": "https://comidadibuteco.com.br/buteco/rei-da-picanha/",
+      "instagramPost": null
     },
     {
       "id": 110,
@@ -1656,13 +1764,14 @@
       "neighborhood": "Santa Branca",
       "address": "R. Ramalho Ortigão, 735 | Santa Branca, Belo Horizonte - MG",
       "dish": "Polpetta do Rei",
-      "desc": "Almôndegas de tilápia ao molho de tomate e alho-poró, acompanhadas de torradas. Rei do mar na mesa do boteco!",
+      "desc": "Almôndegas de tilápia ao molho de tomate e alho-poró, acompanhadas de torradas.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09113409/reidopeixe_polpettasdorei_bh_2026_pauloti_unibh-4918.jpg",
       "photoCredit": "Paulo Ti UniBH",
-      "visited": false,
-      "rating": null,
+      "visited": true,
+      "rating": 7.0,
       "beerTemp": null,
-      "url": "https://comidadibuteco.com.br/buteco/rei-do-peixe/"
+      "url": "https://comidadibuteco.com.br/buteco/rei-do-peixe/",
+      "instagramPost": null
     },
     {
       "id": 111,
@@ -1671,13 +1780,14 @@
       "neighborhood": "Cachoeirinha",
       "address": "R. Gonçalves Lêdo, 288 | Cachoeirinha, Belo Horizonte - MG",
       "dish": "Pode comer que não é pecado",
-      "desc": "Maçã de peito cozida com milho-verde e couve crispy com alho. Leveza com muito sabor.",
+      "desc": "Maçã de peito cozida com pedaços de milho-verde e couve crispy com alho.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09113411/resenhadanaty_podecomerquenaoepecado_bh_2026_rodneycosta_unibh-4649.jpg",
       "photoCredit": "Rodney Costa UniBH",
       "visited": false,
       "rating": null,
       "beerTemp": null,
-      "url": "https://comidadibuteco.com.br/buteco/resenha-da-naty/"
+      "url": "https://comidadibuteco.com.br/buteco/resenha-da-naty/",
+      "instagramPost": null
     },
     {
       "id": 112,
@@ -1685,14 +1795,15 @@
       "region": "Oeste",
       "neighborhood": "Vista Alegre",
       "address": "Avenida Padre José Maurício, 1126 | Vista Alegre, Belo Horizonte - MG",
-      "dish": "Boi Enrolado",
-      "desc": "Costela de boi com arroz, enrolada no repolho sob molho e coberta com queijo gratinado.",
+      "dish": "Boi enrolado",
+      "desc": "Costela de boi com arroz, enrolada no repolho sob uma cama de molho de tomate e coberta com molho de queijo gratinado.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09113413/sospub_boienrolado_bh_2026_rodneycosta_unibh-5057.jpg",
       "photoCredit": "Rodney Costa UniBH",
       "visited": false,
       "rating": null,
       "beerTemp": null,
-      "url": "https://comidadibuteco.com.br/buteco/s-o-s-pub/"
+      "url": "https://comidadibuteco.com.br/buteco/s-o-s-pub/",
+      "instagramPost": null
     },
     {
       "id": 113,
@@ -1701,13 +1812,14 @@
       "neighborhood": "Santa Branca",
       "address": "Rua Ramalho Ortigão, 650 | Belo Horizonte - MG",
       "dish": "Atoladinho de boi bebum",
-      "desc": "Ragu de lombinho bovino com aligot de mandioca e crispy de couve. Um boi que bebeu e ficou atolado de sabor!",
+      "desc": "Ragu de lombinho bovino com aligot de mandioca e crispy de couve.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09113414/santesquinabutequim_atoladimdeboibebum_bh_2026_pauloti_unibh-3975.jpg",
       "photoCredit": "Paulo Ti UniBH",
       "visited": false,
       "rating": null,
       "beerTemp": null,
-      "url": "https://comidadibuteco.com.br/buteco/santesquina-butiquim/"
+      "url": "https://comidadibuteco.com.br/buteco/santesquina-butiquim/",
+      "instagramPost": null
     },
     {
       "id": 114,
@@ -1716,13 +1828,14 @@
       "neighborhood": "Santa Tereza",
       "address": "R. Mármore, 534 | Santa Teresa, Belo Horizonte - MG",
       "dish": "Mama mia!",
-      "desc": "Inspiração italiana com sotaque mineiro: ragu encorpado com verduras frescas sobre base caprichada.",
+      "desc": "Bolinhos empanados na panko e fritos, preparados com uma combinação de rúcula, queijos e tomates. Acompanhados de um molho de tomates especial.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09113416/santaboemia_mamamia_bh_2026_rodneycosta_unibh-4596.jpg",
       "photoCredit": "Rodney Costa UniBH",
       "visited": false,
       "rating": null,
       "beerTemp": null,
-      "url": "https://comidadibuteco.com.br/buteco/santa-boemia/"
+      "url": "https://comidadibuteco.com.br/buteco/santa-boemia/",
+      "instagramPost": null
     },
     {
       "id": 115,
@@ -1730,15 +1843,16 @@
       "region": "Centro-Sul",
       "neighborhood": "Minas Brasil",
       "address": "Av. Padre Vieira, 150 | Minas Brasil, Belo Horizonte - MG",
-      "dish": "Du Gibi",
-      "desc": "Petisco exclusivo do ex-campeão: sabores nostálgicos da cozinha mineira em releitura contemporânea e criativa.",
+      "dish": "Du Gibí",
+      "desc": "Bifão dos Flintstones, de copa lombo, com creme de espinafre do Popeye, picles de brócolis, couve-flor e pimentão; e batata bolinha.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09113518/santuarioretro_dugibi_bh_2026_pauloti_unibh-4873.jpg",
       "photoCredit": "Paulo Ti UniBH",
       "champion": true,
-      "visited": false,
-      "rating": null,
-      "beerTemp": null,
-      "url": "https://comidadibuteco.com.br/buteco/santuario-retro/"
+      "visited": true,
+      "rating": 8.5,
+      "beerTemp": -4.0,
+      "url": "https://comidadibuteco.com.br/buteco/santuario-retro/",
+      "instagramPost": null
     },
     {
       "id": 116,
@@ -1747,13 +1861,14 @@
       "neighborhood": "Maria Helena",
       "address": "Rua Dona Conceição Martins, 63 | Belo Horizonte - MG",
       "dish": "Rolê do Justino",
-      "desc": "Bife de boi à rolê, purê de abóbora com espinafre, acompanhado com caldo da carne e queijo coalho grelhado.",
+      "desc": "Bife de boi à rolê, purê de abóbora com espinafre, acompanhado com caldo da carne e queijo coalho grelhado e defumado.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09113520/seujustino_roledojustino_fernandaoliveira_unibh-3183.jpg",
       "photoCredit": "Fernanda Oliveira UniBH",
       "visited": true,
-      "rating": 8.83,
+      "rating": 8.71,
       "beerTemp": -3.3,
-      "url": "https://comidadibuteco.com.br/buteco/seu-justino/"
+      "url": "https://comidadibuteco.com.br/buteco/seu-justino/",
+      "instagramPost": null
     },
     {
       "id": 117,
@@ -1761,14 +1876,15 @@
       "region": "Pampulha",
       "neighborhood": "Castelo",
       "address": "Av. Altamiro Avelino Soares, 426 | Castelo, Belo Horizonte - MG",
-      "dish": "Só Vem",
-      "desc": "Linguiça artesanal recheada com alho-poró, finalizada com queijo derretido. Só vem, que você não vai se arrepender!",
+      "dish": "Só vem",
+      "desc": "Linguiça artesanal recheada com alho-poró, finalizada com queijo derretido e um toque especial de alho-poró.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09113521/sobar_sovem_bh_2026_pauloti_unibh-5007.jpg",
       "photoCredit": "Paulo Ti UniBH",
       "visited": false,
       "rating": null,
       "beerTemp": null,
-      "url": "https://comidadibuteco.com.br/buteco/so-bar/"
+      "url": "https://comidadibuteco.com.br/buteco/so-bar/",
+      "instagramPost": null
     },
     {
       "id": 118,
@@ -1777,13 +1893,14 @@
       "neighborhood": "Silveira",
       "address": "R. Ilacir Pereira Lima, 518 | Silveira, Belo Horizonte - MG",
       "dish": "Dona Farofa e Sr. Porquinho",
-      "desc": "Farofa de espinafre, agrião e alho-poró na manteiga, servida com costelinha caipira pururucada e vinagrete de abacaxi.",
+      "desc": "Farofa de espinafre, agrião e alho-poró na manteiga, servida com costelinha caipira pururucada e vinagrete de abacaxi com pimenta-biquinho.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09113523/spetim_donafarofaesrporquinho_bh_2026_pauloti_unibh-5204.jpg",
       "photoCredit": "Paulo Ti UniBH",
       "visited": false,
       "rating": null,
       "beerTemp": null,
-      "url": "https://comidadibuteco.com.br/buteco/spetim/"
+      "url": "https://comidadibuteco.com.br/buteco/spetim/",
+      "instagramPost": null
     },
     {
       "id": 119,
@@ -1792,13 +1909,14 @@
       "neighborhood": "Santa Mônica",
       "address": "R. Érico Veríssimo, 2039 | Belo Horizonte - MG",
       "dish": "Costela Véia de Guerra",
-      "desc": "Costela de boi com mandioca cozida, almeirão refogado e acompanhada de farofa. Uma guerreira que nunca decepciona.",
+      "desc": "Costela de boi com mandioca cozida, almeirão refogado e acompanhada de farofa da casa.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09113525/sunsetbar_costelaveiadeguerra_bh_2026_rodneycosta_unibh-3325.jpg",
       "photoCredit": "Rodney Costa UniBH",
-      "visited": false,
-      "rating": null,
+      "visited": true,
+      "rating": 8.8,
       "beerTemp": null,
-      "url": "https://comidadibuteco.com.br/buteco/sunset-bar/"
+      "url": "https://comidadibuteco.com.br/buteco/sunset-bar/",
+      "instagramPost": null
     },
     {
       "id": 120,
@@ -1807,14 +1925,15 @@
       "neighborhood": "Coração Eucarístico",
       "address": "R. Padre Demerval Gomes, 380 | Coração Eucarístico, Belo Horizonte - MG",
       "dish": "Trio Vegano",
-      "desc": "Mix vegano com linguiça de espinafre, pastel de ora-pro-nóbis, torresmo de milho e molho de alho. Ex-campeão 2019!",
+      "desc": "Mix vegano com linguiça de espinafre, pastel de ora-pro-nóbis, torresmo de milho e molho de alho.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09113626/tanganica_triovegano_bh_2026_pauloti_unibh-4057.jpg",
       "photoCredit": "Paulo Ti UniBH",
       "champion": true,
       "visited": false,
       "rating": null,
       "beerTemp": null,
-      "url": "https://comidadibuteco.com.br/buteco/tanganica-art-bar/"
+      "url": "https://comidadibuteco.com.br/buteco/tanganica-art-bar/",
+      "instagramPost": null
     },
     {
       "id": 121,
@@ -1823,28 +1942,30 @@
       "neighborhood": "Pampulha",
       "address": "R. Professor Nelson de Sena, 4 | Pampulha, Belo Horizonte - MG",
       "dish": "Trio da Roça",
-      "desc": "Sambiquira, torresmo e couve-flor à milanesa, acompanhados de creme de alho-poró. Trio poderoso!",
+      "desc": "Sambiquira douradinha, torresmo estalando e couve-flor à milanesa: três crocâncias que se uniram num trio pra conquistar seu coração e sua cerveja, acompanhado de um creme de alho-poró que coroa essa combinação, fechando com a harmonização perfeita.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09113628/tocadoogro_triodaroca_bh_2026_rodneycosta_unibh-3916.jpg",
       "photoCredit": "Rodney Costa UniBH",
       "visited": true,
-      "rating": 8.83,
+      "rating": 8.67,
       "beerTemp": 0.7,
-      "url": "https://comidadibuteco.com.br/buteco/toca-do-ogro/"
+      "url": "https://comidadibuteco.com.br/buteco/tocadoogro/",
+      "instagramPost": null
     },
     {
       "id": 122,
-      "name": "Toninho – Alto Forno",
+      "name": "Toninho - Alto Forno",
       "region": "Noroeste",
       "neighborhood": "Santo André",
       "address": "R. Miracema, 100 | Santo André, Belo Horizonte - MG",
       "dish": "Pé no Rabo (Homenagem ao Tonhão)",
-      "desc": "Homenagem afetiva: pé e rabo de porco ao molho com ora-pro-nóbis, receita que conta uma história de família.",
+      "desc": "Rabada com pé de porco (a tradicional “mãozinha”), cozidos com ora-pro-nóbis e rodelas de milho-verde. Acompanha farofa dourada.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09113630/bartoninhoaltoforno_penorabo_bh_2026_pauloti_unibh-5193.jpg",
       "photoCredit": "Paulo Ti UniBH",
       "visited": true,
       "rating": 8.0,
       "beerTemp": -2.1,
-      "url": "https://comidadibuteco.com.br/buteco/5706-revision-v1/"
+      "url": "https://comidadibuteco.com.br/buteco/5706-revision-v1/",
+      "instagramPost": null
     },
     {
       "id": 123,
@@ -1860,7 +1981,8 @@
       "visited": false,
       "rating": null,
       "beerTemp": null,
-      "url": "https://comidadibuteco.com.br/buteco/3187-revision-v1/"
+      "url": "https://comidadibuteco.com.br/buteco/3187-revision-v1/",
+      "instagramPost": null
     },
     {
       "id": 124,
@@ -1869,13 +1991,14 @@
       "neighborhood": "Anchieta",
       "address": "Rua Francisco Deslandes, 10 | Belo Horizonte - MG",
       "dish": "Di Joelho",
-      "desc": "Joelho de porco defumado com chucrute, maionese de batata e chutney de abacaxi. Agridoce perfeito.",
+      "desc": "Joelho de porco defumado, com chucrute, maionese de batata e chutney de abacaxi.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09113633/viadeslandes_dijoelho_bh_2026_pauloti_unibh-4933.jpg",
       "photoCredit": "Paulo Ti UniBH",
       "visited": false,
       "rating": null,
       "beerTemp": null,
-      "url": "https://comidadibuteco.com.br/buteco/via-deslandes/"
+      "url": "https://comidadibuteco.com.br/buteco/via-deslandes/",
+      "instagramPost": null
     },
     {
       "id": 125,
@@ -1884,13 +2007,14 @@
       "neighborhood": "Centro",
       "address": "Av. Augusto de Lima, 233 - Edifício Maleta | Centro, Belo Horizonte - MG",
       "dish": "Esconde-Esconde",
-      "desc": "Escondidinho de alho-poró recheado com carne de boi desfiada, acompanhado por torradas crocantes.",
+      "desc": "Escondidinho de alho-poró, recheado com carne de boi desfiada, acompanhado por torradas amanteigadas.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09113736/xambar_escondeesconde_bh_2026_rodneycosta_unibh-4581.jpg",
       "photoCredit": "Rodney Costa UniBH",
-      "visited": false,
-      "rating": null,
-      "beerTemp": null,
-      "url": "https://comidadibuteco.com.br/buteco/xambar/"
+      "visited": true,
+      "rating": 7.33,
+      "beerTemp": -3.3,
+      "url": "https://comidadibuteco.com.br/buteco/xambar/",
+      "instagramPost": null
     },
     {
       "id": 126,
@@ -1899,13 +2023,14 @@
       "neighborhood": "Vila Clóris",
       "address": "Rua das Melancias, 35 | Vila Clóris, Belo Horizonte - MG",
       "dish": "Menu de Minas",
-      "desc": "Um cardápio inteiro em um prato: canjiquinha, pão de queijo, mix de carnes com alho-poró e pesto de espinafre.",
+      "desc": "Entradas: shot de canjiquinha petisco, bruschettas de pão de queijo recheado com requeijão, servidas com mix de carnes (bovinas e suínas) com alho-poró e molho pesto de espinafre. Sobremesa: queijo minas com goiabada.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09113737/zebolachabar_menudosgerais_bh_2026_pauloti_unibh-5144.jpg",
       "photoCredit": "Paulo Ti UniBH",
       "visited": false,
       "rating": null,
       "beerTemp": null,
-      "url": "https://comidadibuteco.com.br/buteco/ze-bolacha/"
+      "url": "https://comidadibuteco.com.br/buteco/ze-bolacha/",
+      "instagramPost": null
     },
     {
       "id": 127,
@@ -1914,13 +2039,14 @@
       "neighborhood": "Pampulha",
       "address": "Av. Otacílio Negrão de Lima, 7844 | Pampulha, Belo Horizonte - MG",
       "dish": "Porcoró",
-      "desc": "Iscas de filé-mignon suíno, acompanhadas de batatas salteadas no creme de alho-poró e farofa.",
+      "desc": "Iscas de filé-mignon suíno, acompanhadas de batatas salteadas no creme de alho-poró e farofa da casa.",
       "photo": "https://cdb-static-files.s3.amazonaws.com/wp-content/uploads/2026/03/09113739/zoobar_procoro_bh_2026_rodneycosta_unibh-4379.jpg",
       "photoCredit": "Rodney Costa UniBH",
       "visited": false,
       "rating": null,
       "beerTemp": null,
-      "url": "https://comidadibuteco.com.br/buteco/zoo-bar/"
+      "url": "https://comidadibuteco.com.br/buteco/zoo-bar/",
+      "instagramPost": null
     }
   ]
 }
