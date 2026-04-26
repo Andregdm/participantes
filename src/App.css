@@ -453,6 +453,7 @@ select option { background: #fff;     color: #1C1A14; }
   font-weight: 400;
   font-style: normal;
   letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
 /* =============================================
