@@ -7,12 +7,13 @@ import { HeartIcon, CheckCircle, MoonIcon, SunIcon, IgIcon } from "./components/
 import { Card } from "./components/Card";
 import Logo from "./components/Logo";
 
-// Pré-processamento estático — BARS é imutável, não precisa de useMemo
+// Pré-processamento estático — BARS é imutável
 const BARS_NORMALIZED = BARS.map(b => ({
   ...b,
   _name:         normalizeText(b.name),
   _dish:         normalizeText(b.dish),
   _neighborhood: normalizeText(b.neighborhood),
+  _desc:         normalizeText(b.desc || ""),  // busca na descrição
 }));
 
 // Lazy — carrega o iframe do mapa só quando a aba for acessada
@@ -33,13 +34,12 @@ const FilterButton = ({ active, onClick, icon, label, activeColor, activeBg, act
   </button>
 );
 
-// Estado inicial dos filtros — centralizado para facilitar reset
+// Estado inicial dos filtros
 const FILTER_INIT = { onlyVisited: false, onlyFavorites: false, region: "Todas", search: "", onlyTeam: false };
 
-// ─── Componente principal ─────────────────────────────────────────────────────
 export default function App() {
 
-  // ── Tema ──────────────────────────────────────────────────────────────────
+  // Tema
   const [dark, setDark] = useState(() => localStorage.getItem("cdb26theme") === "dark");
   const T = dark ? THEMES.dark : THEMES.light;
 
@@ -48,7 +48,7 @@ export default function App() {
     document.body.classList.toggle("dark", dark);
   }, [dark]);
 
-  // ── Persistência de listas ─────────────────────────────────────────────────
+  // Persistência
   const [visited, setVisited] = useState(() => {
     try { return new Set(JSON.parse(localStorage.getItem("cdb26v") || "[]")); }
     catch { return new Set(); }
@@ -61,16 +61,16 @@ export default function App() {
   useEffect(() => { localStorage.setItem("cdb26v", JSON.stringify([...visited]));   }, [visited]);
   useEffect(() => { localStorage.setItem("cdb26f", JSON.stringify([...favorites])); }, [favorites]);
 
-  // ── Filtros (objeto único → reset trivial) ────────────────────────────────
+  // Filtros
   const [filters, setFilters] = useState(FILTER_INIT);
   const [sortBy,  setSortBy]  = useState("none");
 
-  // ── UI ─────────────────────────────────────────────────────────────────────
+  // UI
   const [expandedId, setExpandedId] = useState(null);
   const [tab,        setTab]        = useState("bares");
   const [imgErr,     setImgErr]     = useState(new Set());
 
-  // ── Handlers estáveis ──────────────────────────────────────────────────────
+  // Handlers
   const toggleSet = useCallback((setter) => (id) => {
     setter(prev => { const s = new Set(prev); s.has(id) ? s.delete(id) : s.add(id); return s; });
   }, []);
@@ -87,7 +87,7 @@ export default function App() {
     filters.region !== "Todas" || filters.search ||
     filters.onlyTeam || sortBy !== "none";
 
-  // ── Filtragem e ordenação ──────────────────────────────────────────────────
+  // Filtragem e ordenação (agora com descrição)
   const filteredAndSorted = useMemo(() => {
     const q = normalizeText(filters.search);
 
@@ -96,7 +96,7 @@ export default function App() {
       if (filters.onlyFavorites && !favorites.has(b.id)) return false;
       if (filters.region !== "Todas" && b.region !== filters.region) return false;
       if (filters.onlyTeam && !b.visited) return false;
-      if (q && !b._name.includes(q) && !b._dish.includes(q) && !b._neighborhood.includes(q)) return false;
+      if (q && !b._name.includes(q) && !b._dish.includes(q) && !b._neighborhood.includes(q) && !b._desc.includes(q)) return false;
       return true;
     });
 
@@ -105,7 +105,7 @@ export default function App() {
     return result;
   }, [filters, visited, favorites, sortBy]);
 
-  // ── Agrupamento por região ─────────────────────────────────────────────────
+  // Agrupamento
   const grouped = useMemo(() =>
     filteredAndSorted.reduce((acc, b) => {
       (acc[b.region] ??= []).push(b);
@@ -113,10 +113,8 @@ export default function App() {
     }, {}),
   [filteredAndSorted]);
 
-  // Props comuns de Card — evita repetição nos dois grids
   const cardProps = { visited, favorites, onToggleVisit: handleToggleVisit, onToggleFavorite: handleToggleFavorite, expandedId, onToggleExpand: handleToggleExpand, imgErr, onImgError: handleImgError, T, dark };
 
-  // ── Select styles (inline mínimo, o resto no CSS) ─────────────────────────
   const selectActive = (active) => ({
     border:     `1.5px solid ${active ? BRAND.navy : T.border}`,
     background: active ? (dark ? "#1a2040" : "#e8ecf8") : T.inputBg,
@@ -124,14 +122,9 @@ export default function App() {
     fontWeight: active ? 700 : 400,
   });
 
-  // ─────────────────────────────────────────────────────────────────────────
   return (
     <div className="app-container" style={{ background: T.bg }}>
-
-      {/* ── Header ──────────────────────────────────────────────────────── */}
       <header style={{ background: T.headerBg }}>
-
-        {/* Barra Instagram */}
         <div className="instagram-bar">
           <IgIcon color={BRAND.goldLt}/>
           <span style={{ color: "#ccc" }}>Curadoria realizada pelo perfil do Instagram</span>
@@ -144,24 +137,17 @@ export default function App() {
 
         <div className="header-content">
           <div style={{ display: "flex", alignItems: "center", gap: "2rem", flexWrap: "wrap" }}>
-
-            {/* Logo + título */}
             <div className="header-logo-title">
               <div className="logo-container"
                 style={{ border: `3px solid ${BRAND.gold}66`, boxShadow: `0 0 32px ${BRAND.gold}44, 0 8px 20px rgba(0,0,0,0.3)` }}>
                 <Logo size={85}/>
               </div>
               <div>
-                {/* Título principal - cor agora definida pelo CSS */}
                 <h1 className="main-title">Participantes di Buteco</h1>
-
-                {/* Subtítulo com edição e tema */}
                 <div className="main-subtitle" style={{ color: "#9BBFCE" }}>
                   Guia da 26ª Edição do Comida di Buteco ·
                   <span style={{ color: BRAND.goldLt }}> "Somos Todos Verduras"</span>
                 </div>
-
-                {/* Informações de período e preço (movidas para baixo do subtítulo) */}
                 <div className="header-info" style={{ marginTop: "0.5rem" }}>
                   <span className="header-period">10 Abr – 10 Mai 2026</span>
                   <span className="header-price">Petiscos a R$ 40</span>
@@ -169,7 +155,6 @@ export default function App() {
               </div>
             </div>
 
-            {/* Stats + toggle de tema */}
             <div className="header-stats">
               {[
                 { v: BARS.length,     l: "Bares"     },
@@ -189,7 +174,6 @@ export default function App() {
                   background:     dark ? "rgba(232,168,32,0.2)" : "rgba(255,255,255,0.12)",
                   border:         `2px solid ${dark ? BRAND.gold : "rgba(255,255,255,0.3)"}`,
                   borderRadius:   "50%",
-                  /* width e height removidos: agora controlados pelo CSS */
                   display:        "flex",
                   alignItems:     "center",
                   justifyContent: "center",
@@ -202,7 +186,6 @@ export default function App() {
             </div>
           </div>
 
-          {/* Abas */}
           <div className="tabs-container">
             {[{ k: "bares", l: "🍺  Bares & Pratos" }, { k: "mapa", l: "🗺️  Mapa Interativo" }].map(t => (
               <button key={t.k} onClick={() => setTab(t.k)} className="tab-button"
@@ -218,27 +201,22 @@ export default function App() {
         </div>
       </header>
 
-      {/* ── Aba Mapa ────────────────────────────────────────────────────── */}
       {tab === "mapa" && (
         <Suspense fallback={<div style={{ textAlign: "center", padding: "3rem", color: T.textMuted }}>Carregando mapa…</div>}>
           <MapComponent T={T} dark={dark}/>
         </Suspense>
       )}
 
-      {/* ── Aba Bares ───────────────────────────────────────────────────── */}
       {tab === "bares" && (
         <>
-          {/* Filtros sticky */}
           <div className="sticky-filters"
             style={{ background: T.filterBg, borderBottom: `1px solid ${T.filterBorder}`, boxShadow: `0 2px 12px rgba(0,0,0,${dark ? "0.4" : "0.07"})` }}>
             <div className="sticky-filters-inner">
-
-              {/* Busca */}
               <div className="search-wrapper">
                 <span className="search-icon" style={{ color: T.textFaint }}>🔍</span>
                 <input
                   type="text"
-                  placeholder="Buscar bar, prato ou bairro…"
+                  placeholder="Buscar bar, prato, bairro ou descrição…"
                   value={filters.search}
                   onChange={e => handleFilterChange("search", e.target.value)}
                   className="search-input"
@@ -246,7 +224,6 @@ export default function App() {
                 />
               </div>
 
-              {/* Selects */}
               <div className="filters-group">
                 <select
                   value={filters.region}
@@ -269,7 +246,6 @@ export default function App() {
                 </select>
               </div>
 
-              {/* Pills */}
               <div className="filters-group">
                 <FilterButton active={filters.onlyTeam}      onClick={() => handleFilterChange("onlyTeam",      !filters.onlyTeam)}      icon={<CheckCircle d={filters.onlyTeam}/>}      label="Time visitou" activeColor="#27ae60" activeBg={dark ? "#0d2c1a" : "#eafaf1"} activeText="#1a5c30" T={T}/>
                 <FilterButton active={filters.onlyVisited}   onClick={() => handleFilterChange("onlyVisited",   !filters.onlyVisited)}   icon={<CheckCircle d={filters.onlyVisited}/>}   label="Eu visitei"   activeColor="#27ae60" activeBg={dark ? "#0d2c1a" : "#eafaf1"} activeText="#1a5c30" T={T}/>
@@ -289,7 +265,6 @@ export default function App() {
             </div>
           </div>
 
-          {/* Banner CTA do mapa */}
           <div className="max-width-1200 px-15 mt-2">
             <div onClick={() => setTab("mapa")} className="map-cta"
               style={{ background: T.bannerBg, boxShadow: `0 2px 14px rgba(28,45,110,${dark ? "0.5" : "0.2"})`, border: `1px solid ${BRAND.navy}55` }}>
@@ -304,7 +279,6 @@ export default function App() {
             </div>
           </div>
 
-          {/* Grid */}
           <main className="max-width-1200 px-15" style={{ padding: "1.8rem 1.5rem 3.5rem" }}>
             {filteredAndSorted.length === 0 ? (
               <div className="empty-state">
@@ -338,7 +312,6 @@ export default function App() {
         </>
       )}
 
-      {/* ── Footer ──────────────────────────────────────────────────────── */}
       <footer style={{ background: T.footerBg, padding: "2.5rem 1.5rem", textAlign: "center" }}>
         <div className="footer-logo"><Logo size={50}/></div>
         <div className="footer-credit">
