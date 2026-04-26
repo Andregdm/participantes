@@ -430,3 +430,14 @@ select option { background: #fff;     color: #1C1A14; }
 .dark .header-price {
   background: rgba(244, 208, 63, 0.15);
 }
+
+/* Garante que o título principal tenha cor branca (era inline) */
+.main-title {
+  color: #fff;
+}
+
+/* Botão de tema com tamanho definitivo (substitui o inline removido) */
+.dm-toggle {
+  width: 48px !important;
+  height: 48px !important;
+}
