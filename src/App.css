@@ -446,3 +446,32 @@ select option { background: #fff;     color: #1C1A14; }
   text-decoration: underline !important;
   opacity: 0.8;
 }
+
+/* =============================================
+   RESPONSIVIDADE: HEADER STATS E BOTÃO TEMA
+   ============================================= */
+
+@media (max-width: 640px) {
+  .header-stats {
+    gap: 0.5rem;                 /* reduz espaço entre elementos */
+  }
+
+  .stat-card {
+    padding: 0.4rem 0.6rem;      /* reduz padding interno */
+    min-width: 55px;             /* largura mínima menor */
+  }
+
+  .stat-value {
+    font-size: 1.2rem;           /* números menores */
+  }
+
+  .stat-label {
+    font-size: 0.6rem;           /* texto menor */
+    letter-spacing: 0.05em;
+  }
+
+  .dm-toggle {
+    width: 36px !important;       /* botão de tema menor */
+    height: 36px !important;
+  }
+}
