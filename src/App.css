@@ -461,17 +461,17 @@ select option { background: #fff;     color: #1C1A14; }
     min-width: 55px;             /* largura mínima menor */
   }
 
-  .stat-value {
-    font-size: 1.2rem;           /* números menores */
+ /* .stat-value {
+    font-size: 1.2rem;           /* números menores 
   }
 
   .stat-label {
-    font-size: 0.6rem;           /* texto menor */
+    font-size: 0.6rem;           /* texto menor 
     letter-spacing: 0.05em;
   }
 
   .dm-toggle {
-    width: 36px !important;       /* botão de tema menor */
+    width: 36px !important;       /* botão de tema menor 
     height: 36px !important;
-  }
+  }*/
 }
