@@ -272,7 +272,7 @@
   {
     "id": 31,
     "name": "Galp?o Flor do Campo",
-    "beerTemp": null,
+    "beerTemp": -3.3,
     "visited": true,
     "rating": 8,
     "instagramPostUrl": "",
@@ -335,7 +335,7 @@
   {
     "id": 38,
     "name": "Santa Boemia",
-    "beerTemp": null,
+    "beerTemp": -4,
     "visited": true,
     "rating": 7,
     "instagramPostUrl": "",
@@ -821,7 +821,7 @@
   {
     "id": 92,
     "name": "Armaz?m Santa Am?lia",
-    "beerTemp": null,
+    "beerTemp": -5.9,
     "visited": true,
     "rating": 8.5,
     "instagramPostUrl": "",
@@ -1136,7 +1136,7 @@
   {
     "id": 127,
     "name": "Sunset Bar",
-    "beerTemp": null,
+    "beerTemp": -5.2,
     "visited": true,
     "rating": 8.8,
     "instagramPostUrl": "",
