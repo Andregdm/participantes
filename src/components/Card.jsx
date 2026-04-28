@@ -17,16 +17,12 @@ export const Card = ({
   const rc  = REGION_COLOR[b.region] ?? "#555";
   const tmp = getTempStyle(b.beerTemp);
 
-  // Handlers estáveis
   const handleImgError = useCallback(() => onImgError(b.id),       [b.id, onImgError]);
   const handleVisit    = useCallback(() => onToggleVisit(b.id),    [b.id, onToggleVisit]);
   const handleFav      = useCallback(() => onToggleFavorite(b.id), [b.id, onToggleFavorite]);
   const handleExpand   = useCallback(() => onToggleExpand(b.id),   [b.id, onToggleExpand]);
 
   const borderColor = isF ? BRAND.red : isV ? "#27ae60" : T.cardBorder;
-
-  // Verifica se existe link do Instagram
-  const instaLink = b.instagramPost || b.instagramUrl; // adapte o nome do campo conforme seu JSON
 
   return (
     <article
@@ -37,7 +33,6 @@ export const Card = ({
         boxShadow:   `0 2px 10px rgba(0,0,0,${dark ? "0.3" : "0.07"})`,
       }}
     >
-      {/* Faixa de cor regional */}
       <div className="region-color-bar-top" style={{ background: rc }}/>
 
       {/* Foto */}
@@ -73,28 +68,37 @@ export const Card = ({
         </div>
       )}
 
-      {/* Conteúdo */}
       <div className="card-content">
 
-        {/* Nome + ações */}
+        {/* Cabeçalho: nome + ações + Instagram (se houver) */}
         <div className="card-header">
           <div style={{ flex: 1, minWidth: 0 }}>
-            {/* Título do bar com link para o Instagram, se disponível */}
-            <h3 className="card-title" style={{ color: T.text }}>
-              {instaLink ? (
+            <div style={{ display: "flex", alignItems: "center", gap: "6px", flexWrap: "wrap" }}>
+              <h3 className="card-title" style={{ color: T.text, margin: 0 }}>{b.name}</h3>
+              {b.instagramPostUrl && (
                 <a
-                  href={instaLink}
+                  href={b.instagramPostUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  style={{ color: T.text, textDecoration: "none", borderBottom: `1px dotted ${rc}` }}
-                  title="Ver post no Instagram"
+                  className="instagram-link"
+                  style={{
+                    fontSize: "0.7rem",
+                    background: "rgba(0,0,0,0.05)",
+                    padding: "2px 6px",
+                    borderRadius: "20px",
+                    textDecoration: "none",
+                    color: BRAND.navy,
+                    fontWeight: 500,
+                    display: "inline-flex",
+                    alignItems: "center",
+                    gap: "3px",
+                    whiteSpace: "nowrap",
+                  }}
                 >
-                  {b.name}
+                  📷 Ver post
                 </a>
-              ) : (
-                b.name
               )}
-            </h3>
+            </div>
             <div className="card-subtitle" style={{ color: T.textFaint }}>
               {b.neighborhood} · <span style={{ color: rc, fontWeight: 600 }}>{b.region}</span>
             </div>
@@ -109,7 +113,7 @@ export const Card = ({
           </div>
         </div>
 
-        {/* Pill row — time visitou / nota / temperatura */}
+        {/* Info bar */}
         <div className="info-bar" style={{ background: T.glassBg, border: `1px solid ${T.glassBorder}` }}>
           <div className="team-visit-status">
             {b.visited ? (
