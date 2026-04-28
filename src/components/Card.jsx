@@ -83,16 +83,17 @@ export const Card = ({
                   className="instagram-link"
                   style={{
                     fontSize: "1rem",
-                    background: "rgba(0,0,0,0.05)",
+                    background: dark ? "rgba(255,255,255,0.12)" : "rgba(0,0,0,0.05)",
                     padding: "2px 6px",
                     borderRadius: "20px",
                     textDecoration: "none",
-                    color: BRAND.navy,
+                    color: dark ? BRAND.goldLt : BRAND.navy,
                     fontWeight: 500,
                     display: "inline-flex",
                     alignItems: "center",
                     gap: "3px",
                     whiteSpace: "nowrap",
+                    transition: "opacity 0.15s",
                   }}
                 >
                   📷 Ver post
