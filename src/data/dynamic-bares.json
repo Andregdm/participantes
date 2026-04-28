@@ -110,8 +110,8 @@
   {
     "id": 13,
     "name": "Caf? Palhares",
-    "beerTemp": null,
-    "visited": "",
+    "beerTemp": -4,
+    "visited": true,
     "rating": null,
     "instagramPostUrl": "",
     "visitDate": ""
