@@ -1,0 +1,1145 @@
+[
+  {
+    "id": 1,
+    "name": "Bar do Bartolomeu",
+    "beerTemp": null,
+    "visited": true,
+    "rating": 7.5,
+    "instagramPostUrl": "",
+    "visitDate": ""
+  },
+  {
+    "id": 2,
+    "name": "Espetinho do Boi",
+    "beerTemp": null,
+    "visited": true,
+    "rating": 8.25,
+    "instagramPostUrl": "",
+    "visitDate": ""
+  },
+  {
+    "id": 3,
+    "name": "Golden Grill",
+    "beerTemp": null,
+    "visited": true,
+    "rating": 8.83,
+    "instagramPostUrl": "",
+    "visitDate": ""
+  },
+  {
+    "id": 4,
+    "name": "Já Tô Inno",
+    "beerTemp": null,
+    "visited": true,
+    "rating": 9.5,
+    "instagramPostUrl": "",
+    "visitDate": ""
+  },
+  {
+    "id": 5,
+    "name": "Leo da Quadra",
+    "beerTemp": null,
+    "visited": true,
+    "rating": 8.17,
+    "instagramPostUrl": "",
+    "visitDate": ""
+  },
+  {
+    "id": 6,
+    "name": "222",
+    "beerTemp": null,
+    "visited": false,
+    "rating": null,
+    "instagramPostUrl": "",
+    "visitDate": ""
+  },
+  {
+    "id": 7,
+    "name": "Azougue Fogo e Bar",
+    "beerTemp": null,
+    "visited": false,
+    "rating": null,
+    "instagramPostUrl": "",
+    "visitDate": ""
+  },
+  {
+    "id": 8,
+    "name": "Baiúca",
+    "beerTemp": null,
+    "visited": false,
+    "rating": null,
+    "instagramPostUrl": "",
+    "visitDate": ""
+  },
+  {
+    "id": 9,
+    "name": "Bar Estabelecimento",
+    "beerTemp": null,
+    "visited": false,
+    "rating": null,
+    "instagramPostUrl": "",
+    "visitDate": ""
+  },
+  {
+    "id": 10,
+    "name": "Bar Mania Mineira",
+    "beerTemp": null,
+    "visited": false,
+    "rating": null,
+    "instagramPostUrl": "",
+    "visitDate": ""
+  },
+  {
+    "id": 11,
+    "name": "Beco Restaurante",
+    "beerTemp": null,
+    "visited": false,
+    "rating": null,
+    "instagramPostUrl": "",
+    "visitDate": ""
+  },
+  {
+    "id": 12,
+    "name": "Boi Major",
+    "beerTemp": null,
+    "visited": false,
+    "rating": null,
+    "instagramPostUrl": "",
+    "visitDate": ""
+  },
+  {
+    "id": 13,
+    "name": "Café Palhares",
+    "beerTemp": null,
+    "visited": false,
+    "rating": null,
+    "instagramPostUrl": "",
+    "visitDate": ""
+  },
+  {
+    "id": 14,
+    "name": "Dona Dora",
+    "beerTemp": null,
+    "visited": false,
+    "rating": null,
+    "instagramPostUrl": "",
+    "visitDate": ""
+  },
+  {
+    "id": 15,
+    "name": "Espetinho São Pedro Quió",
+    "beerTemp": null,
+    "visited": false,
+    "rating": null,
+    "instagramPostUrl": "",
+    "visitDate": ""
+  },
+  {
+    "id": 16,
+    "name": "Graffica Bar",
+    "beerTemp": null,
+    "visited": false,
+    "rating": null,
+    "instagramPostUrl": "",
+    "visitDate": ""
+  },
+  {
+    "id": 17,
+    "name": "Mamute Bar",
+    "beerTemp": null,
+    "visited": false,
+    "rating": null,
+    "instagramPostUrl": "",
+    "visitDate": ""
+  },
+  {
+    "id": 18,
+    "name": "Pé de Cana",
+    "beerTemp": null,
+    "visited": false,
+    "rating": null,
+    "instagramPostUrl": "",
+    "visitDate": ""
+  },
+  {
+    "id": 19,
+    "name": "PoiZé Bar e Petisqueira",
+    "beerTemp": null,
+    "visited": false,
+    "rating": null,
+    "instagramPostUrl": "",
+    "visitDate": ""
+  },
+  {
+    "id": 20,
+    "name": "Santuário Retrô",
+    "beerTemp": null,
+    "visited": false,
+    "rating": null,
+    "instagramPostUrl": "",
+    "visitDate": ""
+  },
+  {
+    "id": 21,
+    "name": "Via Deslandes",
+    "beerTemp": null,
+    "visited": false,
+    "rating": null,
+    "instagramPostUrl": "",
+    "visitDate": ""
+  },
+  {
+    "id": 22,
+    "name": "Xambar",
+    "beerTemp": null,
+    "visited": false,
+    "rating": null,
+    "instagramPostUrl": "",
+    "visitDate": ""
+  },
+  {
+    "id": 23,
+    "name": "Bar do Nelson",
+    "beerTemp": -3.3,
+    "visited": true,
+    "rating": 8.0,
+    "instagramPostUrl": "",
+    "visitDate": ""
+  },
+  {
+    "id": 24,
+    "name": "Bar Du Du",
+    "beerTemp": -1.4,
+    "visited": true,
+    "rating": 9.33,
+    "instagramPostUrl": "",
+    "visitDate": ""
+  },
+  {
+    "id": 25,
+    "name": "Bar Du Magrelo",
+    "beerTemp": 0.8,
+    "visited": true,
+    "rating": 8.2,
+    "instagramPostUrl": "",
+    "visitDate": ""
+  },
+  {
+    "id": 26,
+    "name": "Bar e Restaurante do Branco",
+    "beerTemp": -4.0,
+    "visited": true,
+    "rating": 7.75,
+    "instagramPostUrl": "",
+    "visitDate": ""
+  },
+  {
+    "id": 27,
+    "name": "Bar Temático",
+    "beerTemp": null,
+    "visited": false,
+    "rating": null,
+    "instagramPostUrl": "",
+    "visitDate": ""
+  },
+  {
+    "id": 28,
+    "name": "Cantinho da Baiana",
+    "beerTemp": null,
+    "visited": true,
+    "rating": 7.67,
+    "instagramPostUrl": "",
+    "visitDate": ""
+  },
+  {
+    "id": 29,
+    "name": "Casa Mojubá",
+    "beerTemp": null,
+    "visited": false,
+    "rating": null,
+    "instagramPostUrl": "",
+    "visitDate": ""
+  },
+  {
+    "id": 30,
+    "name": "Cosmos",
+    "beerTemp": -3.3,
+    "visited": true,
+    "rating": 8.86,
+    "instagramPostUrl": "",
+    "visitDate": ""
+  },
+  {
+    "id": 31,
+    "name": "Galpão Flor do Campo",
+    "beerTemp": null,
+    "visited": false,
+    "rating": null,
+    "instagramPostUrl": "",
+    "visitDate": ""
+  },
+  {
+    "id": 32,
+    "name": "Iracema Bar",
+    "beerTemp": null,
+    "visited": false,
+    "rating": null,
+    "instagramPostUrl": "",
+    "visitDate": ""
+  },
+  {
+    "id": 33,
+    "name": "Köbes Emporium Bar",
+    "beerTemp": -3.9,
+    "visited": true,
+    "rating": 8.0,
+    "instagramPostUrl": "",
+    "visitDate": ""
+  },
+  {
+    "id": 34,
+    "name": "Koqueiros Bar",
+    "beerTemp": -5.9,
+    "visited": true,
+    "rating": 8.0,
+    "instagramPostUrl": "",
+    "visitDate": ""
+  },
+  {
+    "id": 35,
+    "name": "Locomotivas Bar",
+    "beerTemp": -7.3,
+    "visited": true,
+    "rating": 9.67,
+    "instagramPostUrl": "",
+    "visitDate": ""
+  },
+  {
+    "id": 36,
+    "name": "Oratório Bar",
+    "beerTemp": null,
+    "visited": false,
+    "rating": null,
+    "instagramPostUrl": "",
+    "visitDate": ""
+  },
+  {
+    "id": 37,
+    "name": "Quitandas da Tia Nice Bar",
+    "beerTemp": -2.1,
+    "visited": true,
+    "rating": 8.33,
+    "instagramPostUrl": "",
+    "visitDate": ""
+  },
+  {
+    "id": 38,
+    "name": "Santa Boemia",
+    "beerTemp": null,
+    "visited": false,
+    "rating": null,
+    "instagramPostUrl": "",
+    "visitDate": ""
+  },
+  {
+    "id": 39,
+    "name": "Bar Bendita Baderna",
+    "beerTemp": null,
+    "visited": false,
+    "rating": null,
+    "instagramPostUrl": "",
+    "visitDate": ""
+  },
+  {
+    "id": 40,
+    "name": "Bar da Gisa",
+    "beerTemp": -2.7,
+    "visited": true,
+    "rating": 8.33,
+    "instagramPostUrl": "",
+    "visitDate": ""
+  },
+  {
+    "id": 41,
+    "name": "Bar do Peixinho",
+    "beerTemp": null,
+    "visited": false,
+    "rating": null,
+    "instagramPostUrl": "",
+    "visitDate": ""
+  },
+  {
+    "id": 42,
+    "name": "Camisola Bar",
+    "beerTemp": null,
+    "visited": false,
+    "rating": null,
+    "instagramPostUrl": "",
+    "visitDate": ""
+  },
+  {
+    "id": 43,
+    "name": "Dona Ju Gastro Bar",
+    "beerTemp": -3.3,
+    "visited": true,
+    "rating": 9.4,
+    "instagramPostUrl": "",
+    "visitDate": ""
+  },
+  {
+    "id": 44,
+    "name": "Empório Lais",
+    "beerTemp": null,
+    "visited": false,
+    "rating": null,
+    "instagramPostUrl": "",
+    "visitDate": ""
+  },
+  {
+    "id": 45,
+    "name": "Recanto da Traíra",
+    "beerTemp": null,
+    "visited": false,
+    "rating": null,
+    "instagramPostUrl": "",
+    "visitDate": ""
+  },
+  {
+    "id": 46,
+    "name": "Resenha da Naty",
+    "beerTemp": null,
+    "visited": false,
+    "rating": null,
+    "instagramPostUrl": "",
+    "visitDate": ""
+  },
+  {
+    "id": 47,
+    "name": "Spetim",
+    "beerTemp": null,
+    "visited": false,
+    "rating": null,
+    "instagramPostUrl": "",
+    "visitDate": ""
+  },
+  {
+    "id": 48,
+    "name": "Bar do Bem",
+    "beerTemp": null,
+    "visited": false,
+    "rating": null,
+    "instagramPostUrl": "",
+    "visitDate": ""
+  },
+  {
+    "id": 49,
+    "name": "Bar do Momô",
+    "beerTemp": null,
+    "visited": false,
+    "rating": null,
+    "instagramPostUrl": "",
+    "visitDate": ""
+  },
+  {
+    "id": 50,
+    "name": "Boteco 86",
+    "beerTemp": null,
+    "visited": false,
+    "rating": null,
+    "instagramPostUrl": "",
+    "visitDate": ""
+  },
+  {
+    "id": 51,
+    "name": "Cantina Arte Quintal",
+    "beerTemp": null,
+    "visited": false,
+    "rating": null,
+    "instagramPostUrl": "",
+    "visitDate": ""
+  },
+  {
+    "id": 52,
+    "name": "Mulão",
+    "beerTemp": null,
+    "visited": false,
+    "rating": null,
+    "instagramPostUrl": "",
+    "visitDate": ""
+  },
+  {
+    "id": 53,
+    "name": "Tanganica Art Bar",
+    "beerTemp": null,
+    "visited": false,
+    "rating": null,
+    "instagramPostUrl": "",
+    "visitDate": ""
+  },
+  {
+    "id": 54,
+    "name": "Toninho – Alto Forno",
+    "beerTemp": -2.1,
+    "visited": true,
+    "rating": 8.0,
+    "instagramPostUrl": "",
+    "visitDate": ""
+  },
+  {
+    "id": 55,
+    "name": "Bar do Tião",
+    "beerTemp": null,
+    "visited": false,
+    "rating": null,
+    "instagramPostUrl": "",
+    "visitDate": ""
+  },
+  {
+    "id": 56,
+    "name": "Bar Stella",
+    "beerTemp": -8.0,
+    "visited": true,
+    "rating": 6.67,
+    "instagramPostUrl": "",
+    "visitDate": ""
+  },
+  {
+    "id": 57,
+    "name": "Chapa Mágica",
+    "beerTemp": -2.6,
+    "visited": true,
+    "rating": 7.5,
+    "instagramPostUrl": "",
+    "visitDate": ""
+  },
+  {
+    "id": 58,
+    "name": "Companhia do Dino",
+    "beerTemp": -6.6,
+    "visited": true,
+    "rating": 9.0,
+    "instagramPostUrl": "",
+    "visitDate": ""
+  },
+  {
+    "id": 59,
+    "name": "Garagge Vintage",
+    "beerTemp": -5.3,
+    "visited": true,
+    "rating": 7.83,
+    "instagramPostUrl": "",
+    "visitDate": ""
+  },
+  {
+    "id": 60,
+    "name": "Ivo Grill",
+    "beerTemp": -6.0,
+    "visited": true,
+    "rating": 8.67,
+    "instagramPostUrl": "",
+    "visitDate": ""
+  },
+  {
+    "id": 61,
+    "name": "Parada Do Sabor",
+    "beerTemp": null,
+    "visited": true,
+    "rating": 7.75,
+    "instagramPostUrl": "",
+    "visitDate": ""
+  },
+  {
+    "id": 62,
+    "name": "Queremos Frango",
+    "beerTemp": -3.3,
+    "visited": true,
+    "rating": 9.0,
+    "instagramPostUrl": "",
+    "visitDate": ""
+  },
+  {
+    "id": 63,
+    "name": "Zé Bolacha",
+    "beerTemp": null,
+    "visited": false,
+    "rating": null,
+    "instagramPostUrl": "",
+    "visitDate": ""
+  },
+  {
+    "id": 64,
+    "name": "Bar Bambú",
+    "beerTemp": null,
+    "visited": false,
+    "rating": null,
+    "instagramPostUrl": "",
+    "visitDate": ""
+  },
+  {
+    "id": 65,
+    "name": "Bar da Praça",
+    "beerTemp": null,
+    "visited": false,
+    "rating": null,
+    "instagramPostUrl": "",
+    "visitDate": ""
+  },
+  {
+    "id": 66,
+    "name": "Bar da Silvânia",
+    "beerTemp": null,
+    "visited": false,
+    "rating": null,
+    "instagramPostUrl": "",
+    "visitDate": ""
+  },
+  {
+    "id": 67,
+    "name": "Bar do Kim",
+    "beerTemp": null,
+    "visited": false,
+    "rating": null,
+    "instagramPostUrl": "",
+    "visitDate": ""
+  },
+  {
+    "id": 68,
+    "name": "Bar do Primo",
+    "beerTemp": -7.3,
+    "visited": true,
+    "rating": 8.0,
+    "instagramPostUrl": "",
+    "visitDate": ""
+  },
+  {
+    "id": 69,
+    "name": "Bar do Regis",
+    "beerTemp": -0.9,
+    "visited": true,
+    "rating": 7.5,
+    "instagramPostUrl": "",
+    "visitDate": ""
+  },
+  {
+    "id": 70,
+    "name": "Bar dos Meninos",
+    "beerTemp": null,
+    "visited": true,
+    "rating": 9.33,
+    "instagramPostUrl": "",
+    "visitDate": ""
+  },
+  {
+    "id": 71,
+    "name": "Bar e Restaurante Bom Sabor",
+    "beerTemp": -3.9,
+    "visited": true,
+    "rating": 8.67,
+    "instagramPostUrl": "",
+    "visitDate": ""
+  },
+  {
+    "id": 72,
+    "name": "Bar Junto Juntinho",
+    "beerTemp": -3.9,
+    "visited": true,
+    "rating": 8.0,
+    "instagramPostUrl": "",
+    "visitDate": ""
+  },
+  {
+    "id": 73,
+    "name": "Barzim dos Amigos",
+    "beerTemp": -7.3,
+    "visited": true,
+    "rating": 8.5,
+    "instagramPostUrl": "",
+    "visitDate": ""
+  },
+  {
+    "id": 74,
+    "name": "Botequim Buritis",
+    "beerTemp": null,
+    "visited": false,
+    "rating": null,
+    "instagramPostUrl": "",
+    "visitDate": ""
+  },
+  {
+    "id": 75,
+    "name": "Buteco Tô D'Boa",
+    "beerTemp": -7.3,
+    "visited": true,
+    "rating": 10.0,
+    "instagramPostUrl": "",
+    "visitDate": ""
+  },
+  {
+    "id": 76,
+    "name": "Buteco's Bar",
+    "beerTemp": -5.3,
+    "visited": true,
+    "rating": 8.2,
+    "instagramPostUrl": "",
+    "visitDate": ""
+  },
+  {
+    "id": 77,
+    "name": "Butiquim 325",
+    "beerTemp": null,
+    "visited": false,
+    "rating": null,
+    "instagramPostUrl": "",
+    "visitDate": ""
+  },
+  {
+    "id": 78,
+    "name": "Choperia América Norte Sul",
+    "beerTemp": null,
+    "visited": false,
+    "rating": null,
+    "instagramPostUrl": "",
+    "visitDate": ""
+  },
+  {
+    "id": 79,
+    "name": "Chopp da Esquina",
+    "beerTemp": -3.1,
+    "visited": true,
+    "rating": 7.0,
+    "instagramPostUrl": "",
+    "visitDate": ""
+  },
+  {
+    "id": 80,
+    "name": "Comida & Prosa",
+    "beerTemp": null,
+    "visited": false,
+    "rating": null,
+    "instagramPostUrl": "",
+    "visitDate": ""
+  },
+  {
+    "id": 81,
+    "name": "Conectados Bar",
+    "beerTemp": null,
+    "visited": false,
+    "rating": null,
+    "instagramPostUrl": "",
+    "visitDate": ""
+  },
+  {
+    "id": 82,
+    "name": "Espettinho.com",
+    "beerTemp": null,
+    "visited": false,
+    "rating": null,
+    "instagramPostUrl": "",
+    "visitDate": ""
+  },
+  {
+    "id": 83,
+    "name": "Geraldin da Cida",
+    "beerTemp": null,
+    "visited": false,
+    "rating": null,
+    "instagramPostUrl": "",
+    "visitDate": ""
+  },
+  {
+    "id": 84,
+    "name": "Pé de Goiaba",
+    "beerTemp": -5.9,
+    "visited": true,
+    "rating": 7.67,
+    "instagramPostUrl": "",
+    "visitDate": ""
+  },
+  {
+    "id": 85,
+    "name": "Prado Beer",
+    "beerTemp": null,
+    "visited": false,
+    "rating": null,
+    "instagramPostUrl": "",
+    "visitDate": ""
+  },
+  {
+    "id": 86,
+    "name": "Quintal do Louzada",
+    "beerTemp": -7.3,
+    "visited": true,
+    "rating": 7.5,
+    "instagramPostUrl": "",
+    "visitDate": ""
+  },
+  {
+    "id": 87,
+    "name": "Quioxque Botequim Carioca",
+    "beerTemp": null,
+    "visited": false,
+    "rating": null,
+    "instagramPostUrl": "",
+    "visitDate": ""
+  },
+  {
+    "id": 88,
+    "name": "Reforma Bar",
+    "beerTemp": -3.9,
+    "visited": true,
+    "rating": 7.25,
+    "instagramPostUrl": "",
+    "visitDate": ""
+  },
+  {
+    "id": 89,
+    "name": "S.O.S Pub",
+    "beerTemp": null,
+    "visited": false,
+    "rating": null,
+    "instagramPostUrl": "",
+    "visitDate": ""
+  },
+  {
+    "id": 90,
+    "name": "Us Motoca",
+    "beerTemp": null,
+    "visited": false,
+    "rating": null,
+    "instagramPostUrl": "",
+    "visitDate": ""
+  },
+  {
+    "id": 91,
+    "name": "Alexandre's Bar",
+    "beerTemp": null,
+    "visited": false,
+    "rating": null,
+    "instagramPostUrl": "",
+    "visitDate": ""
+  },
+  {
+    "id": 92,
+    "name": "Armazém Santa Amélia",
+    "beerTemp": null,
+    "visited": false,
+    "rating": null,
+    "instagramPostUrl": "",
+    "visitDate": ""
+  },
+  {
+    "id": 93,
+    "name": "Bar do Dedinho",
+    "beerTemp": -3.2,
+    "visited": true,
+    "rating": 8.2,
+    "instagramPostUrl": "",
+    "visitDate": ""
+  },
+  {
+    "id": 94,
+    "name": "Bar Pompéu",
+    "beerTemp": null,
+    "visited": true,
+    "rating": 7.75,
+    "instagramPostUrl": "",
+    "visitDate": ""
+  },
+  {
+    "id": 95,
+    "name": "Barrigudinha Buteco",
+    "beerTemp": null,
+    "visited": false,
+    "rating": null,
+    "instagramPostUrl": "",
+    "visitDate": ""
+  },
+  {
+    "id": 96,
+    "name": "Bazin Bar",
+    "beerTemp": null,
+    "visited": false,
+    "rating": null,
+    "instagramPostUrl": "",
+    "visitDate": ""
+  },
+  {
+    "id": 97,
+    "name": "Bella Bar e Restaurante",
+    "beerTemp": null,
+    "visited": false,
+    "rating": null,
+    "instagramPostUrl": "",
+    "visitDate": ""
+  },
+  {
+    "id": 98,
+    "name": "Buteco do Lili",
+    "beerTemp": null,
+    "visited": false,
+    "rating": null,
+    "instagramPostUrl": "",
+    "visitDate": ""
+  },
+  {
+    "id": 99,
+    "name": "Butiquim On Cê Tá?",
+    "beerTemp": -6.6,
+    "visited": true,
+    "rating": 7.5,
+    "instagramPostUrl": "",
+    "visitDate": ""
+  },
+  {
+    "id": 100,
+    "name": "Cipoeiro Bar",
+    "beerTemp": null,
+    "visited": false,
+    "rating": null,
+    "instagramPostUrl": "",
+    "visitDate": ""
+  },
+  {
+    "id": 101,
+    "name": "Deck Boi na Brasa",
+    "beerTemp": null,
+    "visited": false,
+    "rating": null,
+    "instagramPostUrl": "",
+    "visitDate": ""
+  },
+  {
+    "id": 102,
+    "name": "Espetinho Rei e Família",
+    "beerTemp": -8.7,
+    "visited": true,
+    "rating": 8.0,
+    "instagramPostUrl": "",
+    "visitDate": ""
+  },
+  {
+    "id": 103,
+    "name": "Juzé Bar",
+    "beerTemp": -7.8,
+    "visited": true,
+    "rating": 8.25,
+    "instagramPostUrl": "",
+    "visitDate": ""
+  },
+  {
+    "id": 104,
+    "name": "Magnífico Quintal",
+    "beerTemp": null,
+    "visited": true,
+    "rating": 8.2,
+    "instagramPostUrl": "",
+    "visitDate": ""
+  },
+  {
+    "id": 105,
+    "name": "Magrelo's Bar",
+    "beerTemp": null,
+    "visited": false,
+    "rating": null,
+    "instagramPostUrl": "",
+    "visitDate": ""
+  },
+  {
+    "id": 106,
+    "name": "Mineiros Beer",
+    "beerTemp": null,
+    "visited": false,
+    "rating": null,
+    "instagramPostUrl": "",
+    "visitDate": ""
+  },
+  {
+    "id": 107,
+    "name": "Nubar",
+    "beerTemp": null,
+    "visited": false,
+    "rating": null,
+    "instagramPostUrl": "",
+    "visitDate": ""
+  },
+  {
+    "id": 108,
+    "name": "Parada 10.95 Bar",
+    "beerTemp": null,
+    "visited": false,
+    "rating": null,
+    "instagramPostUrl": "",
+    "visitDate": ""
+  },
+  {
+    "id": 109,
+    "name": "Planeta Lúpulo",
+    "beerTemp": -5.2,
+    "visited": true,
+    "rating": 8.0,
+    "instagramPostUrl": "",
+    "visitDate": ""
+  },
+  {
+    "id": 110,
+    "name": "Rei da Picanha",
+    "beerTemp": null,
+    "visited": true,
+    "rating": 7.0,
+    "instagramPostUrl": "",
+    "visitDate": ""
+  },
+  {
+    "id": 111,
+    "name": "Rei do Peixe",
+    "beerTemp": null,
+    "visited": false,
+    "rating": null,
+    "instagramPostUrl": "",
+    "visitDate": ""
+  },
+  {
+    "id": 112,
+    "name": "Sant'Esquina Butiquim",
+    "beerTemp": null,
+    "visited": false,
+    "rating": null,
+    "instagramPostUrl": "",
+    "visitDate": ""
+  },
+  {
+    "id": 113,
+    "name": "Sô Bar",
+    "beerTemp": null,
+    "visited": false,
+    "rating": null,
+    "instagramPostUrl": "",
+    "visitDate": ""
+  },
+  {
+    "id": 114,
+    "name": "Toca do Ogro",
+    "beerTemp": 0.7,
+    "visited": true,
+    "rating": 8.83,
+    "instagramPostUrl": "",
+    "visitDate": ""
+  },
+  {
+    "id": 115,
+    "name": "Zoo Bar",
+    "beerTemp": null,
+    "visited": false,
+    "rating": null,
+    "instagramPostUrl": "",
+    "visitDate": ""
+  },
+  {
+    "id": 116,
+    "name": "Andrade's Beer",
+    "beerTemp": -4.6,
+    "visited": true,
+    "rating": 9.5,
+    "instagramPostUrl": "",
+    "visitDate": ""
+  },
+  {
+    "id": 117,
+    "name": "Avalanche Bar e Restaurante",
+    "beerTemp": null,
+    "visited": false,
+    "rating": null,
+    "instagramPostUrl": "",
+    "visitDate": ""
+  },
+  {
+    "id": 118,
+    "name": "Bar da Cintia",
+    "beerTemp": null,
+    "visited": false,
+    "rating": null,
+    "instagramPostUrl": "",
+    "visitDate": ""
+  },
+  {
+    "id": 119,
+    "name": "Bar da Fia",
+    "beerTemp": null,
+    "visited": false,
+    "rating": null,
+    "instagramPostUrl": "",
+    "visitDate": ""
+  },
+  {
+    "id": 120,
+    "name": "Bar da Lu",
+    "beerTemp": null,
+    "visited": false,
+    "rating": null,
+    "instagramPostUrl": "",
+    "visitDate": ""
+  },
+  {
+    "id": 121,
+    "name": "Bar do João",
+    "beerTemp": null,
+    "visited": false,
+    "rating": null,
+    "instagramPostUrl": "",
+    "visitDate": ""
+  },
+  {
+    "id": 122,
+    "name": "Dona Suica",
+    "beerTemp": null,
+    "visited": false,
+    "rating": null,
+    "instagramPostUrl": "",
+    "visitDate": ""
+  },
+  {
+    "id": 123,
+    "name": "Espetinho do Tilias",
+    "beerTemp": 0.3,
+    "visited": true,
+    "rating": 7.29,
+    "instagramPostUrl": "",
+    "visitDate": ""
+  },
+  {
+    "id": 124,
+    "name": "Nosso Spetim",
+    "beerTemp": null,
+    "visited": false,
+    "rating": null,
+    "instagramPostUrl": "",
+    "visitDate": ""
+  },
+  {
+    "id": 125,
+    "name": "O Fino do Alho",
+    "beerTemp": null,
+    "visited": false,
+    "rating": null,
+    "instagramPostUrl": "",
+    "visitDate": ""
+  },
+  {
+    "id": 126,
+    "name": "Seu Justino",
+    "beerTemp": -3.3,
+    "visited": true,
+    "rating": 8.83,
+    "instagramPostUrl": "",
+    "visitDate": ""
+  },
+  {
+    "id": 127,
+    "name": "Sunset Bar",
+    "beerTemp": null,
+    "visited": false,
+    "rating": null,
+    "instagramPostUrl": "",
+    "visitDate": ""
+  }
+]
