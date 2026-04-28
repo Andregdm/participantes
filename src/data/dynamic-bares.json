@@ -1109,7 +1109,7 @@
   {
     "id": 124,
     "name": "Nosso Spetim",
-    "beerTemp": null,
+    "beerTemp": -5.9,
     "visited": true,
     "rating": 9,
     "instagramPostUrl": "",
