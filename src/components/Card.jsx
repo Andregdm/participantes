@@ -70,34 +70,28 @@ export const Card = ({
 
       <div className="card-content">
 
-        {/* Cabeçalho: nome + ações + Instagram (se houver) */}
+        {/* Cabeçalho: nome (link se houver post) + ações */}
         <div className="card-header">
           <div style={{ flex: 1, minWidth: 0 }}>
             <div style={{ display: "flex", alignItems: "center", gap: "6px", flexWrap: "wrap" }}>
-              <h3 className="card-title" style={{ color: T.text, margin: 0 }}>{b.name}</h3>
-              {b.instagramPostUrl && (
+              {/* Nome do bar: link para Instagram quando disponível, com sublinhado e emoji de câmera */}
+              {b.instagramPostUrl ? (
                 <a
                   href={b.instagramPostUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="instagram-link"
                   style={{
-                    fontSize: "1rem",
-                    background: dark ? "rgba(255,255,255,0.12)" : "rgba(0,0,0,0.05)",
-                    padding: "2px 6px",
-                    borderRadius: "20px",
-                    textDecoration: "none",
-                    color: dark ? BRAND.goldLt : BRAND.navy,
-                    fontWeight: 500,
-                    display: "inline-flex",
-                    alignItems: "center",
-                    gap: "3px",
-                    whiteSpace: "nowrap",
-                    transition: "opacity 0.15s",
+                    color: T.text,
+                    textDecoration: "underline",
+                    fontWeight: "inherit",
+                    fontSize: "inherit",
+                    margin: 0,
                   }}
                 >
-                  📷 Ver post
+                  {b.name} 📷
                 </a>
+              ) : (
+                <h3 className="card-title" style={{ color: T.text, margin: 0 }}>{b.name}</h3>
               )}
             </div>
             <div className="card-subtitle" style={{ color: T.textFaint }}>
