@@ -794,7 +794,7 @@
   {
     "id": 89,
     "name": "S.O.S Pub",
-    "beerTemp": -4,
+    "beerTemp": null,
     "visited": true,
     "rating": 8,
     "instagramPostUrl": "",
