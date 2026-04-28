@@ -1,6 +1,6 @@
 // Paleta da marca (extraída da logo)
 export const BRAND = {
-  navy:   "#23357A",   // mais claro que o anterior (#1C2D6E) para melhor contraste no modo escuro
+  navy:   "#1C2D6E",
   navyDk: "#131f50",
   red:    "#C0392B",
   gold:   "#E8A820",
@@ -14,10 +14,10 @@ export const THEMES = {
     bg:          "#F5EFE0",
     surface:     "#FFFFFF",
     surfaceAlt:  "#FAF7F0",
-    border:      "#D6C8AC",       // mais definido
-    text:        "#1E1B12",       // contraste aprimorado
-    textMuted:   "#4E4432",       // mais legível
-    textFaint:   "#8A7A64",       // agora com contraste aceitável
+    border:      "#E2D8C0",
+    text:        "#1C1A14",
+    textMuted:   "#6B5F48",
+    textFaint:   "#9E9280",
     statBg:      "rgba(255,255,255,0.13)",
     inputBg:     "#FAF7F0",
     glassBg:     "rgba(255,255,255,0.75)",
@@ -35,10 +35,10 @@ export const THEMES = {
     bg:          "#0F1117",
     surface:     "#1A1D26",
     surfaceAlt:  "#21242F",
-    border:      "#444A62",       // mais visível sem ofuscar
-    text:        "#F5F0E8",       // branco mais puro
-    textMuted:   "#C2BCCC",       // excelente contraste
-    textFaint:   "#8E88A0",       // agora legível
+    border:      "#2E3245",
+    text:        "#EDE8DC",
+    textMuted:   "#9A94A8",
+    textFaint:   "#605A6E",
     statBg:      "rgba(255,255,255,0.07)",
     inputBg:     "#21242F",
     glassBg:     "rgba(26,29,38,0.85)",
@@ -63,8 +63,27 @@ export const TEMP_SCALE = [
   { max: Infinity, color: "#C0392B", bg: "rgba(231,76,60,0.15)"   },
 ];
 
-// Dados dos bares — importados centralmente para evitar re-imports
-import data from "../data/bares.json";
-export const REGION_COLOR = data.regions;
-export const BARS         = data.bars;
-export const REGIONS      = ["Todas", ...Object.keys(data.regions)];
+// ===== NOVAS IMPORTAÇÕES =====
+import staticData from "../data/static-bares.json";
+import dynamicData from "../data/dynamic-bares.json";
+
+export const REGION_COLOR = staticData.regions;
+const staticBars = staticData.bars;
+
+// Mapa dinâmico indexado pelo nome do bar
+const dynamicMap = new Map(dynamicData.map(d => [d.name, d]));
+
+// Combina os dados: campos estáticos + dinâmicos (com fallback)
+export const BARS = staticBars.map(bar => {
+  const dyn = dynamicMap.get(bar.name) || {};
+  return {
+    ...bar,
+    visited:        dyn.visited        ?? false,
+    rating:         dyn.rating         ?? null,
+    beerTemp:       dyn.beerTemp       ?? null,
+    instagramPostUrl: dyn.instagramPostUrl ?? null,
+    visitDate:      dyn.visitDate      ?? null,
+  };
+});
+
+export const REGIONS = ["Todas", ...Object.keys(REGION_COLOR)];
