@@ -88,7 +88,7 @@ export const Card = ({
                     margin: 0,
                   }}
                 >
-                  {b.name} 📷
+                  <h3>{b.name} 📷</h3>
                 </a>
               ) : (
                 <h3 className="card-title" style={{ color: T.text, margin: 0 }}>{b.name}</h3>
