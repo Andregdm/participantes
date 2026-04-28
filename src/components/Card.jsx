@@ -82,7 +82,7 @@ export const Card = ({
                   rel="noopener noreferrer"
                   className="instagram-link"
                   style={{
-                    fontSize: "0.7rem",
+                    fontSize: "1rem",
                     background: "rgba(0,0,0,0.05)",
                     padding: "2px 6px",
                     borderRadius: "20px",
