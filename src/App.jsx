@@ -1,5 +1,5 @@
 import { useMemo } from "react";
-import { BRAND } from "./constants";
+import { BRAND } from "./constants.js";
 
 const getTempIcon = (temp) => {
   if (temp <= -7) return "❄️❄️";
