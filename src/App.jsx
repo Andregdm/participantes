@@ -1,337 +1,127 @@
-import { useState, useMemo, useCallback, useEffect, lazy, Suspense } from "react";
-import "./App.css";
+import { useMemo } from "react";
+import { BRAND } from "./constants";
 
-import { BRAND, THEMES, BARS, REGIONS, REGION_COLOR } from "./components/constants";
-import { normalizeText } from "./components/utils";
-import { HeartIcon, CheckCircle, MoonIcon, SunIcon, IgIcon } from "./components/icons";
-import { Card } from "./components/Card";
-import Logo from "./components/Logo";
+const getTempIcon = (temp) => {
+  if (temp <= -7) return "❄️❄️";
+  if (temp <= -4) return "❄️";
+  if (temp <= 0) return "🥶";
+  return "🌡️";
+};
 
-// Pré-processamento estático — BARS é imutável
-const BARS_NORMALIZED = BARS.map(b => ({
-  ...b,
-  _name:         normalizeText(b.name),
-  _dish:         normalizeText(b.dish),
-  _neighborhood: normalizeText(b.neighborhood),
-  _desc:         normalizeText(b.desc || ""),  // busca na descrição
-}));
+const RankingBeerTemp = ({ bars, T, dark }) => {
+  const rankedBars = useMemo(() => {
+    const withTemp = bars.filter(bar => bar.beerTemp !== null && bar.beerTemp !== undefined);
+    const sorted = [...withTemp].sort((a, b) => a.beerTemp - b.beerTemp);
+    
+    const ranked = [];
+    let lastTemp = null;
+    let currentPos = 0;
+    let skip = 0;
+    
+    for (let i = 0; i < sorted.length; i++) {
+      const bar = sorted[i];
+      const temp = bar.beerTemp;
+      
+      if (temp !== lastTemp) {
+        currentPos += skip + 1;
+        skip = 0;
+        lastTemp = temp;
+      } else {
+        skip++;
+      }
+      
+      ranked.push({
+        ...bar,
+        rank: currentPos
+      });
+    }
+    return ranked;
+  }, [bars]);
 
-// Lazy — carrega o iframe do mapa só quando a aba for acessada
-const MapComponent = lazy(() => import("./components/MapComponent"));
-
-// Botão de filtro reutilizável
-const FilterButton = ({ active, onClick, icon, label, activeColor, activeBg, activeText, T }) => (
-  <button
-    onClick={onClick}
-    className="filter-pill"
-    style={{
-      border:     `2px solid ${active ? activeColor : T.border}`,
-      background: active ? activeBg  : T.surface,
-      color:      active ? activeText : T.textMuted,
-    }}
-  >
-    {icon} {label}
-  </button>
-);
-
-// Estado inicial dos filtros
-const FILTER_INIT = { onlyVisited: false, onlyFavorites: false, region: "Todas", search: "", onlyTeam: false };
-
-export default function App() {
-
-  // Tema
-  const [dark, setDark] = useState(() => localStorage.getItem("cdb26theme") === "dark");
-  const T = dark ? THEMES.dark : THEMES.light;
-
-  useEffect(() => {
-    localStorage.setItem("cdb26theme", dark ? "dark" : "light");
-    document.body.classList.toggle("dark", dark);
-  }, [dark]);
-
-  // Persistência
-  const [visited, setVisited] = useState(() => {
-    try { return new Set(JSON.parse(localStorage.getItem("cdb26v") || "[]")); }
-    catch { return new Set(); }
-  });
-  const [favorites, setFavorites] = useState(() => {
-    try { return new Set(JSON.parse(localStorage.getItem("cdb26f") || "[]")); }
-    catch { return new Set(); }
-  });
-
-  useEffect(() => { localStorage.setItem("cdb26v", JSON.stringify([...visited]));   }, [visited]);
-  useEffect(() => { localStorage.setItem("cdb26f", JSON.stringify([...favorites])); }, [favorites]);
-
-  // Filtros
-  const [filters, setFilters] = useState(FILTER_INIT);
-  const [sortBy,  setSortBy]  = useState("none");
-
-  // UI
-  const [expandedId, setExpandedId] = useState(null);
-  const [tab,        setTab]        = useState("bares");
-  const [imgErr,     setImgErr]     = useState(new Set());
-
-  // Handlers
-  const toggleSet = useCallback((setter) => (id) => {
-    setter(prev => { const s = new Set(prev); s.has(id) ? s.delete(id) : s.add(id); return s; });
-  }, []);
-
-  const handleToggleVisit    = useCallback(toggleSet(setVisited),   [toggleSet]);
-  const handleToggleFavorite = useCallback(toggleSet(setFavorites), [toggleSet]);
-  const handleToggleExpand   = useCallback((id) => setExpandedId(p => p === id ? null : id), []);
-  const handleImgError       = useCallback((id) => setImgErr(p => new Set([...p, id])), []);
-  const handleFilterChange   = useCallback((key, val) => setFilters(p => ({ ...p, [key]: val })), []);
-  const clearFilters         = useCallback(() => { setFilters(FILTER_INIT); setSortBy("none"); }, []);
-
-  const hasActiveFilters =
-    filters.onlyVisited || filters.onlyFavorites ||
-    filters.region !== "Todas" || filters.search ||
-    filters.onlyTeam || sortBy !== "none";
-
-  // Filtragem e ordenação (agora com descrição)
-  const filteredAndSorted = useMemo(() => {
-    const q = normalizeText(filters.search);
-
-    const result = BARS_NORMALIZED.filter(b => {
-      if (filters.onlyVisited   && !visited.has(b.id))   return false;
-      if (filters.onlyFavorites && !favorites.has(b.id)) return false;
-      if (filters.region !== "Todas" && b.region !== filters.region) return false;
-      if (filters.onlyTeam && !b.visited) return false;
-      if (q && !b._name.includes(q) && !b._dish.includes(q) && !b._neighborhood.includes(q) && !b._desc.includes(q)) return false;
-      return true;
-    });
-
-    if (sortBy === "rating")   result.sort((a, b) => (b.rating   ?? -1)  - (a.rating   ?? -1));
-    if (sortBy === "beerTemp") result.sort((a, b) => (a.beerTemp ?? 999) - (b.beerTemp ?? 999));
-    return result;
-  }, [filters, visited, favorites, sortBy]);
-
-  // Agrupamento
-  const grouped = useMemo(() =>
-    filteredAndSorted.reduce((acc, b) => {
-      (acc[b.region] ??= []).push(b);
-      return acc;
-    }, {}),
-  [filteredAndSorted]);
-
-  const cardProps = { visited, favorites, onToggleVisit: handleToggleVisit, onToggleFavorite: handleToggleFavorite, expandedId, onToggleExpand: handleToggleExpand, imgErr, onImgError: handleImgError, T, dark };
-
-  const selectActive = (active) => ({
-    border:     `1.5px solid ${active ? BRAND.navy : T.border}`,
-    background: active ? (dark ? "#1a2040" : "#e8ecf8") : T.inputBg,
-    color:      active ? BRAND.navy : T.textMuted,
-    fontWeight: active ? 700 : 400,
-  });
+  if (rankedBars.length === 0) {
+    return (
+      <div className="empty-state" style={{ textAlign: "center", padding: "3rem", color: T.textMuted }}>
+        <div className="empty-icon">🍺❄️</div>
+        <p style={{ fontSize: "1rem" }}>Nenhuma temperatura de cerveja registrada ainda.</p>
+        <p style={{ fontSize: "0.85rem" }}>Os dados aparecerão assim que o time atualizar a planilha.</p>
+      </div>
+    );
+  }
 
   return (
-    <div className="app-container" style={{ background: T.bg }}>
-      <header style={{ background: T.headerBg }}>
-        <div className="instagram-bar">
-          <IgIcon color={BRAND.goldLt}/>
-          <span style={{ color: "#ccc" }}>Curadoria realizada pelo perfil do Instagram</span>
-          <a href="https://www.instagram.com/ParticipantesdiButeco" target="_blank" rel="noopener noreferrer"
-            style={{ color: BRAND.goldLt, fontWeight: 700 }}>
-            @ParticipantesdiButeco
-          </a>
-          <span style={{ color: "#777" }}>— siga para dicas e novidades!</span>
+    <div className="max-width-1200 px-15" style={{ margin: "2rem auto" }}>
+      <div
+        style={{
+          background: T.surface,
+          borderRadius: "24px",
+          overflow: "hidden",
+          boxShadow: `0 8px 30px rgba(0,0,0,${dark ? "0.4" : "0.08"})`,
+          border: `1px solid ${T.border}`,
+        }}
+      >
+        <div
+          style={{
+            background: dark ? "#0b2b26" : "#e0f2f1",
+            padding: "1rem 1.8rem",
+            borderBottom: `2px solid ${BRAND.gold}`,
+          }}
+        >
+          <h2 style={{ margin: 0, fontSize: "1.6rem", display: "flex", alignItems: "center", gap: "10px" }}>
+            <span>🍺❄️</span> Ranking das Cervejas Mais Geladas
+          </h2>
+          <p style={{ margin: "0.5rem 0 0", opacity: 0.7, fontSize: "0.85rem" }}>
+            Ordenado da cerveja mais gelada (menor °C) para a menos gelada.
+          </p>
         </div>
 
-        <div className="header-content">
-          <div style={{ display: "flex", alignItems: "center", gap: "2rem", flexWrap: "wrap" }}>
-            <div className="header-logo-title">
-              <div className="logo-container"
-                style={{ border: `3px solid ${BRAND.gold}66`, boxShadow: `0 0 32px ${BRAND.gold}44, 0 8px 20px rgba(0,0,0,0.3)` }}>
-                <Logo size={85}/>
-              </div>
-              <div>
-                <h1 className="main-title">Participantes di Buteco</h1>
-                <div className="main-subtitle" style={{ color: "#9BBFCE" }}>
-                  Guia da 26ª Edição do Comida di Buteco ·
-                  <span style={{ color: BRAND.goldLt }}> Tema: Verduras</span>
-                </div>
-                <div className="header-info" style={{ marginTop: "0.5rem" }}>
-                  <span className="header-period">10 Abr – 10 Mai 2026</span>
-                  <span className="header-price">Petiscos a R$ 40</span>
-                </div>
-              </div>
-            </div>
-
-            <div className="header-stats">
-              {[
-                { v: BARS.length,     l: "Bares"     },
-                { v: visited.size,    l: "Eu visitei" },
-                { v: favorites.size,  l: "Favoritos"  },
-              ].map(s => (
-                <div key={s.l} className="stat-card" style={{ background: T.statBg }}>
-                  <div className="stat-value">{s.v}</div>
-                  <div className="stat-label">{s.l}</div>
-                </div>
+        <div style={{ overflowX: "auto" }}>
+          <table style={{ width: "100%", borderCollapse: "collapse", fontFamily: "sans-serif" }}>
+            <thead>
+              <tr style={{ borderBottom: `2px solid ${T.border}`, background: dark ? "#1e212b" : "#f5f0e8" }}>
+                <th style={{ padding: "1rem 0.8rem", textAlign: "center", width: "80px" }}>Posição</th>
+                <th style={{ padding: "1rem 0.8rem", textAlign: "left" }}>Estabelecimento</th>
+                <th style={{ padding: "1rem 0.8rem", textAlign: "left" }}>Região</th>
+                <th style={{ padding: "1rem 0.8rem", textAlign: "center", width: "120px" }}>Temperatura</th>
+              </tr>
+            </thead>
+            <tbody>
+              {rankedBars.map((bar, idx) => (
+                <tr
+                  key={bar.id}
+                  style={{
+                    borderBottom: `1px solid ${T.border}`,
+                    background: idx % 2 === 0 ? T.cardBg : T.surfaceAlt,
+                  }}
+                >
+                  <td style={{ padding: "0.8rem", textAlign: "center", fontWeight: "bold", fontSize: "1.1rem" }}>
+                    {bar.rank}º
+                  </td>
+                  <td style={{ padding: "0.8rem", fontWeight: 500 }}>
+                    {bar.name}
+                  </td>
+                  <td style={{ padding: "0.8rem", color: T.textMuted }}>
+                    {bar.region}
+                  </td>
+                  <td style={{
+                    padding: "0.8rem",
+                    textAlign: "center",
+                    fontWeight: "bold",
+                    color: bar.beerTemp < 0 ? "#2980B9" : "#E67E22",
+                  }}>
+                    {getTempIcon(bar.beerTemp)} {bar.beerTemp}°C
+                  </td>
+                </tr>
               ))}
-
-              <button
-                className="dm-toggle"
-                onClick={() => setDark(p => !p)}
-                style={{
-                  background:     dark ? "rgba(232,168,32,0.2)" : "rgba(255,255,255,0.12)",
-                  border:         `2px solid ${dark ? BRAND.gold : "rgba(255,255,255,0.3)"}`,
-                  borderRadius:   "50%",
-                  display:        "flex",
-                  alignItems:     "center",
-                  justifyContent: "center",
-                  color:          dark ? BRAND.goldLt : "#fff",
-                  backdropFilter: "blur(8px)",
-                }}
-              >
-                {dark ? <SunIcon/> : <MoonIcon/>}
-              </button>
-            </div>
-          </div>
-
-          <div className="tabs-container">
-            {[{ k: "bares", l: "🍺  Bares & Pratos" }, { k: "mapa", l: "🗺️  Mapa Interativo" }].map(t => (
-              <button key={t.k} onClick={() => setTab(t.k)} className="tab-button"
-                style={{
-                  borderBottom: `3px solid ${tab === t.k ? BRAND.goldLt : "transparent"}`,
-                  color:        tab === t.k ? "#fff" : "rgba(255,255,255,0.45)",
-                  fontWeight:   tab === t.k ? 700 : 400,
-                }}>
-                {t.l}
-              </button>
-            ))}
-          </div>
+            </tbody>
+          </table>
         </div>
-      </header>
 
-      {tab === "mapa" && (
-        <Suspense fallback={<div style={{ textAlign: "center", padding: "3rem", color: T.textMuted }}>Carregando mapa…</div>}>
-          <MapComponent T={T} dark={dark}/>
-        </Suspense>
-      )}
-
-      {tab === "bares" && (
-        <>
-          <div className="sticky-filters"
-            style={{ background: T.filterBg, borderBottom: `1px solid ${T.filterBorder}`, boxShadow: `0 2px 12px rgba(0,0,0,${dark ? "0.4" : "0.07"})` }}>
-            <div className="sticky-filters-inner">
-              <div className="search-wrapper">
-                <span className="search-icon" style={{ color: T.textFaint }}>🔍</span>
-                <input
-                  type="text"
-                  placeholder="Buscar bar, prato, bairro ou descrição…"
-                  value={filters.search}
-                  onChange={e => handleFilterChange("search", e.target.value)}
-                  className="search-input"
-                  style={{ border: `1.5px solid ${T.border}`, background: T.inputBg, color: T.text }}
-                />
-              </div>
-
-              <div className="filters-group">
-                <select
-                  value={filters.region}
-                  onChange={e => handleFilterChange("region", e.target.value)}
-                  className="select-input"
-                  style={selectActive(filters.region !== "Todas")}
-                >
-                  {REGIONS.map(r => <option key={r}>{r === "Todas" ? "📌 Regiões" : r}</option>)}
-                </select>
-
-                <select
-                  value={sortBy}
-                  onChange={e => setSortBy(e.target.value)}
-                  className="select-input"
-                  style={selectActive(sortBy !== "none")}
-                >
-                  <option value="none">📋 Ordenar</option>
-                  <option value="rating">⭐ Maior nota</option>
-                  <option value="beerTemp">🌡️ Mais gelada</option>
-                </select>
-              </div>
-
-              <div className="filters-group">
-                <FilterButton active={filters.onlyTeam}      onClick={() => handleFilterChange("onlyTeam",      !filters.onlyTeam)}      icon={<CheckCircle d={filters.onlyTeam}/>}      label="Time visitou" activeColor="#27ae60" activeBg={dark ? "#0d2c1a" : "#eafaf1"} activeText="#1a5c30" T={T}/>
-                <FilterButton active={filters.onlyVisited}   onClick={() => handleFilterChange("onlyVisited",   !filters.onlyVisited)}   icon={<CheckCircle d={filters.onlyVisited}/>}   label="Eu visitei"   activeColor="#27ae60" activeBg={dark ? "#0d2c1a" : "#eafaf1"} activeText="#1a5c30" T={T}/>
-                <FilterButton active={filters.onlyFavorites} onClick={() => handleFilterChange("onlyFavorites", !filters.onlyFavorites)} icon={<HeartIcon   f={filters.onlyFavorites}/>}  label="Favoritos"    activeColor={BRAND.red} activeBg={dark ? "#2c0d0d" : "#fdf0ed"} activeText="#c0392b" T={T}/>
-              </div>
-
-              {hasActiveFilters && (
-                <button onClick={clearFilters} className="filter-pill"
-                  style={{ border: `1px solid ${T.border}`, background: T.surface, color: T.textMuted }}>
-                  ✕ Limpar
-                </button>
-              )}
-
-              <div className="filter-counter" style={{ color: T.textFaint }}>
-                {filteredAndSorted.length} / {BARS.length}
-              </div>
-            </div>
-          </div>
-
-          <div className="max-width-1200 px-15 mt-2">
-            <div onClick={() => setTab("mapa")} className="map-cta"
-              style={{ background: T.bannerBg, boxShadow: `0 2px 14px rgba(28,45,110,${dark ? "0.5" : "0.2"})`, border: `1px solid ${BRAND.navy}55` }}>
-              <Logo size={38}/>
-              <div>
-                <div className="cta-title">Ver Mapa Interativo dos Bares</div>
-                <div className="cta-subtitle" style={{ color: BRAND.goldLt }}>
-                  Todos os bares marcados no mapa personalizado · Curadoria @ParticipantesdiButeco
-                </div>
-              </div>
-              <span className="cta-arrow" style={{ color: BRAND.goldLt }}>→</span>
-            </div>
-          </div>
-
-          <main className="max-width-1200 px-15" style={{ padding: "1.8rem 1.5rem 3.5rem" }}>
-            {filteredAndSorted.length === 0 ? (
-              <div className="empty-state">
-                <div className="empty-icon">🔍</div>
-                <p className="empty-state-text" style={{ color: T.textMuted }}>Nenhum bar encontrado com esses filtros.</p>
-                <button onClick={clearFilters} className="empty-button" style={{ background: BRAND.navy, color: "#fff" }}>
-                  Limpar filtros
-                </button>
-              </div>
-            ) : sortBy !== "none" ? (
-              <div className="bars-grid">
-                {filteredAndSorted.map(b => <Card key={b.id} b={b} {...cardProps}/>)}
-              </div>
-            ) : (
-              Object.keys(grouped).sort().map(region => (
-                <section key={region} className="section-margin">
-                  <div className="region-header" style={{ borderBottom: `2px solid ${REGION_COLOR[region]}30` }}>
-                    <div className="region-color-bar" style={{ background: REGION_COLOR[region] }}/>
-                    <h2 className="region-title" style={{ color: REGION_COLOR[region] }}>{region}</h2>
-                    <span className="region-count" style={{ background: REGION_COLOR[region] + "22", color: REGION_COLOR[region] }}>
-                      {grouped[region].length} bares
-                    </span>
-                  </div>
-                  <div className="bars-grid">
-                    {grouped[region].map(b => <Card key={b.id} b={b} {...cardProps}/>)}
-                  </div>
-                </section>
-              ))
-            )}
-          </main>
-        </>
-      )}
-
-      <footer style={{ background: T.footerBg, padding: "2.5rem 1.5rem", textAlign: "center" }}>
-        <div className="footer-logo"><Logo size={50}/></div>
-        <div className="footer-credit">
-          <IgIcon color={BRAND.goldLt}/>
-          <span className="cookie-text" style={{ color: "#aaa" }}>
-            Curadoria:{" "}
-            <a href="https://www.instagram.com/ParticipantesdiButeco" target="_blank" rel="noopener noreferrer"
-              style={{ color: BRAND.goldLt, fontWeight: 700 }}>
-              @ParticipantesdiButeco
-            </a>
-          </span>
+        <div style={{ padding: "0.8rem 1.8rem", background: T.surfaceAlt, fontSize: "0.7rem", color: T.textFaint, textAlign: "center" }}>
+          Total de bares com temperatura registrada: {rankedBars.length}
         </div>
-        <p className="footer-text">
-          Comida di Buteco 2026 · 26ª Edição · Belo Horizonte · 10 abr – 10 mai · Petiscos a R$ 40
-        </p>
-        <button onClick={() => setDark(p => !p)} className="footer-theme-toggle" style={{ color: dark ? BRAND.goldLt : "#ccc" }}>
-          {dark ? <SunIcon/> : <MoonIcon/>}
-          {dark ? "Modo Claro" : "Modo Escuro"}
-        </button>
-      </footer>
+      </div>
     </div>
   );
-}
+};
+
+export default RankingBeerTemp;
