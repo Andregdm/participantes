@@ -848,9 +848,9 @@
   {
     "id": 95,
     "name": "Orat?rio Bar",
-    "beerTemp": null,
-    "visited": "",
-    "rating": null,
+    "beerTemp": 3.9,
+    "visited": true,
+    "rating": 8.5,
     "instagramPostUrl": "",
     "visitDate": ""
   },
