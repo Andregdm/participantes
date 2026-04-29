@@ -24,16 +24,16 @@
     "visited": true,
     "rating": 9.285714285714286,
     "instagramPostUrl": "",
-    "visitDate": ""
+    "visitDate": "2026-04-19"
   },
   {
     "id": 4,
-    "name": "Armaz?m Santa Am?lia",
+    "name": "Armazém Santa Amélia",
     "beerTemp": -5.9,
     "visited": true,
     "rating": 8.5,
     "instagramPostUrl": "",
-    "visitDate": ""
+    "visitDate": "2026-04-21"
   },
   {
     "id": 5,
@@ -42,7 +42,7 @@
     "visited": true,
     "rating": 8.8,
     "instagramPostUrl": "",
-    "visitDate": ""
+    "visitDate": "2026-04-21"
   },
   {
     "id": 6,
@@ -51,11 +51,11 @@
     "visited": true,
     "rating": 8,
     "instagramPostUrl": "",
-    "visitDate": ""
+    "visitDate": "2026-04-24"
   },
   {
     "id": 7,
-    "name": "Bai?ca",
+    "name": "Baiúca",
     "beerTemp": null,
     "visited": "",
     "rating": null,
@@ -64,7 +64,7 @@
   },
   {
     "id": 8,
-    "name": "Bar Bamb?",
+    "name": "Bar Bambú",
     "beerTemp": null,
     "visited": "",
     "rating": null,
@@ -96,7 +96,7 @@
     "visited": true,
     "rating": 8.8,
     "instagramPostUrl": "",
-    "visitDate": ""
+    "visitDate": "2026-04-21"
   },
   {
     "id": 12,
@@ -105,7 +105,7 @@
     "visited": true,
     "rating": 8.333333333333334,
     "instagramPostUrl": "",
-    "visitDate": ""
+    "visitDate": "2026-04-18"
   },
   {
     "id": 13,
@@ -114,11 +114,11 @@
     "visited": true,
     "rating": 8.2,
     "instagramPostUrl": "",
-    "visitDate": ""
+    "visitDate": "2026-04-21"
   },
   {
     "id": 14,
-    "name": "Bar da Pra?a",
+    "name": "Bar da Praça",
     "beerTemp": null,
     "visited": "",
     "rating": null,
@@ -127,7 +127,7 @@
   },
   {
     "id": 15,
-    "name": "Bar da Silv?nia",
+    "name": "Bar da Silvânia",
     "beerTemp": null,
     "visited": "",
     "rating": null,
@@ -141,7 +141,7 @@
     "visited": true,
     "rating": 7.5,
     "instagramPostUrl": "",
-    "visitDate": ""
+    "visitDate": "2026-04-10"
   },
   {
     "id": 17,
@@ -159,16 +159,16 @@
     "visited": true,
     "rating": 8.2,
     "instagramPostUrl": "",
-    "visitDate": ""
+    "visitDate": "2026-04-14"
   },
   {
     "id": 19,
-    "name": "Bar do Jo?o",
+    "name": "Bar do João",
     "beerTemp": null,
     "visited": true,
     "rating": 8,
     "instagramPostUrl": "",
-    "visitDate": ""
+    "visitDate": "2026-04-21"
   },
   {
     "id": 20,
@@ -177,16 +177,16 @@
     "visited": true,
     "rating": 8.666666666666666,
     "instagramPostUrl": "",
-    "visitDate": ""
+    "visitDate": "2026-04-23"
   },
   {
     "id": 21,
-    "name": "Bar do Mom?",
+    "name": "Bar do Momô",
     "beerTemp": -6.6,
     "visited": true,
     "rating": 8.666666666666666,
     "instagramPostUrl": "",
-    "visitDate": ""
+    "visitDate": "2026-04-20"
   },
   {
     "id": 22,
@@ -195,7 +195,7 @@
     "visited": true,
     "rating": 8,
     "instagramPostUrl": "",
-    "visitDate": ""
+    "visitDate": "2026-04-18"
   },
   {
     "id": 23,
@@ -213,7 +213,7 @@
     "visited": true,
     "rating": 8,
     "instagramPostUrl": "",
-    "visitDate": ""
+    "visitDate": "2026-04-13"
   },
   {
     "id": 25,
@@ -222,16 +222,16 @@
     "visited": true,
     "rating": 7.5,
     "instagramPostUrl": "",
-    "visitDate": ""
+    "visitDate": "2026-04-17"
   },
   {
     "id": 26,
-    "name": "Bar do Ti?o",
+    "name": "Bar do Tião",
     "beerTemp": -2.6,
     "visited": true,
     "rating": 8,
     "instagramPostUrl": "",
-    "visitDate": ""
+    "visitDate": "2026-04-25"
   },
   {
     "id": 27,
@@ -240,7 +240,7 @@
     "visited": true,
     "rating": 9.333333333333334,
     "instagramPostUrl": "",
-    "visitDate": ""
+    "visitDate": "2026-04-17"
   },
   {
     "id": 28,
@@ -249,7 +249,7 @@
     "visited": true,
     "rating": 9.333333333333334,
     "instagramPostUrl": "",
-    "visitDate": ""
+    "visitDate": "2026-04-14"
   },
   {
     "id": 29,
@@ -258,7 +258,7 @@
     "visited": true,
     "rating": 8.2,
     "instagramPostUrl": "",
-    "visitDate": ""
+    "visitDate": "2026-04-15"
   },
   {
     "id": 30,
@@ -267,7 +267,7 @@
     "visited": true,
     "rating": 8.666666666666666,
     "instagramPostUrl": "",
-    "visitDate": ""
+    "visitDate": "2026-04-13"
   },
   {
     "id": 31,
@@ -276,7 +276,7 @@
     "visited": true,
     "rating": 7.75,
     "instagramPostUrl": "",
-    "visitDate": ""
+    "visitDate": "2026-04-15"
   },
   {
     "id": 32,
@@ -285,7 +285,7 @@
     "visited": true,
     "rating": 7.333333333333333,
     "instagramPostUrl": "",
-    "visitDate": ""
+    "visitDate": "2026-04-26"
   },
   {
     "id": 33,
@@ -294,7 +294,7 @@
     "visited": true,
     "rating": 8,
     "instagramPostUrl": "",
-    "visitDate": ""
+    "visitDate": "2026-04-17"
   },
   {
     "id": 34,
@@ -307,12 +307,12 @@
   },
   {
     "id": 35,
-    "name": "Bar Pomp?u",
+    "name": "Bar Pompéu",
     "beerTemp": null,
     "visited": true,
     "rating": 7.75,
     "instagramPostUrl": "",
-    "visitDate": ""
+    "visitDate": "2026-04-12"
   },
   {
     "id": 36,
@@ -321,16 +321,16 @@
     "visited": true,
     "rating": 6.8,
     "instagramPostUrl": "",
-    "visitDate": ""
+    "visitDate": "2026-04-18"
   },
   {
     "id": 37,
-    "name": "Bar Tem?tico",
+    "name": "Bar Temático",
     "beerTemp": -8.1,
     "visited": true,
     "rating": 8,
     "instagramPostUrl": "",
-    "visitDate": ""
+    "visitDate": "2026-04-26"
   },
   {
     "id": 38,
@@ -348,7 +348,7 @@
     "visited": true,
     "rating": 8.5,
     "instagramPostUrl": "",
-    "visitDate": ""
+    "visitDate": "2026-04-13"
   },
   {
     "id": 40,
@@ -366,7 +366,7 @@
     "visited": true,
     "rating": 7,
     "instagramPostUrl": "",
-    "visitDate": ""
+    "visitDate": "2026-04-24"
   },
   {
     "id": 42,
@@ -384,7 +384,7 @@
     "visited": true,
     "rating": 8.75,
     "instagramPostUrl": "",
-    "visitDate": ""
+    "visitDate": "2026-04-24"
   },
   {
     "id": 44,
@@ -393,7 +393,7 @@
     "visited": true,
     "rating": 8.5,
     "instagramPostUrl": "",
-    "visitDate": ""
+    "visitDate": "2026-04-20"
   },
   {
     "id": 45,
@@ -402,7 +402,7 @@
     "visited": true,
     "rating": 8,
     "instagramPostUrl": "",
-    "visitDate": ""
+    "visitDate": "2026-04-23"
   },
   {
     "id": 46,
@@ -415,12 +415,12 @@
   },
   {
     "id": 47,
-    "name": "Buteco T? D'Boa",
+    "name": "Buteco Tô D'Boa",
     "beerTemp": -7.3,
     "visited": true,
     "rating": 10,
     "instagramPostUrl": "",
-    "visitDate": ""
+    "visitDate": "2026-04-14"
   },
   {
     "id": 48,
@@ -429,7 +429,7 @@
     "visited": true,
     "rating": 8.2,
     "instagramPostUrl": "",
-    "visitDate": ""
+    "visitDate": "2026-04-14"
   },
   {
     "id": 49,
@@ -442,21 +442,21 @@
   },
   {
     "id": 50,
-    "name": "Butiquim On C? T??",
+    "name": "Butiquim On Cê Tá?",
     "beerTemp": -6.6,
     "visited": true,
     "rating": 7.857142857142857,
     "instagramPostUrl": "",
-    "visitDate": ""
+    "visitDate": "2026-04-19"
   },
   {
     "id": 51,
-    "name": "Caf? Palhares",
+    "name": "Café Palhares",
     "beerTemp": -4,
     "visited": true,
     "rating": 8.333333333333334,
     "instagramPostUrl": "",
-    "visitDate": ""
+    "visitDate": "2026-04-28"
   },
   {
     "id": 52,
@@ -474,7 +474,7 @@
     "visited": true,
     "rating": 9.5,
     "instagramPostUrl": "",
-    "visitDate": ""
+    "visitDate": "2026-04-20"
   },
   {
     "id": 54,
@@ -483,34 +483,34 @@
     "visited": true,
     "rating": 7.5,
     "instagramPostUrl": "",
-    "visitDate": ""
+    "visitDate": "2026-04-18"
   },
   {
     "id": 55,
-    "name": "Casa Mojub?",
+    "name": "Casa Mojubá",
     "beerTemp": -5.8,
     "visited": true,
     "rating": 7,
     "instagramPostUrl": "",
-    "visitDate": ""
+    "visitDate": "2026-04-26"
   },
   {
     "id": 56,
-    "name": "Chapa M?gica",
+    "name": "Chapa Mágica",
     "beerTemp": -2.6,
     "visited": true,
     "rating": 7.4,
     "instagramPostUrl": "",
-    "visitDate": ""
+    "visitDate": "2026-04-18"
   },
   {
     "id": 57,
-    "name": "Choperia Am?rica Norte Sul",
+    "name": "Choperia América Norte Sul",
     "beerTemp": null,
     "visited": true,
     "rating": 8.666666666666666,
     "instagramPostUrl": "",
-    "visitDate": ""
+    "visitDate": "2026-04-25"
   },
   {
     "id": 58,
@@ -519,7 +519,7 @@
     "visited": true,
     "rating": 7,
     "instagramPostUrl": "",
-    "visitDate": ""
+    "visitDate": "2026-04-13"
   },
   {
     "id": 59,
@@ -546,7 +546,7 @@
     "visited": true,
     "rating": 8.8,
     "instagramPostUrl": "",
-    "visitDate": ""
+    "visitDate": "2026-04-18"
   },
   {
     "id": 62,
@@ -564,7 +564,7 @@
     "visited": true,
     "rating": 8.714285714285714,
     "instagramPostUrl": "",
-    "visitDate": ""
+    "visitDate": "2026-04-18"
   },
   {
     "id": 64,
@@ -573,7 +573,7 @@
     "visited": true,
     "rating": 8,
     "instagramPostUrl": "",
-    "visitDate": ""
+    "visitDate": "2026-04-16"
   },
   {
     "id": 65,
@@ -582,7 +582,7 @@
     "visited": true,
     "rating": 9,
     "instagramPostUrl": "",
-    "visitDate": ""
+    "visitDate": "2026-04-24"
   },
   {
     "id": 66,
@@ -591,7 +591,7 @@
     "visited": true,
     "rating": 9.2,
     "instagramPostUrl": "",
-    "visitDate": ""
+    "visitDate": "2026-04-18"
   },
   {
     "id": 67,
@@ -604,7 +604,7 @@
   },
   {
     "id": 68,
-    "name": "Emp?rio Lais",
+    "name": "Empório Lais",
     "beerTemp": null,
     "visited": "",
     "rating": null,
@@ -618,7 +618,7 @@
     "visited": true,
     "rating": 8.25,
     "instagramPostUrl": "",
-    "visitDate": ""
+    "visitDate": "2026-04-10"
   },
   {
     "id": 70,
@@ -627,20 +627,20 @@
     "visited": true,
     "rating": 7.111111111111111,
     "instagramPostUrl": "",
-    "visitDate": ""
+    "visitDate": "2026-04-19"
   },
   {
     "id": 71,
-    "name": "Espetinho Rei e Fam?lia",
+    "name": "Espetinho Rei e Família",
     "beerTemp": -8.7,
     "visited": true,
     "rating": 8,
     "instagramPostUrl": "",
-    "visitDate": ""
+    "visitDate": "2026-04-14"
   },
   {
     "id": 72,
-    "name": "Espetinho S?o Pedro Qui?",
+    "name": "Espetinho São Pedro Quió",
     "beerTemp": null,
     "visited": "",
     "rating": null,
@@ -654,16 +654,16 @@
     "visited": true,
     "rating": 6.5,
     "instagramPostUrl": "",
-    "visitDate": ""
+    "visitDate": "2026-04-23"
   },
   {
     "id": 74,
-    "name": "Galp?o Flor do Campo",
+    "name": "Galpão Flor do Campo",
     "beerTemp": -3.3,
     "visited": true,
     "rating": 8,
     "instagramPostUrl": "",
-    "visitDate": ""
+    "visitDate": "2026-04-26"
   },
   {
     "id": 75,
@@ -672,7 +672,7 @@
     "visited": true,
     "rating": 7.571428571428571,
     "instagramPostUrl": "",
-    "visitDate": ""
+    "visitDate": "2026-04-19"
   },
   {
     "id": 76,
@@ -690,7 +690,7 @@
     "visited": true,
     "rating": 9.334285714285715,
     "instagramPostUrl": "",
-    "visitDate": ""
+    "visitDate": "2026-04-10"
   },
   {
     "id": 78,
@@ -699,7 +699,7 @@
     "visited": true,
     "rating": 7.5,
     "instagramPostUrl": "",
-    "visitDate": ""
+    "visitDate": "2026-04-24"
   },
   {
     "id": 79,
@@ -717,34 +717,34 @@
     "visited": true,
     "rating": 9,
     "instagramPostUrl": "",
-    "visitDate": ""
+    "visitDate": "2026-04-19"
   },
   {
     "id": 81,
-    "name": "J? T? Inno",
+    "name": "Já Tô Inno",
     "beerTemp": null,
     "visited": true,
     "rating": 9.4,
     "instagramPostUrl": "",
-    "visitDate": ""
+    "visitDate": "2026-04-10"
   },
   {
     "id": 82,
-    "name": "Juz? Bar",
+    "name": "Juzé Bar",
     "beerTemp": -7.8,
     "visited": true,
     "rating": 8.25,
     "instagramPostUrl": "",
-    "visitDate": ""
+    "visitDate": "2026-04-14"
   },
   {
     "id": 83,
-    "name": "K?bes Emporium Bar",
+    "name": "Köbes Emporium Bar",
     "beerTemp": -3.9,
     "visited": true,
     "rating": 8,
     "instagramPostUrl": "",
-    "visitDate": ""
+    "visitDate": "2026-04-15"
   },
   {
     "id": 84,
@@ -753,7 +753,7 @@
     "visited": true,
     "rating": 8,
     "instagramPostUrl": "",
-    "visitDate": ""
+    "visitDate": "2026-04-15"
   },
   {
     "id": 85,
@@ -762,7 +762,7 @@
     "visited": true,
     "rating": 8.142857142857142,
     "instagramPostUrl": "",
-    "visitDate": ""
+    "visitDate": "2026-04-10"
   },
   {
     "id": 86,
@@ -771,16 +771,16 @@
     "visited": true,
     "rating": 9.666666666666666,
     "instagramPostUrl": "https://www.instagram.com/reel/DXo2J9BnPq7/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
-    "visitDate": ""
+    "visitDate": "2026-04-18"
   },
   {
     "id": 87,
-    "name": "Magn?fico Quintal",
+    "name": "Magnífico Quintal",
     "beerTemp": null,
     "visited": true,
     "rating": 8.2,
     "instagramPostUrl": "",
-    "visitDate": ""
+    "visitDate": "2026-04-14"
   },
   {
     "id": 88,
@@ -811,12 +811,12 @@
   },
   {
     "id": 91,
-    "name": "Mul?o",
+    "name": "Mulão",
     "beerTemp": -5.2,
     "visited": true,
     "rating": 8,
     "instagramPostUrl": "",
-    "visitDate": ""
+    "visitDate": "2026-04-20"
   },
   {
     "id": 92,
@@ -825,7 +825,7 @@
     "visited": true,
     "rating": 9,
     "instagramPostUrl": "",
-    "visitDate": ""
+    "visitDate": "2026-04-21"
   },
   {
     "id": 93,
@@ -847,12 +847,12 @@
   },
   {
     "id": 95,
-    "name": "Orat?rio Bar",
+    "name": "Oratório Bar",
     "beerTemp": 3.9,
     "visited": true,
     "rating": 8.5,
     "instagramPostUrl": "",
-    "visitDate": ""
+    "visitDate": "2026-04-28"
   },
   {
     "id": 96,
@@ -870,38 +870,38 @@
     "visited": true,
     "rating": 7.75,
     "instagramPostUrl": "",
-    "visitDate": ""
+    "visitDate": "2026-04-12"
   },
   {
     "id": 98,
-    "name": "P? de Cana",
+    "name": "Pé de Cana",
     "beerTemp": -2.6,
     "visited": true,
     "rating": 8.8,
     "instagramPostUrl": "",
-    "visitDate": ""
+    "visitDate": "2026-04-24"
   },
   {
     "id": 99,
-    "name": "P? de Goiaba",
+    "name": "Pé de Goiaba",
     "beerTemp": -5.9,
     "visited": true,
     "rating": 7.666666666666667,
     "instagramPostUrl": "",
-    "visitDate": ""
+    "visitDate": "2026-04-17"
   },
   {
     "id": 100,
-    "name": "Planeta L?pulo",
+    "name": "Planeta Lúpulo",
     "beerTemp": -5.2,
     "visited": true,
     "rating": 8,
     "instagramPostUrl": "",
-    "visitDate": ""
+    "visitDate": "2026-04-14"
   },
   {
     "id": 101,
-    "name": "PoiZ? Bar e Petisqueira",
+    "name": "PoiZé Bar e Petisqueira",
     "beerTemp": null,
     "visited": "",
     "rating": null,
@@ -924,7 +924,7 @@
     "visited": true,
     "rating": 9,
     "instagramPostUrl": "",
-    "visitDate": ""
+    "visitDate": "2026-04-18"
   },
   {
     "id": 104,
@@ -933,7 +933,7 @@
     "visited": true,
     "rating": 7.5,
     "instagramPostUrl": "",
-    "visitDate": ""
+    "visitDate": "2026-04-17"
   },
   {
     "id": 105,
@@ -942,7 +942,7 @@
     "visited": true,
     "rating": 4.5,
     "instagramPostUrl": "",
-    "visitDate": ""
+    "visitDate": "2026-04-23"
   },
   {
     "id": 106,
@@ -951,11 +951,11 @@
     "visited": true,
     "rating": 8.33,
     "instagramPostUrl": "",
-    "visitDate": ""
+    "visitDate": "2026-04-15"
   },
   {
     "id": 107,
-    "name": "Recanto da Tra?ra",
+    "name": "Recanto da Traíra",
     "beerTemp": null,
     "visited": "",
     "rating": null,
@@ -969,7 +969,7 @@
     "visited": true,
     "rating": 7.25,
     "instagramPostUrl": "",
-    "visitDate": ""
+    "visitDate": "2026-04-17"
   },
   {
     "id": 109,
@@ -978,7 +978,7 @@
     "visited": true,
     "rating": 7,
     "instagramPostUrl": "",
-    "visitDate": ""
+    "visitDate": "2026-04-12"
   },
   {
     "id": 110,
@@ -987,7 +987,7 @@
     "visited": true,
     "rating": 7,
     "instagramPostUrl": "",
-    "visitDate": ""
+    "visitDate": "2026-04-21"
   },
   {
     "id": 111,
@@ -1005,7 +1005,7 @@
     "visited": true,
     "rating": 8,
     "instagramPostUrl": "",
-    "visitDate": ""
+    "visitDate": "2026-04-27"
   },
   {
     "id": 113,
@@ -1014,7 +1014,7 @@
     "visited": true,
     "rating": 8.5,
     "instagramPostUrl": "",
-    "visitDate": ""
+    "visitDate": "2026-04-25"
   },
   {
     "id": 114,
@@ -1023,16 +1023,16 @@
     "visited": true,
     "rating": 7,
     "instagramPostUrl": "",
-    "visitDate": ""
+    "visitDate": "2026-04-26"
   },
   {
     "id": 115,
-    "name": "Santu?rio Retr?",
+    "name": "Santuário Retrô",
     "beerTemp": -4,
     "visited": true,
     "rating": 8.5,
     "instagramPostUrl": "",
-    "visitDate": ""
+    "visitDate": "2026-04-20"
   },
   {
     "id": 116,
@@ -1041,11 +1041,11 @@
     "visited": true,
     "rating": 8.714285714285714,
     "instagramPostUrl": "",
-    "visitDate": ""
+    "visitDate": "2026-04-19"
   },
   {
     "id": 117,
-    "name": "S? Bar",
+    "name": "Sô Bar",
     "beerTemp": null,
     "visited": "",
     "rating": null,
@@ -1068,7 +1068,7 @@
     "visited": true,
     "rating": 8.8,
     "instagramPostUrl": "",
-    "visitDate": ""
+    "visitDate": "2026-04-21"
   },
   {
     "id": 120,
@@ -1086,16 +1086,16 @@
     "visited": true,
     "rating": 8.666666666666666,
     "instagramPostUrl": "",
-    "visitDate": ""
+    "visitDate": "2026-04-19"
   },
   {
     "id": 122,
-    "name": "Toninho ? Alto Forno",
+    "name": "Toninho – Alto Forno",
     "beerTemp": -2.1,
     "visited": true,
     "rating": 8,
     "instagramPostUrl": "",
-    "visitDate": ""
+    "visitDate": "2026-04-17"
   },
   {
     "id": 123,
@@ -1122,16 +1122,16 @@
     "visited": true,
     "rating": 6.8,
     "instagramPostUrl": "",
-    "visitDate": ""
+    "visitDate": "2026-04-24"
   },
   {
     "id": 126,
-    "name": "Z? Bolacha",
+    "name": "Zé Bolacha",
     "beerTemp": -0.8,
     "visited": true,
     "rating": 9,
     "instagramPostUrl": "",
-    "visitDate": ""
+    "visitDate": "2026-04-25"
   },
   {
     "id": 127,
