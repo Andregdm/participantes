@@ -434,11 +434,11 @@
   {
     "id": 49,
     "name": "Butiquim 325",
-    "beerTemp": null,
-    "visited": "",
-    "rating": null,
+    "beerTemp": -5.9,
+    "visited": true,
+    "rating": 6.666666666666667,
     "instagramPostUrl": "",
-    "visitDate": ""
+    "visitDate": "2026-04-28"
   },
   {
     "id": 50,
@@ -524,20 +524,20 @@
   {
     "id": 59,
     "name": "Cipoeiro Bar",
-    "beerTemp": null,
-    "visited": "",
-    "rating": null,
+    "beerTemp": -3.3,
+    "visited": true,
+    "rating": 9.5,
     "instagramPostUrl": "",
-    "visitDate": ""
+    "visitDate": "2026-04-29"
   },
   {
     "id": 60,
     "name": "Comida & Prosa",
-    "beerTemp": null,
-    "visited": "",
-    "rating": null,
+    "beerTemp": -4,
+    "visited": true,
+    "rating": 7.666666666666667,
     "instagramPostUrl": "",
-    "visitDate": ""
+    "visitDate": "2026-04-28"
   },
   {
     "id": 61,
@@ -551,11 +551,11 @@
   {
     "id": 62,
     "name": "Conectados Bar",
-    "beerTemp": null,
-    "visited": "",
-    "rating": null,
+    "beerTemp": -7.3,
+    "visited": true,
+    "rating": 9.666666666666666,
     "instagramPostUrl": "",
-    "visitDate": ""
+    "visitDate": "2026-04-28"
   },
   {
     "id": 63,
@@ -803,11 +803,11 @@
   {
     "id": 90,
     "name": "Mineiros Beer",
-    "beerTemp": null,
-    "visited": "",
+    "beerTemp": -0.3,
+    "visited": true,
     "rating": null,
     "instagramPostUrl": "",
-    "visitDate": ""
+    "visitDate": "2026-04-29"
   },
   {
     "id": 91,
@@ -848,7 +848,7 @@
   {
     "id": 95,
     "name": "Oratório Bar",
-    "beerTemp": 3.9,
+    "beerTemp": 4.9,
     "visited": true,
     "rating": 8.5,
     "instagramPostUrl": "",
@@ -911,11 +911,11 @@
   {
     "id": 102,
     "name": "Prado Beer",
-    "beerTemp": null,
-    "visited": "",
-    "rating": null,
+    "beerTemp": -4.8,
+    "visited": true,
+    "rating": 9,
     "instagramPostUrl": "",
-    "visitDate": ""
+    "visitDate": "2026-04-28"
   },
   {
     "id": 103,
@@ -1073,11 +1073,11 @@
   {
     "id": 120,
     "name": "Tanganica Art Bar",
-    "beerTemp": null,
-    "visited": "",
-    "rating": null,
+    "beerTemp": 2.2,
+    "visited": true,
+    "rating": 5.333333333333333,
     "instagramPostUrl": "",
-    "visitDate": ""
+    "visitDate": "2026-04-28"
   },
   {
     "id": 121,
