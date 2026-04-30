@@ -2,11 +2,11 @@
   {
     "id": 1,
     "name": "222",
-    "beerTemp": null,
-    "visited": "",
-    "rating": null,
+    "beerTemp": -5.3,
+    "visited": true,
+    "rating": 8.333333333333334,
     "instagramPostUrl": "",
-    "visitDate": ""
+    "visitDate": "2026-04-30"
   },
   {
     "id": 2,
@@ -902,11 +902,11 @@
   {
     "id": 101,
     "name": "PoiZé Bar e Petisqueira",
-    "beerTemp": null,
-    "visited": "",
+    "beerTemp": -3.9,
+    "visited": true,
     "rating": null,
     "instagramPostUrl": "",
-    "visitDate": ""
+    "visitDate": "2026-04-30"
   },
   {
     "id": 102,
@@ -1111,7 +1111,7 @@
     "name": "Via Deslandes",
     "beerTemp": -2.7,
     "visited": true,
-    "rating": null,
+    "rating": 7.333333333333333,
     "instagramPostUrl": "",
     "visitDate": "2026-04-30"
   },
