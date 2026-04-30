@@ -794,18 +794,18 @@
   {
     "id": 89,
     "name": "Mamute Bar",
-    "beerTemp": null,
-    "visited": "",
-    "rating": null,
+    "beerTemp": -3.9,
+    "visited": true,
+    "rating": 8,
     "instagramPostUrl": "",
-    "visitDate": ""
+    "visitDate": "2026-04-29"
   },
   {
     "id": 90,
     "name": "Mineiros Beer",
     "beerTemp": -0.3,
     "visited": true,
-    "rating": 8.5,
+    "rating": 8,
     "instagramPostUrl": "",
     "visitDate": "2026-04-29"
   },
