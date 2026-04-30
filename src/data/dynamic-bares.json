@@ -56,11 +56,11 @@
   {
     "id": 7,
     "name": "Baiúca",
-    "beerTemp": null,
-    "visited": "",
-    "rating": null,
+    "beerTemp": -1.7,
+    "visited": true,
+    "rating": 8.25,
     "instagramPostUrl": "",
-    "visitDate": ""
+    "visitDate": "2026-04-30"
   },
   {
     "id": 8,
