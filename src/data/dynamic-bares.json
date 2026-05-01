@@ -119,11 +119,11 @@
   {
     "id": 14,
     "name": "Bar da Praça",
-    "beerTemp": null,
-    "visited": "",
+    "beerTemp": -2.1,
+    "visited": true,
     "rating": null,
     "instagramPostUrl": "",
-    "visitDate": ""
+    "visitDate": "2026-05-01"
   },
   {
     "id": 15,
