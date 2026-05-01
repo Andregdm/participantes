@@ -121,7 +121,7 @@
     "name": "Bar da Praça",
     "beerTemp": -2.1,
     "visited": true,
-    "rating": null,
+    "rating": 8.25,
     "instagramPostUrl": "",
     "visitDate": "2026-05-01"
   },
@@ -1055,11 +1055,11 @@
   {
     "id": 118,
     "name": "Spetim",
-    "beerTemp": null,
-    "visited": "",
+    "beerTemp": -6.6,
+    "visited": true,
     "rating": null,
     "instagramPostUrl": "",
-    "visitDate": ""
+    "visitDate": "2026-05-01"
   },
   {
     "id": 119,
