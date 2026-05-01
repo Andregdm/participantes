@@ -11,11 +11,11 @@
   {
     "id": 2,
     "name": "Alexandre's Bar",
-    "beerTemp": null,
-    "visited": "",
+    "beerTemp": -4,
+    "visited": true,
     "rating": null,
     "instagramPostUrl": "",
-    "visitDate": ""
+    "visitDate": "2026-05-01"
   },
   {
     "id": 3,
@@ -355,7 +355,7 @@
     "name": "Bazin Bar",
     "beerTemp": -2.7,
     "visited": true,
-    "rating": null,
+    "rating": 8.5,
     "instagramPostUrl": "",
     "visitDate": "2026-05-01"
   },
