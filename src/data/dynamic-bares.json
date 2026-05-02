@@ -299,11 +299,11 @@
   {
     "id": 34,
     "name": "Bar Mania Mineira",
-    "beerTemp": null,
-    "visited": "",
+    "beerTemp": -6.6,
+    "visited": true,
     "rating": null,
     "instagramPostUrl": "",
-    "visitDate": ""
+    "visitDate": "2026-05-02"
   },
   {
     "id": 35,
@@ -677,11 +677,11 @@
   {
     "id": 76,
     "name": "Geraldin da Cida",
-    "beerTemp": null,
-    "visited": "",
-    "rating": null,
+    "beerTemp": -2.7,
+    "visited": true,
+    "rating": 8,
     "instagramPostUrl": "",
-    "visitDate": ""
+    "visitDate": "2026-05-02"
   },
   {
     "id": 77,
