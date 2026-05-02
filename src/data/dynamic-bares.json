@@ -301,7 +301,7 @@
     "name": "Bar Mania Mineira",
     "beerTemp": -6.6,
     "visited": true,
-    "rating": null,
+    "rating": 10,
     "instagramPostUrl": "",
     "visitDate": "2026-05-02"
   },
