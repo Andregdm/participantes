@@ -13,7 +13,7 @@
     "name": "Alexandre's Bar",
     "beerTemp": -4,
     "visited": true,
-    "rating": 8.25,
+    "rating": 8,
     "instagramPostUrl": "",
     "visitDate": "2026-05-01"
   },
@@ -409,7 +409,7 @@
     "name": "Buteco do Lili",
     "beerTemp": -6.6,
     "visited": true,
-    "rating": 9.25,
+    "rating": 9.5,
     "instagramPostUrl": "",
     "visitDate": "2026-05-01"
   },
