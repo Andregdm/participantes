@@ -301,7 +301,7 @@
     "name": "Bar Mania Mineira",
     "beerTemp": -6.6,
     "visited": true,
-    "rating": 9.333333333333334,
+    "rating": 9.2,
     "instagramPostUrl": "",
     "visitDate": "2026-05-02"
   },
@@ -337,7 +337,7 @@
     "name": "Barrigudinha Buteco",
     "beerTemp": null,
     "visited": true,
-    "rating": 8.333333333333334,
+    "rating": 7.8,
     "instagramPostUrl": "",
     "visitDate": "2026-05-02"
   },
@@ -410,7 +410,7 @@
     "beerTemp": -6.6,
     "visited": true,
     "rating": 9.5,
-    "instagramPostUrl": "",
+    "instagramPostUrl": "https://www.instagram.com/p/DX5QEcrwiST/",
     "visitDate": "2026-05-01"
   },
   {
@@ -832,7 +832,7 @@
     "name": "Nubar",
     "beerTemp": null,
     "visited": true,
-    "rating": 8.666666666666666,
+    "rating": 8.4,
     "instagramPostUrl": "",
     "visitDate": "2026-05-02"
   },
@@ -859,7 +859,7 @@
     "name": "Parada 10.95 Bar",
     "beerTemp": null,
     "visited": true,
-    "rating": 7.666666666666667,
+    "rating": 8.2,
     "instagramPostUrl": "",
     "visitDate": "2026-05-02"
   },
@@ -1048,7 +1048,7 @@
     "name": "Sô Bar",
     "beerTemp": null,
     "visited": true,
-    "rating": 9.25,
+    "rating": 9,
     "instagramPostUrl": "",
     "visitDate": "2026-05-02"
   },
