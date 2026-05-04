@@ -75,10 +75,10 @@
     "id": 9,
     "name": "Bar Bendita Baderna",
     "beerTemp": null,
-    "visited": "",
-    "rating": null,
+    "visited": true,
+    "rating": 7,
     "instagramPostUrl": "",
-    "visitDate": ""
+    "visitDate": "2026-05-03"
   },
   {
     "id": 10,
@@ -201,10 +201,10 @@
     "id": 23,
     "name": "Bar do Peixinho",
     "beerTemp": null,
-    "visited": "",
-    "rating": null,
+    "visited": true,
+    "rating": 9,
     "instagramPostUrl": "",
-    "visitDate": ""
+    "visitDate": "2026-05-03"
   },
   {
     "id": 24,
@@ -462,10 +462,10 @@
     "id": 52,
     "name": "Camisola Bar",
     "beerTemp": null,
-    "visited": "",
-    "rating": null,
+    "visited": true,
+    "rating": 8,
     "instagramPostUrl": "",
-    "visitDate": ""
+    "visitDate": "2026-05-03"
   },
   {
     "id": 53,
@@ -914,7 +914,7 @@
     "beerTemp": -4.8,
     "visited": true,
     "rating": 9,
-    "instagramPostUrl": "",
+    "instagramPostUrl": "https://www.instagram.com/p/DX1tZXDyhes/",
     "visitDate": "2026-04-28"
   },
   {
@@ -957,10 +957,10 @@
     "id": 107,
     "name": "Recanto da Traíra",
     "beerTemp": null,
-    "visited": "",
-    "rating": null,
+    "visited": true,
+    "rating": 7.5,
     "instagramPostUrl": "",
-    "visitDate": ""
+    "visitDate": "2026-05-03"
   },
   {
     "id": 108,
@@ -993,10 +993,10 @@
     "id": 111,
     "name": "Resenha da Naty",
     "beerTemp": null,
-    "visited": "",
-    "rating": null,
+    "visited": true,
+    "rating": 8,
     "instagramPostUrl": "",
-    "visitDate": ""
+    "visitDate": "2026-05-03"
   },
   {
     "id": 112,
@@ -1058,7 +1058,7 @@
     "beerTemp": -6.6,
     "visited": true,
     "rating": 9.25,
-    "instagramPostUrl": "",
+    "instagramPostUrl": "https://www.instagram.com/p/DX4ib8Hva7J/",
     "visitDate": "2026-05-01"
   },
   {
