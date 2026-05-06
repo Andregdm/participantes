@@ -607,7 +607,7 @@
     "name": "Empório Lais",
     "beerTemp": null,
     "visited": true,
-    "rating": null,
+    "rating": 9,
     "instagramPostUrl": "",
     "visitDate": "2026-05-05"
   },
@@ -705,10 +705,10 @@
     "id": 79,
     "name": "Iracema Bar",
     "beerTemp": null,
-    "visited": true,
+    "visited": "",
     "rating": null,
     "instagramPostUrl": "",
-    "visitDate": "2026-05-05"
+    "visitDate": ""
   },
   {
     "id": 80,
@@ -1137,9 +1137,9 @@
     "id": 127,
     "name": "Zoo Bar",
     "beerTemp": null,
-    "visited": "",
-    "rating": null,
+    "visited": true,
+    "rating": 8,
     "instagramPostUrl": "",
-    "visitDate": ""
+    "visitDate": "2026-05-05"
   }
 ]
