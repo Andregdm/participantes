@@ -74,7 +74,7 @@
   {
     "id": 9,
     "name": "Bar Bendita Baderna",
-    "beerTemp": null,
+    "beerTemp": -4,
     "visited": true,
     "rating": 7,
     "instagramPostUrl": "",
@@ -606,10 +606,10 @@
     "id": 68,
     "name": "Empório Lais",
     "beerTemp": null,
-    "visited": "",
+    "visited": true,
     "rating": null,
     "instagramPostUrl": "",
-    "visitDate": ""
+    "visitDate": "2026-05-05"
   },
   {
     "id": 69,
@@ -705,10 +705,10 @@
     "id": 79,
     "name": "Iracema Bar",
     "beerTemp": null,
-    "visited": "",
+    "visited": true,
     "rating": null,
     "instagramPostUrl": "",
-    "visitDate": ""
+    "visitDate": "2026-05-05"
   },
   {
     "id": 80,
@@ -958,7 +958,7 @@
     "name": "Recanto da Traíra",
     "beerTemp": null,
     "visited": true,
-    "rating": 8,
+    "rating": 7.666666666666667,
     "instagramPostUrl": "",
     "visitDate": "2026-05-03"
   },
