@@ -134,7 +134,7 @@ export default function App() {
                 <h1 className="main-title" style={{ color: "#fff" }}>Participantes di Buteco</h1>
                 <div className="main-subtitle" style={{ color: "#9BBFCE" }}>
                   Guia da 26ª Edição do Comida di Buteco ·
-                  <span style={{ color: BRAND.goldLt }}> "Tema: Verduras"</span>
+                  <span style={{ color: BRAND.goldLt }}>Tema: Verduras</span>
                 </div>
                 <div className="header-info" style={{ marginTop: "0.5rem" }}>
                   <span className="header-period">10 Abr – 10 Mai 2026</span>
