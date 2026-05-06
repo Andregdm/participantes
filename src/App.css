@@ -484,3 +484,42 @@ select option { background: #fff;     color: #1C1A14; }
     height: 36px !important;
   }*/
 }
+
+/* Ranking table responsivo */
+@media (max-width: 700px) {
+  .max-width-1200 table,
+  .max-width-1200 thead,
+  .max-width-1200 tbody,
+  .max-width-1200 th,
+  .max-width-1200 td,
+  .max-width-1200 tr {
+    display: block;
+  }
+  .max-width-1200 thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+  .max-width-1200 tr {
+    margin-bottom: 0.8rem;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  }
+  .max-width-1200 td {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.6rem 0.8rem;
+    border-bottom: 1px solid #eee;
+  }
+  .max-width-1200 td:before {
+    content: attr(data-label);
+    font-weight: 600;
+    width: 40%;
+    color: #555;
+  }
+  .dark .max-width-1200 td:before {
+    color: #aaa;
+  }
+}
