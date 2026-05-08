@@ -148,7 +148,7 @@
     "name": "Bar do Bem",
     "beerTemp": null,
     "visited": "",
-    "rating": null,
+    "rating": 8.666666666666666,
     "instagramPostUrl": "",
     "visitDate": ""
   },
@@ -706,7 +706,7 @@
     "name": "Iracema Bar",
     "beerTemp": null,
     "visited": "",
-    "rating": null,
+    "rating": 8.333333333333334,
     "instagramPostUrl": "",
     "visitDate": ""
   },
