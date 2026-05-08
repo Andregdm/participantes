@@ -128,11 +128,11 @@
   {
     "id": 15,
     "name": "Bar da Silvânia",
-    "beerTemp": null,
-    "visited": "",
-    "rating": null,
+    "beerTemp": -8,
+    "visited": true,
+    "rating": 9.333333333333334,
     "instagramPostUrl": "",
-    "visitDate": ""
+    "visitDate": "2026-05-08"
   },
   {
     "id": 16,
