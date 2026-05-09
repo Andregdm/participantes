@@ -84,10 +84,10 @@
     "id": 10,
     "name": "Bar da Cintia",
     "beerTemp": null,
-    "visited": "",
+    "visited": true,
     "rating": null,
     "instagramPostUrl": "",
-    "visitDate": ""
+    "visitDate": "2026-05-08"
   },
   {
     "id": 11,
@@ -130,7 +130,7 @@
     "name": "Bar da Silvânia",
     "beerTemp": -8,
     "visited": true,
-    "rating": 9.333333333333334,
+    "rating": 9.166666666666666,
     "instagramPostUrl": "",
     "visitDate": "2026-05-08"
   },
@@ -597,10 +597,10 @@
     "id": 67,
     "name": "Dona Suica",
     "beerTemp": null,
-    "visited": "",
+    "visited": true,
     "rating": null,
     "instagramPostUrl": "",
-    "visitDate": ""
+    "visitDate": "2026-05-08"
   },
   {
     "id": 68,
@@ -840,10 +840,10 @@
     "id": 94,
     "name": "O Fino do Alho",
     "beerTemp": null,
-    "visited": "",
+    "visited": true,
     "rating": null,
     "instagramPostUrl": "",
-    "visitDate": ""
+    "visitDate": "2026-05-08"
   },
   {
     "id": 95,
