@@ -85,7 +85,7 @@
     "name": "Bar da Cintia",
     "beerTemp": null,
     "visited": true,
-    "rating": null,
+    "rating": 7.5,
     "instagramPostUrl": "",
     "visitDate": "2026-05-08"
   },
@@ -598,7 +598,7 @@
     "name": "Dona Suica",
     "beerTemp": null,
     "visited": true,
-    "rating": null,
+    "rating": 7.666666666666667,
     "instagramPostUrl": "",
     "visitDate": "2026-05-08"
   },
@@ -841,7 +841,7 @@
     "name": "O Fino do Alho",
     "beerTemp": null,
     "visited": true,
-    "rating": null,
+    "rating": 6.5,
     "instagramPostUrl": "",
     "visitDate": "2026-05-08"
   },
